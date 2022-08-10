@@ -20,5 +20,5 @@
     <com.xiangxiongfly.common.widget.navigation.BottomNavigation
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
-        android:layout_height="80dp" />
+        android:layout_height="48dp" />
 </LinearLayout>

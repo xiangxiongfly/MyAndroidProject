@@ -4,10 +4,13 @@ import android.os.Bundle
 import android.util.Log
 import android.util.SparseArray
 import android.view.ViewGroup
+import androidx.annotation.IntRange
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
+import com.example.home.HomeFragment
 import com.xiangxiongfly.common.base.BaseActivity
+import com.xiangxiongfly.common.base.BaseFragment
 import com.xiangxiongfly.common.widget.navigation.BottomNavigation
 import com.xiangxiongfly.common.widget.navigation.TabItem
 
@@ -19,8 +22,8 @@ class MainActivity : BaseActivity() {
 
     private var currentPosition = 0
 
-    private val mTitles = arrayOf("首页", "朋友圈", "发现", "设置")
-    private val mFragments = SparseArray<TabFragment>()
+    private val mTitles = arrayOf("首页", "Jetpack", "Others", "设置")
+    private val mFragments = SparseArray<BaseFragment>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,38 +36,40 @@ class MainActivity : BaseActivity() {
         vpMain = findViewById(R.id.vp_main)
         bottomNavigation = findViewById(R.id.bottom_navigation)
 
-        val list = ArrayList<TabItem>().apply {
-            add(
+        initBottomNavigation()
+        initViewPager()
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.putInt(KEY_POSITION, currentPosition)
+        super.onSaveInstanceState(outState)
+    }
+
+    private fun initBottomNavigation() {
+        bottomNavigation.init(
+            listOf<TabItem>(
                 TabItem(
                     R.drawable.tab_home_selected,
                     R.drawable.tab_home_unselect,
                     mTitles[0]
-                )
-            )
-            add(
+                ),
                 TabItem(
                     R.drawable.tab_friends_selected,
                     R.drawable.tab_friends_unselect,
                     mTitles[1]
-                )
-            )
-            add(
+                ),
                 TabItem(
                     R.drawable.tab_find_selected,
                     R.drawable.tab_find_unselect,
                     mTitles[2]
-                )
-            )
-            add(
+                ),
                 TabItem(
                     R.drawable.tab_setting_selected,
                     R.drawable.tab_setting_unselect,
                     mTitles[3]
                 )
             )
-        }
-
-        bottomNavigation.init(list)
+        )
         bottomNavigation.setCurrentTab(currentPosition)
         bottomNavigation.setOnItemSelectedListener(object :
             BottomNavigation.OnItemSelectedListener {
@@ -84,13 +89,6 @@ class MainActivity : BaseActivity() {
                 }
             }
         })
-
-        initViewPager()
-    }
-
-    override fun onSaveInstanceState(outState: Bundle) {
-        outState.putInt(KEY_POSITION, currentPosition)
-        super.onSaveInstanceState(outState)
     }
 
     private fun initViewPager() {
@@ -101,11 +99,11 @@ class MainActivity : BaseActivity() {
             }
 
             override fun getItem(position: Int): Fragment {
-                return TabFragment.newInstance(mTitles[position])
+                return createFragment(position)
             }
 
             override fun instantiateItem(container: ViewGroup, position: Int): Any {
-                val tabFragment = super.instantiateItem(container, position) as TabFragment
+                val tabFragment = super.instantiateItem(container, position) as BaseFragment
                 mFragments.put(position, tabFragment)
                 return tabFragment
             }
@@ -130,9 +128,18 @@ class MainActivity : BaseActivity() {
             }
 
             override fun onPageScrollStateChanged(state: Int) {
-
             }
         })
+    }
+
+    fun createFragment(@IntRange(from = 0, to = 3) position: Int): BaseFragment {
+        return when (position) {
+            0 -> HomeFragment.newInstance(mTitles[position])
+            1 -> HomeFragment.newInstance(mTitles[position])
+            2 -> HomeFragment.newInstance(mTitles[position])
+            3 -> HomeFragment.newInstance(mTitles[position])
+            else -> throw IllegalArgumentException("错误Fragment")
+        }
     }
 }
 

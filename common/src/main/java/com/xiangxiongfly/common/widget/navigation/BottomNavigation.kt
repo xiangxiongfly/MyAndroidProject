@@ -22,7 +22,7 @@ class BottomNavigation @JvmOverloads constructor(
         gravity = Gravity.CENTER
     }
 
-    fun init(tabItems: ArrayList<TabItem>) {
+    fun init(tabItems: List<TabItem>) {
         val layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT, 1F)
         layoutParams.gravity = Gravity.CENTER
         tabCount = tabItems.size
