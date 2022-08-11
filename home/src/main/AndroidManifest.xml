@@ -2,4 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.home">
 
+    <application android:theme="@style/Theme.MyAndroid">
+        <activity android:name=".viewpager.ViewPagerActivity" />
+        <activity android:name=".viewpager2.ViewPager2Activity" />
+    </application>
+
 </manifest>

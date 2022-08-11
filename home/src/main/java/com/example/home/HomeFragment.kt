@@ -1,19 +1,24 @@
 package com.example.home
 
+import android.content.Intent
+import android.content.res.ColorStateList
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import android.widget.Button
+import com.example.home.viewpager.ViewPagerActivity
+import com.example.home.viewpager2.ViewPager2Activity
+import com.google.android.flexbox.FlexboxLayout
+import com.xiangxiongfly.common.base.BaseActivity
 import com.xiangxiongfly.common.base.BaseFragment
+import kotlin.reflect.KClass
 
 
 private const val KEY_TITLE = "key_title"
 
 class HomeFragment : BaseFragment() {
-    private lateinit var tvTitle: TextView
+    private lateinit var flexboxLayout: FlexboxLayout
 
     private var mTitle: String? = null
 
@@ -43,10 +48,17 @@ class HomeFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        tvTitle = view.findViewById(R.id.tv_title)
-        tvTitle.text = mTitle
-        tvTitle.setOnClickListener {
-            tvTitle.text = mTitle + "改变了"
-        }
+        flexboxLayout = view.findViewById(R.id.flexboxLayout)
+
+        flexboxLayout.removeAllViews()
+        addElement("ViewPager", ViewPagerActivity::class)
+        addElement("ViewPager2", ViewPager2Activity::class)
+    }
+
+    private fun addElement(text: String, activityClass: KClass<out BaseActivity>) {
+        val button = Button(context)
+        button.text = text
+        button.setOnClickListener { startActivity(Intent(context, activityClass.java)) }
+        flexboxLayout.addView(button)
     }
 }

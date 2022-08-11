@@ -9,6 +9,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.example.home.HomeFragment
+import com.example.jetpack.JetpackFragment
+import com.example.others.OthersFragment
+import com.example.setting.SettingFragment
 import com.xiangxiongfly.common.base.BaseActivity
 import com.xiangxiongfly.common.base.BaseFragment
 import com.xiangxiongfly.common.widget.navigation.BottomNavigation
@@ -135,9 +138,9 @@ class MainActivity : BaseActivity() {
     fun createFragment(@IntRange(from = 0, to = 3) position: Int): BaseFragment {
         return when (position) {
             0 -> HomeFragment.newInstance(mTitles[position])
-            1 -> HomeFragment.newInstance(mTitles[position])
-            2 -> HomeFragment.newInstance(mTitles[position])
-            3 -> HomeFragment.newInstance(mTitles[position])
+            1 -> JetpackFragment.newInstance(mTitles[position])
+            2 -> OthersFragment.newInstance(mTitles[position])
+            3 -> SettingFragment.newInstance(mTitles[position])
             else -> throw IllegalArgumentException("错误Fragment")
         }
     }

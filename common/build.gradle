@@ -41,4 +41,8 @@ dependencies {
     api rootProject.ext.dependencies["material"]
     api rootProject.ext.dependencies["constraintlayout"]
     api rootProject.ext.dependencies["legacy-support-v4"]
+
+    //Flex
+    api rootProject.ext.dependencies["flexbox"]
+
 }
