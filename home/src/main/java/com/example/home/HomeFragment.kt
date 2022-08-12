@@ -1,7 +1,6 @@
 package com.example.home
 
 import android.content.Intent
-import android.content.res.ColorStateList
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -51,6 +50,10 @@ class HomeFragment : BaseFragment() {
         flexboxLayout = view.findViewById(R.id.flexboxLayout)
 
         flexboxLayout.removeAllViews()
+        addElements()
+    }
+
+    private fun addElements() {
         addElement("ViewPager", ViewPagerActivity::class)
         addElement("ViewPager2", ViewPager2Activity::class)
     }
@@ -58,6 +61,7 @@ class HomeFragment : BaseFragment() {
     private fun addElement(text: String, activityClass: KClass<out BaseActivity>) {
         val button = Button(context)
         button.text = text
+        button.isAllCaps = false
         button.setOnClickListener { startActivity(Intent(context, activityClass.java)) }
         flexboxLayout.addView(button)
     }

@@ -14,8 +14,8 @@ import com.example.others.OthersFragment
 import com.example.setting.SettingFragment
 import com.xiangxiongfly.common.base.BaseActivity
 import com.xiangxiongfly.common.base.BaseFragment
-import com.xiangxiongfly.common.widget.navigation.BottomNavigation
-import com.xiangxiongfly.common.widget.navigation.TabItem
+import com.xiangxiongfly.common.widgets.navigation.BottomNavigation
+import com.xiangxiongfly.common.widgets.navigation.TabItem
 
 const val KEY_POSITION: String = "key_position"
 

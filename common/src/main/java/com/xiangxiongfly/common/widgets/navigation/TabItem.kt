@@ -1,4 +1,4 @@
-package com.xiangxiongfly.common.widget.navigation
+package com.xiangxiongfly.common.widgets.navigation
 
 import androidx.annotation.DrawableRes
 
