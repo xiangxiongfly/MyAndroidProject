@@ -40,7 +40,7 @@ class TextFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val textView: TextView = view.findViewById(R.id.textView)
-        textView.text = param
+        textView.text = "$param \n ${System.currentTimeMillis()}"
     }
 
 

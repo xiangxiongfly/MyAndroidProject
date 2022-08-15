@@ -3,14 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.TextFragment">
+    tools:context=".viewpager.lazy.TestFragment">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/description"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="@string/hello_world"
-        android:textSize="24sp" />
+        android:gravity="center" />
 
 </FrameLayout>

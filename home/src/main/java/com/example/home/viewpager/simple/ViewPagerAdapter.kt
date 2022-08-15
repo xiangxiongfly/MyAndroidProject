@@ -5,7 +5,6 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.viewpager.widget.PagerAdapter
 
-
 class ViewPagerAdapter(private val imageViewList: ArrayList<ImageView>) : PagerAdapter() {
     override fun getCount(): Int = imageViewList.size
 

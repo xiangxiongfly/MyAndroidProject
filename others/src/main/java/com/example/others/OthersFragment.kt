@@ -7,9 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.xiangxiongfly.common.base.BaseFragment
-
-
-private const val KEY_TITLE = "key_title"
+import com.xiangxiongfly.common.base.KEY_TITLE
 
 class OthersFragment : BaseFragment() {
     private lateinit var tvTitle: TextView

@@ -3,7 +3,10 @@
     package="com.example.home">
 
     <application android:theme="@style/Theme.MyAndroid">
-        <activity android:name=".viewpager.simple.ViewPagerSimpleActivity"></activity>
+        <activity android:name=".viewpager.lazy.NewLazyActivity" />
+        <activity android:name=".viewpager.lazy.LazyActivity" />
+        <activity android:name=".viewpager.tab.TabVpActivity" />
+        <activity android:name=".viewpager.simple.ViewPagerSimpleActivity" />
         <activity android:name=".viewpager.ViewPagerActivity" />
         <activity android:name=".viewpager2.ViewPager2Activity" />
     </application>

@@ -11,10 +11,8 @@ import com.example.home.viewpager2.ViewPager2Activity
 import com.google.android.flexbox.FlexboxLayout
 import com.xiangxiongfly.common.base.BaseActivity
 import com.xiangxiongfly.common.base.BaseFragment
+import com.xiangxiongfly.common.base.KEY_TITLE
 import kotlin.reflect.KClass
-
-
-private const val KEY_TITLE = "key_title"
 
 class HomeFragment : BaseFragment() {
     private lateinit var flexboxLayout: FlexboxLayout
@@ -58,11 +56,17 @@ class HomeFragment : BaseFragment() {
         addElement("ViewPager2", ViewPager2Activity::class)
     }
 
-    private fun addElement(text: String, activityClass: KClass<out BaseActivity>) {
+    private fun addElement(title: String, activityClass: KClass<out BaseActivity>) {
         val button = Button(context)
-        button.text = text
+        button.text = title
         button.isAllCaps = false
-        button.setOnClickListener { startActivity(Intent(context, activityClass.java)) }
+        button.setOnClickListener {
+            startActivity(
+                Intent(context, activityClass.java).apply {
+                    putExtra(KEY_TITLE, title)
+                }
+            )
+        }
         flexboxLayout.addView(button)
     }
 }
