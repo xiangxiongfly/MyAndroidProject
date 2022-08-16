@@ -9,14 +9,14 @@ import android.widget.TextView
 import com.xiangxiongfly.common.R
 import com.xiangxiongfly.common.base.BaseFragment
 
-private const val ARG_PARAM = "param"
-
 class TextFragment : BaseFragment() {
     private lateinit var textView: TextView
 
     private var param: String? = null
 
     companion object {
+        private const val ARG_PARAM = "param"
+
         @JvmStatic
         fun newInstance(param: String) =
             TextFragment().apply {

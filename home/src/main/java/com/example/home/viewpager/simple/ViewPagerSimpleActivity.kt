@@ -28,9 +28,11 @@ class ViewPagerSimpleActivity : BaseActivity() {
     private lateinit var viewPager3: ViewPager
     private lateinit var viewPager4: ViewPager
 
+    //图片资源
     private val mImgIds =
         intArrayOf(R.drawable.a, R.drawable.b, R.drawable.c, R.drawable.d, R.drawable.e)
 
+    //亮点之间距离
     private var distance = 0
 
     companion object {
@@ -62,6 +64,9 @@ class ViewPagerSimpleActivity : BaseActivity() {
         viewPager4 = findViewById(R.id.viewPager4)
     }
 
+    /**
+     * 获取ImageView集合
+     */
     private fun getImageViewList(): ArrayList<ImageView> {
         return arrayListOf<ImageView>().apply {
             for (i in mImgIds.indices) {
@@ -73,9 +78,11 @@ class ViewPagerSimpleActivity : BaseActivity() {
         }
     }
 
+    /**
+     * ViewPager基本使用
+     */
     private fun initViewPager1() {
         val imageViewList = getImageViewList()
-
         val width = dp2px(10)
 
         for (i in mImgIds.indices) {
@@ -112,9 +119,11 @@ class ViewPagerSimpleActivity : BaseActivity() {
         })
     }
 
+    /**
+     * ViewPager基本使用2+缩放透明动画
+     */
     private fun initViewPager2() {
         val imageViewList = getImageViewList()
-
         val width = dp2px(10)
 
         for (i in mImgIds.indices) {
@@ -127,13 +136,14 @@ class ViewPagerSimpleActivity : BaseActivity() {
             indicator2.addView(dot, layoutParams)
         }
         viewPager2.adapter = ViewPagerAdapter(imageViewList)
-        dotSelected.viewTreeObserver.addOnGlobalLayoutListener(object :
-            ViewTreeObserver.OnGlobalLayoutListener {
-            override fun onGlobalLayout() {
-                dotSelected.viewTreeObserver.removeOnGlobalLayoutListener(this)
-                distance = indicator2.getChildAt(1).left - indicator2.getChildAt(0).left
+        dotSelected.viewTreeObserver.addOnGlobalLayoutListener(
+            object : ViewTreeObserver.OnGlobalLayoutListener {
+                override fun onGlobalLayout() {
+                    dotSelected.viewTreeObserver.removeOnGlobalLayoutListener(this)
+                    distance = indicator2.getChildAt(1).left - indicator2.getChildAt(0).left
+                }
             }
-        })
+        )
         viewPager2.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
             override fun onPageScrolled(
                 position: Int,
@@ -154,10 +164,13 @@ class ViewPagerSimpleActivity : BaseActivity() {
 
             }
         })
-        //设置页面变形
+        //设置页面变形效果
         viewPager2.setPageTransformer(true, ScaleTransformer())
     }
 
+    /**
+     * ViewPager旋转动画
+     */
     private fun initViewPager3() {
         val imageViewList = getImageViewList()
         viewPager3.offscreenPageLimit = 3
@@ -166,6 +179,9 @@ class ViewPagerSimpleActivity : BaseActivity() {
         viewPager3.setPageTransformer(true, RotateTransformer())
     }
 
+    /**
+     * ViewPager景深动画
+     */
     private fun initViewPager4() {
         val imageViewList = getImageViewList()
         viewPager4.adapter = ViewPagerAdapter(imageViewList)
