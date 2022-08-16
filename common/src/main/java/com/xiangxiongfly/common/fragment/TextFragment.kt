@@ -1,6 +1,7 @@
 package com.xiangxiongfly.common.fragment
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,6 +12,8 @@ import com.xiangxiongfly.common.base.BaseFragment
 private const val ARG_PARAM = "param"
 
 class TextFragment : BaseFragment() {
+    private lateinit var textView: TextView
+
     private var param: String? = null
 
     companion object {
@@ -39,9 +42,12 @@ class TextFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val textView: TextView = view.findViewById(R.id.textView)
-        textView.text = "$param \n ${System.currentTimeMillis()}"
+        textView = view.findViewById(R.id.textView)
     }
 
-
+    override fun onResume() {
+        super.onResume()
+        Log.e("TAG", "TextFragment onResume $param")
+        textView.text = "$param \n ${System.currentTimeMillis()}"
+    }
 }

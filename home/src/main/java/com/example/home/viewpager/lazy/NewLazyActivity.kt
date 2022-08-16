@@ -12,6 +12,10 @@ import com.xiangxiongfly.common.base.BaseActivity
 import com.xiangxiongfly.common.base.KEY_TITLE
 import com.xiangxiongfly.common.fragment.TextFragment
 
+/**
+ * FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT：表示只有当Fragment显示在屏幕上时才执行onResume()
+ * 可以将加载数据的方法放在onResume()中从而实现懒加载。
+ */
 class NewLazyActivity : BaseActivity() {
     private lateinit var viewPager: ViewPager
 

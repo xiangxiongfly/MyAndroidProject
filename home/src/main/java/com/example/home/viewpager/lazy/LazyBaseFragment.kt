@@ -4,6 +4,10 @@ import android.os.Bundle
 import android.view.View
 import com.xiangxiongfly.common.base.BaseFragment
 
+/**
+ * setUserVisibleHint方法判断Fragment是否对用户可见
+ * onActivityCreated方法判断View是否被创建
+ */
 abstract class LazyBaseFragment : BaseFragment() {
     //View是否创建
     private var isViewCreated = false
