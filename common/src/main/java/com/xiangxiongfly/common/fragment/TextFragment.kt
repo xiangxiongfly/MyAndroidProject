@@ -43,6 +43,7 @@ class TextFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         textView = view.findViewById(R.id.textView)
+        Log.e("TAG", "TextFragment onViewCreated $param")
     }
 
     override fun onResume() {
