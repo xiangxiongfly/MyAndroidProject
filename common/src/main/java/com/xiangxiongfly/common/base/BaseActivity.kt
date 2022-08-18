@@ -9,10 +9,12 @@ const val KEY_TITLE = "title"
 open class BaseActivity : AppCompatActivity() {
 
     protected lateinit var mContext: Context
+    protected lateinit var mActivity: AppCompatActivity
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mContext = this
+        mActivity = this
         if (intent.hasExtra(KEY_TITLE)) {
             val title = intent.getStringExtra(KEY_TITLE)
             setTitle(title)

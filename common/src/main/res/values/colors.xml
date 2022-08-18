@@ -9,6 +9,9 @@
     <color name="grey">#FFB3B3B3</color>
     <color name="white">#FFFFFFFF</color>
     <color name="red">#FFFF0000</color>
+    <color name="pink">#FFFFC0CB</color>
+
+    <color name="color_main">@color/purple_500</color>
 
     <color name="color_selected">@color/black</color>
     <color name="color_unselect">@color/grey</color>

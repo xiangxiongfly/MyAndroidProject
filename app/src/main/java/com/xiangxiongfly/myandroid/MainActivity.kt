@@ -1,10 +1,14 @@
 package com.xiangxiongfly.myandroid
 
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.util.SparseArray
+import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.annotation.IntRange
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
@@ -12,6 +16,7 @@ import com.example.home.HomeFragment
 import com.example.jetpack.JetpackFragment
 import com.example.others.OthersFragment
 import com.example.setting.SettingFragment
+import com.google.android.material.navigation.NavigationView
 import com.xiangxiongfly.common.base.BaseActivity
 import com.xiangxiongfly.common.base.BaseFragment
 import com.xiangxiongfly.common.widgets.navigation.BottomNavigation
@@ -21,7 +26,9 @@ const val KEY_POSITION: String = "key_position"
 
 class MainActivity : BaseActivity() {
     private lateinit var vpMain: ViewPager
+    private lateinit var drawerLayout: DrawerLayout
     private lateinit var bottomNavigation: BottomNavigation
+    private lateinit var navView: NavigationView
 
     private var currentPosition = 0
 
@@ -31,16 +38,24 @@ class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        window.statusBarColor = Color.TRANSPARENT
 
         savedInstanceState?.let {
-            currentPosition = savedInstanceState.getInt(KEY_POSITION, 0)
+            currentPosition = it.getInt(KEY_POSITION, 0)
         }
 
-        vpMain = findViewById(R.id.vp_main)
-        bottomNavigation = findViewById(R.id.bottom_navigation)
+        initView()
 
         initBottomNavigation()
         initViewPager()
+        initDrawerLayout()
+    }
+
+    private fun initView() {
+        vpMain = findViewById(R.id.vp_main)
+        bottomNavigation = findViewById(R.id.bottom_navigation)
+        drawerLayout = findViewById(R.id.drawer_layout)
+        navView = findViewById(R.id.nav_view)
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
@@ -79,16 +94,22 @@ class MainActivity : BaseActivity() {
             override fun onItemSelected(tabItem: TabItem) {
                 currentPosition = tabItem.index
                 vpMain.setCurrentItem(currentPosition, false)
+                when (tabItem.index) {
+                    0 -> Log.i("TAG", "首页")
+                    1 -> Log.i("TAG", "朋友圈")
+                    2 -> Log.i("TAG", "发现")
+                    3 -> Log.i("TAG", "设置")
+                }
             }
         })
         bottomNavigation.setOnItemReselectedListener(object :
             BottomNavigation.OnItemReselectedListener {
             override fun onItemReselected(tabItem: TabItem) {
                 when (tabItem.index) {
-                    0 -> Log.e("TAG", "首页2")
-                    1 -> Log.e("TAG", "朋友圈2")
-                    2 -> Log.e("TAG", "发现2")
-                    3 -> Log.e("TAG", "设置2")
+                    0 -> Log.i("TAG", "首页2")
+                    1 -> Log.i("TAG", "朋友圈2")
+                    2 -> Log.i("TAG", "发现2")
+                    3 -> Log.i("TAG", "设置2")
                 }
             }
         })
@@ -135,13 +156,38 @@ class MainActivity : BaseActivity() {
         })
     }
 
-    fun createFragment(@IntRange(from = 0, to = 3) position: Int): BaseFragment {
+    private fun createFragment(@IntRange(from = 0, to = 3) position: Int): BaseFragment {
         return when (position) {
             0 -> HomeFragment.newInstance(mTitles[position])
             1 -> JetpackFragment.newInstance(mTitles[position])
             2 -> OthersFragment.newInstance(mTitles[position])
             3 -> SettingFragment.newInstance(mTitles[position])
             else -> throw IllegalArgumentException("错误Fragment")
+        }
+    }
+
+    private fun initDrawerLayout() {
+        drawerLayout.addDrawerListener(object : DrawerLayout.DrawerListener {
+            override fun onDrawerSlide(drawerView: View, slideOffset: Float) {
+                Log.i("TAG", "DrawerLayout滑动中")
+            }
+
+            override fun onDrawerOpened(drawerView: View) {
+                Log.i("TAG", "DrawerLayout打开")
+            }
+
+            override fun onDrawerClosed(drawerView: View) {
+                Log.i("TAG", "DrawerLayout关闭")
+            }
+
+            override fun onDrawerStateChanged(newState: Int) {
+                Log.i("TAG", "DrawerLayout状态变化")
+            }
+        })
+        navView.setNavigationItemSelectedListener { menuItem ->
+            Toast.makeText(this, menuItem.title, Toast.LENGTH_SHORT).show()
+            drawerLayout.closeDrawers()
+            false
         }
     }
 }

@@ -4,6 +4,7 @@
 ## 基本控件
 
 - ViewPager
+- ViewPager2
 
 ## Jetpack
 

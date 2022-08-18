@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import com.example.home.immersion.ImmersionActivity
 import com.example.home.viewpager.ViewPagerActivity
 import com.example.home.viewpager2.ViewPager2Activity
 import com.google.android.flexbox.FlexboxLayout
@@ -54,6 +55,7 @@ class HomeFragment : BaseFragment() {
     private fun addElements() {
         addElement("ViewPager", ViewPagerActivity::class)
         addElement("ViewPager2", ViewPager2Activity::class)
+        addElement("沉浸式状态栏", ImmersionActivity::class)
     }
 
     private fun addElement(title: String, activityClass: KClass<out BaseActivity>) {

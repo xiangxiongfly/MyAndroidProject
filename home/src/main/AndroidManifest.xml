@@ -3,7 +3,25 @@
     package="com.example.home">
 
     <application android:theme="@style/Theme.MyAndroid">
-        <activity android:name=".viewpager2.tab.TabActivity"></activity>
+        <activity
+            android:name=".immersion.ImmersionActivity5"
+            android:theme="@style/ImmersiveStatusBarTheme" />
+        <activity
+            android:name=".immersion.ImmersionActivity4"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".immersion.ImmersionActivity3"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".immersion.ImmersionActivity2"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".immersion.ImmersionActivity1"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".immersion.ImmersionActivity"
+            android:theme="@style/NoActionBarTheme" />
+        <activity android:name=".viewpager2.tab.TabActivity" />
         <activity android:name=".viewpager2.simple.ViewPager2SimpleActivity" />
         <activity android:name=".viewpager.lazy.NewLazyActivity" />
         <activity android:name=".viewpager.lazy.LazyActivity" />
