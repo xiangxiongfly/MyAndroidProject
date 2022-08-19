@@ -71,12 +71,29 @@ object StatusBarUtils {
     }
 
     /**
+     * 隐藏状态栏
+     */
+    fun hideStatusBar(activity: Activity) {
+        activity.window.setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN
+        )
+    }
+
+    /**
+     * 显示状态栏
+     */
+    fun showStatusBar(activity: Activity) {
+        activity.window.clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
+    }
+
+    /**
      * 操作状态栏
      */
-    fun hideBar(activity: Activity, item: BarState) {
+    fun hideBar(activity: Activity, state: BarState) {
         fitsNotchScreen(activity)
         var uiFlags = View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-        when (item) {
+        when (state) {
             BarState.FLAG_HIDE_ALL_BAR ->
                 //隐藏状态栏和导航栏
                 uiFlags =

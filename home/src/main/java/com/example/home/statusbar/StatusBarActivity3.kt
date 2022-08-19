@@ -14,7 +14,7 @@ class StatusBarActivity3 : BaseActivity() {
     companion object {
         fun start(context: Context) {
             val intent = Intent(context, StatusBarActivity3::class.java).apply {
-                putExtra(KEY_TITLE, "修改状态栏颜色")
+                putExtra(KEY_TITLE, "操作状态栏")
             }
             context.startActivity(intent)
         }
@@ -35,5 +35,13 @@ class StatusBarActivity3 : BaseActivity() {
 
     fun switchGreen(v: View) {
         StatusBarUtils.setStatusBarColor2(this, R.color.green)
+    }
+
+    fun showStatusBar(v: View) {
+        StatusBarUtils.showStatusBar(this)
+    }
+
+    fun hideStatusBar(v: View) {
+        StatusBarUtils.hideStatusBar(this)
     }
 }

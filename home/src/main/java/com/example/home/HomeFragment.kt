@@ -61,16 +61,26 @@ class HomeFragment : BaseFragment() {
     }
 
     private fun addElement(title: String, activityClass: KClass<out BaseActivity>) {
-        val button = Button(context)
-        button.text = title
-        button.isAllCaps = false
-        button.setOnClickListener {
-            startActivity(
-                Intent(context, activityClass.java).apply {
-                    putExtra(KEY_TITLE, title)
+//        val button = Button(context)
+//        button.text = title
+//        button.isAllCaps = false
+//        button.setOnClickListener {
+//            val intent = Intent(context, activityClass.java)
+//            intent.putExtra(KEY_TITLE, title)
+//            startActivity(intent)
+//        }
+//        flexboxLayout.addView(button)
+
+        flexboxLayout.addView(
+            Button(context).apply {
+                text = title
+                isAllCaps = false
+                setOnClickListener {
+                    startActivity(Intent(context, activityClass.java).apply {
+                        putExtra(KEY_TITLE, title)
+                    })
                 }
-            )
-        }
-        flexboxLayout.addView(button)
+            }
+        )
     }
 }

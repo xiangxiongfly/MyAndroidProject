@@ -11,11 +11,13 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Customize your theme here. -->
         <item name="textAllCaps">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@android:color/white</item>
     </style>
 
     <!-- 闪屏页主题 -->
     <style name="SplashTheme" parent="AppTheme">
-        <item name="android:windowBackground">@drawable/light_image</item>
+        <item name="android:windowBackground">@drawable/dark_image</item>
         <item name="android:windowIsTranslucent">false</item>
         <item name="android:windowDisablePreview">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>

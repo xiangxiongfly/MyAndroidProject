@@ -7,8 +7,10 @@ import android.util.Log
 import android.util.SparseArray
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.annotation.IntRange
+import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentPagerAdapter
@@ -18,6 +20,7 @@ import com.example.jetpack.JetpackFragment
 import com.example.others.OthersFragment
 import com.example.setting.SettingFragment
 import com.google.android.material.navigation.NavigationView
+import com.gyf.immersionbar.ImmersionBar
 import com.xiangxiongfly.common.base.BaseActivity
 import com.xiangxiongfly.common.base.BaseFragment
 import com.xiangxiongfly.common.widgets.navigation.BottomNavigation
@@ -30,6 +33,8 @@ class MainActivity : BaseActivity() {
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var bottomNavigation: BottomNavigation
     private lateinit var navView: NavigationView
+    private lateinit var contentView: LinearLayout
+    private lateinit var toolbar: Toolbar
 
     private var currentPosition = 0
 
@@ -43,13 +48,16 @@ class MainActivity : BaseActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(R.style.AppTheme)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        initView()
         savedInstanceState?.let {
             currentPosition = it.getInt(KEY_POSITION, 0)
         }
 
-        initView()
+        //沉浸式
+        ImmersionBar.with(this).titleBar(toolbar).init()
 
         initBottomNavigation()
         initViewPager()
@@ -61,6 +69,8 @@ class MainActivity : BaseActivity() {
         bottomNavigation = findViewById(R.id.bottom_navigation)
         drawerLayout = findViewById(R.id.drawer_layout)
         navView = findViewById(R.id.nav_view)
+        contentView = findViewById(R.id.content_view)
+        toolbar = findViewById(R.id.toolbar)
     }
 
     override fun onSaveInstanceState(outState: Bundle) {

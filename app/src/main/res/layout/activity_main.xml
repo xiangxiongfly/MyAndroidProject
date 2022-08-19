@@ -5,15 +5,22 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
     <!--    内容区-->
     <LinearLayout
-        android:id="@+id/root"
+        android:id="@+id/content_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/main_shape"
+            app:title="MyAndroid"
+            app:titleTextColor="@android:color/white" />
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/vp_main"
@@ -38,7 +45,6 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:fitsSystemWindows="true"
         app:headerLayout="@layout/drawer_header"
         app:menu="@menu/drawer_menu" />
 

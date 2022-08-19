@@ -9,6 +9,6 @@ class SplashActivity : BaseActivity() {
         postDelayed({
             MainActivity.start(this)
             finish()
-        }, 200L)
+        }, 800L)
     }
 }
