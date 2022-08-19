@@ -18,5 +18,11 @@
         android:onClick="click2"
         android:text="全屏+状态栏有文字图标" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="click3"
+        android:text="修改状态栏颜色" />
+
 </LinearLayout>
 

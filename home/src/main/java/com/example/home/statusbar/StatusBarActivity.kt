@@ -5,7 +5,6 @@ import android.view.View
 import com.example.home.R
 import com.xiangxiongfly.common.base.BaseActivity
 
-
 class StatusBarActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,5 +19,8 @@ class StatusBarActivity : BaseActivity() {
         StatusBarActivity2.start(this)
     }
 
+    fun click3(v: View) {
+        StatusBarActivity3.start(this)
+    }
 
 }

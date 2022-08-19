@@ -31,7 +31,6 @@
 
     <!-- 透明状态栏主题 -->
     <style name="AppTheme.Transparent" parent="AppTheme">
-        <!-- Status bar color. -->
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 </resources>
