@@ -1,6 +1,7 @@
 package com.xiangxiongfly.myandroid
 
-import android.graphics.Color
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.util.SparseArray
@@ -35,11 +36,15 @@ class MainActivity : BaseActivity() {
     private val mTitles = arrayOf("首页", "Jetpack", "Others", "设置")
     private val mFragments = SparseArray<BaseFragment>()
 
+    companion object {
+        fun start(context: Context) {
+            context.startActivity(Intent(context, MainActivity::class.java))
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        window.statusBarColor = Color.TRANSPARENT
-
         savedInstanceState?.let {
             currentPosition = it.getInt(KEY_POSITION, 0)
         }

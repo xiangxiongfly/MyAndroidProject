@@ -5,6 +5,8 @@
 
 - ViewPager
 - ViewPager2
+- 状态栏的使用
+- 沉浸式状态栏
 
 ## Jetpack
 

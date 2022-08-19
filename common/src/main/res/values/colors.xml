@@ -10,9 +10,10 @@
     <color name="white">#FFFFFFFF</color>
     <color name="red">#FFFF0000</color>
     <color name="pink">#FFFFC0CB</color>
+    <color name="yellow">#FFFFFF00</color>
+    <color name="green">#FF008000</color>
 
     <color name="color_main">@color/purple_500</color>
-
     <color name="color_selected">@color/black</color>
     <color name="color_unselect">@color/grey</color>
 </resources>

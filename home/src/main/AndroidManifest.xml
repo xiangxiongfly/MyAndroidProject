@@ -2,25 +2,22 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.home">
 
-    <application android:theme="@style/Theme.MyAndroid">
+    <application>
+        <activity android:name=".statusbar.StatusBarActivity3" />
+        <activity
+            android:name=".statusbar.StatusBarActivity2"
+            android:exported="true"
+            android:theme="@style/AppTheme.Transparent" />
+        <activity android:name=".statusbar.StatusBarActivity1" />
+        <activity android:name=".statusbar.StatusBarActivity" />
         <activity
             android:name=".immersion.ImmersionActivity5"
-            android:theme="@style/ImmersiveStatusBarTheme" />
-        <activity
-            android:name=".immersion.ImmersionActivity4"
-            android:theme="@style/NoActionBarTheme" />
-        <activity
-            android:name=".immersion.ImmersionActivity3"
-            android:theme="@style/NoActionBarTheme" />
-        <activity
-            android:name=".immersion.ImmersionActivity2"
-            android:theme="@style/NoActionBarTheme" />
-        <activity
-            android:name=".immersion.ImmersionActivity1"
-            android:theme="@style/NoActionBarTheme" />
-        <activity
-            android:name=".immersion.ImmersionActivity"
-            android:theme="@style/NoActionBarTheme" />
+            android:theme="@style/AppTheme.Transparent" />
+        <activity android:name=".immersion.ImmersionActivity4" />
+        <activity android:name=".immersion.ImmersionActivity3" />
+        <activity android:name=".immersion.ImmersionActivity2" />
+        <activity android:name=".immersion.ImmersionActivity1" />
+        <activity android:name=".immersion.ImmersionActivity" />
         <activity android:name=".viewpager2.tab.TabActivity" />
         <activity android:name=".viewpager2.simple.ViewPager2SimpleActivity" />
         <activity android:name=".viewpager.lazy.NewLazyActivity" />

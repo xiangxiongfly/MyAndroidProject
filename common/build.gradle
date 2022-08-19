@@ -45,4 +45,11 @@ dependencies {
     //Flex
     api rootProject.ext.dependencies["flexbox"]
 
+    //palette
+    api rootProject.ext.dependencies["palette"]
+
+    //immersionbar
+    api rootProject.ext.dependencies["immersionbar"]
+
+
 }

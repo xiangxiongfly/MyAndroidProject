@@ -55,7 +55,6 @@ android {
 }
 
 dependencies {
-
     implementation project(path: ':common')
     implementation project(path: ':jetpack')
     implementation project(path: ':home')
@@ -64,6 +63,4 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-
-
 }

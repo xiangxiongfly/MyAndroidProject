@@ -8,5 +8,4 @@
     android:fitsSystemWindows="true"
     tools:context=".immersion.ImmersionActivity2">
 
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
