@@ -104,30 +104,30 @@ class MainActivity : BaseActivity() {
             )
         )
         bottomNavigation.setCurrentTab(currentPosition)
-        bottomNavigation.setOnItemSelectedListener(object :
-            BottomNavigation.OnItemSelectedListener {
-            override fun onItemSelected(tabItem: TabItem) {
-                currentPosition = tabItem.index
-                vpMain.setCurrentItem(currentPosition, false)
-                when (tabItem.index) {
-                    0 -> Log.i("TAG", "首页")
-                    1 -> Log.i("TAG", "朋友圈")
-                    2 -> Log.i("TAG", "发现")
-                    3 -> Log.i("TAG", "设置")
+        bottomNavigation.setOnItemSelectedListener(
+            object : BottomNavigation.OnItemSelectedListener {
+                override fun onItemSelected(tabItem: TabItem) {
+                    currentPosition = tabItem.index
+                    vpMain.setCurrentItem(currentPosition, false)
+                    when (tabItem.index) {
+                        0 -> Log.i("TAG", "首页")
+                        1 -> Log.i("TAG", "朋友圈")
+                        2 -> Log.i("TAG", "发现")
+                        3 -> Log.i("TAG", "设置")
+                    }
                 }
-            }
-        })
-        bottomNavigation.setOnItemReselectedListener(object :
-            BottomNavigation.OnItemReselectedListener {
-            override fun onItemReselected(tabItem: TabItem) {
-                when (tabItem.index) {
-                    0 -> Log.i("TAG", "首页2")
-                    1 -> Log.i("TAG", "朋友圈2")
-                    2 -> Log.i("TAG", "发现2")
-                    3 -> Log.i("TAG", "设置2")
+            })
+        bottomNavigation.setOnItemReselectedListener(
+            object : BottomNavigation.OnItemReselectedListener {
+                override fun onItemReselected(tabItem: TabItem) {
+                    when (tabItem.index) {
+                        0 -> Log.i("TAG", "首页2")
+                        1 -> Log.i("TAG", "朋友圈2")
+                        2 -> Log.i("TAG", "发现2")
+                        3 -> Log.i("TAG", "设置2")
+                    }
                 }
-            }
-        })
+            })
     }
 
     private fun initViewPager() {
@@ -204,6 +204,11 @@ class MainActivity : BaseActivity() {
             drawerLayout.closeDrawers()
             false
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        Log.e("TAG", "onSupportNavigateUp")
+        return super.onSupportNavigateUp()
     }
 }
 

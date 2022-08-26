@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!--    内容区-->
+    <!-- 内容区 -->
     <LinearLayout
         android:id="@+id/content_view"
         android:layout_width="match_parent"
@@ -39,7 +39,7 @@
             android:layout_height="48dp" />
     </LinearLayout>
 
-    <!--    左边菜单-->
+    <!-- 左边菜单 -->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"

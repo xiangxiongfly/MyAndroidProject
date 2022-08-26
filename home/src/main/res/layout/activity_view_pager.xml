@@ -7,6 +7,13 @@
     android:orientation="vertical"
     tools:context=".viewpager.ViewPagerActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/main_shape"
+        app:title="ViewPager"
+        app:titleTextColor="@android:color/white" />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

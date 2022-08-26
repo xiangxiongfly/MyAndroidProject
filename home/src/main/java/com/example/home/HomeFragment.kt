@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import com.example.home.immersion.ImmersionActivity
+import com.example.home.listview.ListViewActivity
 import com.example.home.statusbar.StatusBarActivity
 import com.example.home.viewpager.ViewPagerActivity
 import com.example.home.viewpager2.ViewPager2Activity
@@ -58,6 +59,7 @@ class HomeFragment : BaseFragment() {
         addElement("ViewPager2", ViewPager2Activity::class)
         addElement("状态栏的使用", StatusBarActivity::class)
         addElement("沉浸式状态栏", ImmersionActivity::class)
+        addElement("ListView", ListViewActivity::class)
     }
 
     private fun addElement(title: String, activityClass: KClass<out BaseActivity>) {
