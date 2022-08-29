@@ -3,7 +3,8 @@
     package="com.example.home">
 
     <application>
-        <activity android:name=".listview.CheckBoxListViewActivity"></activity>
+        <activity android:name=".expandable_listview.ExpandableListViewActivity"></activity>
+        <activity android:name=".listview.CheckBoxListViewActivity" />
         <activity android:name=".listview.MutilTypeActivity" />
         <activity android:name=".listview.BaseAdapterActivity" />
         <activity android:name=".listview.SimpleAdapterActivity" />
