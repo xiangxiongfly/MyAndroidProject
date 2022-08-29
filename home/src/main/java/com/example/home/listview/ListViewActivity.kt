@@ -31,4 +31,8 @@ class ListViewActivity : BaseActivity() {
         CheckBoxListViewActivity.start(this)
     }
 
+    fun toScrollViewListView(v: View) {
+        ScrollViewListViewActivity.start(this)
+    }
+
 }

@@ -44,4 +44,10 @@
         android:onClick="toCheckBoxListView"
         android:text="CheckBox+ListView" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="toScrollViewListView"
+        android:text="ScrollView+ListView" />
+
 </LinearLayout>
