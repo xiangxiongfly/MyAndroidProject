@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.ListView
 import com.example.home.R
 import com.example.home.listview.adapter.CheckBoxAdapter
-import com.example.home.listview.bean.Fruit
+import com.example.home.bean.Fruit
 import com.xiangxiongfly.common.base.BaseActivity
 import com.xiangxiongfly.common.base.KEY_TITLE
 

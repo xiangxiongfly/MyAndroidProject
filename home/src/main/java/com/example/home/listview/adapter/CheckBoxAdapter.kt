@@ -9,7 +9,7 @@ import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.home.R
-import com.example.home.listview.bean.Fruit
+import com.example.home.bean.Fruit
 
 class CheckBoxAdapter(val mContext: Context, val mList: ArrayList<Fruit>) : BaseAdapter() {
 
@@ -26,8 +26,8 @@ class CheckBoxAdapter(val mContext: Context, val mList: ArrayList<Fruit>) : Base
         val itemView: View
         if (convertView == null) {
             itemView = layoutInflater.inflate(R.layout.item_checkbox, null)
-            val img = itemView.findViewById<ImageView>(R.id.img)
-            val name = itemView.findViewById<TextView>(R.id.name)
+            val img = itemView.findViewById<ImageView>(R.id.fruit_img)
+            val name = itemView.findViewById<TextView>(R.id.fruit_name)
             val checkBox = itemView.findViewById<CheckBox>(R.id.checkBox)
             viewHolder = ViewHolder(img, name, checkBox)
             itemView.tag = viewHolder

@@ -12,6 +12,16 @@ fun dp2px(dpValue: Int): Int {
     return (dpValue * scale + 0.5F).toInt()
 }
 
-fun Float.dp() = dp2px(this)
+fun dp2px(dpValue: Double): Int {
+    val scale = Resources.getSystem().displayMetrics.density
+    return (dpValue * scale + 0.5F).toInt()
+}
 
-fun Int.dp() = dp2px(this)
+val Float.dp
+    get() = dp2px(this)
+
+val Int.dp
+    get() = dp2px(this)
+
+val Double.dp
+    get() = dp2px(this)

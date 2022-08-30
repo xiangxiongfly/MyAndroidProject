@@ -9,6 +9,7 @@ import android.widget.Button
 import com.example.home.expandable_listview.ExpandableListViewActivity
 import com.example.home.immersion.ImmersionActivity
 import com.example.home.listview.ListViewActivity
+import com.example.home.recyclerview.RecyclerViewActivity
 import com.example.home.statusbar.StatusBarActivity
 import com.example.home.viewpager.ViewPagerActivity
 import com.example.home.viewpager2.ViewPager2Activity
@@ -62,6 +63,7 @@ class HomeFragment : BaseFragment() {
         addElement("沉浸式状态栏", ImmersionActivity::class)
         addElement("ListView", ListViewActivity::class)
         addElement("ExpandableListView", ExpandableListViewActivity::class)
+        addElement("RecyclerView", RecyclerViewActivity::class)
     }
 
     private fun addElement(title: String, activityClass: KClass<out BaseActivity>) {

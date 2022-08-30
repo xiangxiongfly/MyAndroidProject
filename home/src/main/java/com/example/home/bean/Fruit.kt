@@ -1,4 +1,4 @@
-package com.example.home.listview.bean
+package com.example.home.bean
 
 data class Fruit(
     var fruitImage: Int,

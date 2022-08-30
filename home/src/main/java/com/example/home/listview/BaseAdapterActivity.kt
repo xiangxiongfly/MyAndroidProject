@@ -8,8 +8,8 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ListView
 import com.example.home.R
+import com.example.home.bean.Fruit
 import com.example.home.listview.adapter.MyAdapter
-import com.example.home.listview.bean.Fruit
 import com.xiangxiongfly.common.base.BaseActivity
 import com.xiangxiongfly.common.base.KEY_TITLE
 

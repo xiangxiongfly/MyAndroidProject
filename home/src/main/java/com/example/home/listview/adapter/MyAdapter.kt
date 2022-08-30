@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import com.example.home.R
-import com.example.home.listview.bean.Fruit
+import com.example.home.bean.Fruit
 
 class MyAdapter(val mContext: Context, val mDatas: ArrayList<Fruit>) : BaseAdapter() {
 
@@ -22,9 +22,9 @@ class MyAdapter(val mContext: Context, val mDatas: ArrayList<Fruit>) : BaseAdapt
         val viewHolder: ViewHolder
         val itemView: View
         if (convertView == null) {
-            itemView = layoutInflater.inflate(R.layout.item_simple, null)
-            val fruitImage: ImageView = itemView.findViewById(R.id.img)
-            val fruitName: TextView = itemView.findViewById(R.id.name)
+            itemView = layoutInflater.inflate(R.layout.item_fruit, null)
+            val fruitImage: ImageView = itemView.findViewById(R.id.fruit_img)
+            val fruitName: TextView = itemView.findViewById(R.id.fruit_name)
             viewHolder = ViewHolder(fruitImage, fruitName)
             itemView.tag = viewHolder
         } else {

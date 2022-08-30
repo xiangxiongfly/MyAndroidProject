@@ -3,8 +3,12 @@
     package="com.example.home">
 
     <application>
-        <activity android:name=".listview.ScrollViewListViewActivity" />
+        <activity android:name=".recyclerview.simple.RvStaggeredActivity"></activity>
+        <activity android:name=".recyclerview.simple.RvGridActivity" />
+        <activity android:name=".recyclerview.simple.RvLinearActivity" />
+        <activity android:name=".recyclerview.RecyclerViewActivity" />
         <activity android:name=".expandable_listview.ExpandableListViewActivity" />
+        <activity android:name=".listview.ScrollViewListViewActivity" />
         <activity android:name=".listview.CheckBoxListViewActivity" />
         <activity android:name=".listview.MutilTypeActivity" />
         <activity android:name=".listview.BaseAdapterActivity" />
@@ -28,12 +32,12 @@
         <activity android:name=".immersion.ImmersionActivity" />
         <activity android:name=".viewpager2.tab.TabActivity" />
         <activity android:name=".viewpager2.simple.ViewPager2SimpleActivity" />
+        <activity android:name=".viewpager2.ViewPager2Activity" />
         <activity android:name=".viewpager.lazy.NewLazyActivity" />
         <activity android:name=".viewpager.lazy.LazyActivity" />
         <activity android:name=".viewpager.tab.TabVpActivity" />
         <activity android:name=".viewpager.simple.ViewPagerSimpleActivity" />
         <activity android:name=".viewpager.ViewPagerActivity" />
-        <activity android:name=".viewpager2.ViewPager2Activity" />
     </application>
 
 </manifest>

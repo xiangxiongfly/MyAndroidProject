@@ -49,15 +49,15 @@ class MutilTypeAdapter(val mContext: Context, val mDatas: ArrayList<Any>) : Base
             when (type) {
                 TYPE_LEFT -> {
                     itemView = layoutInflater.inflate(R.layout.item_left_fruit, null)
-                    val img: ImageView = itemView.findViewById(R.id.img)
-                    val name: TextView = itemView.findViewById(R.id.name)
+                    val img: ImageView = itemView.findViewById(R.id.fruit_img)
+                    val name: TextView = itemView.findViewById(R.id.fruit_name)
                     leftViewHolder = LeftViewHolder(name, img)
                     itemView.setTag(R.id.type_left, leftViewHolder)
                 }
                 else -> {
                     itemView = layoutInflater.inflate(R.layout.item_right_fruit, null)
-                    val img: ImageView = itemView.findViewById(R.id.img)
-                    val name: TextView = itemView.findViewById(R.id.name)
+                    val img: ImageView = itemView.findViewById(R.id.fruit_img)
+                    val name: TextView = itemView.findViewById(R.id.fruit_name)
                     rightViewHolder = RightViewHolder(name, img)
                     itemView.setTag(R.id.type_right, rightViewHolder)
                 }
