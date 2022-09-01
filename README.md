@@ -9,6 +9,7 @@
 - 沉浸式状态栏
 - ListView
 - ExpandableListView
+- RecyclerView
 
 ## Jetpack
 

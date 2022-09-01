@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/add"
+        android:title="添加" />
+    <item
+        android:id="@+id/addAll"
+        android:title="添加多个" />
+    <item
+        android:id="@+id/deleteAll"
+        android:title="删除多个" />
+    <item
+        android:id="@+id/updateAll"
+        android:title="更新多个" />
+</menu>

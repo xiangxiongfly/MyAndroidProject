@@ -3,6 +3,7 @@ package com.example.home.recyclerview
 import android.os.Bundle
 import android.view.View
 import com.example.home.R
+import com.example.home.recyclerview.diffutil.DiffUtilActivity
 import com.example.home.recyclerview.simple.RvGridActivity
 import com.example.home.recyclerview.simple.RvLinearActivity
 import com.example.home.recyclerview.simple.RvStaggeredActivity
@@ -24,5 +25,9 @@ class RecyclerViewActivity : BaseActivity() {
 
     fun toStaggered(v: View) {
         RvStaggeredActivity.start(this)
+    }
+
+    fun toDiffUtil(v: View) {
+        DiffUtilActivity.start(this)
     }
 }

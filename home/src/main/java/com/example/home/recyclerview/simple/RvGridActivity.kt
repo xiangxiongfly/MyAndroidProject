@@ -9,8 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.home.R
 import com.example.home.bean.Fruit
 import com.example.home.data.FruitData
-import com.example.home.recyclerview.divider.GridItemDecoration
 import com.example.home.recyclerview.simple.adapter.FruitAdapter
+import com.example.home.recyclerview.divider.GridItemDecoration
 import com.xiangxiongfly.common.base.BaseActivity
 import com.xiangxiongfly.common.base.KEY_TITLE
 import com.xiangxiongfly.common.utils.dp

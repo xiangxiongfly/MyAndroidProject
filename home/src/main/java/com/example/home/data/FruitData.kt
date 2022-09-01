@@ -5,19 +5,19 @@ import com.example.home.bean.Fruit
 
 object FruitData {
 
-    fun getFruitList(count: Int = 30): ArrayList<Fruit> {
+    fun getFruitList(count: Int = 5): ArrayList<Fruit> {
         val mList = arrayListOf<Fruit>()
         for (i in 0..count) {
-            mList.add(Fruit(R.drawable.apple_pic, "apple$i"))
-            mList.add(Fruit(R.drawable.banana_pic, "banana$i"))
-            mList.add(Fruit(R.drawable.cherry_pic, "cherry$i"))
-            mList.add(Fruit(R.drawable.grape_pic, "grape$i"))
-            mList.add(Fruit(R.drawable.mango_pic, "mango$i"))
-            mList.add(Fruit(R.drawable.orange_pic, "orange$i"))
-            mList.add(Fruit(R.drawable.pear_pic, "pear$i"))
-            mList.add(Fruit(R.drawable.pineapple_pic, "pineapple$i"))
-            mList.add(Fruit(R.drawable.strawberry_pic, "strawberry$i"))
-            mList.add(Fruit(R.drawable.watermelon_pic, "watermelon$i"))
+            mList.add(Fruit(R.drawable.apple_pic, "苹果$i"))
+            mList.add(Fruit(R.drawable.banana_pic, "香蕉$i"))
+            mList.add(Fruit(R.drawable.cherry_pic, "樱桃$i"))
+            mList.add(Fruit(R.drawable.grape_pic, "葡萄$i"))
+            mList.add(Fruit(R.drawable.mango_pic, "芒果$i"))
+            mList.add(Fruit(R.drawable.orange_pic, "橘子$i"))
+            mList.add(Fruit(R.drawable.pear_pic, "例子$i"))
+            mList.add(Fruit(R.drawable.pineapple_pic, "菠萝$i"))
+            mList.add(Fruit(R.drawable.strawberry_pic, "草莓$i"))
+            mList.add(Fruit(R.drawable.watermelon_pic, "西瓜$i"))
         }
         return mList
     }

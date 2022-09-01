@@ -3,7 +3,8 @@
     package="com.example.home">
 
     <application>
-        <activity android:name=".recyclerview.simple.RvStaggeredActivity"></activity>
+        <activity android:name=".recyclerview.diffutil.DiffUtilActivity" />
+        <activity android:name=".recyclerview.simple.RvStaggeredActivity" />
         <activity android:name=".recyclerview.simple.RvGridActivity" />
         <activity android:name=".recyclerview.simple.RvLinearActivity" />
         <activity android:name=".recyclerview.RecyclerViewActivity" />
