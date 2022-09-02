@@ -3,6 +3,7 @@
     package="com.example.home">
 
     <application>
+        <activity android:name=".recyclerview.type.RvMutilTypeActivity"></activity>
         <activity android:name=".recyclerview.diffutil.DiffUtilActivity" />
         <activity android:name=".recyclerview.simple.RvStaggeredActivity" />
         <activity android:name=".recyclerview.simple.RvGridActivity" />
@@ -11,7 +12,7 @@
         <activity android:name=".expandable_listview.ExpandableListViewActivity" />
         <activity android:name=".listview.ScrollViewListViewActivity" />
         <activity android:name=".listview.CheckBoxListViewActivity" />
-        <activity android:name=".listview.MutilTypeActivity" />
+        <activity android:name=".listview.LvMutilTypeActivity" />
         <activity android:name=".listview.BaseAdapterActivity" />
         <activity android:name=".listview.SimpleAdapterActivity" />
         <activity android:name=".listview.ArrayAdapterActivity" />

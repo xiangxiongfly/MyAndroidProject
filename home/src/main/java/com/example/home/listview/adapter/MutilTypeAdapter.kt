@@ -8,8 +8,8 @@ import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.home.R
-import com.example.home.listview.bean.LeftFruit
-import com.example.home.listview.bean.RightFruit
+import com.example.home.bean.LeftFruit
+import com.example.home.bean.RightFruit
 
 class MutilTypeAdapter(val mContext: Context, val mDatas: ArrayList<Any>) : BaseAdapter() {
     companion object {

@@ -2,18 +2,16 @@ package com.example.home.recyclerview.simple
 
 import android.content.Context
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.home.R
 import com.example.home.bean.Fruit
 import com.example.home.data.FruitData
-import com.example.home.recyclerview.simple.adapter.FruitAdapter
 import com.example.home.recyclerview.divider.GridItemDecoration
+import com.example.home.recyclerview.simple.adapter.FruitAdapter
 import com.xiangxiongfly.common.base.BaseActivity
 import com.xiangxiongfly.common.base.KEY_TITLE
-import com.xiangxiongfly.common.utils.dp
 
 class RvGridActivity : BaseActivity() {
     private lateinit var recyclerView: RecyclerView
@@ -47,9 +45,12 @@ class RvGridActivity : BaseActivity() {
 
     private fun initRv() {
         val mAdapter = FruitAdapter(mContext, mFruitList)
-        recyclerView.layoutManager = GridLayoutManager(mContext, 2)
+        recyclerView.layoutManager = GridLayoutManager(mContext, 3)
         recyclerView.setHasFixedSize(true)
-        recyclerView.addItemDecoration(GridItemDecoration(Color.RED, 0.5.dp))
+        //方式一
+//        recyclerView.addItemDecoration(GridItemDecoration(Color.RED, 1.dp))
+        //方式二
+        recyclerView.addItemDecoration(GridItemDecoration(mContext, R.drawable.divider_red_shape))
         recyclerView.adapter = mAdapter
     }
 }

@@ -7,6 +7,7 @@ import com.example.home.recyclerview.diffutil.DiffUtilActivity
 import com.example.home.recyclerview.simple.RvGridActivity
 import com.example.home.recyclerview.simple.RvLinearActivity
 import com.example.home.recyclerview.simple.RvStaggeredActivity
+import com.example.home.recyclerview.type.RvMutilTypeActivity
 import com.xiangxiongfly.common.base.BaseActivity
 
 class RecyclerViewActivity : BaseActivity() {
@@ -25,6 +26,10 @@ class RecyclerViewActivity : BaseActivity() {
 
     fun toStaggered(v: View) {
         RvStaggeredActivity.start(this)
+    }
+
+    fun toMutilType(v: View) {
+        RvMutilTypeActivity.start(this)
     }
 
     fun toDiffUtil(v: View) {

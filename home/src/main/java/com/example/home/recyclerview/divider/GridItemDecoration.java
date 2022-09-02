@@ -1,11 +1,15 @@
 package com.example.home.recyclerview.divider;
 
+import android.content.Context;
 import android.graphics.Canvas;
-import android.graphics.Paint;
 import android.graphics.Rect;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.view.View;
 
+import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -13,14 +17,28 @@ import androidx.recyclerview.widget.RecyclerView;
  * RecyclerView网格分割线
  */
 public class GridItemDecoration extends RecyclerView.ItemDecoration {
-    private int mDividerSize;
-    private Paint mPaint;
+    //Drawable分割线
+    private Drawable mDivider;
+    private final int mDividerWidthSize;
+    private final int mDividerHeightSize;
 
+    /**
+     * 添加分割线方式一
+     *
+     * @param color       分割线颜色
+     * @param dividerSize 分割线尺寸
+     */
     public GridItemDecoration(int color, int dividerSize) {
-        mDividerSize = dividerSize;
-        mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        mPaint.setColor(color);
-        mPaint.setStyle(Paint.Style.FILL);
+        mDividerWidthSize = dividerSize;
+        mDividerHeightSize = dividerSize;
+        ColorDrawable shapeDrawable = new ColorDrawable(color);
+        mDivider = shapeDrawable;
+    }
+
+    public GridItemDecoration(Context context, @DrawableRes int drawableId) {
+        mDivider = ContextCompat.getDrawable(context, drawableId);
+        mDividerHeightSize = mDivider.getIntrinsicHeight();
+        mDividerWidthSize = mDivider.getIntrinsicWidth();
     }
 
     /**
@@ -34,29 +52,6 @@ public class GridItemDecoration extends RecyclerView.ItemDecoration {
     }
 
     /**
-     * 是否最后一列
-     */
-    private boolean isLastColumn(RecyclerView parent, int position, int spanCount, int childCount) {
-        if ((position + 1) % spanCount == 0) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    /**
-     * 是否最后一行
-     */
-    private boolean isLastRow(RecyclerView parent, int position, int spanCount, int childCount) {
-        childCount = childCount - childCount % spanCount;
-        if (position >= childCount) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    /**
      * 设置分割线大小
      */
     @Override
@@ -66,13 +61,34 @@ public class GridItemDecoration extends RecyclerView.ItemDecoration {
         int position = parent.getChildAdapterPosition(view);
         if (isLastRow(parent, position, spanCount, childCount)) {
             //最后一行不绘制底部
-            outRect.set(0, 0, mDividerSize, 0);
+            outRect.set(0, 0, mDividerWidthSize, 0);
         } else if (isLastColumn(parent, position, spanCount, childCount)) {
             //最后一列不绘制右边
-            outRect.set(0, 0, 0, mDividerSize);
+            outRect.set(0, 0, 0, mDividerHeightSize);
         } else {
-            outRect.set(0, 0, mDividerSize, mDividerSize);
+            outRect.set(0, 0, mDividerWidthSize, mDividerHeightSize);
         }
+    }
+
+    /**
+     * 是否最后一列
+     */
+    private boolean isLastColumn(RecyclerView parent, int position, int spanCount, int childCount) {
+        if ((position + 1) % spanCount == 0) { //最后一列不需要绘制右边
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * 是否最后一行
+     */
+    private boolean isLastRow(RecyclerView parent, int position, int spanCount, int childCount) {
+        childCount = childCount - childCount % spanCount;
+        if (position >= childCount) { //最后一行不需要绘制底部
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -80,39 +96,41 @@ public class GridItemDecoration extends RecyclerView.ItemDecoration {
      */
     @Override
     public void onDraw(@NonNull Canvas c, @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
-        drawVertical(c, parent);
         drawHorizontal(c, parent);
+        drawVertical(c, parent);
     }
 
     /**
      * 绘制垂直分割线
      */
-    private void drawVertical(@NonNull Canvas c, @NonNull RecyclerView parent) {
+    private void drawVertical(@NonNull Canvas canvas, @NonNull RecyclerView parent) {
         final int childCount = parent.getChildCount();
         for (int i = 0; i < childCount; i++) {
             final View childView = parent.getChildAt(i);
             RecyclerView.LayoutParams layoutParams = (RecyclerView.LayoutParams) childView.getLayoutParams();
             final int left = childView.getRight() + layoutParams.rightMargin;
+            final int right = left + mDividerWidthSize;
             final int top = childView.getTop() - layoutParams.topMargin;
-            final int right = left + mDividerSize;
             final int bottom = childView.getBottom() + layoutParams.bottomMargin;
-            c.drawRect(left, top, right, bottom, mPaint);
+            mDivider.setBounds(left, top, right, bottom);
+            mDivider.draw(canvas);
         }
     }
 
     /**
      * 绘制水平分割线
      */
-    private void drawHorizontal(@NonNull Canvas c, @NonNull RecyclerView parent) {
+    private void drawHorizontal(@NonNull Canvas canvas, @NonNull RecyclerView parent) {
         final int childCount = parent.getChildCount();
         for (int i = 0; i < childCount; i++) {
             final View childView = parent.getChildAt(i);
             RecyclerView.LayoutParams layoutParams = (RecyclerView.LayoutParams) childView.getLayoutParams();
             final int left = childView.getLeft() - layoutParams.leftMargin;
+            final int right = childView.getRight() + layoutParams.rightMargin + mDividerWidthSize;
             final int top = childView.getBottom() + layoutParams.bottomMargin;
-            final int right = childView.getRight() + layoutParams.rightMargin + mDividerSize;
-            final int bottom = top + mDividerSize;
-            c.drawRect(left, top, right, bottom, mPaint);
+            final int bottom = top + mDividerHeightSize;
+            mDivider.setBounds(left, top, right, bottom);
+            mDivider.draw(canvas);
         }
     }
 }

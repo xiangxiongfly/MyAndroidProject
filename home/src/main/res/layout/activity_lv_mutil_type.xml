@@ -8,4 +8,4 @@
     android:divider="@null"
     android:padding="10dp"
     android:scrollbars="none"
-    tools:context=".listview.MutilTypeActivity" />
+    tools:context=".listview.LvMutilTypeActivity" />

@@ -24,7 +24,7 @@ class ListViewActivity : BaseActivity() {
     }
 
     fun toMultiTypeAdapter(v: View) {
-        MutilTypeActivity.start(this)
+        LvMutilTypeActivity.start(this)
     }
 
     fun toCheckBoxListView(v: View) {

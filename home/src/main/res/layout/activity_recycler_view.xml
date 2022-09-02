@@ -35,7 +35,14 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="toMutilType"
+        android:text="多类型布局" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:onClick="toDiffUtil"
         android:text="DiffUtil测试" />
+
 
 </LinearLayout>

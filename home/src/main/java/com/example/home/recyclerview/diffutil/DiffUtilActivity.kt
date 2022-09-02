@@ -61,14 +61,14 @@ class DiffUtilActivity : BaseActivity() {
     var start: Long = 0
 
     fun click1(v: View) {
-        recyclerView.viewTreeObserver.addOnGlobalLayoutListener(object :
-            ViewTreeObserver.OnGlobalLayoutListener {
-            override fun onGlobalLayout() {
-                val end = System.currentTimeMillis()
-                logE("DiffUtil耗时1：${end - start}ms")
-                recyclerView.viewTreeObserver.removeOnGlobalLayoutListener(this)
-            }
-        })
+        recyclerView.viewTreeObserver.addOnGlobalLayoutListener(
+            object : ViewTreeObserver.OnGlobalLayoutListener {
+                override fun onGlobalLayout() {
+                    val end = System.currentTimeMillis()
+                    logE("DiffUtil耗时1：${end - start}ms")
+                    recyclerView.viewTreeObserver.removeOnGlobalLayoutListener(this)
+                }
+            })
         start = System.currentTimeMillis()
         val newList = ArrayList<User>()
         for (item in mList) {
@@ -85,14 +85,15 @@ class DiffUtilActivity : BaseActivity() {
     }
 
     fun click2(v: View) {
-        recyclerView.viewTreeObserver.addOnGlobalLayoutListener(object :
-            ViewTreeObserver.OnGlobalLayoutListener {
-            override fun onGlobalLayout() {
-                val end = System.currentTimeMillis()
-                logE("DiffUtil耗时2：${end - start}ms")
-                recyclerView.viewTreeObserver.removeOnGlobalLayoutListener(this)
-            }
-        })
+        recyclerView.viewTreeObserver.addOnGlobalLayoutListener(
+            object : ViewTreeObserver.OnGlobalLayoutListener {
+                override fun onGlobalLayout() {
+                    val end = System.currentTimeMillis()
+                    logE("DiffUtil耗时2：${end - start}ms")
+                    recyclerView.viewTreeObserver.removeOnGlobalLayoutListener(this)
+                }
+            },
+        )
         start = System.currentTimeMillis()
         val newList = ArrayList<User>()
         for (item in mList) {
@@ -107,14 +108,14 @@ class DiffUtilActivity : BaseActivity() {
     }
 
     fun click3(v: View) {
-        recyclerView.viewTreeObserver.addOnGlobalLayoutListener(object :
-            ViewTreeObserver.OnGlobalLayoutListener {
-            override fun onGlobalLayout() {
-                val end = System.currentTimeMillis()
-                logE("notifyDataSetChanged耗时1：${end - start}ms")
-                recyclerView.viewTreeObserver.removeOnGlobalLayoutListener(this)
-            }
-        })
+        recyclerView.viewTreeObserver.addOnGlobalLayoutListener(
+            object : ViewTreeObserver.OnGlobalLayoutListener {
+                override fun onGlobalLayout() {
+                    val end = System.currentTimeMillis()
+                    logE("notifyDataSetChanged耗时1：${end - start}ms")
+                    recyclerView.viewTreeObserver.removeOnGlobalLayoutListener(this)
+                }
+            })
         start = System.currentTimeMillis()
         mList.removeFirst()
         mList.removeLast()
@@ -124,14 +125,14 @@ class DiffUtilActivity : BaseActivity() {
     }
 
     fun click4(v: View) {
-        recyclerView.viewTreeObserver.addOnGlobalLayoutListener(object :
-            ViewTreeObserver.OnGlobalLayoutListener {
-            override fun onGlobalLayout() {
-                val end = System.currentTimeMillis()
-                logE("notifyDataSetChanged耗时2：${end - start}ms")
-                recyclerView.viewTreeObserver.removeOnGlobalLayoutListener(this)
-            }
-        })
+        recyclerView.viewTreeObserver.addOnGlobalLayoutListener(
+            object : ViewTreeObserver.OnGlobalLayoutListener {
+                override fun onGlobalLayout() {
+                    val end = System.currentTimeMillis()
+                    logE("notifyDataSetChanged耗时2：${end - start}ms")
+                    recyclerView.viewTreeObserver.removeOnGlobalLayoutListener(this)
+                }
+            })
         start = System.currentTimeMillis()
         mList.removeFirst()
         mList.removeLast()

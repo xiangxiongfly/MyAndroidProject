@@ -109,16 +109,16 @@ class RvLinearActivity : BaseActivity() {
         //分割线使用方式一：
         recyclerView.addItemDecoration(
             LinearItemDecoration(
-                LinearItemDecoration.VERTICAL,
+                LinearItemDecoration.VERTICAL_LIST,
                 Color.RED,
-                0.5.dp
+                1.dp
             )
         )
         //分割线使用方式二：
 //        recyclerView.addItemDecoration(
 //            LinearItemDecoration(
 //                mContext,
-//                LinearItemDecoration.VERTICAL,
+//                LinearItemDecoration.VERTICAL_LIST,
 //                R.drawable.divider_red_shape
 //            )
 //        )
