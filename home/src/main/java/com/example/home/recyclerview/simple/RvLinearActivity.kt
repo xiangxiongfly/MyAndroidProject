@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.widget.Toolbar
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.home.R
@@ -17,6 +18,7 @@ import com.example.home.recyclerview.simple.adapter.FruitAdapter2
 import com.xiangxiongfly.common.base.BaseActivity
 import com.xiangxiongfly.common.base.KEY_TITLE
 import com.xiangxiongfly.common.utils.dp
+import java.util.*
 
 class RvLinearActivity : BaseActivity() {
     private lateinit var recyclerView: RecyclerView
@@ -90,6 +92,7 @@ class RvLinearActivity : BaseActivity() {
 
     private fun initRv() {
         mAdapter = FruitAdapter2(mContext, mFruitList)
+        //设置点击事件
         mAdapter.setOnItemClickListener(object : FruitAdapter2.OnItemClickListener {
             override fun onUpdate(position: Int) {
                 mAdapter.update(position)
@@ -122,7 +125,51 @@ class RvLinearActivity : BaseActivity() {
 //                R.drawable.divider_red_shape
 //            )
 //        )
+
         recyclerView.adapter = mAdapter
+        initBind()
+    }
+
+    private fun initBind() {
+        val helper = ItemTouchHelper(
+            object : ItemTouchHelper.Callback() {
+                override fun getMovementFlags(
+                    recyclerView: RecyclerView,
+                    viewHolder: RecyclerView.ViewHolder
+                ): Int {
+                    //侧滑删除
+                    val swipeFlags = ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT
+                    //拖拽
+                    val dragFlags =
+                        ItemTouchHelper.UP or ItemTouchHelper.DOWN or ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT
+                    return makeMovementFlags(dragFlags, swipeFlags)
+                }
+
+                //拖拽事件
+                override fun onMove(
+                    recyclerView: RecyclerView,
+                    viewHolder: RecyclerView.ViewHolder,
+                    target: RecyclerView.ViewHolder
+                ): Boolean {
+                    Collections.swap(mFruitList, viewHolder.adapterPosition, target.adapterPosition)
+                    mAdapter.notifyItemMoved(viewHolder.adapterPosition, target.adapterPosition)
+                    return false
+                }
+
+                //侧滑事件
+                override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+                    mFruitList.removeAt(viewHolder.adapterPosition)
+                    mAdapter.notifyItemRemoved(viewHolder.adapterPosition)
+                }
+
+                //是否拖拽
+                override fun isLongPressDragEnabled(): Boolean {
+                    return true
+                }
+            }
+        )
+        //绑定
+        helper.attachToRecyclerView(recyclerView)
     }
 
 
