@@ -10,6 +10,7 @@
 - ListView
 - ExpandableListView
 - RecyclerView
+- SpannableString
 
 ## Jetpack
 

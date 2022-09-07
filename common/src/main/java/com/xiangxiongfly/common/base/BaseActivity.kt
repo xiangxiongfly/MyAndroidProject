@@ -22,4 +22,9 @@ open class BaseActivity : AppCompatActivity(), HandlerAction {
             setTitle(title)
         }
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        removeCallbacks()
+    }
 }
