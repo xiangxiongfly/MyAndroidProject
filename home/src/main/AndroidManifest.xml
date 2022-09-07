@@ -3,14 +3,8 @@
     package="com.example.home">
 
     <application>
-        <activity
-            android:name=".span.simple.SpanSimpleActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".span.text_style.TextStyleActivity" />
+        <activity android:name=".span.simple.SpanSimpleActivity" />
         <activity android:name=".span.SpannableStringActivity" />
         <activity android:name=".recyclerview.type.RvMutilTypeActivity" />
         <activity android:name=".recyclerview.diffutil.DiffUtilActivity" />
