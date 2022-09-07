@@ -1,4 +1,4 @@
-package com.example.home.span.simple
+package com.example.home.span
 
 import android.content.Context
 import android.content.Intent

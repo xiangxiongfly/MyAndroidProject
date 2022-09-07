@@ -1,3 +1,8 @@
 <resources>
-
+    <string name="desc">
+        Take your first steps programming in Kotlin, add images and text to your Android apps, and learn how to use classes, objects, and conditionals to create an interactive app for your users.
+        Build two different apps, and improve the user interface of your app by learning about layouts, Material Design guidelines, and best practices for UI development.
+        Enhance your users’ ability to navigate across, into and back out from the various screens within your app for a consistent and predictable user experience.
+        Write coroutines for complex code, and learn about HTTP and REST to get data from the internet. Then, use the Coil library to display images in your app.
+    </string>
 </resources>
