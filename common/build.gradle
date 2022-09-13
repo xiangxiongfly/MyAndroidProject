@@ -40,7 +40,7 @@ dependencies {
     api rootProject.ext.dependencies["appcompat"]
     api rootProject.ext.dependencies["material"]
     api rootProject.ext.dependencies["constraintlayout"]
-    api rootProject.ext.dependencies["legacy-support-v4"]
+//    api rootProject.ext.dependencies["legacy-support-v4"]
 
     //Flex
     api rootProject.ext.dependencies["flexbox"]
@@ -51,5 +51,8 @@ dependencies {
     //immersionbar
     api rootProject.ext.dependencies["immersionbar"]
 
-
+    def lifecycle_version = "2.5.0"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-process:$lifecycle_version"
 }

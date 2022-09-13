@@ -2,4 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.jetpack">
 
+    <application>
+        <activity android:name=".lifecycle.dialog.LifecycleDialogActivity"></activity>
+        <activity android:name=".lifecycle.custom.LifecycleCustomActivity" />
+        <activity android:name=".lifecycle.advertising2.AdvertisingActivity2" />
+        <activity android:name=".SecondActivity" />
+        <activity android:name=".lifecycle.advertising.AdvertisingActivity" />
+        <activity android:name=".lifecycle.simple.LifecycleSimpleActivity" />
+        <activity android:name=".lifecycle.LifecycleActivity" />
+    </application>
+
 </manifest>

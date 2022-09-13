@@ -1,16 +1,21 @@
 package com.example.jetpack
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.fragment.app.Fragment
+import android.widget.Button
+import com.example.jetpack.lifecycle.LifecycleActivity
+import com.google.android.flexbox.FlexboxLayout
+import com.xiangxiongfly.common.base.BaseActivity
 import com.xiangxiongfly.common.base.BaseFragment
 import com.xiangxiongfly.common.base.KEY_TITLE
+import kotlin.reflect.KClass
+
 
 class JetpackFragment : BaseFragment() {
-    private lateinit var tvTitle: TextView
+    private lateinit var flexboxLayout: FlexboxLayout
 
     private var mTitle: String? = null
 
@@ -40,10 +45,30 @@ class JetpackFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        tvTitle = view.findViewById(R.id.tv_title)
-        tvTitle.text = mTitle
-        tvTitle.setOnClickListener {
-            tvTitle.text = mTitle + "改变了"
-        }
+        initView(view)
+        addElements()
+    }
+
+    private fun initView(view: View) {
+        flexboxLayout = view.findViewById(R.id.flexboxLayout)
+    }
+
+    private fun addElements() {
+        flexboxLayout.removeAllViews()
+        addElement("Lifecycle", LifecycleActivity::class)
+    }
+
+    private fun addElement(title: String, activityClass: KClass<out BaseActivity>) {
+        flexboxLayout.addView(
+            Button(context).apply {
+                text = title
+                isAllCaps = false
+                setOnClickListener {
+                    startActivity(Intent(context, activityClass.java).apply {
+                        putExtra(KEY_TITLE, title)
+                    })
+                }
+            }
+        )
     }
 }

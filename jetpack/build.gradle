@@ -22,6 +22,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets {
+        main {
+            res.srcDirs =
+                    [
+                            'src/main/res/layouts/lifecycle',
+                            'src/main/res/layouts/main',
+                            //下面这行代码容易遗漏
+                            'src/main/res'
+                    ]
+        }
+    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -30,7 +41,7 @@ android {
         jvmTarget = '1.8'
     }
     //防止资源冲突
-    resourcePrefix "${name}_"
+//    resourcePrefix "${name}_"
 }
 
 dependencies {

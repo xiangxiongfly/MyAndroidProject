@@ -1,2 +1,3 @@
 <resources>
+    <string name="loading_msg">加载中</string>
 </resources>

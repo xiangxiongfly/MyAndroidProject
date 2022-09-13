@@ -36,7 +36,7 @@ class MainActivity : BaseActivity() {
     private lateinit var contentView: LinearLayout
     private lateinit var toolbar: Toolbar
 
-    private var currentPosition = 0
+    private var currentPosition = 1
 
     private val mTitles = arrayOf("首页", "Jetpack", "Others", "设置")
     private val mFragments = SparseArray<BaseFragment>()
@@ -169,6 +169,7 @@ class MainActivity : BaseActivity() {
             override fun onPageScrollStateChanged(state: Int) {
             }
         })
+        vpMain.setCurrentItem(currentPosition, false)
     }
 
     private fun createFragment(@IntRange(from = 0, to = 3) position: Int): BaseFragment {

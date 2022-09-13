@@ -51,13 +51,16 @@ class HomeFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        flexboxLayout = view.findViewById(R.id.flexboxLayout)
-
-        flexboxLayout.removeAllViews()
+        initView(view)
         addElements()
     }
 
+    private fun initView(view: View) {
+        flexboxLayout = view.findViewById(R.id.flexboxLayout)
+    }
+
     private fun addElements() {
+        flexboxLayout.removeAllViews()
         addElement("ViewPager", ViewPagerActivity::class)
         addElement("ViewPager2", ViewPager2Activity::class)
         addElement("状态栏的使用", StatusBarActivity::class)
