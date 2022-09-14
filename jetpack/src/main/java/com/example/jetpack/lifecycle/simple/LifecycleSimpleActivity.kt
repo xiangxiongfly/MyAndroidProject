@@ -6,10 +6,9 @@ import android.os.Bundle
 import android.util.Log
 import androidx.lifecycle.*
 import com.example.jetpack.R
+import com.example.jetpack.LIFECYCLE
 import com.xiangxiongfly.common.base.BaseActivity
 import com.xiangxiongfly.common.base.KEY_TITLE
-
-const val TAG = "Lifecycle"
 
 class LifecycleSimpleActivity : BaseActivity() {
     companion object {
@@ -25,32 +24,32 @@ class LifecycleSimpleActivity : BaseActivity() {
         setContentView(R.layout.activity_lifecycle_simple)
         lifecycle.addObserver(MyObserver())
         lifecycle.addObserver(MyObserver2())
-        Log.e(TAG, "Activity onCreate")
+        Log.e(LIFECYCLE, "Activity onCreate")
     }
 
     override fun onStart() {
         super.onStart()
-        Log.e(TAG, "Activity onStart")
+        Log.e(LIFECYCLE, "Activity onStart")
     }
 
     override fun onResume() {
         super.onResume()
-        Log.e(TAG, "Activity onResume")
+        Log.e(LIFECYCLE, "Activity onResume")
     }
 
     override fun onPause() {
         super.onPause()
-        Log.e(TAG, "Activity onPause")
+        Log.e(LIFECYCLE, "Activity onPause")
     }
 
     override fun onStop() {
         super.onStop()
-        Log.e(TAG, "Activity onStop")
+        Log.e(LIFECYCLE, "Activity onStop")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.e(TAG, "Activity onDestroy")
+        Log.e(LIFECYCLE, "Activity onDestroy")
     }
 }
 
@@ -59,22 +58,22 @@ class MyObserver : LifecycleObserver {
 
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
     fun onInit() {
-        Log.e(TAG, "MyObserver 初始化")
+        Log.e(LIFECYCLE, "MyObserver 初始化")
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
     fun onConnect(owner: LifecycleOwner) {
-        Log.e(TAG, "MyObserver 建立连接")
+        Log.e(LIFECYCLE, "MyObserver 建立连接")
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
     fun onDisconnect(owner: LifecycleOwner) {
-        Log.e(TAG, "MyObserver 断开连接")
+        Log.e(LIFECYCLE, "MyObserver 断开连接")
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
     fun onRelease() {
-        Log.e(TAG, "MyObserver 释放")
+        Log.e(LIFECYCLE, "MyObserver 释放")
     }
 }
 
@@ -87,7 +86,7 @@ class MyObserver2 : DefaultLifecycleObserver {
     }
 
     private fun onInit() {
-        Log.e(TAG, "MyObserver2 初始化")
+        Log.e(LIFECYCLE, "MyObserver2 初始化")
     }
 
     override fun onResume(owner: LifecycleOwner) {
@@ -96,7 +95,7 @@ class MyObserver2 : DefaultLifecycleObserver {
     }
 
     private fun onConnect(owner: LifecycleOwner) {
-        Log.e(TAG, "MyObserver2 建立连接")
+        Log.e(LIFECYCLE, "MyObserver2 建立连接")
     }
 
     override fun onPause(owner: LifecycleOwner) {
@@ -105,7 +104,7 @@ class MyObserver2 : DefaultLifecycleObserver {
     }
 
     private fun onDisconnect(owner: LifecycleOwner) {
-        Log.e(TAG, "MyObserver2 断开连接")
+        Log.e(LIFECYCLE, "MyObserver2 断开连接")
     }
 
     override fun onDestroy(owner: LifecycleOwner) {
@@ -114,7 +113,7 @@ class MyObserver2 : DefaultLifecycleObserver {
     }
 
     private fun onRelease() {
-        Log.e(TAG, "MyObserver2 释放")
+        Log.e(LIFECYCLE, "MyObserver2 释放")
     }
 }
 

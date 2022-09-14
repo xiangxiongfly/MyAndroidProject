@@ -5,15 +5,15 @@ import android.content.Intent
 import android.os.Bundle
 import com.xiangxiongfly.common.base.BaseActivity
 
-class SecondActivity : BaseActivity() {
+class NextActivity : BaseActivity() {
     companion object {
         fun start(context: Context) {
-            context.startActivity(Intent(context, SecondActivity::class.java))
+            context.startActivity(Intent(context, NextActivity::class.java))
         }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_second)
+        setContentView(R.layout.activity_next)
     }
 }

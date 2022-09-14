@@ -4,12 +4,11 @@ import android.os.CountDownTimer
 import android.util.Log
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
+import com.example.jetpack.LIFECYCLE
 
 /**
  * 广告管理类
  */
-const val TAG = "Lifecycle"
-
 class AdvertisingManage2 : DefaultLifecycleObserver {
 
     private var mAdvertisingManageListener: AdvertisingManageListener? = null
@@ -17,12 +16,12 @@ class AdvertisingManage2 : DefaultLifecycleObserver {
     private var countDownTimer: CountDownTimer? =
         object : CountDownTimer(5000L, 1000L) {
             override fun onTick(millisUntilFinished: Long) {
-                Log.e(TAG, "广告剩余 ${millisUntilFinished / 1000L} 秒")
+                Log.e(LIFECYCLE, "广告剩余 ${millisUntilFinished / 1000L} 秒")
                 mAdvertisingManageListener?.time((millisUntilFinished / 1000L).toInt())
             }
 
             override fun onFinish() {
-                Log.e(TAG, "广告结束，跳转页面")
+                Log.e(LIFECYCLE, "广告结束，跳转页面")
                 mAdvertisingManageListener?.gotoActivity()
             }
         }
@@ -33,7 +32,7 @@ class AdvertisingManage2 : DefaultLifecycleObserver {
     }
 
     private fun start() {
-        Log.e(TAG, "开始计时")
+        Log.e(LIFECYCLE, "开始计时")
         countDownTimer?.start()
     }
 
@@ -46,7 +45,7 @@ class AdvertisingManage2 : DefaultLifecycleObserver {
      * 结束计时
      */
     private fun cancel() {
-        Log.e(TAG, "结束计时")
+        Log.e(LIFECYCLE, "结束计时")
         countDownTimer?.cancel()
         countDownTimer = null
     }

@@ -9,8 +9,8 @@ import android.widget.TextView
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LifecycleRegistry
+import com.example.jetpack.NextActivity
 import com.example.jetpack.R
-import com.example.jetpack.SecondActivity
 import com.example.jetpack.lifecycle.advertising2.AdvertisingManage2
 
 class LifecycleCustomActivity : Activity(), LifecycleOwner {
@@ -44,12 +44,12 @@ class LifecycleCustomActivity : Activity(), LifecycleOwner {
                 }
 
                 override fun gotoActivity() {
-                    SecondActivity.start(this@LifecycleCustomActivity)
+                    NextActivity.start(this@LifecycleCustomActivity)
                     finish()
                 }
             })
         btnEnter.setOnClickListener {
-            SecondActivity.start(this@LifecycleCustomActivity)
+            NextActivity.start(this@LifecycleCustomActivity)
             finish()
         }
     }

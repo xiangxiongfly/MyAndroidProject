@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import com.example.jetpack.R
-import com.example.jetpack.SecondActivity
+import com.example.jetpack.NextActivity
 import com.xiangxiongfly.common.base.BaseActivity
 
 
@@ -35,12 +35,12 @@ class AdvertisingActivity2 : BaseActivity() {
                 }
 
                 override fun gotoActivity() {
-                    SecondActivity.start(mContext)
+                    NextActivity.start(mContext)
                     finish()
                 }
             })
         btnEnter.setOnClickListener {
-            SecondActivity.start(mContext)
+            NextActivity.start(mContext)
             finish()
         }
     }
