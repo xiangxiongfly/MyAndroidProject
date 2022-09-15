@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.home.R
-import com.example.home.bean.User
+import com.xiangxiongfly.common.bean.User
 
 class UserAdapter(val mContext: Context, private var mList: ArrayList<User>) :
     RecyclerView.Adapter<UserAdapter.ViewHolder>() {

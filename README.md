@@ -14,4 +14,6 @@
 ## Jetpack
 
 - Lifecycle
+- ViewModel
+- LiveData
 

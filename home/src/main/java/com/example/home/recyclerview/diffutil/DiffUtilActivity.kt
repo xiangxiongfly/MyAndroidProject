@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.home.R
-import com.example.home.bean.User
+import com.xiangxiongfly.common.bean.User
 import com.xiangxiongfly.common.base.BaseActivity
 import com.xiangxiongfly.common.base.KEY_TITLE
 import com.xiangxiongfly.common.utils.logE

@@ -3,7 +3,10 @@
     package="com.example.jetpack">
 
     <application>
-        <activity android:name=".viewmodel.fragments.MenuActivity"></activity>
+        <activity android:name=".livedata.other.LiveDataOtherActivity"></activity>
+        <activity android:name=".livedata.simple.LiveDataSimpleActivity" />
+        <activity android:name=".livedata.LiveDataActivity" />
+        <activity android:name=".viewmodel.fragments.MenuActivity" />
         <activity android:name=".viewmodel.simple.ViewModelSimpleActivity" />
         <activity android:name=".viewmodel.ViewModelActivity" />
         <activity android:name=".lifecycle.dialog.LifecycleDialogActivity" />

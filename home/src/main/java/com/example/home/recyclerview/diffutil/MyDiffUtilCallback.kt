@@ -1,7 +1,7 @@
 package com.example.home.recyclerview.diffutil
 
 import androidx.recyclerview.widget.DiffUtil
-import com.example.home.bean.User
+import com.xiangxiongfly.common.bean.User
 
 class MyDiffUtilCallback(
     private val oldList: ArrayList<User>,
