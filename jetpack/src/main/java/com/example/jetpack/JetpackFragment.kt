@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import com.example.jetpack.lifecycle.LifecycleActivity
 import com.example.jetpack.livedata.LiveDataActivity
+import com.example.jetpack.viewbinding.ViewBindingActivity
 import com.example.jetpack.viewmodel.ViewModelActivity
 import com.google.android.flexbox.FlexboxLayout
 import com.xiangxiongfly.common.base.BaseActivity
@@ -60,6 +61,7 @@ class JetpackFragment : BaseFragment() {
         addElement("Lifecycle", LifecycleActivity::class)
         addElement("ViewModel", ViewModelActivity::class)
         addElement("LiveData", LiveDataActivity::class)
+        addElement("ViewBinding", ViewBindingActivity::class)
     }
 
     private fun addElement(title: String, activityClass: KClass<out BaseActivity>) {

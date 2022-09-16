@@ -3,7 +3,14 @@
     package="com.example.jetpack">
 
     <application>
-        <activity android:name=".livedata.other.LiveDataOtherActivity"></activity>
+        <activity android:name=".viewbinding.base2.TwoActivity" />
+        <activity android:name=".viewbinding.base.OneActivity" />
+        <activity android:name=".viewbinding.include.VBIncludeActivity" />
+        <activity android:name=".viewbinding.rv.RvActivity" />
+        <activity android:name=".viewbinding.simple.VBFragmentActivity" />
+        <activity android:name=".viewbinding.simple.VBActivity" />
+        <activity android:name=".viewbinding.ViewBindingActivity" />
+        <activity android:name=".livedata.other.LiveDataOtherActivity" />
         <activity android:name=".livedata.simple.LiveDataSimpleActivity" />
         <activity android:name=".livedata.LiveDataActivity" />
         <activity android:name=".viewmodel.fragments.MenuActivity" />
