@@ -17,10 +17,6 @@ open class BaseActivity : AppCompatActivity(), HandlerAction {
         LogUtils.e("TAG", this.javaClass.simpleName.toString())
         mContext = this
         mActivity = this
-        if (intent.hasExtra(KEY_TITLE)) {
-            val title = intent.getStringExtra(KEY_TITLE)
-            setTitle(title)
-        }
     }
 
     override fun onDestroy() {
