@@ -3,6 +3,7 @@
     package="com.example.jetpack">
 
     <application>
+        <activity android:name=".viewbinding.base3.ThreeActivity"></activity>
         <activity android:name=".viewbinding.base2.TwoActivity" />
         <activity android:name=".viewbinding.base.OneActivity" />
         <activity android:name=".viewbinding.include.VBIncludeActivity" />

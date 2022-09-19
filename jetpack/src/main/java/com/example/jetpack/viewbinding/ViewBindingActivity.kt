@@ -5,6 +5,7 @@ import android.view.View
 import com.example.jetpack.R
 import com.example.jetpack.viewbinding.base.OneActivity
 import com.example.jetpack.viewbinding.base2.TwoActivity
+import com.example.jetpack.viewbinding.base3.ThreeActivity
 import com.example.jetpack.viewbinding.include.VBIncludeActivity
 import com.example.jetpack.viewbinding.rv.RvActivity
 import com.example.jetpack.viewbinding.simple.VBActivity
@@ -39,5 +40,9 @@ class ViewBindingActivity : BaseActivity() {
 
     fun toBase2(v: View) {
         TwoActivity.start(this)
+    }
+
+    fun toBase3(v: View) {
+        ThreeActivity.start(this)
     }
 }
