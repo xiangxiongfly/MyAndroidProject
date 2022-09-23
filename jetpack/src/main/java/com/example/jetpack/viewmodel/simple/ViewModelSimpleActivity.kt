@@ -47,6 +47,26 @@ class ViewModelSimpleActivity : BaseActivity() {
         })
     }
 
+    override fun onStart() {
+        super.onStart()
+        Log.e(VIEWMODEL, "onStart")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.e(VIEWMODEL, "onResume")
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        Log.e(VIEWMODEL, "onSaveInstanceState")
+    }
+
+    override fun onRetainCustomNonConfigurationInstance(): Any? {
+        Log.e(VIEWMODEL, "onRetainCustomNonConfigurationInstance")
+        return super.onRetainCustomNonConfigurationInstance()
+    }
+
     private fun initView() {
         tvCount = findViewById(R.id.tv_count)
         tvScreen = findViewById(R.id.tv_screen)

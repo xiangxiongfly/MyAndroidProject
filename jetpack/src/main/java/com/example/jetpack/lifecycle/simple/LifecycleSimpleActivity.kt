@@ -5,12 +5,14 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.lifecycle.*
-import com.example.jetpack.R
 import com.example.jetpack.LIFECYCLE
+import com.example.jetpack.R
 import com.xiangxiongfly.common.base.BaseActivity
 import com.xiangxiongfly.common.base.KEY_TITLE
 
 class LifecycleSimpleActivity : BaseActivity() {
+    val customObserver = CustomObserver()
+
     companion object {
         fun start(context: Context) {
             context.startActivity(Intent(context, LifecycleSimpleActivity::class.java).apply {
@@ -22,38 +24,73 @@ class LifecycleSimpleActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lifecycle_simple)
+        customObserver.dispatchCreate()
         lifecycle.addObserver(MyObserver())
         lifecycle.addObserver(MyObserver2())
-        Log.e(LIFECYCLE, "Activity onCreate")
     }
 
     override fun onStart() {
         super.onStart()
-        Log.e(LIFECYCLE, "Activity onStart")
+        customObserver.dispatchStart()
     }
 
     override fun onResume() {
         super.onResume()
-        Log.e(LIFECYCLE, "Activity onResume")
+        customObserver.dispatchResume()
     }
 
     override fun onPause() {
         super.onPause()
-        Log.e(LIFECYCLE, "Activity onPause")
+        customObserver.dispatchPause()
     }
 
     override fun onStop() {
         super.onStop()
-        Log.e(LIFECYCLE, "Activity onStop")
+        customObserver.dispatchStop()
     }
 
     override fun onDestroy() {
         super.onDestroy()
+        customObserver.dispatchDestroy()
+    }
+}
+
+interface IObserver {
+    fun dispatchCreate()
+    fun dispatchStart()
+    fun dispatchResume()
+    fun dispatchPause()
+    fun dispatchStop()
+    fun dispatchDestroy()
+}
+
+class CustomObserver : IObserver {
+    override fun dispatchCreate() {
+        Log.e(LIFECYCLE, "Activity onCreate")
+    }
+
+    override fun dispatchStart() {
+        Log.e(LIFECYCLE, "Activity onStart")
+    }
+
+    override fun dispatchResume() {
+        Log.e(LIFECYCLE, "Activity onResume")
+    }
+
+    override fun dispatchPause() {
+        Log.e(LIFECYCLE, "Activity onPause")
+    }
+
+    override fun dispatchStop() {
+        Log.e(LIFECYCLE, "Activity onStop")
+    }
+
+    override fun dispatchDestroy() {
         Log.e(LIFECYCLE, "Activity onDestroy")
     }
 }
 
-//创建观察者方式一：
+//Lifecycle：创建观察者方式一：
 class MyObserver : LifecycleObserver {
 
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
@@ -77,7 +114,7 @@ class MyObserver : LifecycleObserver {
     }
 }
 
-//创建观察者方式二
+//Lifecycle：创建观察者方式二
 class MyObserver2 : DefaultLifecycleObserver {
 
     override fun onCreate(owner: LifecycleOwner) {
