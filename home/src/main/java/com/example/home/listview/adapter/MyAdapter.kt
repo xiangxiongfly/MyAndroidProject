@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import com.example.home.R
-import com.example.home.bean.Fruit
+import com.xiangxiongfly.common.bean.Fruit
 
 class MyAdapter(val mContext: Context, val mDatas: ArrayList<Fruit>) : BaseAdapter() {
 

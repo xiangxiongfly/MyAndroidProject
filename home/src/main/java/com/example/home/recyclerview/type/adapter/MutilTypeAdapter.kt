@@ -8,8 +8,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.home.R
-import com.example.home.bean.LeftFruit
-import com.example.home.bean.RightFruit
+import com.xiangxiongfly.common.bean.LeftFruit
+import com.xiangxiongfly.common.bean.RightFruit
 
 class MutilTypeAdapter(val mContext: Context, val mList: ArrayList<Any>) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {

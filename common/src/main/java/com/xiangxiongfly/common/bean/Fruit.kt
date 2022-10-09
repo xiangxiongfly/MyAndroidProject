@@ -1,4 +1,4 @@
-package com.example.home.bean
+package com.xiangxiongfly.common.bean
 
 data class Fruit(
     var fruitImage: Int,

@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.home.R
-import com.example.home.bean.Fruit
+import com.xiangxiongfly.common.bean.Fruit
 
 class FruitAdapter(val mContext: Context, private val mList: ArrayList<Fruit>) :
     RecyclerView.Adapter<FruitAdapter.ViewHolder>() {

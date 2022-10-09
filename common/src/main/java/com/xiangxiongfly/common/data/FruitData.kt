@@ -1,7 +1,7 @@
-package com.example.home.data
+package com.xiangxiongfly.common.data
 
-import com.example.home.R
-import com.example.home.bean.Fruit
+import com.xiangxiongfly.common.R
+import com.xiangxiongfly.common.bean.Fruit
 
 object FruitData {
 

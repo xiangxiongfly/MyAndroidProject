@@ -6,7 +6,7 @@ import android.os.Bundle
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.home.R
-import com.example.home.bean.Fruit
+import com.xiangxiongfly.common.bean.Fruit
 import com.example.home.recyclerview.simple.adapter.FruitAdapter
 import com.xiangxiongfly.common.base.BaseActivity
 import com.xiangxiongfly.common.base.KEY_TITLE

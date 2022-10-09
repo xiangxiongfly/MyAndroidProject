@@ -5,6 +5,9 @@ import com.xiangxiongfly.common.BuildConfig
 
 const val DEFAULT_TAG = "MyAndroid"
 
+/**
+ * 日志工作类
+ */
 object LogUtils {
     fun e(tag: String, msg: String) {
         if (BuildConfig.DEBUG) {

@@ -5,9 +5,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.ListView
 import com.example.home.R
-import com.example.home.bean.LeftFruit
-import com.example.home.bean.RightFruit
-import com.example.home.data.FruitData
+import com.xiangxiongfly.common.bean.LeftFruit
+import com.xiangxiongfly.common.bean.RightFruit
+import com.xiangxiongfly.common.data.FruitData
 import com.example.home.listview.adapter.MutilTypeAdapter
 import com.xiangxiongfly.common.base.BaseActivity
 import com.xiangxiongfly.common.base.KEY_TITLE

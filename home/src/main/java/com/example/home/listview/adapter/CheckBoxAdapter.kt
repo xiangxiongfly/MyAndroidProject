@@ -9,7 +9,7 @@ import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.home.R
-import com.example.home.bean.Fruit
+import com.xiangxiongfly.common.bean.Fruit
 
 class CheckBoxAdapter(val mContext: Context, val mList: ArrayList<Fruit>) : BaseAdapter() {
 

@@ -11,8 +11,8 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.home.R
-import com.example.home.bean.Fruit
-import com.example.home.data.FruitData
+import com.xiangxiongfly.common.bean.Fruit
+import com.xiangxiongfly.common.data.FruitData
 import com.example.home.recyclerview.divider.LinearItemDecoration
 import com.example.home.recyclerview.simple.adapter.FruitAdapter2
 import com.xiangxiongfly.common.base.BaseActivity
