@@ -1,5 +1,7 @@
 package com.example.jetpack.viewbinding.base3
 
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
@@ -21,6 +23,8 @@ class FragmentViewBindingDelegate1<VB : ViewBinding>(
 ) : ReadOnlyProperty<Fragment, VB> {
     private var viewBinding: VB? = null
 
+    private val mainHandler = Handler(Looper.getMainLooper())
+
     override fun getValue(thisRef: Fragment, property: KProperty<*>): VB {
         viewBinding?.let { return it }
 
@@ -35,7 +39,12 @@ class FragmentViewBindingDelegate1<VB : ViewBinding>(
             thisRef.viewLifecycleOwnerLiveData.observe(thisRef) { viewLifecycleOwner ->
                 viewLifecycleOwner.lifecycle.addObserver(object : DefaultLifecycleObserver {
                     override fun onDestroy(owner: LifecycleOwner) {
-                        viewBinding = null
+                        //说明：
+                        //Fragment的ViewLifecycleOwner通知更新Lifecycle的ON_DESTROY时机是发生在Fragment#onDestroyView()之前
+                        //因此，需要将主线程上的所有操作完后才能清理ViewBinding
+                        mainHandler.post {
+                            viewBinding = null
+                        }
                     }
                 })
             }
@@ -52,6 +61,8 @@ class FragmentViewBindingDelegate2<VB : ViewBinding>(
 
     private val bindMethod = clazz.getMethod("bind", View::class.java)
 
+    private val mainHandler = Handler(Looper.getMainLooper())
+
     override fun getValue(thisRef: Fragment, property: KProperty<*>): VB {
         viewBinding?.let { return it }
 
@@ -66,7 +77,9 @@ class FragmentViewBindingDelegate2<VB : ViewBinding>(
             thisRef.viewLifecycleOwnerLiveData.observe(thisRef) { viewLifecycleOwner ->
                 viewLifecycleOwner.lifecycle.addObserver(object : DefaultLifecycleObserver {
                     override fun onDestroy(owner: LifecycleOwner) {
-                        viewBinding = null
+                        mainHandler.post {
+                            viewBinding = null
+                        }
                     }
                 })
             }

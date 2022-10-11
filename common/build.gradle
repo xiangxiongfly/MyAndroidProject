@@ -67,8 +67,4 @@ dependencies {
     //ViewModel
     api "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
 
-    //ViewBinding扩展
-
-    api 'com.github.yogacp:android-viewbinding:1.0.4'
-
 }
