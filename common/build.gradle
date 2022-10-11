@@ -54,7 +54,6 @@ dependencies {
     //immersionbar
     api rootProject.ext.dependencies["immersionbar"]
 
-
     //ktx
     api rootProject.ext.dependencies["activity-ktx"]
     api rootProject.ext.dependencies["fragment-ktx"]
@@ -67,4 +66,9 @@ dependencies {
     api "androidx.lifecycle:lifecycle-process:$lifecycle_version"
     //ViewModel
     api "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+
+    //ViewBinding扩展
+
+    api 'com.github.yogacp:android-viewbinding:1.0.4'
+
 }

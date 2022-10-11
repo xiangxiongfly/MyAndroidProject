@@ -8,8 +8,10 @@ import com.example.jetpack.R
 import com.example.jetpack.databinding.ActivityThreeBinding
 import com.xiangxiongfly.common.base.BaseActivity
 
+
 class ThreeActivity : BaseActivity() {
-    private val viewBinding: ActivityThreeBinding by viewBinding(ActivityThreeBinding::inflate)
+//        private val viewBinding: ActivityThreeBinding by viewBindings(ActivityThreeBinding::inflate)
+    private val viewBinding: ActivityThreeBinding by viewBindings()
 
     companion object {
         fun start(context: Context) {
@@ -19,9 +21,8 @@ class ThreeActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(viewBinding.root)
         viewBinding.ivAvatar.setImageResource(R.mipmap.ic_launcher_round)
-        viewBinding.tvName.text = "小白"
+        viewBinding.tvName.text = "小白3"
         viewBinding.tvAge.text = 38.toString()
         viewBinding.btn.setOnClickListener {
             Toast.makeText(mContext, "hello3", Toast.LENGTH_SHORT).show()

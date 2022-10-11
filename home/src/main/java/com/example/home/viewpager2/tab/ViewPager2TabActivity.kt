@@ -11,7 +11,7 @@ import com.xiangxiongfly.common.base.BaseActivity
 import com.xiangxiongfly.common.base.KEY_TITLE
 import com.xiangxiongfly.common.fragment.TextFragment
 
-class TabActivity : BaseActivity() {
+class ViewPager2TabActivity : BaseActivity() {
     private lateinit var tabLayout: TabLayout
     private lateinit var viewPager2: ViewPager2
 
@@ -24,7 +24,7 @@ class TabActivity : BaseActivity() {
 
     companion object {
         fun start(context: Context) {
-            val intent = Intent(context, TabActivity::class.java).apply {
+            val intent = Intent(context, ViewPager2TabActivity::class.java).apply {
                 putExtra(KEY_TITLE, "ViewPager2+TabLayout+Fragment")
             }
             context.startActivity(intent)
@@ -33,7 +33,7 @@ class TabActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tab)
+        setContentView(R.layout.activity_view_pager2_tab)
         initView()
 
         // offscreenPageLimit默认不开启预加载

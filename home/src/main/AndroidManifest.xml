@@ -3,6 +3,7 @@
     package="com.example.home">
 
     <application>
+        <activity android:name=".drawable.DrawableActivity"></activity>
         <activity android:name=".span.SpanSearchActivity" />
         <activity android:name=".span.TextStyleActivity" />
         <activity android:name=".span.SpanSimpleActivity" />
@@ -36,7 +37,7 @@
         <activity android:name=".immersion.ImmersionActivity2" />
         <activity android:name=".immersion.ImmersionActivity1" />
         <activity android:name=".immersion.ImmersionActivity" />
-        <activity android:name=".viewpager2.tab.TabActivity" />
+        <activity android:name=".viewpager2.tab.ViewPager2TabActivity" />
         <activity android:name=".viewpager2.simple.ViewPager2SimpleActivity" />
         <activity android:name=".viewpager2.ViewPager2Activity" />
         <activity android:name=".viewpager.lazy.NewLazyActivity" />

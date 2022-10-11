@@ -5,7 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".viewpager2.tab.TabActivity">
+    tools:context=".drawable.DrawableActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/main_shape"
+        app:title="Drawable"
+        app:titleTextColor="@android:color/white" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
@@ -21,4 +28,5 @@
         android:id="@+id/viewPager2"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
 </LinearLayout>

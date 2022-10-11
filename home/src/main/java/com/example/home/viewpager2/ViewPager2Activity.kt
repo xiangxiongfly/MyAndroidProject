@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.View
 import com.example.home.R
 import com.example.home.viewpager2.simple.ViewPager2SimpleActivity
-import com.example.home.viewpager2.tab.TabActivity
+import com.example.home.viewpager2.tab.ViewPager2TabActivity
 import com.xiangxiongfly.common.base.BaseActivity
 
 class ViewPager2Activity : BaseActivity() {
@@ -18,6 +18,6 @@ class ViewPager2Activity : BaseActivity() {
         ViewPager2SimpleActivity.start(this)
     }
     fun tpTabVp(v: View) {
-        TabActivity.start(this)
+        ViewPager2TabActivity.start(this)
     }
 }
