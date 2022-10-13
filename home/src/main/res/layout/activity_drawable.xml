@@ -22,6 +22,7 @@
         app:tabIndicatorFullWidth="true"
         app:tabMode="auto"
         app:tabSelectedTextColor="#ff0000"
+        app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
         app:tabTextColor="@color/black" />
 
     <androidx.viewpager2.widget.ViewPager2

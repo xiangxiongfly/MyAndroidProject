@@ -35,7 +35,15 @@ class ViewPager2TabActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view_pager2_tab)
         initView()
+        initViewPager2()
+    }
 
+    private fun initView() {
+        tabLayout = findViewById(R.id.tabLayout)
+        viewPager2 = findViewById(R.id.viewPager2)
+    }
+
+    private fun initViewPager2() {
         // offscreenPageLimit默认不开启预加载
         // offscreenPageLimit设置为1表示缓存前一页，预加载下一页，包含当前页一共三页
         viewPager2.offscreenPageLimit = 1
@@ -49,10 +57,5 @@ class ViewPager2TabActivity : BaseActivity() {
                 }
             }
         ).attach()
-    }
-
-    private fun initView() {
-        tabLayout = findViewById(R.id.tabLayout)
-        viewPager2 = findViewById(R.id.viewPager2)
     }
 }

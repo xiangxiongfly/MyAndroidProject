@@ -26,9 +26,19 @@ import com.xiangxiongfly.common.base.BaseFragment
 import com.xiangxiongfly.common.widgets.navigation.BottomNavigation
 import com.xiangxiongfly.common.widgets.navigation.TabItem
 
-const val KEY_POSITION: String = "key_position"
 
 class MainActivity : BaseActivity() {
+
+    companion object {
+        const val KEY_POSITION: String = "key_position"
+        const val POSITION_HOME = 0
+        const val POSITION_JETPACK = 1
+
+        fun start(context: Context) {
+            context.startActivity(Intent(context, MainActivity::class.java))
+        }
+    }
+
     private lateinit var vpMain: ViewPager
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var bottomNavigation: BottomNavigation
@@ -36,16 +46,11 @@ class MainActivity : BaseActivity() {
     private lateinit var contentView: LinearLayout
     private lateinit var toolbar: Toolbar
 
-    private var currentPosition = 1
+    private var currentPosition = POSITION_HOME
 
     private val mTitles = arrayOf("首页", "Jetpack", "Others", "设置")
     private val mFragments = SparseArray<BaseFragment>()
 
-    companion object {
-        fun start(context: Context) {
-            context.startActivity(Intent(context, MainActivity::class.java))
-        }
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.AppTheme)
@@ -116,7 +121,8 @@ class MainActivity : BaseActivity() {
                         3 -> Log.i("TAG", "设置")
                     }
                 }
-            })
+            }
+        )
         bottomNavigation.setOnItemReselectedListener(
             object : BottomNavigation.OnItemReselectedListener {
                 override fun onItemReselected(tabItem: TabItem) {
@@ -127,7 +133,8 @@ class MainActivity : BaseActivity() {
                         3 -> Log.i("TAG", "设置2")
                     }
                 }
-            })
+            }
+        )
     }
 
     private fun initViewPager() {

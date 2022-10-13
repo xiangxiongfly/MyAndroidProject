@@ -11,7 +11,5 @@ class TabAdapter(
 ) : FragmentStateAdapter(fragmentActivity) {
     override fun getItemCount(): Int = fragmentList.size
 
-    override fun createFragment(position: Int): Fragment {
-        return fragmentList[position]
-    }
+    override fun createFragment(position: Int): Fragment = fragmentList[position]
 }

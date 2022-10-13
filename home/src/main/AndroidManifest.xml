@@ -3,7 +3,7 @@
     package="com.example.home">
 
     <application>
-        <activity android:name=".drawable.DrawableActivity"></activity>
+        <activity android:name=".drawable.DrawableActivity" />
         <activity android:name=".span.SpanSearchActivity" />
         <activity android:name=".span.TextStyleActivity" />
         <activity android:name=".span.SpanSimpleActivity" />

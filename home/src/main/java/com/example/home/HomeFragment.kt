@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import com.example.home.drawable.DrawableActivity
 import com.example.home.expandable_listview.ExpandableListViewActivity
 import com.example.home.immersion.ImmersionActivity
 import com.example.home.listview.ListViewActivity
@@ -69,6 +70,7 @@ class HomeFragment : BaseFragment() {
         addElement("ExpandableListView", ExpandableListViewActivity::class)
         addElement("RecyclerView", RecyclerViewActivity::class)
         addElement("SpannableString", SpannableStringActivity::class)
+        addElement("Drawable", DrawableActivity::class)
     }
 
     private fun addElement(title: String, activityClass: KClass<out BaseActivity>) {
