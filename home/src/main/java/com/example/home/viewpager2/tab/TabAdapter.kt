@@ -12,4 +12,8 @@ class TabAdapter(
     override fun getItemCount(): Int = fragmentList.size
 
     override fun createFragment(position: Int): Fragment = fragmentList[position]
+
+    override fun getItemId(position: Int): Long {
+        return fragmentList[position].hashCode().toLong()
+    }
 }

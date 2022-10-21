@@ -15,7 +15,7 @@ class ViewPager2TabActivity : BaseActivity() {
     private lateinit var tabLayout: TabLayout
     private lateinit var viewPager2: ViewPager2
 
-    private val titles = arrayOf("one", "two", "three", "four", "five", "six", "seven", "eight")
+    private val titles = arrayListOf("one", "two", "three", "four", "five", "six", "seven", "eight")
     private val fragmentList = arrayListOf<TextFragment>().apply {
         titles.forEachIndexed { index, s ->
             add(TextFragment.newInstance(s))
