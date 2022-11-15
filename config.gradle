@@ -1,5 +1,6 @@
-ext {
+ext.kotlin_version = "1.5.31"
 
+ext {
     android = [
             compileSdkVersion: 31,
             minSdkVersion    : 22,

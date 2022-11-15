@@ -13,6 +13,7 @@ import com.example.home.listview.ListViewActivity
 import com.example.home.recyclerview.RecyclerViewActivity
 import com.example.home.span.SpannableStringActivity
 import com.example.home.statusbar.StatusBarActivity
+import com.example.home.tablayout.TabLayoutActivity
 import com.example.home.viewpager.ViewPagerActivity
 import com.example.home.viewpager2.ViewPager2Activity
 import com.google.android.flexbox.FlexboxLayout
@@ -71,6 +72,7 @@ class HomeFragment : BaseFragment() {
         addElement("RecyclerView", RecyclerViewActivity::class)
         addElement("SpannableString", SpannableStringActivity::class)
         addElement("Drawable", DrawableActivity::class)
+        addElement("TabLayout", TabLayoutActivity::class)
     }
 
     private fun addElement(title: String, activityClass: KClass<out BaseActivity>) {

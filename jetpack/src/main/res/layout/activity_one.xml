@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context=".viewbinding.base.OneActivity">
+    tools:context=".viewbinding.base1.OneActivity">
 
     <TextView
         android:id="@+id/tv_name"

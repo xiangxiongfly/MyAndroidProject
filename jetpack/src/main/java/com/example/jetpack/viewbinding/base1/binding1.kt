@@ -1,4 +1,4 @@
-package com.example.jetpack.viewbinding.base
+package com.example.jetpack.viewbinding.base1
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -27,8 +27,8 @@ abstract class BindingActivity<VB : ViewBinding> : BaseActivity() {
 }
 
 abstract class BindingFragment<VB : ViewBinding> : BaseFragment() {
-    private lateinit var _viewBinding: VB
-    protected val mViewBinding get() = _viewBinding
+    private var _viewBinding: VB? = null
+    protected val mViewBinding get() = _viewBinding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -36,8 +36,13 @@ abstract class BindingFragment<VB : ViewBinding> : BaseFragment() {
         savedInstanceState: Bundle?
     ): View? {
         _viewBinding = getViewBinding(inflater, container)
-        return _viewBinding.root
+        return mViewBinding.root
     }
 
     abstract fun getViewBinding(inflater: LayoutInflater, container: ViewGroup?): VB
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _viewBinding = null
+    }
 }

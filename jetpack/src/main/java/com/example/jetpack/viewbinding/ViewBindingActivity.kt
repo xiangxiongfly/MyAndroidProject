@@ -3,7 +3,7 @@ package com.example.jetpack.viewbinding
 import android.os.Bundle
 import android.view.View
 import com.example.jetpack.R
-import com.example.jetpack.viewbinding.base.OneActivity
+import com.example.jetpack.viewbinding.base1.OneActivity
 import com.example.jetpack.viewbinding.base2.TwoActivity
 import com.example.jetpack.viewbinding.base3.ThreeActivity
 import com.example.jetpack.viewbinding.include.VBIncludeActivity

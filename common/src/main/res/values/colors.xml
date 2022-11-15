@@ -12,6 +12,8 @@
     <color name="pink">#FFFFC0CB</color>
     <color name="yellow">#FFFFFF00</color>
     <color name="green">#FF008000</color>
+    <color name="blue">#FF0000FF</color>
+    <color name="orange">#FFFF8C00</color>
 
     <color name="color_main">#008577</color>
     <color name="color_secondary">#69B056</color>

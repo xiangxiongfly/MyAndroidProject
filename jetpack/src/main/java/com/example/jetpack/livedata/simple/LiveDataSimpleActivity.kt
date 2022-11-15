@@ -12,6 +12,7 @@ import com.example.jetpack.LIVEDATA
 import com.example.jetpack.R
 import com.xiangxiongfly.common.base.BaseActivity
 
+
 class LiveDataSimpleActivity : BaseActivity() {
     private val viewModel: SimpleViewModel by viewModels()
 
@@ -25,6 +26,8 @@ class LiveDataSimpleActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_live_data_simple)
         val name: TextView = findViewById(R.id.name)
+
+        viewModel.liveData.setValue("hello world000")
 
         //创建观察者对象
         val observer = object : Observer<String> {
@@ -44,8 +47,8 @@ class LiveDataSimpleActivity : BaseActivity() {
     }
 
     fun sendMessage(v: View) {
-//        viewModel.liveData.setValue("hello world")
-        viewModel.liveData.postValue("hello world")
+        viewModel.liveData.setValue("hello world")
+//        viewModel.liveData.postValue("hello world")
     }
 
     override fun onStart() {
@@ -55,23 +58,24 @@ class LiveDataSimpleActivity : BaseActivity() {
 
     override fun onResume() {
         super.onResume()
-        viewModel.liveData.setValue("onResume") //活跃状态，会通知观察者
+//        viewModel.liveData.setValue("onResume") //活跃状态，会通知观察者
 
 //        Log.e(LIVEDATA,"onResume 是否有观察者：${viewModel.liveData.hasObservers()}")
     }
 
     override fun onPause() {
         super.onPause()
-        viewModel.liveData.setValue("onPause") //活跃状态，会通知观察者
+//        viewModel.liveData.setValue("onPause") //活跃状态，会通知观察者
     }
 
     override fun onStop() {
         super.onStop()
-        viewModel.liveData.setValue("onStop") //非活跃状态，不会通知观察者
+//        viewModel.liveData.setValue("onStop") //非活跃状态，不会通知观察者
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        viewModel.liveData.setValue("onDestroy") //非活跃状态，不会通知观察者
+//        viewModel.liveData.setValue("onDestroy") //非活跃状态，不会通知观察者
     }
+
 }

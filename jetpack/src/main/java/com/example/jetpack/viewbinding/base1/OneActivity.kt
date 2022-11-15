@@ -1,4 +1,4 @@
-package com.example.jetpack.viewbinding.base
+package com.example.jetpack.viewbinding.base1
 
 import android.content.Context
 import android.content.Intent
