@@ -9,9 +9,11 @@
 - [ListView](https://blog.csdn.net/qq_14876133/article/details/88656319)
 - [ExpandableListView](https://blog.csdn.net/qq_14876133/article/details/88656319)
 - [RecyclerView](https://blog.csdn.net/qq_14876133/article/details/112094700)
-- [SpannableString](https://blog.csdn.net/qq_14876133/article/details/81019084)、[搜索关键字变色](https://blog.csdn.net/qq_14876133/article/details/126745473)、[文字跳动效果](https://blog.csdn.net/qq_14876133/article/details/81019354)
+- [SpannableString](https://blog.csdn.net/qq_14876133/article/details/81019084)
+    - [搜索关键字变色](https://blog.csdn.net/qq_14876133/article/details/126745473)
+    - [文字跳动效果](https://blog.csdn.net/qq_14876133/article/details/81019354)
 - [Drawable](https://blog.csdn.net/qq_14876133/article/details/127268623)
-- TabLayout
+- [TabLayout](https://blog.csdn.net/qq_14876133/article/details/127844487)
 
 ## Jetpack
 

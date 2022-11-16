@@ -1,7 +1,6 @@
 package com.example.setting
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -43,7 +42,7 @@ class SettingFragment : BaseFragment() {
         tvTitle = view.findViewById(R.id.tv_title)
         tvTitle.text = mTitle
         tvTitle.setOnClickListener {
-            tvTitle.text = mTitle + "改变了"
+            tvTitle.text = mTitle + "点击了"
         }
     }
 }

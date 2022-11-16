@@ -1,11 +1,14 @@
 package com.example.home
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
+import android.widget.TextView
+import androidx.core.content.ContextCompat
+import com.example.home.bottom_sheet.BottomSheetActivity
 import com.example.home.drawable.DrawableActivity
 import com.example.home.expandable_listview.ExpandableListViewActivity
 import com.example.home.immersion.ImmersionActivity
@@ -65,6 +68,7 @@ class HomeFragment : BaseFragment() {
         flexboxLayout.removeAllViews()
         addElement("ViewPager", ViewPagerActivity::class)
         addElement("ViewPager2", ViewPager2Activity::class)
+        addElement("BottomSheet", BottomSheetActivity::class)
         addElement("状态栏的使用", StatusBarActivity::class)
         addElement("沉浸式状态栏", ImmersionActivity::class)
         addElement("ListView", ListViewActivity::class)
@@ -76,20 +80,13 @@ class HomeFragment : BaseFragment() {
     }
 
     private fun addElement(title: String, activityClass: KClass<out BaseActivity>) {
-//        val button = Button(context)
-//        button.text = title
-//        button.isAllCaps = false
-//        button.setOnClickListener {
-//            val intent = Intent(context, activityClass.java)
-//            intent.putExtra(KEY_TITLE, title)
-//            startActivity(intent)
-//        }
-//        flexboxLayout.addView(button)
-
         flexboxLayout.addView(
-            Button(context).apply {
+            TextView(context).apply {
+                background = ContextCompat.getDrawable(mContext, R.drawable.home_shape)
+                setTextColor(Color.BLACK)
                 text = title
                 isAllCaps = false
+                textSize = 18F
                 setOnClickListener {
                     startActivity(Intent(context, activityClass.java).apply {
                         putExtra(KEY_TITLE, title)

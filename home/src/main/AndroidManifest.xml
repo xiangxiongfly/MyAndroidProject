@@ -2,10 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.home">
 
-    <application
-        android:name="com.xiangxiongfly.common.base.BaseApp"
-        android:theme="@style/AppTheme">
-        <activity android:name=".tablayout.TabLayoutActivity"/>
+    <application>
+        <activity android:name=".bottom_sheet.BottomSheetActivity" />
+        <activity android:name=".tablayout.TabLayoutActivity" />
         <activity android:name=".drawable.DrawableActivity" />
         <activity android:name=".span.SpanSearchActivity" />
         <activity android:name=".span.TextStyleActivity" />

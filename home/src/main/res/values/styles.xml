@@ -10,4 +10,20 @@
         <item name="android:textStyle">normal</item>
         <item name="textAllCaps">false</item>
     </style>
+
+    <!--  BottomSheetDialog圆角效果  -->
+    <style name="MyBottomSheetDialogStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/bottomSheetStyleWrapper</item>
+    </style>
+
+    <style name="bottomSheetStyleWrapper" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <!--  BottomSheetDialog圆角效果、背景无阴影  -->
+    <style name="MyBottomSheetDialogBgStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/bottomSheetStyleWrapper</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
 </resources>
