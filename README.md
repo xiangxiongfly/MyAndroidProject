@@ -14,6 +14,7 @@
     - [文字跳动效果](https://blog.csdn.net/qq_14876133/article/details/81019354)
 - [Drawable](https://blog.csdn.net/qq_14876133/article/details/127268623)
 - [TabLayout](https://blog.csdn.net/qq_14876133/article/details/127844487)
+- [BottomSheet](https://blog.csdn.net/qq_14876133/article/details/127882057)
 
 ## Jetpack
 
