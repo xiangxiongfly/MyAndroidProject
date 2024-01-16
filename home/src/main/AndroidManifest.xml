@@ -24,13 +24,6 @@
         <activity android:name=".listview.SimpleAdapterActivity" />
         <activity android:name=".listview.ArrayAdapterActivity" />
         <activity android:name=".listview.ListViewActivity" />
-        <activity android:name=".statusbar.StatusBarActivity3" />
-        <activity
-            android:name=".statusbar.StatusBarActivity2"
-            android:exported="true"
-            android:theme="@style/AppTheme.Transparent" />
-        <activity android:name=".statusbar.StatusBarActivity1" />
-        <activity android:name=".statusbar.StatusBarActivity" />
         <activity
             android:name=".immersion.ImmersionActivity5"
             android:theme="@style/AppTheme.Transparent" />

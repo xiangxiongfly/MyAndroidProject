@@ -2,9 +2,7 @@
 <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:id="@+id/root"
     android:layout_height="match_parent"
-    android:background="@drawable/light_image"
-    tools:context=".statusbar.StatusBarActivity2" >
-</ImageView>
+    android:background="@drawable/image"
+    tools:context=".operate_status_bar.OperateStatusBar1Activity" />
 
