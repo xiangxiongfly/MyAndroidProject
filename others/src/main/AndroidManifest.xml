@@ -2,4 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.others">
 
+    <application>
+        <activity android:name=".permissions.TwoActivity"></activity>
+        <activity android:name=".permissions.PermissionActivity" />
+    </application>
+
 </manifest>

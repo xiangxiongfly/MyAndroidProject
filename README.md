@@ -22,3 +22,7 @@
 - [ViewModel](https://blog.csdn.net/qq_14876133/article/details/114832205)
 - [LiveData](https://blog.csdn.net/qq_14876133/article/details/114806356)
 - [ViewBinding](https://blog.csdn.net/qq_14876133/article/details/114888889)
+
+## Others
+
+- [权限](https://blog.csdn.net/qq_14876133/article/details/135747680)

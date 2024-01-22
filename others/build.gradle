@@ -30,7 +30,7 @@ android {
         jvmTarget = '1.8'
     }
     //防止资源冲突
-    resourcePrefix "${name}_"
+//    resourcePrefix "${name}_"
 }
 
 dependencies {

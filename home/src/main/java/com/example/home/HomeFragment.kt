@@ -1,13 +1,9 @@
 package com.example.home
 
-import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.core.content.ContextCompat
 import com.example.home.bottom_sheet.BottomSheetActivity
 import com.example.home.drawable.DrawableActivity
 import com.example.home.expandable_listview.ExpandableListViewActivity
@@ -19,31 +15,15 @@ import com.example.home.tablayout.TabLayoutActivity
 import com.example.home.viewpager.ViewPagerActivity
 import com.example.home.viewpager2.ViewPager2Activity
 import com.google.android.flexbox.FlexboxLayout
-import com.xiangxiongfly.common.base.BaseActivity
 import com.xiangxiongfly.common.base.BaseFragment
-import com.xiangxiongfly.common.base.KEY_TITLE
-import kotlin.reflect.KClass
+import com.xiangxiongfly.common.exts.addElement
 
 class HomeFragment : BaseFragment() {
     private lateinit var flexboxLayout: FlexboxLayout
 
-    private var mTitle: String? = null
-
     companion object {
         @JvmStatic
-        fun newInstance(title: String) =
-            HomeFragment().apply {
-                arguments = Bundle().apply {
-                    putString(KEY_TITLE, title)
-                }
-            }
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            mTitle = it.getString(KEY_TITLE)
-        }
+        fun newInstance(title: String) = HomeFragment()
     }
 
     override fun onCreateView(
@@ -55,42 +35,30 @@ class HomeFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        initView(view)
+        initViews(view)
         addElements()
     }
 
-    private fun initView(view: View) {
+    private fun initViews(view: View) {
         flexboxLayout = view.findViewById(R.id.flexboxLayout)
     }
 
     private fun addElements() {
         flexboxLayout.removeAllViews()
-        addElement("ViewPager", ViewPagerActivity::class)
-        addElement("ViewPager2", ViewPager2Activity::class)
-        addElement("BottomSheet", BottomSheetActivity::class)
-        addElement("沉浸式状态栏", ImmersionActivity::class)
-        addElement("ListView", ListViewActivity::class)
-        addElement("ExpandableListView", ExpandableListViewActivity::class)
-        addElement("RecyclerView", RecyclerViewActivity::class)
-        addElement("SpannableString", SpannableStringActivity::class)
-        addElement("Drawable", DrawableActivity::class)
-        addElement("TabLayout", TabLayoutActivity::class)
+        flexboxLayout.addElement(mContext, "ViewPager", ViewPagerActivity::class.java)
+        flexboxLayout.addElement(mContext, "ViewPager2", ViewPager2Activity::class.java)
+        flexboxLayout.addElement(mContext, "BottomSheet", BottomSheetActivity::class.java)
+        flexboxLayout.addElement(mContext, "沉浸式状态栏", ImmersionActivity::class.java)
+        flexboxLayout.addElement(mContext, "ListView", ListViewActivity::class.java)
+        flexboxLayout.addElement(
+            mContext,
+            "ExpandableListView",
+            ExpandableListViewActivity::class.java
+        )
+        flexboxLayout.addElement(mContext, "RecyclerView", RecyclerViewActivity::class.java)
+        flexboxLayout.addElement(mContext, "SpannableString", SpannableStringActivity::class.java)
+        flexboxLayout.addElement(mContext, "Drawable", DrawableActivity::class.java)
+        flexboxLayout.addElement(mContext, "TabLayout", TabLayoutActivity::class.java)
     }
 
-    private fun addElement(title: String, activityClass: KClass<out BaseActivity>) {
-        flexboxLayout.addView(
-            TextView(context).apply {
-                background = ContextCompat.getDrawable(mContext, R.drawable.home_shape)
-                setTextColor(Color.BLACK)
-                text = title
-                isAllCaps = false
-                textSize = 18F
-                setOnClickListener {
-                    startActivity(Intent(context, activityClass.java).apply {
-                        putExtra(KEY_TITLE, title)
-                    })
-                }
-            }
-        )
-    }
 }
