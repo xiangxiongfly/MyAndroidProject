@@ -24,14 +24,6 @@
         <activity android:name=".listview.SimpleAdapterActivity" />
         <activity android:name=".listview.ArrayAdapterActivity" />
         <activity android:name=".listview.ListViewActivity" />
-        <activity
-            android:name=".immersion.ImmersionActivity5"
-            android:theme="@style/AppTheme.Transparent" />
-        <activity android:name=".immersion.ImmersionActivity4" />
-        <activity android:name=".immersion.ImmersionActivity3" />
-        <activity android:name=".immersion.ImmersionActivity2" />
-        <activity android:name=".immersion.ImmersionActivity1" />
-        <activity android:name=".immersion.ImmersionActivity" />
         <activity android:name=".viewpager2.tab.ViewPager2TabActivity" />
         <activity android:name=".viewpager2.simple.ViewPager2SimpleActivity" />
         <activity android:name=".viewpager2.ViewPager2Activity" />

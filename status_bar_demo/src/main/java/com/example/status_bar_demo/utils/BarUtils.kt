@@ -19,7 +19,6 @@ import androidx.core.content.ContextCompat
  */
 object BarUtils {
 
-//<editor-fold desc="全屏设置">
     /**
      * 刘海屏适配
      */
@@ -102,9 +101,7 @@ object BarUtils {
     fun showNavigationBar(activity: Activity) {
         activity.window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_VISIBLE
     }
-//</editor-fold>
 
-//<editor-fold desc="状态栏颜色">
     /**
      * 修改状态栏颜色
      */
@@ -136,9 +133,7 @@ object BarUtils {
         activity.window.decorView.systemUiVisibility =
             flags xor View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
     }
-//</editor-fold>
 
-//<editor-fold desc="辅助">
     /**
      * 获取状态栏高度
      */
@@ -179,6 +174,5 @@ object BarUtils {
         }
         return false
     }
-//</editor-fold>
 }
 

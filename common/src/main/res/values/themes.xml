@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- App主题 -->
     <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
@@ -25,21 +25,10 @@
         <item name="android:windowTranslucentNavigation">true</item>
     </style>
 
-    <!-- 全屏主题 -->
-    <style name="FullScreenTheme" parent="AppTheme">
-        <item name="android:windowFullscreen">true</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
-    </style>
-
     <!-- 透明状态栏主题 -->
     <style name="AppTheme.Transparent" parent="AppTheme">
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 
-    <!--  无标题栏主题  -->
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
 
 </resources>

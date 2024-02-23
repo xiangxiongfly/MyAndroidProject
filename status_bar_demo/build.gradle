@@ -29,9 +29,6 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    buildFeatures {
-        viewBinding = true
-    }
 }
 
 dependencies {
@@ -49,4 +46,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     implementation 'com.github.liangjingkanji:StatusBar:2.0.5'
+    implementation 'androidx.palette:palette:1.0.0'
 }

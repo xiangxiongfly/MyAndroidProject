@@ -1,4 +1,4 @@
-package com.example.home.immersion
+package com.example.status_bar_demo.immersion_status_bar
 
 import android.content.Context
 import android.content.Intent
@@ -10,21 +10,17 @@ import android.widget.ImageView
 import androidx.annotation.DrawableRes
 import androidx.core.graphics.ColorUtils
 import androidx.palette.graphics.Palette
-import com.example.home.R
-import com.xiangxiongfly.common.base.BaseActivity
-import com.xiangxiongfly.common.base.KEY_TITLE
-import com.xiangxiongfly.common.utils.ScreenUtils
-import com.xiangxiongfly.common.utils.StatusBarUtils
+import com.example.status_bar_demo.R
+import com.example.status_bar_demo.base.BaseActivity
+import com.example.status_bar_demo.utils.BarUtils
+import com.example.status_bar_demo.utils.ScreenUtils
 
-class ImmersionActivity5 : BaseActivity() {
+class Immersion5Activity : BaseActivity() {
     private lateinit var imageView: ImageView
 
     companion object {
-        fun start(context: Context) {
-            val intent = Intent(context, ImmersionActivity5::class.java).apply {
-                putExtra(KEY_TITLE, "区分状态栏图标颜色和背景图颜色")
-            }
-            context.startActivity(intent)
+        fun actionStart(context: Context) {
+            context.startActivity(Intent(context, Immersion5Activity::class.java))
         }
     }
 
@@ -58,7 +54,7 @@ class ImmersionActivity5 : BaseActivity() {
         val left = 0
         val top = 0
         val right = ScreenUtils.getScreenWidth(this)
-        val bottom = StatusBarUtils.getStatusBarHeight(this)
+        val bottom = BarUtils.getStatusBarHeight(this)
 
         Palette.from(bitmap)
             .maximumColorCount(colorCount)
@@ -78,9 +74,9 @@ class ImmersionActivity5 : BaseActivity() {
                     mostPopularSwatch?.let { swatch ->
                         val luminance = ColorUtils.calculateLuminance(swatch.rgb)
                         if (luminance < 0.5) {
-                            StatusBarUtils.setDarkStatusBar(mActivity)
+                            BarUtils.setDarkStatusBar(this@Immersion5Activity)
                         } else {
-                            StatusBarUtils.setLightStatusBar(mActivity)
+                            BarUtils.setLightStatusBar(this@Immersion5Activity)
                         }
                     }
                 }

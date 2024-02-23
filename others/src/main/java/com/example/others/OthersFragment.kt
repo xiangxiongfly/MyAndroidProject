@@ -40,7 +40,7 @@ class OthersFragment : BaseFragment() {
 
     private fun addElements() {
         flexboxLayout.removeAllViews()
-        flexboxLayout.addElement(mContext, "Permissions", PermissionActivity::class.java)
+        flexboxLayout.addElement(mContext, "Permissions封装", PermissionActivity::class.java)
     }
 
 }

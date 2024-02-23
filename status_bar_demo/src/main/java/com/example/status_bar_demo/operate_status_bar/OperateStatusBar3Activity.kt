@@ -1,5 +1,7 @@
 package com.example.status_bar_demo.operate_status_bar
 
+import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
@@ -9,6 +11,12 @@ import com.example.status_bar_demo.base.BaseActivity
 import com.example.status_bar_demo.utils.BarUtils
 
 class OperateStatusBar3Activity : BaseActivity() {
+    companion object {
+        fun actionStart(context: Context) {
+            context.startActivity(Intent(context, OperateStatusBar3Activity::class.java))
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_operate_status_bar3)

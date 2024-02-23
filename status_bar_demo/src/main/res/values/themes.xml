@@ -20,8 +20,10 @@
         <item name="windowActionBar">false</item>
         <!--   是否显示标题栏     -->
         <item name="windowNoTitle">true</item>
-        <!--   是否全屏显示     -->
+        <!--   是否全屏显示，会隐藏状态栏和导航栏    -->
         <item name="android:windowFullscreen">true</item>
+        <!--   无窗口内容覆盖   -->
+        <item name="android:windowContentOverlay">@null</item>
         <!--   设置状态栏颜色     -->
         <item name="android:statusBarColor">@android:color/transparent</item>
         <!--   导航栏是否是半透明     -->
@@ -37,6 +39,17 @@
         <item name="android:statusBarColor">@android:color/transparent</item>
         <!--   导航栏是否是半透明     -->
         <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="NoActionBarTheme" parent="Theme.MyStatusBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="TransparentTheme" parent="Theme.MyStatusBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 
 </resources>

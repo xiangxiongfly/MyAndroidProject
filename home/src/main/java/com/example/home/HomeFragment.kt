@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import com.example.home.bottom_sheet.BottomSheetActivity
 import com.example.home.drawable.DrawableActivity
 import com.example.home.expandable_listview.ExpandableListViewActivity
-import com.example.home.immersion.ImmersionActivity
 import com.example.home.listview.ListViewActivity
 import com.example.home.recyclerview.RecyclerViewActivity
 import com.example.home.span.SpannableStringActivity
@@ -48,7 +47,6 @@ class HomeFragment : BaseFragment() {
         flexboxLayout.addElement(mContext, "ViewPager", ViewPagerActivity::class.java)
         flexboxLayout.addElement(mContext, "ViewPager2", ViewPager2Activity::class.java)
         flexboxLayout.addElement(mContext, "BottomSheet", BottomSheetActivity::class.java)
-        flexboxLayout.addElement(mContext, "沉浸式状态栏", ImmersionActivity::class.java)
         flexboxLayout.addElement(mContext, "ListView", ListViewActivity::class.java)
         flexboxLayout.addElement(
             mContext,

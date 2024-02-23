@@ -4,8 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f00"
     android:fitsSystemWindows="true"
-    tools:context=".immersion.ImmersionActivity3">
+    tools:context=".immersion_status_bar.Immersion3Activity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hello" />
 
     <com.google.android.material.appbar.CollapsingToolbarLayout
         android:layout_width="match_parent"
@@ -17,13 +23,6 @@
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
             android:scaleType="fitXY"
-            android:src="@drawable/dark_image" />
-
+            android:src="@mipmap/ic_launcher" />
     </com.google.android.material.appbar.CollapsingToolbarLayout>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="hello" />
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
