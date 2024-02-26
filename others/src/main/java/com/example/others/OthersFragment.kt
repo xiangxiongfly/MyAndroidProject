@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.others.network.NetworkActivity
 import com.example.others.permissions.PermissionActivity
 import com.google.android.flexbox.FlexboxLayout
 import com.xiangxiongfly.common.base.BaseFragment
@@ -15,10 +16,6 @@ class OthersFragment : BaseFragment() {
     companion object {
         @JvmStatic
         fun newInstance(title: String) = OthersFragment()
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
     }
 
     override fun onCreateView(
@@ -41,6 +38,7 @@ class OthersFragment : BaseFragment() {
     private fun addElements() {
         flexboxLayout.removeAllViews()
         flexboxLayout.addElement(mContext, "Permissions封装", PermissionActivity::class.java)
+        flexboxLayout.addElement(mContext, "监听网络状态变化工具类", NetworkActivity::class.java)
     }
 
 }

@@ -3,8 +3,8 @@
     package="com.example.others">
 
     <application>
-        <activity android:name=".permissions.TwoActivity"></activity>
+        <activity android:name=".network.NetworkActivity" />
+        <activity android:name=".permissions.TwoActivity" />
         <activity android:name=".permissions.PermissionActivity" />
     </application>
-
 </manifest>

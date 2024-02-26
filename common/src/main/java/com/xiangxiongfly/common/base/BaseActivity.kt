@@ -10,13 +10,11 @@ const val KEY_TITLE = "title"
 
 open class BaseActivity : AppCompatActivity(), HandlerAction {
     protected lateinit var mContext: Context
-    protected lateinit var mActivity: AppCompatActivity
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         LogUtils.e("TAG", this.javaClass.simpleName.toString())
         mContext = this
-        mActivity = this
     }
 
     override fun onDestroy() {
