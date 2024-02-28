@@ -12,10 +12,10 @@
             <solid android:color="@color/color_secondary" />
             <corners android:radius="2dp" />
             <padding
-                android:bottom="4dp"
+                android:bottom="6dp"
                 android:left="8dp"
                 android:right="8dp"
-                android:top="4dp" />
+                android:top="6dp" />
         </shape>
     </item>
 </layer-list>

@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.home.bottom_sheet.BottomSheetActivity
+import com.example.home.dialog.DialogActivity
 import com.example.home.drawable.DrawableActivity
 import com.example.home.expandable_listview.ExpandableListViewActivity
 import com.example.home.listview.ListViewActivity
@@ -44,6 +45,7 @@ class HomeFragment : BaseFragment() {
 
     private fun addElements() {
         flexboxLayout.removeAllViews()
+        flexboxLayout.addElement(mContext, "Dialog", DialogActivity::class.java)
         flexboxLayout.addElement(mContext, "ViewPager", ViewPagerActivity::class.java)
         flexboxLayout.addElement(mContext, "ViewPager2", ViewPager2Activity::class.java)
         flexboxLayout.addElement(mContext, "BottomSheet", BottomSheetActivity::class.java)

@@ -2,6 +2,7 @@
 
 ## 基本控件
 
+- [Dialog](https://blog.csdn.net/qq_14876133/article/details/81837253)
 - [ViewPager](https://blog.csdn.net/qq_14876133/article/details/88575494)
 - [ViewPager2](https://blog.csdn.net/qq_14876133/article/details/114083166)
 - [状态栏使用总结](https://blog.csdn.net/qq_14876133/article/details/126411006)
