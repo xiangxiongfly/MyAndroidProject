@@ -17,7 +17,7 @@ import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.example.home.HomeFragment
 import com.example.jetpack.JetpackFragment
-import com.example.others.OthersFragment
+import com.example.tools.ToolsFragment
 import com.example.setting.SettingFragment
 import com.google.android.material.navigation.NavigationView
 import com.gyf.immersionbar.ImmersionBar
@@ -33,6 +33,7 @@ class MainActivity : BaseActivity() {
         const val KEY_POSITION: String = "key_position"
         const val POSITION_HOME = 0
         const val POSITION_JETPACK = 1
+        const val POSITION_TOOLS = 2
 
         fun start(context: Context) {
             context.startActivity(Intent(context, MainActivity::class.java))
@@ -46,9 +47,9 @@ class MainActivity : BaseActivity() {
     private lateinit var contentView: LinearLayout
     private lateinit var toolbar: Toolbar
 
-    private var currentPosition = POSITION_HOME
+    private var currentPosition = POSITION_TOOLS
 
-    private val mTitles = arrayOf("首页", "Jetpack", "Others", "设置")
+    private val mTitles = arrayOf("首页", "Jetpack", "工具", "设置")
     private val mFragments = SparseArray<BaseFragment>()
 
 
@@ -182,7 +183,7 @@ class MainActivity : BaseActivity() {
         return when (position) {
             0 -> HomeFragment.newInstance(mTitles[position])
             1 -> JetpackFragment.newInstance(mTitles[position])
-            2 -> OthersFragment.newInstance(mTitles[position])
+            2 -> ToolsFragment.newInstance(mTitles[position])
             3 -> SettingFragment.newInstance(mTitles[position])
             else -> throw IllegalArgumentException("错误Fragment")
         }

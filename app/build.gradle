@@ -59,7 +59,7 @@ dependencies {
     implementation project(path: ':common')
     implementation project(path: ':jetpack')
     implementation project(path: ':home')
-    implementation project(path: ':others')
+    implementation project(path: ':tools')
     implementation project(path: ':setting')
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
