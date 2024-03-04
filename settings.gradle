@@ -1,8 +1,8 @@
 rootProject.name = "MyAndroid"
-include ':app'
 include ':common'
-include ':home'
-include ':jetpack'
-include ':tools'
-include ':setting'
+include ':app'
+include ':module:home'
+include ':module:jetpack'
+include ':module:tools'
+include ':module:setting'
 include ':status_bar_demo'

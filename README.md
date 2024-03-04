@@ -24,7 +24,7 @@
 - [LiveData](https://blog.csdn.net/qq_14876133/article/details/114806356)
 - [ViewBinding](https://blog.csdn.net/qq_14876133/article/details/114888889)
 
-## Others
+## Tools
 
 - [Dialog封装](https://blog.csdn.net/qq_14876133/article/details/81012388)
 - [Permission封装](https://blog.csdn.net/qq_14876133/article/details/135747680)

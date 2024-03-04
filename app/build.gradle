@@ -56,12 +56,9 @@ android {
 }
 
 dependencies {
-    implementation project(path: ':common')
-    implementation project(path: ':jetpack')
-    implementation project(path: ':home')
-    implementation project(path: ':tools')
-    implementation project(path: ':setting')
-    testImplementation 'junit:junit:4.+'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation project(path: '::common')
+    implementation project(path: ':module:jetpack')
+    implementation project(path: ':module:home')
+    implementation project(path: ':module:tools')
+    implementation project(path: ':module:setting')
 }
