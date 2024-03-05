@@ -54,7 +54,7 @@ class DialogActivity : BaseActivity() {
     }
 
     fun showTip(view: View) {
-        TipDialog.Build(mContext)
+        TipsDialog.Build(mContext)
             .show(2000L)
     }
 }

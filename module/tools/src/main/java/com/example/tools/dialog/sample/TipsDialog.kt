@@ -7,8 +7,13 @@ import com.example.tools.dialog.base.ViewHolder
 import com.xiangxiongfly.common.action.HandlerAction
 import com.xiangxiongfly.common.action.HandlerAction.Companion.HANDLER
 
-class TipDialog : HandlerAction {
-    class Build(context: Context) : BaseDialog.Builder(context, R.layout.tools_dialog_tip) {
+class TipsDialog : HandlerAction {
+    class Build(context: Context) : BaseDialog.Builder(context, R.layout.tools_dialog_tips) {
+        init {
+            setCanceledOnTouchOutside(false)
+            setCancelable(false)
+        }
+
         override fun convertView(viewHolder: ViewHolder, dialog: BaseDialog) {
         }
 

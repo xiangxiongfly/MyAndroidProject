@@ -2,6 +2,7 @@ package com.example.tools.dialog.base
 
 import android.app.Activity
 import android.content.Context
+import android.content.DialogInterface
 import android.os.Bundle
 import android.view.*
 import android.widget.FrameLayout
@@ -47,6 +48,12 @@ class BaseDialog(context: Context, private val params: DialogParams) :
         }
         setCanceledOnTouchOutside(params.mCanceledOnTouchOutside) //点击外部区域是否取消
         setCancelable(params.mCancelable) //按返回键是否取消
+        params.mOnShowListener?.let {
+            setOnShowListener(it)
+        }
+        params.mOnDismissListener.let {
+            setOnDismissListener(it)
+        }
     }
 
     class DialogParams {
@@ -64,6 +71,9 @@ class BaseDialog(context: Context, private val params: DialogParams) :
 
         @StyleRes
         var mAnimationStyle: Int = -1
+
+        var mOnShowListener: DialogInterface.OnShowListener? = null
+        var mOnDismissListener: DialogInterface.OnDismissListener? = null
     }
 
     abstract class Builder(val context: Context, @LayoutRes layoutResId: Int) {
@@ -83,7 +93,7 @@ class BaseDialog(context: Context, private val params: DialogParams) :
             mActivity = getActivity(context)
         }
 
-        fun getActivity(context: Context): Activity? {
+        protected fun getActivity(context: Context): Activity? {
             if (context is Activity) {
                 return context
             }
@@ -93,7 +103,7 @@ class BaseDialog(context: Context, private val params: DialogParams) :
         /**
          * 是否显示背景暗淡度
          */
-        fun setDimEnable(enable: Boolean): Builder {
+        protected fun setDimEnable(enable: Boolean): Builder {
             params.mDimEnabled = enable
             return this
         }
@@ -101,7 +111,7 @@ class BaseDialog(context: Context, private val params: DialogParams) :
         /**
          * 设置背景暗淡度
          */
-        fun setDimAmount(@FloatRange(from = 0.0, to = 1.0) dimAmount: Float): Builder {
+        protected fun setDimAmount(@FloatRange(from = 0.0, to = 1.0) dimAmount: Float): Builder {
             params.mDimAmount = dimAmount
             return this
         }
@@ -109,7 +119,7 @@ class BaseDialog(context: Context, private val params: DialogParams) :
         /**
          * 设置显示位置
          */
-        fun setGravity(gravity: Int): Builder {
+        protected fun setGravity(gravity: Int): Builder {
             params.mGravity = gravity
             return this
         }
@@ -117,12 +127,12 @@ class BaseDialog(context: Context, private val params: DialogParams) :
         /**
          * 设置宽高
          */
-        fun setWidth(width: Int): Builder {
+        protected fun setWidth(width: Int): Builder {
             params.mWidth = width
             return this
         }
 
-        fun setHeight(height: Int): Builder {
+        protected fun setHeight(height: Int): Builder {
             params.mHeight = height
             return this
         }
@@ -130,7 +140,7 @@ class BaseDialog(context: Context, private val params: DialogParams) :
         /**
          * 设置左右空白
          */
-        fun setHorizontalGap(gap: Int): Builder {
+        protected fun setHorizontalGap(gap: Int): Builder {
             params.mGap = gap
             return this
         }
@@ -138,7 +148,7 @@ class BaseDialog(context: Context, private val params: DialogParams) :
         /**
          * 动画
          */
-        fun setAnimationStyle(@StyleRes animationStyle: Int): Builder {
+        protected fun setAnimationStyle(@StyleRes animationStyle: Int): Builder {
             params.mAnimationStyle = animationStyle
             return this
         }
@@ -146,7 +156,7 @@ class BaseDialog(context: Context, private val params: DialogParams) :
         /**
          * 点击外部区域是否隐藏
          */
-        fun setCanceledOnTouchOutside(cancel: Boolean): Builder {
+        protected fun setCanceledOnTouchOutside(cancel: Boolean): Builder {
             params.mCanceledOnTouchOutside = cancel
             return this
         }
@@ -154,8 +164,24 @@ class BaseDialog(context: Context, private val params: DialogParams) :
         /**
          * 点击返回按钮是否隐藏
          */
-        fun setCancelable(cancelable: Boolean): Builder {
+        protected fun setCancelable(cancelable: Boolean): Builder {
             params.mCancelable = cancelable
+            return this
+        }
+
+        /**
+         * 设置显示监听
+         */
+        protected fun setOnShowListener(onShowListener: DialogInterface.OnShowListener): Builder {
+            params.mOnShowListener = onShowListener
+            return this
+        }
+
+        /**
+         * 设置隐藏监听
+         */
+        protected fun setOnDismissListener(onDismissListener: DialogInterface.OnDismissListener): Builder {
+            params.mOnDismissListener = onDismissListener
             return this
         }
 
@@ -167,12 +193,12 @@ class BaseDialog(context: Context, private val params: DialogParams) :
         }
 
         // Dialog是否被创建
-        fun isCreatedDialog(): Boolean {
+        private fun isCreatedDialog(): Boolean {
             return mDialog != null
         }
 
         // Dialog是否显示
-        fun isShowing(): Boolean {
+        private fun isShowing(): Boolean {
             if (mDialog != null && mDialog!!.isShowing) {
                 return true
             }

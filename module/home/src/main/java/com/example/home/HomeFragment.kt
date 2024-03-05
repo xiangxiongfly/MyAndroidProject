@@ -9,6 +9,7 @@ import com.example.home.dialog.DialogActivity
 import com.example.home.drawable.DrawableActivity
 import com.example.home.expandable_listview.ExpandableListViewActivity
 import com.example.home.listview.ListViewActivity
+import com.example.home.popupwindow.PopupWindowActivity
 import com.example.home.recyclerview.RecyclerViewActivity
 import com.example.home.span.SpannableStringActivity
 import com.example.home.tablayout.TabLayoutActivity
@@ -46,6 +47,7 @@ class HomeFragment : BaseFragment() {
     private fun addElements() {
         flexboxLayout.removeAllViews()
         flexboxLayout.addElement(mContext, "Dialog", DialogActivity::class.java)
+        flexboxLayout.addElement(mContext, "PopupWindow", PopupWindowActivity::class.java)
         flexboxLayout.addElement(mContext, "ViewPager", ViewPagerActivity::class.java)
         flexboxLayout.addElement(mContext, "ViewPager2", ViewPager2Activity::class.java)
         flexboxLayout.addElement(mContext, "BottomSheet", BottomSheetActivity::class.java)

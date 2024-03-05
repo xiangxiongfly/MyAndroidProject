@@ -17,8 +17,8 @@ import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.example.home.HomeFragment
 import com.example.jetpack.JetpackFragment
-import com.example.tools.ToolsFragment
 import com.example.setting.SettingFragment
+import com.example.tools.ToolsFragment
 import com.google.android.material.navigation.NavigationView
 import com.gyf.immersionbar.ImmersionBar
 import com.xiangxiongfly.common.base.BaseActivity
@@ -47,7 +47,7 @@ class MainActivity : BaseActivity() {
     private lateinit var contentView: LinearLayout
     private lateinit var toolbar: Toolbar
 
-    private var currentPosition = POSITION_TOOLS
+    private var currentPosition = POSITION_HOME
 
     private val mTitles = arrayOf("首页", "Jetpack", "工具", "设置")
     private val mFragments = SparseArray<BaseFragment>()

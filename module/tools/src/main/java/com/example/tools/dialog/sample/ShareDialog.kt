@@ -10,9 +10,12 @@ import com.example.tools.dialog.base.ViewHolder
 class ShareDialog {
 
     class Builder(context: Context) : BaseDialog.Builder(context, R.layout.tools_dialog_share) {
-        override fun convertView(viewHolder: ViewHolder, dialog: BaseDialog) {
+        init {
             setGravity(Gravity.BOTTOM)
             setAnimationStyle(R.style.DialogAnim)
+        }
+
+        override fun convertView(viewHolder: ViewHolder, dialog: BaseDialog) {
             viewHolder.setOnClickListener(R.id.tv_weixin_share, object : View.OnClickListener {
                 override fun onClick(v: View?) {
                     dialog.dismiss()
