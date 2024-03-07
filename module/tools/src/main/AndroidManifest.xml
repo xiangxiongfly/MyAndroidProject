@@ -3,10 +3,11 @@
     package="com.example.tools">
 
     <application>
-        <activity android:name="com.example.tools.dialog.DialogActivity" />
-        <activity android:name="com.example.tools.network.NetworkActivity" />
-        <activity android:name="com.example.tools.permissions.TwoActivity" />
-        <activity android:name="com.example.tools.permissions.PermissionActivity" />
+        <activity android:name=".popupwindow.PopupWindowActivity"></activity>
+        <activity android:name=".dialog.DialogActivity" />
+        <activity android:name=".network.NetworkActivity" />
+        <activity android:name=".permissions.TwoActivity" />
+        <activity android:name=".permissions.PermissionActivity" />
     </application>
 
 </manifest>

@@ -14,8 +14,8 @@ import com.xiangxiongfly.common.base.BaseActivity
 import com.xiangxiongfly.common.utils.dp2px
 
 class PopupWindowActivity : BaseActivity() {
-    private lateinit var btnShare: Button
     private lateinit var root: View
+    private lateinit var btnShare: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

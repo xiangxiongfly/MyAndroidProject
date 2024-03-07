@@ -27,6 +27,7 @@
 
 ## Tools
 
-- [Dialog封装](https://blog.csdn.net/qq_14876133/article/details/81012388)
-- [Permission封装](https://blog.csdn.net/qq_14876133/article/details/135747680)
+- [封装Dialog](https://blog.csdn.net/qq_14876133/article/details/81012388)
+- [封装PopupWindow](https://blog.csdn.net/qq_14876133/article/details/81018545)
+- [封装Permission](https://blog.csdn.net/qq_14876133/article/details/135747680)
 - [监听网络状态变化](https://blog.csdn.net/qq_14876133/article/details/136301889)
