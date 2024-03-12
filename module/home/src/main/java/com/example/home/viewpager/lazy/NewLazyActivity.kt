@@ -9,7 +9,6 @@ import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.example.home.R
 import com.xiangxiongfly.common.base.BaseActivity
-import com.xiangxiongfly.common.base.KEY_TITLE
 import com.xiangxiongfly.common.fragment.TextFragment
 
 /**
@@ -29,9 +28,8 @@ class NewLazyActivity : BaseActivity() {
     )
 
     companion object {
-        fun start(context: Context) {
+        fun actionStart(context: Context) {
             val intent = Intent(context, NewLazyActivity::class.java)
-            intent.putExtra(KEY_TITLE, "ViewPager懒加载(新方案)")
             context.startActivity(intent)
         }
     }

@@ -10,7 +10,6 @@ import androidx.viewpager.widget.ViewPager
 import com.example.home.R
 import com.google.android.material.tabs.TabLayout
 import com.xiangxiongfly.common.base.BaseActivity
-import com.xiangxiongfly.common.base.KEY_TITLE
 import com.xiangxiongfly.common.fragment.TextFragment
 
 class TabVpActivity : BaseActivity() {
@@ -25,9 +24,8 @@ class TabVpActivity : BaseActivity() {
     }
 
     companion object {
-        fun start(context: Context) {
+        fun actionStart(context: Context) {
             val intent = Intent(context, TabVpActivity::class.java)
-            intent.putExtra(KEY_TITLE, "ViewPager+TabLayout+Fragment")
             context.startActivity(intent)
         }
     }
@@ -49,22 +47,23 @@ class TabVpActivity : BaseActivity() {
         viewPager.adapter = adapter
         tabLayout.setupWithViewPager(viewPager)
     }
+
+    class MyAdapter(
+        fm: FragmentManager,
+        val titles: Array<String>,
+        val fragmentList: ArrayList<TextFragment>
+    ) : FragmentPagerAdapter(fm) {
+        override fun getCount(): Int {
+            return titles.size
+        }
+
+        override fun getItem(position: Int): Fragment {
+            return fragmentList[position]
+        }
+
+        override fun getPageTitle(position: Int): CharSequence? {
+            return titles[position]
+        }
+    }
 }
 
-class MyAdapter(
-    fm: FragmentManager,
-    val titles: Array<String>,
-    val fragmentList: ArrayList<TextFragment>
-) : FragmentPagerAdapter(fm) {
-    override fun getCount(): Int {
-        return titles.size
-    }
-
-    override fun getItem(position: Int): Fragment {
-        return fragmentList[position]
-    }
-
-    override fun getPageTitle(position: Int): CharSequence? {
-        return titles[position]
-    }
-}

@@ -38,4 +38,10 @@
         android:onClick="toNewLazy"
         android:text="ViewPager+Fragment懒加载（新方案）" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="toNoScrollViewPager"
+        android:text="NoScrollViewPager" />
+
 </LinearLayout>

@@ -1,7 +1,6 @@
 package com.example.home.viewpager.lazy
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -48,6 +47,6 @@ class TestFragment : LazyBaseFragment() {
     }
 
     override fun loadData() {
-        description.text = "$param1 \n ${System.currentTimeMillis()}"
+        postDelayed({ description.text = "$param1 \n ${System.currentTimeMillis()}" }, 1000L)
     }
 }

@@ -15,7 +15,6 @@ import com.example.home.viewpager.transformer.DepthPageTransformer
 import com.example.home.viewpager.transformer.RotateTransformer
 import com.example.home.viewpager.transformer.ScaleTransformer
 import com.xiangxiongfly.common.base.BaseActivity
-import com.xiangxiongfly.common.base.KEY_TITLE
 import com.xiangxiongfly.common.utils.dp2px
 import java.util.*
 
@@ -36,9 +35,8 @@ class ViewPagerSimpleActivity : BaseActivity() {
     private var distance = 0
 
     companion object {
-        fun start(context: Context) {
+        fun actionStart(context: Context) {
             val intent = Intent(context, ViewPagerSimpleActivity::class.java)
-            intent.putExtra(KEY_TITLE, "ViewPager基本使用")
             context.startActivity(intent)
         }
     }

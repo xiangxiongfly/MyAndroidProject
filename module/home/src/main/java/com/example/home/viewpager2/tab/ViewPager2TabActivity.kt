@@ -23,7 +23,7 @@ class ViewPager2TabActivity : BaseActivity() {
     }
 
     companion object {
-        fun start(context: Context) {
+        fun actionStart(context: Context) {
             val intent = Intent(context, ViewPager2TabActivity::class.java).apply {
                 putExtra(KEY_TITLE, "ViewPager2+TabLayout+Fragment")
             }

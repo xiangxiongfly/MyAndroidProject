@@ -3,7 +3,8 @@
     package="com.example.home">
 
     <application>
-        <activity android:name=".popupwindow.PopupWindowActivity"></activity>
+        <activity android:name=".viewpager.no_scroll.NoScrollVpActivity"></activity>
+        <activity android:name=".popupwindow.PopupWindowActivity" />
         <activity android:name=".dialog.DialogActivity" />
         <activity android:name=".bottom_sheet.BottomSheetActivity" />
         <activity android:name=".tablayout.TabLayoutActivity" />

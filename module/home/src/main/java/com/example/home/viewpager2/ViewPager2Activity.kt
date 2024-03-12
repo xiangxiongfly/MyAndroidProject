@@ -14,10 +14,11 @@ class ViewPager2Activity : BaseActivity() {
         setContentView(R.layout.activity_view_pager2)
     }
 
-    fun toViewPager2(v: View) {
-        ViewPager2SimpleActivity.start(this)
+    fun toViewPager2(view: View) {
+        ViewPager2SimpleActivity.actionStart(this)
     }
-    fun tpTabVp(v: View) {
-        ViewPager2TabActivity.start(this)
+
+    fun tpTabVp(view: View) {
+        ViewPager2TabActivity.actionStart(this)
     }
 }

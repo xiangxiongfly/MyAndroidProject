@@ -47,7 +47,7 @@ class MainActivity : BaseActivity() {
     private lateinit var contentView: LinearLayout
     private lateinit var toolbar: Toolbar
 
-    private var currentPosition = POSITION_TOOLS
+    private var currentPosition = POSITION_HOME
 
     private val mTitles = arrayOf("首页", "Jetpack", "工具", "设置")
     private val mFragments = SparseArray<BaseFragment>()

@@ -8,9 +8,9 @@ import android.widget.TextView
 import com.xiangxiongfly.common.R
 import com.xiangxiongfly.common.base.BaseFragment
 
-class SimpleFragment : BaseFragment() {
+class SimpleFragment private constructor() : BaseFragment() {
     private lateinit var textView: TextView
-    private var title: String? = null
+    private var param: String? = null
 
     companion object {
         private const val ARG_PARAM = "param"
@@ -27,7 +27,7 @@ class SimpleFragment : BaseFragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            title = it.getString(ARG_PARAM)
+            param = it.getString(ARG_PARAM)
         }
     }
 
@@ -41,10 +41,6 @@ class SimpleFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         textView = view.findViewById(R.id.textView)
-    }
-
-    override fun onResume() {
-        super.onResume()
-        textView.text = "$title"
+        textView.text = "$param"
     }
 }

@@ -25,7 +25,7 @@ class ViewPager2SimpleActivity : BaseActivity() {
         intArrayOf(R.drawable.a, R.drawable.b, R.drawable.c, R.drawable.d, R.drawable.e)
 
     companion object {
-        fun start(context: Context) {
+        fun actionStart(context: Context) {
             val intent = Intent(context, ViewPager2SimpleActivity::class.java).apply {
                 putExtra(KEY_TITLE, "ViewPager2基本使用")
             }
