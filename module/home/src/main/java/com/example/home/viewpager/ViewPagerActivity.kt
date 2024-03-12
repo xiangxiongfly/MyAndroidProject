@@ -5,7 +5,7 @@ import android.view.View
 import com.example.home.R
 import com.example.home.viewpager.lazy.LazyActivity
 import com.example.home.viewpager.lazy.NewLazyActivity
-import com.example.home.viewpager.no_scroll.NoScrollVpActivity
+import com.example.home.viewpager.no_scroll_vp.NoScrollVpActivity
 import com.example.home.viewpager.simple.ViewPagerSimpleActivity
 import com.example.home.viewpager.tab.TabVpActivity
 import com.xiangxiongfly.common.base.BaseActivity

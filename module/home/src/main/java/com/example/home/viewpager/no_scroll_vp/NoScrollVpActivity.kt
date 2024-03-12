@@ -1,4 +1,4 @@
-package com.example.home.viewpager.no_scroll
+package com.example.home.viewpager.no_scroll_vp
 
 import android.content.Context
 import android.content.Intent
