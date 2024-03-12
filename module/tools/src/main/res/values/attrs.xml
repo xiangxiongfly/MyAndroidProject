@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 设置item -->
+    <declare-styleable name="SettingItem">
+        <!-- 左边 -->
+        <attr name="item_leftText" format="string" />
+        <attr name="item_leftTextColor" format="color" />
+        <attr name="item_leftTextSize" format="dimension" />
+        <attr name="item_leftDrawable" format="reference" />
+        <attr name="item_leftDrawablePadding" format="dimension" />
+        <attr name="item_leftDrawableSize" format="dimension" />
+        <!-- 右边 -->
+        <attr name="item_rightText" format="string" />
+        <attr name="item_rightTextColor" format="color" />
+        <attr name="item_rightTextSize" format="dimension" />
+        <attr name="item_rightDrawable" format="reference" />
+        <attr name="item_rightDrawablePadding" format="dimension" />
+        <attr name="item_rightDrawableSize" format="dimension" />
+        <!-- 分割线 -->
+        <attr name="item_lineVisible" format="boolean" />
+        <attr name="item_lineDrawable" format="color|reference" />
+        <attr name="item_lineWidth" format="dimension" />
+        <attr name="item_lineMargin" format="dimension" />
+    </declare-styleable>
+</resources>

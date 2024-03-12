@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F4"
+    android:orientation="vertical"
+    tools:context=".setting_item.SettingItemActivity">
+
+    <com.example.tools.setting_item.layout.SettingItem
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:item_leftDrawable="@drawable/ic_arrows_left"
+        app:item_leftText="设置1"
+        app:item_rightDrawable="@drawable/ic_arrows_right"
+        app:item_rightText="设置2" />
+
+    <com.example.tools.setting_item.layout.SettingItem
+        android:id="@+id/setting_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:item_leftText="关于我们"
+        app:item_lineMargin="15dp"
+        app:item_lineVisible="true"
+        app:item_lineWidth="2dp"
+        app:item_rightDrawable="@drawable/ic_arrows_right" />
+
+    <com.example.tools.setting_item.layout.SettingItem
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_leftText="关于我们2"
+        app:item_rightDrawable="@drawable/ic_arrows_right" />
+
+    <com.example.tools.setting_item.layout.SettingItem
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:item_leftDrawable="@drawable/icon_smile"
+        app:item_leftDrawablePadding="5dp"
+        app:item_leftDrawableSize="30dp"
+        app:item_leftText="清空缓存"
+        app:item_rightDrawable="@drawable/ic_arrows_right" />
+
+    <com.example.tools.setting_item.layout.SettingItem
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:item_leftText="请输入">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:hint="请输入相关信息"
+            android:textSize="14sp" />
+    </com.example.tools.setting_item.layout.SettingItem>
+
+    <com.example.tools.setting_item.layout.SettingItem
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:item_leftText="退出登录"
+        app:item_leftTextColor="#F00"
+        app:item_leftTextSize="18sp" />
+
+</LinearLayout>

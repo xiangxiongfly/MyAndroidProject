@@ -3,7 +3,8 @@
     package="com.example.tools">
 
     <application>
-        <activity android:name=".popupwindow.PopupWindowActivity"></activity>
+        <activity android:name=".setting_item.SettingItemActivity"></activity>
+        <activity android:name=".popupwindow.PopupWindowActivity" />
         <activity android:name=".dialog.DialogActivity" />
         <activity android:name=".network.NetworkActivity" />
         <activity android:name=".permissions.TwoActivity" />
