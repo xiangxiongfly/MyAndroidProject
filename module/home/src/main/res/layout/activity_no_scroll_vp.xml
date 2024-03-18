@@ -35,7 +35,7 @@
             android:text="第三个" />
     </LinearLayout>
 
-    <com.example.home.viewpager.no_scroll_vp.NoScrollViewPager
+    <com.xiangxiongfly.common.widgets.layout.NoScrollViewPager
         android:id="@+id/no_scroll_vp"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

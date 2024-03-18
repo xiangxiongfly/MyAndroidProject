@@ -5,6 +5,20 @@
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
     </configurations>
   </component>
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/MyWorksapce/android/MyAndroid/common/src/main/res/layout/item_text.xml" value="0.20104166666666667" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/module/home/src/main/res/layout/activity_view_pager.xml" value="0.2898148148148148" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/module/home/src/main/res/layout/activity_wrap_view_pager.xml" value="0.3536458333333333" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/module/home/src/main/res/layout/item_pager.xml" value="0.3375" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/module/home/src/main/res/layout/item_right_fruit.xml" value="0.3536458333333333" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/module/home/src/main/res/layout/item_user.xml" value="0.3536458333333333" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/module/home/src/main/res/layout/layout_child.xml" value="0.3536458333333333" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/module/jetpack/src/main/res/layout/title_bar.xml" value="0.3536458333333333" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

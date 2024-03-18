@@ -8,6 +8,7 @@ import com.example.home.viewpager.lazy.NewLazyActivity
 import com.example.home.viewpager.no_scroll_vp.NoScrollVpActivity
 import com.example.home.viewpager.simple.ViewPagerSimpleActivity
 import com.example.home.viewpager.tab.TabVpActivity
+import com.example.home.viewpager.wrap_vp.WrapViewPagerActivity
 import com.xiangxiongfly.common.base.BaseActivity
 
 class ViewPagerActivity : BaseActivity() {
@@ -35,5 +36,9 @@ class ViewPagerActivity : BaseActivity() {
 
     fun toNoScrollViewPager(view: View) {
         NoScrollVpActivity.actionStart(this)
+    }
+
+    fun toWrapViewPager(view: View) {
+        WrapViewPagerActivity.actionStart(this)
     }
 }

@@ -1,4 +1,4 @@
-package com.example.home.viewpager.no_scroll_vp
+package com.xiangxiongfly.common.widgets.layout
 
 import android.content.Context
 import android.util.AttributeSet
