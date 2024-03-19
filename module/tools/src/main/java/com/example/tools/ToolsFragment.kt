@@ -9,6 +9,7 @@ import com.example.tools.network.NetworkActivity
 import com.example.tools.permissions.PermissionActivity
 import com.example.tools.popupwindow.PopupWindowActivity
 import com.example.tools.setting_item.SettingItemActivity
+import com.example.tools.state_layout.StateLayoutActivity
 import com.google.android.flexbox.FlexboxLayout
 import com.xiangxiongfly.common.base.BaseFragment
 import com.xiangxiongfly.common.exts.addElement
@@ -45,6 +46,7 @@ class ToolsFragment : BaseFragment() {
         flexboxLayout.addElement(mContext, "封装Permissions", PermissionActivity::class.java)
         flexboxLayout.addElement(mContext, "监听网络状态变化", NetworkActivity::class.java)
         flexboxLayout.addElement(mContext, "封装设置item", SettingItemActivity::class.java)
+        flexboxLayout.addElement(mContext, "封装加载页", StateLayoutActivity::class.java)
     }
 
 }

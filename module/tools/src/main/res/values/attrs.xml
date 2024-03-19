@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- 设置item -->
+    <!-- 设置条item -->
     <declare-styleable name="SettingItem">
         <!-- 左边 -->
         <attr name="item_leftText" format="string" />
@@ -22,4 +22,12 @@
         <attr name="item_lineWidth" format="dimension" />
         <attr name="item_lineMargin" format="dimension" />
     </declare-styleable>
+
+    <!--加载页-->
+    <declare-styleable name="StateLayout">
+        <attr name="empty_layout" format="reference" />
+        <attr name="loading_layout" format="reference" />
+        <attr name="error_layout" format="reference" />
+    </declare-styleable>
+
 </resources>
