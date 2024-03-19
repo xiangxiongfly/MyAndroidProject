@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.tools.dialog.DialogActivity
+import com.example.tools.eventbus.EventBusActivity
 import com.example.tools.network.NetworkActivity
 import com.example.tools.permissions.PermissionActivity
 import com.example.tools.popupwindow.PopupWindowActivity
@@ -41,12 +42,13 @@ class ToolsFragment : BaseFragment() {
 
     private fun addElements() {
         flexboxLayout.removeAllViews()
+        flexboxLayout.addElement(mContext, "封装EventBus", EventBusActivity::class.java)
         flexboxLayout.addElement(mContext, "封装Dialog", DialogActivity::class.java)
         flexboxLayout.addElement(mContext, "封装PopupWindow", PopupWindowActivity::class.java)
         flexboxLayout.addElement(mContext, "封装Permissions", PermissionActivity::class.java)
         flexboxLayout.addElement(mContext, "监听网络状态变化", NetworkActivity::class.java)
-        flexboxLayout.addElement(mContext, "封装设置item", SettingItemActivity::class.java)
-        flexboxLayout.addElement(mContext, "封装加载页", StateLayoutActivity::class.java)
+        flexboxLayout.addElement(mContext, "SettingItem设置条", SettingItemActivity::class.java)
+        flexboxLayout.addElement(mContext, "StateLayout状态页", StateLayoutActivity::class.java)
     }
 
 }

@@ -3,6 +3,8 @@
     package="com.example.tools">
 
     <application>
+        <activity android:name=".eventbus.PostActivity" />
+        <activity android:name=".eventbus.EventBusActivity" />
         <activity android:name=".state_layout.StateLayoutActivity" />
         <activity android:name=".setting_item.SettingItemActivity" />
         <activity android:name=".popupwindow.PopupWindowActivity" />
