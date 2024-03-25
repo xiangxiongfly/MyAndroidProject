@@ -8,6 +8,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/MyWorksapce/android/MyAndroid/common/src/main/res/drawable/ic_arrows_left.xml" value="0.3365" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/common/src/main/res/drawable/tips_warning_ic.xml" value="0.3365" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/common/src/main/res/layout/item_text.xml" value="0.20104166666666667" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/module/home/src/main/res/layout/activity_view_pager.xml" value="0.2898148148148148" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/module/home/src/main/res/layout/activity_wrap_view_pager.xml" value="0.3536458333333333" />
@@ -20,6 +22,7 @@
         <entry key="..\:/MyWorksapce/android/MyAndroid/module/tools/src/main/res/layout/activity_event_bus.xml" value="0.23049001814882034" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/module/tools/src/main/res/layout/activity_post.xml" value="0.3109375" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/module/tools/src/main/res/layout/activity_state_layout.xml" value="0.3536458333333333" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/module/tools/src/main/res/layout/activity_title_bar.xml" value="0.3536458333333333" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/module/tools/src/main/res/layout/activity_two.xml" value="0.3536458333333333" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/module/tools/src/main/res/layout/fragment_post.xml" value="0.3536458333333333" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/module/tools/src/main/res/layout/state_empty.xml" value="0.3536458333333333" />

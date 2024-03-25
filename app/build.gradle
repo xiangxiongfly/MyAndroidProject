@@ -4,31 +4,43 @@ plugins {
 }
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
 
     defaultConfig {
-        applicationId "com.xiangxiongfly.myandroid"
-        minSdkVersion 22
-        targetSdkVersion 31
-        versionCode 1
-        versionName "1.0"
+        applicationId rootProject.ext.android["applicationId"]
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     //签名信息
     signingConfigs {
+//        release {
+//            storeFile file('../sign/MyAndroid.jks')
+//            storePassword '123456'
+//            keyAlias 'app'
+//            keyPassword '123456'
+//        }
+//        debug {
+//            storeFile file('../sign/MyAndroid.jks')
+//            storePassword '123456'
+//            keyAlias 'app'
+//            keyPassword '123456'
+//        }
         release {
-            storeFile file('MyAndroid.jks')
-            storePassword '123456'
-            keyAlias 'app'
-            keyPassword '123456'
+            storeFile file(KEY_PATH)
+            storePassword KEY_PASSWORD
+            keyAlias ALIAS_NAME
+            keyPassword ALIAS_PASSWORD
         }
         debug {
-            storeFile file('MyAndroid.jks')
-            storePassword '123456'
-            keyAlias 'app'
-            keyPassword '123456'
+            storeFile file(KEY_PATH)
+            storePassword KEY_PASSWORD
+            keyAlias ALIAS_NAME
+            keyPassword ALIAS_PASSWORD
         }
     }
 

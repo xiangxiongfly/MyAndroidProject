@@ -3,6 +3,7 @@
     package="com.example.tools">
 
     <application>
+        <activity android:name=".titlebar.TitleBarActivity" />
         <activity android:name=".eventbus.PostActivity" />
         <activity android:name=".eventbus.EventBusActivity" />
         <activity android:name=".state_layout.StateLayoutActivity" />

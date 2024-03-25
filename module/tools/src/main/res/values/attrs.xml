@@ -30,4 +30,118 @@
         <attr name="error_layout" format="reference" />
     </declare-styleable>
 
+    <!--标题栏-->
+    <declare-styleable name="TitleBar">
+        <!--整体区域：-->
+        <attr name="verticalPadding" format="dimension" />
+
+        <!--中间区域：-->
+        <!--标题-->
+        <attr name="title" format="string" />
+        <!--标题颜色-->
+        <attr name="titleColor" format="color" />
+        <!--标题大小-->
+        <attr name="titleSize" format="dimension" />
+        <!--标题位置-->
+        <attr name="titlePosition">
+            <enum name="left" value="1" />
+            <enum name="right" value="2" />
+            <enum name="center" value="3" />
+        </attr>
+        <!--标题样式-->
+        <attr name="titleStyle">
+            <enum name="normal" value="1" />
+            <enum name="bold" value="2" />
+            <enum name="italic" value="3" />
+        </attr>
+        <!--标题图标-->
+        <attr name="titleIcon" format="reference" />
+        <!--标题图标大小-->
+        <attr name="titleIconSize" format="dimension" />
+        <!--标题图标距离文字距离-->
+        <attr name="titleIconPadding" format="dimension" />
+        <!--标题图标位置-->
+        <attr name="titleIconPosition">
+            <enum name="left" value="1" />
+            <enum name="right" value="2" />
+            <enum name="top" value="3" />
+            <enum name="bottom" value="4" />
+        </attr>
+        <!--标题水平间距-->
+        <attr name="titleHorizontalPadding" format="dimension" />
+        <!--标题文字溢出模式-->
+        <attr name="titleOverflowMode">
+            <enum name="none" value="0" />
+            <enum name="start" value="1" />
+            <enum name="middle" value="2" />
+            <enum name="end" value="3" />
+            <enum name="marquee" value="4" />
+        </attr>
+
+        <!--左边区域：-->
+        <!--左边标题-->
+        <attr name="leftText" format="string" />
+        <!--左边标题颜色-->
+        <attr name="leftTextColor" format="color|reference" />
+        <!--左边标题大小-->
+        <attr name="leftTextSize" format="dimension" />
+        <!--左边标题样式-->
+        <attr name="leftTextStyle">
+            <enum name="normal" value="1" />
+            <enum name="bold" value="2" />
+            <enum name="italic" value="3" />
+        </attr>
+        <!--左边图标-->
+        <attr name="leftIcon" format="reference" />
+        <!--左边图标大小-->
+        <attr name="leftIconSize" format="dimension" />
+        <!--左边图标距离文字-->
+        <attr name="leftIconPadding" format="dimension" />
+        <!--左边图标位置-->
+        <attr name="leftIconPosition">
+            <enum name="left" value="1" />
+            <enum name="right" value="2" />
+            <enum name="top" value="3" />
+            <enum name="bottom" value="4" />
+        </attr>
+        <!--左边水平间距-->
+        <attr name="leftHorizontalPadding" format="dimension" />
+
+        <!--右边区域：-->
+        <!--右边标题-->
+        <attr name="rightText" format="string" />
+        <!--右边标题颜色-->
+        <attr name="rightTextColor" format="color|reference" />
+        <!--右边标题大小-->
+        <attr name="rightTextSize" format="dimension" />
+        <!--右边标题样式-->
+        <attr name="rightTextStyle">
+            <enum name="normal" value="1" />
+            <enum name="bold" value="2" />
+            <enum name="italic" value="3" />
+        </attr>
+        <!--右边图标-->
+        <attr name="rightIcon" format="reference" />
+        <!--右边图标大小-->
+        <attr name="rightIconSize" format="dimension" />
+        <!--右边图标距离文字-->
+        <attr name="rightIconPadding" format="dimension" />
+        <!--右边图标位置-->
+        <attr name="rightIconPosition">
+            <enum name="left" value="1" />
+            <enum name="right" value="2" />
+            <enum name="top" value="3" />
+            <enum name="bottom" value="4" />
+        </attr>
+        <!--右边水平间距-->
+        <attr name="rightHorizontalPadding" format="dimension" />
+
+        <!--下划线区域：-->
+        <!--下划线是否可见-->
+        <attr name="lineVisible" format="boolean" />
+        <!--下划线颜色-->
+        <attr name="lineColor" format="color|reference" />
+        <!--下划线尺寸-->
+        <attr name="lineSize" format="dimension" />
+    </declare-styleable>
 </resources>

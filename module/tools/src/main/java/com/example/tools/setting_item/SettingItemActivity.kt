@@ -2,7 +2,7 @@ package com.example.tools.setting_item
 
 import android.os.Bundle
 import com.example.tools.R
-import com.example.tools.setting_item.layout.SettingItem
+import com.example.tools.setting_item.widgets.SettingItem
 import com.xiangxiongfly.common.base.BaseActivity
 import com.xiangxiongfly.common.utils.ToastUtils
 

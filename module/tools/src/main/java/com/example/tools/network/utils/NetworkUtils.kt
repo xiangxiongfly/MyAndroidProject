@@ -140,7 +140,7 @@ object NetworkUtils {
      * 需添加权限
      */
     @JvmStatic
-    @RequiresPermission(Manifest.permission.ACCESS_NETWORK_STATE)
+//    @RequiresPermission(Manifest.permission.ACCESS_NETWORK_STATE)
     fun isAvailable(context: Context): Boolean {
         val info = getActiveNetworkInfo(context)
         return info != null && info.isAvailable
@@ -235,7 +235,7 @@ object NetworkUtils {
      * 判断WIFI是否打开
      */
     @JvmStatic
-    @RequiresPermission(Manifest.permission.ACCESS_WIFI_STATE)
+//    @RequiresPermission(Manifest.permission.ACCESS_WIFI_STATE)
     fun isWifiEnabled(context: Context): Boolean {
         val wifiManager =
             context.applicationContext.getSystemService(Context.WIFI_SERVICE) as WifiManager

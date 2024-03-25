@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:context=".setting_item.SettingItemActivity">
 
-    <com.example.tools.setting_item.layout.SettingItem
+    <com.example.tools.setting_item.widgets.SettingItem
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -17,7 +17,7 @@
         app:item_rightDrawable="@drawable/ic_arrows_right"
         app:item_rightText="设置2" />
 
-    <com.example.tools.setting_item.layout.SettingItem
+    <com.example.tools.setting_item.widgets.SettingItem
         android:id="@+id/setting_about"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,13 +28,13 @@
         app:item_lineWidth="2dp"
         app:item_rightDrawable="@drawable/ic_arrows_right" />
 
-    <com.example.tools.setting_item.layout.SettingItem
+    <com.example.tools.setting_item.widgets.SettingItem
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:item_leftText="关于我们2"
         app:item_rightDrawable="@drawable/ic_arrows_right" />
 
-    <com.example.tools.setting_item.layout.SettingItem
+    <com.example.tools.setting_item.widgets.SettingItem
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -44,7 +44,7 @@
         app:item_leftText="清空缓存"
         app:item_rightDrawable="@drawable/ic_arrows_right" />
 
-    <com.example.tools.setting_item.layout.SettingItem
+    <com.example.tools.setting_item.widgets.SettingItem
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -56,9 +56,9 @@
             android:layout_gravity="center_vertical|end"
             android:hint="请输入相关信息"
             android:textSize="14sp" />
-    </com.example.tools.setting_item.layout.SettingItem>
+    </com.example.tools.setting_item.widgets.SettingItem>
 
-    <com.example.tools.setting_item.layout.SettingItem
+    <com.example.tools.setting_item.widgets.SettingItem
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"

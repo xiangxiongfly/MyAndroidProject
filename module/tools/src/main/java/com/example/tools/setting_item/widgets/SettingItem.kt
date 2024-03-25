@@ -1,17 +1,14 @@
-package com.example.tools.setting_item.layout
+package com.example.tools.setting_item.widgets
 
 import android.content.Context
+import android.content.res.TypedArray
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.StateListDrawable
-import android.text.TextUtils
 import android.util.AttributeSet
 import android.util.TypedValue
-import android.view.Gravity
 import android.view.View
 import android.widget.FrameLayout
-import android.widget.LinearLayout
-import android.widget.TextView
 import androidx.annotation.AttrRes
 import androidx.core.content.ContextCompat
 import com.example.tools.R
@@ -32,55 +29,43 @@ class SettingItem @JvmOverloads constructor(
     }
 
     private val mContainerLayout by lazy {
-        LinearLayout(context).apply {
-            layoutParams =
-                FrameLayout.LayoutParams(
-                    LayoutParams.MATCH_PARENT,
-                    LayoutParams.WRAP_CONTENT,
-                    Gravity.CENTER_VERTICAL
-                )
-        }
+        SettingItemFactory.newContainerView(context)
     }
 
     private val mLeftTextView by lazy {
-        TextView(context).apply {
-            val leftLayoutParams =
-                LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1F)
-            leftLayoutParams.gravity = Gravity.CENTER_VERTICAL
-            layoutParams = leftLayoutParams
-            isSingleLine = true
-            ellipsize = TextUtils.TruncateAt.END
-            setPaddingRelative(dp2px(15), dp2px(12), dp2px(15), dp2px(12))
-            gravity = Gravity.START or Gravity.CENTER_VERTICAL
-        }
+        SettingItemFactory.newLeftView(context)
     }
 
     private val mRightTextView by lazy {
-        TextView(context).apply {
-            val rightLayoutParams =
-                LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.WRAP_CONTENT,
-                    LinearLayout.LayoutParams.WRAP_CONTENT
-                )
-            rightLayoutParams.gravity = Gravity.CENTER_VERTICAL
-            layoutParams = rightLayoutParams
-            isSingleLine = true
-            ellipsize = TextUtils.TruncateAt.END
-            setPaddingRelative(dp2px(15), dp2px(12), dp2px(15), dp2px(12))
-            gravity = Gravity.END or Gravity.CENTER_VERTICAL
-        }
+        SettingItemFactory.newRightView(context)
     }
 
     private val mLineView by lazy {
-        View(context).apply {
-            layoutParams = FrameLayout.LayoutParams(LayoutParams.MATCH_PARENT, 1, Gravity.BOTTOM)
-        }
+        SettingItemFactory.newLine(context)
     }
 
     init {
-        val a = context.obtainStyledAttributes(attrs, R.styleable.SettingItem)
-
+        val a: TypedArray = context.obtainStyledAttributes(attrs, R.styleable.SettingItem)
         // 设置左边
+        setupLeft(a)
+        // 设置右边
+        setupRight(a)
+        // 设置下划线
+        setupLine(a)
+        // 设置背景
+        setupBackground()
+        a.recycle()
+
+        mContainerLayout.addView(mLeftTextView)
+        mContainerLayout.addView(mRightTextView)
+        addView(mContainerLayout, 0)
+        addView(mLineView, 1)
+    }
+
+    /**
+     * 设置左边
+     */
+    private fun setupLeft(a: TypedArray) {
         mLeftTextView.apply {
             // 设置左边文本
             if (a.hasValue(R.styleable.SettingItem_item_leftText)) {
@@ -125,8 +110,12 @@ class SettingItem @JvmOverloads constructor(
             )
             compoundDrawablePadding = leftDrawablePadding
         }
+    }
 
-        // 设置右边
+    /**
+     * 设置右边
+     */
+    private fun setupRight(a: TypedArray) {
         mRightTextView.apply {
             // 设置右边文本
             if (a.hasValue(R.styleable.SettingItem_item_rightText)) {
@@ -171,8 +160,12 @@ class SettingItem @JvmOverloads constructor(
             )
             compoundDrawablePadding = rightDrawablePadding
         }
+    }
 
-        // 设置下划线
+    /**
+     * 设置下划线
+     */
+    private fun setupLine(a: TypedArray) {
         mLineView.apply {
             // 设置是否显示下划线
             val visible = a.getBoolean(R.styleable.SettingItem_item_lineVisible, false)
@@ -195,38 +188,36 @@ class SettingItem @JvmOverloads constructor(
                     ColorDrawable(Color.parseColor("#FFECECEC"))
                 }
         }
+    }
 
+    /**
+     * 设置背景
+     */
+    private fun setupBackground() {
         if (background == null) {
-            val drawable = StateListDrawable()
-            drawable.addState(
-                intArrayOf(android.R.attr.state_pressed),
-                ColorDrawable(DEFAULT_LINE_COLOR)
-            )
-            drawable.addState(
-                intArrayOf(android.R.attr.state_selected),
-                ColorDrawable(DEFAULT_LINE_COLOR)
-            )
-            drawable.addState(
-                intArrayOf(android.R.attr.state_focused),
-                ColorDrawable(DEFAULT_LINE_COLOR)
-            )
-            drawable.addState(
-                intArrayOf(),
-                ColorDrawable(ContextCompat.getColor(getContext(), R.color.white))
-            )
-            background = drawable
+            val bgDrawable = StateListDrawable().apply {
+                addState(
+                    intArrayOf(android.R.attr.state_pressed),
+                    ColorDrawable(DEFAULT_LINE_COLOR)
+                )
+                addState(
+                    intArrayOf(android.R.attr.state_selected),
+                    ColorDrawable(DEFAULT_LINE_COLOR)
+                )
+                addState(
+                    intArrayOf(android.R.attr.state_focused),
+                    ColorDrawable(DEFAULT_LINE_COLOR)
+                )
+                addState(
+                    intArrayOf(),
+                    ColorDrawable(ContextCompat.getColor(getContext(), R.color.white))
+                )
+            }
+            background = bgDrawable
 
             // 必须要设置可点击，否则点击屏幕任何角落都会触发按压事件
             isFocusable = true
             isClickable = true
         }
-
-        a.recycle()
-
-        mContainerLayout.addView(mLeftTextView)
-        mContainerLayout.addView(mRightTextView)
-
-        addView(mContainerLayout, 0)
-        addView(mLineView, 1)
     }
 }

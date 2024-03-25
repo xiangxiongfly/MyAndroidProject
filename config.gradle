@@ -2,6 +2,7 @@ ext {
     kotlin_version = "1.5.31"
 
     android = [
+            applicationId    : "com.xiangxiongfly.myandroid",
             compileSdkVersion: 31,
             minSdkVersion    : 22,
             targetSdkVersion : 31,
