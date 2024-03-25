@@ -35,6 +35,5 @@ class TitleBarActivity : BaseActivity() {
 
         info.setOnClickListener { ToastUtils.show("信息") }
         details.setOnClickListener { ToastUtils.show("详情") }
-
     }
 }

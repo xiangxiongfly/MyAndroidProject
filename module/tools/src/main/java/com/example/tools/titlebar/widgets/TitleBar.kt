@@ -6,7 +6,6 @@ import android.graphics.Typeface
 import android.graphics.drawable.ColorDrawable
 import android.text.TextUtils
 import android.util.AttributeSet
-import android.util.Log
 import android.util.TypedValue
 import android.view.Gravity
 import android.view.View
@@ -355,7 +354,6 @@ class TitleBar @JvmOverloads constructor(
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
-        Log.e("TAG", "onMeasure")
         val titleBarMeasuredWidth = measuredWidth
         val titleBarMeasuredHeight = measuredHeight
         val titleViewMeasuredWidth = mTitleTextView.measuredWidth
@@ -449,7 +447,6 @@ class TitleBar @JvmOverloads constructor(
     }
 
     override fun setLayoutParams(params: ViewGroup.LayoutParams) {
-        Log.e("TAG", "setLayoutParams")
         if (params.width == ViewGroup.LayoutParams.WRAP_CONTENT) {
             params.width = ViewGroup.LayoutParams.MATCH_PARENT
         }
