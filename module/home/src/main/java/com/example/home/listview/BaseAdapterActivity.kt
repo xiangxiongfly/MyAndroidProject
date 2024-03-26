@@ -7,11 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ListView
+import com.example.base.BaseActivity
+import com.example.base.KEY_TITLE
 import com.example.home.R
 import com.xiangxiongfly.common.bean.Fruit
 import com.example.home.listview.adapter.MyAdapter
-import com.xiangxiongfly.common.base.BaseActivity
-import com.xiangxiongfly.common.base.KEY_TITLE
 
 class BaseAdapterActivity : BaseActivity() {
     private val datas = arrayListOf<Fruit>().apply {

@@ -8,9 +8,9 @@ import android.view.Gravity
 import android.view.View
 import android.widget.ImageView
 import androidx.core.content.ContextCompat
+import com.example.base.BaseFragment
+import com.example.base.utils.dp
 import com.example.home.R
-import com.xiangxiongfly.common.base.BaseFragment
-import com.xiangxiongfly.common.utils.dp
 
 class LayerDrawableFragment : BaseFragment(R.layout.fragment_common_drawable) {
 

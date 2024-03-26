@@ -10,9 +10,9 @@ import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.RelativeSizeSpan
 import android.widget.TextView
+import com.example.base.BaseActivity
+import com.example.base.KEY_TITLE
 import com.example.home.R
-import com.xiangxiongfly.common.base.BaseActivity
-import com.xiangxiongfly.common.base.KEY_TITLE
 
 class TextStyleActivity : BaseActivity() {
     private lateinit var textView: TextView

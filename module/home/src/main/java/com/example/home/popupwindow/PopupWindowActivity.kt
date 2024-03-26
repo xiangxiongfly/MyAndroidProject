@@ -9,9 +9,9 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.PopupWindow
 import android.widget.TextView
+import com.example.base.BaseActivity
+import com.example.base.utils.dp2px
 import com.example.home.R
-import com.xiangxiongfly.common.base.BaseActivity
-import com.xiangxiongfly.common.utils.dp2px
 
 class PopupWindowActivity : BaseActivity() {
     private lateinit var root: View

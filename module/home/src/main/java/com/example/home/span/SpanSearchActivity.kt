@@ -11,9 +11,9 @@ import android.text.style.TextAppearanceSpan
 import android.widget.EditText
 import android.widget.TextView
 import androidx.annotation.StyleRes
+import com.example.base.BaseActivity
+import com.example.base.KEY_TITLE
 import com.example.home.R
-import com.xiangxiongfly.common.base.BaseActivity
-import com.xiangxiongfly.common.base.KEY_TITLE
 import java.util.regex.Pattern
 
 class SpanSearchActivity : BaseActivity() {

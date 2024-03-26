@@ -2,10 +2,10 @@ package com.example.tools.titlebar
 
 import android.os.Bundle
 import android.widget.TextView
+import com.example.base.BaseActivity
+import com.example.base.utils.ToastUtils
 import com.example.tools.R
-import com.example.tools.titlebar.widgets.TitleBar
-import com.xiangxiongfly.common.base.BaseActivity
-import com.xiangxiongfly.common.utils.ToastUtils
+import com.example.widgets.titlebar.TitleBar
 
 class TitleBarActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

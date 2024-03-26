@@ -11,12 +11,12 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
+import com.example.base.BaseActivity;
 import com.example.tools.R;
 import com.example.tools.permissions.utils.OnPermissionCallback;
 import com.example.tools.permissions.utils.OnSettingsCallback;
 import com.example.tools.permissions.utils.PermissionHelper;
 import com.example.tools.permissions.utils.PermissionUtils;
-import com.xiangxiongfly.common.base.BaseActivity;
 
 import java.util.ArrayList;
 

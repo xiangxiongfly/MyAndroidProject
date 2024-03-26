@@ -2,10 +2,10 @@ package com.example.tools.dialog
 
 import android.os.Bundle
 import android.view.View
+import com.example.base.BaseActivity
+import com.example.base.utils.ToastUtils
 import com.example.tools.R
 import com.example.tools.dialog.sample.*
-import com.xiangxiongfly.common.base.BaseActivity
-import com.xiangxiongfly.common.utils.ToastUtils
 
 class DialogActivity : BaseActivity() {
 

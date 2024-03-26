@@ -3,11 +3,11 @@ package com.example.tools.popupwindow.sample
 import android.content.Context
 import android.view.Gravity
 import android.view.View
+import com.example.base.dialog.ViewHolder
+import com.example.base.popupwindow.BasePopupWindow
+import com.example.base.utils.ToastUtils
+import com.example.base.utils.dp2px
 import com.example.tools.R
-import com.example.tools.dialog.base.ViewHolder
-import com.example.tools.popupwindow.base.BasePopupWindow
-import com.xiangxiongfly.common.utils.ToastUtils
-import com.xiangxiongfly.common.utils.dp2px
 
 class SharePop {
 

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.base.BaseFragment
 import com.example.home.bottom_sheet.BottomSheetActivity
 import com.example.home.dialog.DialogActivity
 import com.example.home.drawable.DrawableActivity
@@ -16,7 +17,6 @@ import com.example.home.tablayout.TabLayoutActivity
 import com.example.home.viewpager.ViewPagerActivity
 import com.example.home.viewpager2.ViewPager2Activity
 import com.google.android.flexbox.FlexboxLayout
-import com.xiangxiongfly.common.base.BaseFragment
 import com.xiangxiongfly.common.exts.addElement
 
 class HomeFragment : BaseFragment() {
@@ -53,9 +53,7 @@ class HomeFragment : BaseFragment() {
         flexboxLayout.addElement(mContext, "BottomSheet", BottomSheetActivity::class.java)
         flexboxLayout.addElement(mContext, "ListView", ListViewActivity::class.java)
         flexboxLayout.addElement(
-            mContext,
-            "ExpandableListView",
-            ExpandableListViewActivity::class.java
+            mContext, "ExpandableListView", ExpandableListViewActivity::class.java
         )
         flexboxLayout.addElement(mContext, "RecyclerView", RecyclerViewActivity::class.java)
         flexboxLayout.addElement(mContext, "SpannableString", SpannableStringActivity::class.java)

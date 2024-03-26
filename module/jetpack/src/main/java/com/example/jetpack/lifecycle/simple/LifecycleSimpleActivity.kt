@@ -5,10 +5,10 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.lifecycle.*
+import com.example.base.BaseActivity
+import com.example.base.KEY_TITLE
 import com.example.jetpack.LIFECYCLE
 import com.example.jetpack.R
-import com.xiangxiongfly.common.base.BaseActivity
-import com.xiangxiongfly.common.base.KEY_TITLE
 
 class LifecycleSimpleActivity : BaseActivity() {
     val customObserver = CustomObserver()

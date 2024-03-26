@@ -6,13 +6,13 @@ import android.graphics.drawable.Animatable
 import android.graphics.drawable.Drawable
 import android.view.animation.Animation
 import android.view.animation.LinearInterpolator
-import com.xiangxiongfly.common.utils.dp
+import com.example.base.utils.dp
 import kotlin.math.min
 
 
 class CustomCircleDrawable : Drawable(), Animatable {
 
-    val CIRCLE_WIDTH = 5.dp.toFloat()
+    private val CIRCLE_WIDTH = 5.dp.toFloat()
 
     private val bgPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
         style = Paint.Style.STROKE

@@ -1,7 +1,7 @@
 package com.xiangxiongfly.myandroid
 
 import android.os.Bundle
-import com.xiangxiongfly.common.base.BaseActivity
+import com.example.base.BaseActivity
 
 class SplashActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

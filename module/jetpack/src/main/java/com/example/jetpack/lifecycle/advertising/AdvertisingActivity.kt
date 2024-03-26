@@ -5,9 +5,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import com.example.base.BaseActivity
 import com.example.jetpack.NextActivity
 import com.example.jetpack.R
-import com.xiangxiongfly.common.base.BaseActivity
 
 class AdvertisingActivity : BaseActivity() {
     private lateinit var tvAdvertisingTime: TextView

@@ -7,9 +7,8 @@ import android.widget.ImageView
 import android.widget.SeekBar
 import androidx.appcompat.widget.AppCompatSeekBar
 import androidx.core.content.ContextCompat
+import com.example.base.BaseFragment
 import com.example.home.R
-import com.xiangxiongfly.common.base.BaseFragment
-
 
 class LevelListDrawableFragment : BaseFragment(R.layout.fragment_level_list_drawable) {
 

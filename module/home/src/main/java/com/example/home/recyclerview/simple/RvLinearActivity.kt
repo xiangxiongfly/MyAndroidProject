@@ -10,14 +10,14 @@ import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.base.BaseActivity
+import com.example.base.KEY_TITLE
+import com.example.base.utils.dp
 import com.example.home.R
-import com.xiangxiongfly.common.bean.Fruit
-import com.xiangxiongfly.common.data.FruitData
 import com.example.home.recyclerview.divider.LinearItemDecoration
 import com.example.home.recyclerview.simple.adapter.FruitAdapter2
-import com.xiangxiongfly.common.base.BaseActivity
-import com.xiangxiongfly.common.base.KEY_TITLE
-import com.xiangxiongfly.common.utils.dp
+import com.xiangxiongfly.common.bean.Fruit
+import com.xiangxiongfly.common.data.FruitData
 import java.util.*
 
 class RvLinearActivity : BaseActivity() {

@@ -2,6 +2,7 @@ package com.example.jetpack.viewbinding
 
 import android.os.Bundle
 import android.view.View
+import com.example.base.BaseActivity
 import com.example.jetpack.R
 import com.example.jetpack.viewbinding.base1.OneActivity
 import com.example.jetpack.viewbinding.base2.TwoActivity
@@ -10,7 +11,6 @@ import com.example.jetpack.viewbinding.include.VBIncludeActivity
 import com.example.jetpack.viewbinding.rv.RvActivity
 import com.example.jetpack.viewbinding.simple.VBActivity
 import com.example.jetpack.viewbinding.simple.VBFragmentActivity
-import com.xiangxiongfly.common.base.BaseActivity
 
 class ViewBindingActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

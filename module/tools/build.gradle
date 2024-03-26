@@ -34,5 +34,5 @@ android {
 }
 
 dependencies {
-    implementation project(path: ':common')
+    implementation project(path: ':library:common')
 }

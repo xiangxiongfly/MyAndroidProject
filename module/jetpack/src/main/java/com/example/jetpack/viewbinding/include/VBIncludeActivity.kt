@@ -4,10 +4,10 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
+import com.example.base.BaseActivity
 import com.example.jetpack.R
 import com.example.jetpack.databinding.ActivityVbincludeBinding
 import com.example.jetpack.databinding.MergeDetailBinding
-import com.xiangxiongfly.common.base.BaseActivity
 
 class VBIncludeActivity : BaseActivity() {
     private var _viewBinding: ActivityVbincludeBinding? = null

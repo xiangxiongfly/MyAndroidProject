@@ -17,9 +17,9 @@ import android.widget.ListView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
+import com.example.base.BaseActivity
+import com.example.base.KEY_TITLE
 import com.example.home.R
-import com.xiangxiongfly.common.base.BaseActivity
-import com.xiangxiongfly.common.base.KEY_TITLE
 
 class SpanSimpleActivity : BaseActivity() {
     private lateinit var listView: ListView

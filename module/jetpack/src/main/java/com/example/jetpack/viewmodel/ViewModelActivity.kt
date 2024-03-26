@@ -2,10 +2,10 @@ package com.example.jetpack.viewmodel
 
 import android.os.Bundle
 import android.view.View
+import com.example.base.BaseActivity
 import com.example.jetpack.R
 import com.example.jetpack.viewmodel.fragments.MenuActivity
 import com.example.jetpack.viewmodel.simple.ViewModelSimpleActivity
-import com.xiangxiongfly.common.base.BaseActivity
 
 class ViewModelActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

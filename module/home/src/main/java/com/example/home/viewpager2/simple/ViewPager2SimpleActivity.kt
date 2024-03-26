@@ -2,19 +2,15 @@ package com.example.home.viewpager2.simple
 
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.core.view.forEachIndexed
-import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
+import com.example.base.BaseActivity
+import com.example.base.KEY_TITLE
+import com.example.base.utils.dp2px
 import com.example.home.R
-import com.xiangxiongfly.common.base.BaseActivity
-import com.xiangxiongfly.common.base.KEY_TITLE
-import com.xiangxiongfly.common.utils.dp2px
-import java.util.ArrayList
 
 class ViewPager2SimpleActivity : BaseActivity() {
     private lateinit var viewPager2: ViewPager2

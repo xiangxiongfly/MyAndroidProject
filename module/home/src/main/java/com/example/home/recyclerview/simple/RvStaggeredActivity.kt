@@ -5,11 +5,11 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.example.base.BaseActivity
+import com.example.base.KEY_TITLE
 import com.example.home.R
-import com.xiangxiongfly.common.bean.Fruit
 import com.example.home.recyclerview.simple.adapter.FruitAdapter
-import com.xiangxiongfly.common.base.BaseActivity
-import com.xiangxiongfly.common.base.KEY_TITLE
+import com.xiangxiongfly.common.bean.Fruit
 import java.util.*
 
 class RvStaggeredActivity : BaseActivity() {
@@ -68,7 +68,6 @@ class RvStaggeredActivity : BaseActivity() {
         }
         return builder.toString()
     }
-
 
 
 }

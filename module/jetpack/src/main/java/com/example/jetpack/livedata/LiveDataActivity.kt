@@ -2,10 +2,10 @@ package com.example.jetpack.livedata
 
 import android.os.Bundle
 import android.view.View
+import com.example.base.BaseActivity
 import com.example.jetpack.R
 import com.example.jetpack.livedata.other.LiveDataOtherActivity
 import com.example.jetpack.livedata.simple.LiveDataSimpleActivity
-import com.xiangxiongfly.common.base.BaseActivity
 
 class LiveDataActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

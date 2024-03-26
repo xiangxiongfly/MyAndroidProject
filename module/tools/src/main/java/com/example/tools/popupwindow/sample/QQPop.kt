@@ -4,9 +4,9 @@ import android.content.Context
 import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup
+import com.example.base.dialog.ViewHolder
+import com.example.base.popupwindow.BasePopupWindow
 import com.example.tools.R
-import com.example.tools.dialog.base.ViewHolder
-import com.example.tools.popupwindow.base.BasePopupWindow
 
 class QQPop {
 

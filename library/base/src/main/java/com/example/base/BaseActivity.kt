@@ -1,0 +1,24 @@
+package com.example.base
+
+import android.content.Context
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.example.base.action.HandlerAction
+import com.example.base.utils.LogUtils
+
+const val KEY_TITLE = "title"
+
+open class BaseActivity : AppCompatActivity(), HandlerAction {
+    protected lateinit var mContext: Context
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        mContext = this
+        LogUtils.e("TAG", this.javaClass.simpleName.toString())
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        removeCallbacks()
+    }
+}

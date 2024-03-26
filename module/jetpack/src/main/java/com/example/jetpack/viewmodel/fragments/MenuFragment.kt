@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ListView
 import androidx.fragment.app.activityViewModels
+import com.example.base.BaseFragment
 import com.example.jetpack.R
-import com.xiangxiongfly.common.base.BaseFragment
 
 class MenuFragment : BaseFragment() {
     private val sharedViewModel: SharedViewModel by activityViewModels()

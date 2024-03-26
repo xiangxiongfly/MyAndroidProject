@@ -3,14 +3,12 @@ package com.example.tools.dialog.sample
 import android.content.Context
 import android.text.TextUtils
 import android.view.Gravity
-import android.view.View
 import android.widget.EditText
 import android.widget.TextView
-import android.widget.Toast
+import com.example.base.dialog.BaseDialog
+import com.example.base.dialog.ViewHolder
+import com.example.base.utils.ToastUtils
 import com.example.tools.R
-import com.example.tools.dialog.base.BaseDialog
-import com.example.tools.dialog.base.ViewHolder
-import com.xiangxiongfly.common.utils.ToastUtils
 
 class CommentDialog {
 

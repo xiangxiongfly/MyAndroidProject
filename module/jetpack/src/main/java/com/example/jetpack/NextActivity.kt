@@ -3,7 +3,7 @@ package com.example.jetpack
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import com.xiangxiongfly.common.base.BaseActivity
+import com.example.base.BaseActivity
 
 class NextActivity : BaseActivity() {
     companion object {

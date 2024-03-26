@@ -9,11 +9,11 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.base.BaseActivity
+import com.example.base.KEY_TITLE
+import com.example.base.utils.logE
 import com.example.home.R
 import com.xiangxiongfly.common.bean.User
-import com.xiangxiongfly.common.base.BaseActivity
-import com.xiangxiongfly.common.base.KEY_TITLE
-import com.xiangxiongfly.common.utils.logE
 
 class DiffUtilActivity : BaseActivity() {
     private lateinit var recyclerView: RecyclerView

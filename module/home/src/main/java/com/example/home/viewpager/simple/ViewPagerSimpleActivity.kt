@@ -10,12 +10,12 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.core.view.size
 import androidx.viewpager.widget.ViewPager
+import com.example.base.BaseActivity
+import com.example.base.utils.dp2px
 import com.example.home.R
 import com.example.home.viewpager.transformer.DepthPageTransformer
 import com.example.home.viewpager.transformer.RotateTransformer
 import com.example.home.viewpager.transformer.ScaleTransformer
-import com.xiangxiongfly.common.base.BaseActivity
-import com.xiangxiongfly.common.utils.dp2px
 import java.util.*
 
 class ViewPagerSimpleActivity : BaseActivity() {

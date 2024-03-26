@@ -5,8 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import com.xiangxiongfly.common.base.BaseFragment
-import com.xiangxiongfly.common.base.KEY_TITLE
+import com.example.base.BaseFragment
+import com.example.base.KEY_TITLE
 
 class SettingFragment : BaseFragment() {
     private lateinit var tvTitle: TextView

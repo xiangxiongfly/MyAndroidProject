@@ -10,9 +10,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import com.example.base.BaseActivity
+import com.example.base.utils.ToastUtils
 import com.example.home.R
-import com.xiangxiongfly.common.base.BaseActivity
-import com.xiangxiongfly.common.utils.ToastUtils
 import java.util.*
 
 class DialogActivity : BaseActivity() {

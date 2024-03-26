@@ -2,13 +2,13 @@ package com.example.jetpack.lifecycle
 
 import android.os.Bundle
 import android.view.View
+import com.example.base.BaseActivity
 import com.example.jetpack.R
 import com.example.jetpack.lifecycle.advertising.AdvertisingActivity
 import com.example.jetpack.lifecycle.advertising2.AdvertisingActivity2
 import com.example.jetpack.lifecycle.custom.LifecycleCustomActivity
 import com.example.jetpack.lifecycle.dialog.LifecycleDialogActivity
 import com.example.jetpack.lifecycle.simple.LifecycleSimpleActivity
-import com.xiangxiongfly.common.base.BaseActivity
 
 class LifecycleActivity : BaseActivity() {
 

@@ -3,9 +3,9 @@ package com.example.tools.dialog.sample
 import android.content.Context
 import android.view.Gravity
 import android.view.View
+import com.example.base.dialog.BaseDialog
+import com.example.base.dialog.ViewHolder
 import com.example.tools.R
-import com.example.tools.dialog.base.BaseDialog
-import com.example.tools.dialog.base.ViewHolder
 
 class ShareDialog {
 

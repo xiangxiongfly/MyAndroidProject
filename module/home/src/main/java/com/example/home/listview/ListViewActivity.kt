@@ -2,8 +2,8 @@ package com.example.home.listview
 
 import android.os.Bundle
 import android.view.View
+import com.example.base.BaseActivity
 import com.example.home.R
-import com.xiangxiongfly.common.base.BaseActivity
 
 class ListViewActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

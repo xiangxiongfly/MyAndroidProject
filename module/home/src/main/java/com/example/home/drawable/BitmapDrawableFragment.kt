@@ -8,8 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.core.content.ContextCompat
+import com.example.base.BaseFragment
 import com.example.home.R
-import com.xiangxiongfly.common.base.BaseFragment
 
 class BitmapDrawableFragment : BaseFragment() {
 

@@ -4,11 +4,11 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ListView
+import com.example.base.BaseActivity
+import com.example.base.KEY_TITLE
 import com.example.home.R
 import com.example.home.listview.adapter.CheckBoxAdapter
 import com.xiangxiongfly.common.bean.Fruit
-import com.xiangxiongfly.common.base.BaseActivity
-import com.xiangxiongfly.common.base.KEY_TITLE
 
 class CheckBoxListViewActivity : BaseActivity() {
     private lateinit var listView: ListView

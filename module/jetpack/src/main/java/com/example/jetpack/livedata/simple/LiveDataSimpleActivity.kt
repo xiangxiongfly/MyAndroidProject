@@ -8,10 +8,9 @@ import android.view.View
 import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
+import com.example.base.BaseActivity
 import com.example.jetpack.LIVEDATA
 import com.example.jetpack.R
-import com.xiangxiongfly.common.base.BaseActivity
-
 
 class LiveDataSimpleActivity : BaseActivity() {
     private val viewModel: SimpleViewModel by viewModels()

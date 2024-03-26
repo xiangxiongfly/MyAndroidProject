@@ -4,11 +4,11 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
+import com.example.base.BaseActivity
 import com.example.home.R
 import com.example.home.drawable.custom.CustomCircleDrawableFragment
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-import com.xiangxiongfly.common.base.BaseActivity
 
 class DrawableActivity : BaseActivity() {
     private lateinit var tabLayout: TabLayout

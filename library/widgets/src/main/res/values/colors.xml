@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="tab_selected_color">#FF000000</color>
+    <color name="tab_unselect_color">#FFB3B3B3</color>
+    <color name="tab_label_color">#FF000000</color>
+</resources>

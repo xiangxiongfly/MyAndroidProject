@@ -7,8 +7,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
+import com.example.base.BaseActivity
 import com.example.home.R
-import com.xiangxiongfly.common.base.BaseActivity
 import com.xiangxiongfly.common.fragment.TextFragment
 
 /**

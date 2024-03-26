@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".state_layout.StateLayoutActivity">
+    tools:context=".statelayout.StateLayoutActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,7 +42,7 @@
 
     </LinearLayout>
 
-    <com.example.tools.state_layout.widgets.StateLayout
+    <com.example.widgets.statelayout.StateLayout
         android:id="@+id/state_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -55,6 +55,6 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="加载成功" />
-    </com.example.tools.state_layout.widgets.StateLayout>
+    </com.example.widgets.statelayout.StateLayout>
 
 </LinearLayout>

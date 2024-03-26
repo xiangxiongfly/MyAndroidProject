@@ -2,10 +2,10 @@ package com.example.home.expandable_listview
 
 import android.os.Bundle
 import android.widget.ExpandableListView
+import com.example.base.BaseActivity
 import com.example.home.R
 import com.example.home.expandable_listview.bean.Child
 import com.example.home.expandable_listview.bean.Group
-import com.xiangxiongfly.common.base.BaseActivity
 
 class ExpandableListViewActivity : BaseActivity() {
     private lateinit var expandableListView: ExpandableListView

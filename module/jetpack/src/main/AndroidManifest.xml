@@ -3,7 +3,7 @@
     package="com.example.jetpack">
 
     <application>
-        <activity android:name=".room.RoomActivity"></activity>
+        <activity android:name=".room.RoomActivity" />
         <activity android:name=".viewbinding.base3.ThreeActivity" />
         <activity android:name=".viewbinding.base2.TwoActivity" />
         <activity android:name=".viewbinding.base1.OneActivity" />

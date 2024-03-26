@@ -4,11 +4,11 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import com.example.base.BaseActivity
+import com.example.base.utils.eventbus.EventBusUtils
+import com.example.base.utils.eventbus.MessageEvent
+import com.example.base.utils.eventbus.MessageEventCode
 import com.example.tools.R
-import com.xiangxiongfly.common.base.BaseActivity
-import com.xiangxiongfly.common.utils.eventbus.EventBusUtils
-import com.xiangxiongfly.common.utils.eventbus.MessageEvent
-import com.xiangxiongfly.common.utils.eventbus.MessageEventCode
 
 class PostActivity : BaseActivity() {
     companion object {

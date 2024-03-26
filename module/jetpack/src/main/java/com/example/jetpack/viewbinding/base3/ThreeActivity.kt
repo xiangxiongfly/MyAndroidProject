@@ -4,9 +4,9 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
+import com.example.base.BaseActivity
 import com.example.jetpack.R
 import com.example.jetpack.databinding.ActivityThreeBinding
-import com.xiangxiongfly.common.base.BaseActivity
 
 
 class ThreeActivity : BaseActivity() {

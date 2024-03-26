@@ -8,26 +8,57 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/MyWorksapce/android/MyAndroid/app/src/main/res/layout/activity_main.xml" value="0.23036649214659685" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/common/src/main/res/drawable/ic_arrows_left.xml" value="0.3365" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/common/src/main/res/drawable/tips_warning_ic.xml" value="0.3365" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/common/src/main/res/layout/item_text.xml" value="0.20104166666666667" />
-        <entry key="..\:/MyWorksapce/android/MyAndroid/module/home/src/main/res/layout/activity_view_pager.xml" value="0.2898148148148148" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/library/base/src/main/res/layout/tab_view.xml" value="0.3536458333333333" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/library/common/src/main/res/drawable-anydpi/tab_friends_unselect.xml" value="0.1" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/library/common/src/main/res/drawable/divider_red_shape.xml" value="0.1" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/library/common/src/main/res/drawable/dot_normal_shape.xml" value="0.1" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/library/common/src/main/res/drawable/dot_selected_shape.xml" value="0.1" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/library/common/src/main/res/drawable/dot_selector.xml" value="0.1" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/library/widgets/src/main/res/drawable-anydpi/tab_find_unselect.xml" value="0.1" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/library/widgets/src/main/res/drawable-anydpi/tab_friends_selected.xml" value="0.1" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/library/widgets/src/main/res/drawable-anydpi/tab_home_unselect.xml" value="0.1" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/library/widgets/src/main/res/drawable/home_shape.xml" value="0.1" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/library/widgets/src/main/res/layout/state_empty.xml" value="0.3536458333333333" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/library/widgets/src/main/res/layout/tab_view.xml" value="0.3536458333333333" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/module/home/src/main/res/layout/activity_view_pager.xml" value="0.1" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/module/home/src/main/res/layout/activity_view_pager_simple.xml" value="0.23036649214659685" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/module/home/src/main/res/layout/activity_wrap_view_pager.xml" value="0.3536458333333333" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/module/home/src/main/res/layout/item_pager.xml" value="0.3375" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/module/home/src/main/res/layout/item_right_fruit.xml" value="0.3536458333333333" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/module/home/src/main/res/layout/item_user.xml" value="0.3536458333333333" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/module/home/src/main/res/layout/layout_child.xml" value="0.3536458333333333" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/module/home/src/main/res/menu/menu_scrolling.xml" value="0.3536458333333333" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/module/jetpack/src/main/res/layout/activity_two.xml" value="0.31574074074074077" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/module/jetpack/src/main/res/layout/title_bar.xml" value="0.3536458333333333" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/module/tools/src/main/res/layout/activity_clear_edit_text.xml" value="0.3536458333333333" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/module/tools/src/main/res/layout/activity_event_bus.xml" value="0.23049001814882034" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/module/tools/src/main/res/layout/activity_network.xml" value="0.3536458333333333" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/module/tools/src/main/res/layout/activity_permission.xml" value="0.3536458333333333" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/module/tools/src/main/res/layout/activity_post.xml" value="0.3109375" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/module/tools/src/main/res/layout/activity_setting_item.xml" value="0.3536458333333333" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/module/tools/src/main/res/layout/activity_state_layout.xml" value="0.3536458333333333" />
-        <entry key="..\:/MyWorksapce/android/MyAndroid/module/tools/src/main/res/layout/activity_title_bar.xml" value="0.3536458333333333" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/module/tools/src/main/res/layout/activity_title_bar.xml" value="0.23036649214659685" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/module/tools/src/main/res/layout/activity_two.xml" value="0.3536458333333333" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/module/tools/src/main/res/layout/fragment_permission.xml" value="0.3536458333333333" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/module/tools/src/main/res/layout/fragment_post.xml" value="0.3536458333333333" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/module/tools/src/main/res/layout/state_empty.xml" value="0.3536458333333333" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/module/tools/src/main/res/layout/state_error.xml" value="0.33177083333333335" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/module/tools/src/main/res/layout/state_loading.xml" value="0.35260416666666666" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/module/tools/src/main/res/layout/tools_activity_dialog.xml" value="0.3536458333333333" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/module/tools/src/main/res/layout/tools_activity_popup_window.xml" value="0.3536458333333333" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/module/tools/src/main/res/layout/tools_dialog_comment.xml" value="0.3536458333333333" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/module/tools/src/main/res/layout/tools_dialog_confirm.xml" value="0.3536458333333333" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/module/tools/src/main/res/layout/tools_dialog_share.xml" value="0.3536458333333333" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/module/tools/src/main/res/layout/tools_dialog_tips.xml" value="0.3536458333333333" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/status_bar_demo/src/main/res/layout/activity_immersion1.xml" value="0.3536458333333333" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/status_bar_demo/src/main/res/layout/activity_immersion2.xml" value="0.3536458333333333" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/status_bar_demo/src/main/res/layout/activity_immersion3.xml" value="0.3536458333333333" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/status_bar_demo/src/main/res/layout/activity_immersion4.xml" value="0.3536458333333333" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/status_bar_demo/src/main/res/layout/activity_immersion5.xml" value="0.3536458333333333" />
       </map>
     </option>
   </component>

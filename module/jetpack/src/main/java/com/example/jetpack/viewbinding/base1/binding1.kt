@@ -5,14 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.viewbinding.ViewBinding
-import com.xiangxiongfly.common.base.BaseActivity
-import com.xiangxiongfly.common.base.BaseFragment
+import com.example.base.BaseActivity
+import com.example.base.BaseFragment
 
 
 /**
  * 基类封装，不使用反射
  */
-
 abstract class BindingActivity<VB : ViewBinding> : BaseActivity() {
     private lateinit var _viewBinding: VB
     protected val mViewBinding get() = _viewBinding

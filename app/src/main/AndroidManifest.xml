@@ -3,7 +3,7 @@
     package="com.xiangxiongfly.myandroid">
 
     <application
-        android:name="com.xiangxiongfly.common.base.BaseApplication"
+        android:name="com.example.base.BaseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"

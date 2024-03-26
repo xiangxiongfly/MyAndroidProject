@@ -2,8 +2,8 @@ package com.example.tools.permissions;
 
 import android.os.Bundle;
 
+import com.example.base.BaseActivity;
 import com.example.tools.R;
-import com.xiangxiongfly.common.base.BaseActivity;
 
 public class TwoActivity extends BaseActivity {
 

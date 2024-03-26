@@ -3,12 +3,12 @@ package com.example.tools.popupwindow
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import com.example.base.BaseActivity
+import com.example.base.utils.ToastUtils
 import com.example.tools.R
 import com.example.tools.popupwindow.sample.LikePop
 import com.example.tools.popupwindow.sample.QQPop
 import com.example.tools.popupwindow.sample.SharePop
-import com.xiangxiongfly.common.base.BaseActivity
-import com.xiangxiongfly.common.utils.ToastUtils
 
 class PopupWindowActivity : BaseActivity() {
     private lateinit var root: View

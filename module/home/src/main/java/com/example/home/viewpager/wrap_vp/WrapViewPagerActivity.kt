@@ -9,12 +9,11 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.ImageView
 import androidx.viewpager.widget.PagerAdapter
+import com.example.base.BaseActivity
 import com.example.home.R
-import com.xiangxiongfly.common.base.BaseActivity
-import com.xiangxiongfly.common.widgets.layout.WrapContentViewPager
 
 class WrapViewPagerActivity : BaseActivity() {
-    private lateinit var wrapViewPager: WrapContentViewPager
+    private lateinit var wrapViewPager: com.example.widgets.WrapContentViewPager
 
     companion object {
         fun actionStart(context: Context) {

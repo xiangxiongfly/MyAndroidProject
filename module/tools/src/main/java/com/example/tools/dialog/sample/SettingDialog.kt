@@ -2,10 +2,10 @@ package com.example.tools.dialog.sample
 
 import android.content.Context
 import android.view.Gravity
+import com.example.base.dialog.BaseDialog
+import com.example.base.dialog.ViewHolder
+import com.example.base.utils.dp2px
 import com.example.tools.R
-import com.example.tools.dialog.base.BaseDialog
-import com.example.tools.dialog.base.ViewHolder
-import com.xiangxiongfly.common.utils.dp2px
 
 class SettingDialog {
 

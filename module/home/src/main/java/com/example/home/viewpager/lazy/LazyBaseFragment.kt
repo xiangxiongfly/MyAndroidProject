@@ -1,8 +1,7 @@
 package com.example.home.viewpager.lazy
 
 import android.os.Bundle
-import android.view.View
-import com.xiangxiongfly.common.base.BaseFragment
+import com.example.base.BaseFragment
 
 /**
  * setUserVisibleHint方法判断Fragment是否对用户可见

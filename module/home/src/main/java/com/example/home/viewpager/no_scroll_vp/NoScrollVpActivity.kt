@@ -7,16 +7,15 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import com.example.base.BaseActivity
 import com.example.home.R
-import com.xiangxiongfly.common.base.BaseActivity
 import com.xiangxiongfly.common.fragment.SimpleFragment
-import com.xiangxiongfly.common.widgets.layout.NoScrollViewPager
 
 class NoScrollVpActivity : BaseActivity() {
     private lateinit var btnOne: Button
     private lateinit var btnTwo: Button
     private lateinit var btnThree: Button
-    private lateinit var noScrollVp: NoScrollViewPager
+    private lateinit var noScrollVp: com.example.widgets.NoScrollViewPager
 
     companion object {
         fun actionStart(context: Context) {

@@ -3,11 +3,11 @@ package com.example.tools.network
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import com.example.base.BaseActivity
+import com.example.base.utils.LogUtils
 import com.example.tools.R
-import com.example.tools.network.utils.NetworkHelper
-import com.example.tools.network.utils.NetworkUtils
-import com.xiangxiongfly.common.base.BaseActivity
-import com.xiangxiongfly.common.utils.LogUtils
+import com.example.base.utils.network.NetworkHelper
+import com.example.base.utils.network.NetworkUtils
 import kotlin.concurrent.thread
 
 class NetworkActivity : BaseActivity(), NetworkHelper.OnNetworkStateChangedListener {

@@ -5,9 +5,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import com.example.base.BaseActivity
+import com.example.base.KEY_TITLE
 import com.example.home.R
-import com.xiangxiongfly.common.base.BaseActivity
-import com.xiangxiongfly.common.base.KEY_TITLE
 
 class ArrayAdapterActivity : BaseActivity() {
     companion object {

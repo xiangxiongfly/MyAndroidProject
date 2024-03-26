@@ -8,9 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.base.BaseActivity
 import com.example.jetpack.R
 import com.example.jetpack.databinding.ActivityRvBinding
-import com.xiangxiongfly.common.base.BaseActivity
 import com.xiangxiongfly.common.databinding.ItemTextBinding
 
 class RvActivity : BaseActivity() {

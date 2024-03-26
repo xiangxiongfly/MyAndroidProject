@@ -3,12 +3,12 @@ package com.example.tools.eventbus
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import com.example.base.BaseActivity
+import com.example.base.utils.eventbus.BindEventBus
+import com.example.base.utils.eventbus.EventBusUtils
+import com.example.base.utils.eventbus.MessageEvent
+import com.example.base.utils.eventbus.MessageEventCode
 import com.example.tools.R
-import com.xiangxiongfly.common.base.BaseActivity
-import com.xiangxiongfly.common.utils.eventbus.BindEventBus
-import com.xiangxiongfly.common.utils.eventbus.EventBusUtils
-import com.xiangxiongfly.common.utils.eventbus.MessageEvent
-import com.xiangxiongfly.common.utils.eventbus.MessageEventCode
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
 

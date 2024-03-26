@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
+import com.example.base.BaseFragment
 import com.example.jetpack.R
-import com.xiangxiongfly.common.base.BaseFragment
 
 class DetailFragment : BaseFragment() {
     private val sharedViewModel: SharedViewModel by activityViewModels()

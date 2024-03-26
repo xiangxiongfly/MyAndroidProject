@@ -6,11 +6,10 @@ import android.os.Bundle
 import android.util.Log
 import androidx.arch.core.util.Function
 import androidx.lifecycle.*
+import com.example.base.BaseActivity
 import com.example.jetpack.LIVEDATA
 import com.example.jetpack.R
-import com.xiangxiongfly.common.base.BaseActivity
 import com.xiangxiongfly.common.bean.User
-
 
 class LiveDataOtherActivity : BaseActivity() {
     companion object {

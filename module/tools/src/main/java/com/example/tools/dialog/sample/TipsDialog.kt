@@ -1,11 +1,11 @@
 package com.example.tools.dialog.sample
 
 import android.content.Context
+import com.example.base.action.HandlerAction
+import com.example.base.action.HandlerAction.Companion.HANDLER
+import com.example.base.dialog.BaseDialog
+import com.example.base.dialog.ViewHolder
 import com.example.tools.R
-import com.example.tools.dialog.base.BaseDialog
-import com.example.tools.dialog.base.ViewHolder
-import com.xiangxiongfly.common.action.HandlerAction
-import com.xiangxiongfly.common.action.HandlerAction.Companion.HANDLER
 
 class TipsDialog : HandlerAction {
     class Build(context: Context) : BaseDialog.Builder(context, R.layout.tools_dialog_tips) {

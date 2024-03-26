@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <com.example.tools.titlebar.widgets.TitleBar
+        <com.example.widgets.titlebar.TitleBar
             android:id="@+id/titleBar1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -26,7 +26,7 @@
             app:title="标题"
             app:titleIcon="@drawable/pear_pic" />
 
-        <com.example.tools.titlebar.widgets.TitleBar
+        <com.example.widgets.titlebar.TitleBar
             android:id="@+id/titleBar2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -43,7 +43,7 @@
             app:titleIcon="@drawable/pear_pic"
             app:titleOverflowMode="marquee" />
 
-        <com.example.tools.titlebar.widgets.TitleBar
+        <com.example.widgets.titlebar.TitleBar
             android:id="@+id/titleBar3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -72,6 +72,6 @@
                     android:layout_marginStart="10dp"
                     android:text="details" />
             </LinearLayout>
-        </com.example.tools.titlebar.widgets.TitleBar>
+        </com.example.widgets.titlebar.TitleBar>
     </LinearLayout>
 </ScrollView>

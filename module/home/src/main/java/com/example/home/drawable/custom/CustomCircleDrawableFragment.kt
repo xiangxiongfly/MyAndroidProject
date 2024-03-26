@@ -3,8 +3,8 @@ package com.example.home.drawable.custom
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
+import com.example.base.BaseFragment
 import com.example.home.R
-import com.xiangxiongfly.common.base.BaseFragment
 
 class CustomCircleDrawableFragment : BaseFragment(R.layout.fragment_custom_circle_drawable) {
 

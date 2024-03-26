@@ -3,9 +3,9 @@ package com.example.jetpack.viewbinding.base3
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.example.base.BaseFragment
 import com.example.jetpack.R
 import com.example.jetpack.databinding.FragmentThreeBinding
-import com.xiangxiongfly.common.base.BaseFragment
 
 class ThreeFragment : BaseFragment(R.layout.fragment_three) {
 //    private val viewBinding: FragmentThreeBinding by viewBindings(FragmentThreeBinding::bind)

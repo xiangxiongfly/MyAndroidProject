@@ -9,10 +9,9 @@ import android.view.View
 import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
+import com.example.base.BaseActivity
 import com.example.jetpack.R
 import com.example.jetpack.VIEWMODEL
-import com.xiangxiongfly.common.base.BaseActivity
-
 
 class ViewModelSimpleActivity : BaseActivity() {
     private lateinit var tvCount: TextView

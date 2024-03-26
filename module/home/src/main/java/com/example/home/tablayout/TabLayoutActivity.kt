@@ -17,12 +17,12 @@ import com.airbnb.lottie.LottieProperty
 import com.airbnb.lottie.SimpleColorFilter
 import com.airbnb.lottie.model.KeyPath
 import com.airbnb.lottie.value.LottieValueCallback
+import com.example.base.BaseActivity
+import com.example.base.utils.dp
 import com.example.home.R
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-import com.xiangxiongfly.common.base.BaseActivity
 import com.xiangxiongfly.common.fragment.SimpleFragment
-import com.xiangxiongfly.common.utils.dp
 
 class TabLayoutActivity : BaseActivity() {
     private lateinit var viewPager2: ViewPager2

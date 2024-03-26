@@ -3,8 +3,8 @@ package com.example.jetpack.viewmodel.fragments
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import com.example.base.BaseActivity
 import com.example.jetpack.R
-import com.xiangxiongfly.common.base.BaseActivity
 
 class MenuActivity : BaseActivity() {
     companion object {

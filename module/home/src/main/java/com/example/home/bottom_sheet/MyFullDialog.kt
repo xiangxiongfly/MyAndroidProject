@@ -6,10 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.ImageView
+import com.example.base.utils.KeyboardUtils
 import com.example.home.R
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.xiangxiongfly.common.utils.KeyboardUtils
 
 class MyFullDialog : BottomSheetDialogFragment() {
     private lateinit var close: ImageView

@@ -1,10 +1,10 @@
 package com.example.tools.setting_item
 
 import android.os.Bundle
+import com.example.base.BaseActivity
+import com.example.base.utils.ToastUtils
 import com.example.tools.R
 import com.example.tools.setting_item.widgets.SettingItem
-import com.xiangxiongfly.common.base.BaseActivity
-import com.xiangxiongfly.common.utils.ToastUtils
 
 class SettingItemActivity : BaseActivity() {
     private lateinit var settingAbout: SettingItem

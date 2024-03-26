@@ -2,8 +2,8 @@ package com.example.home.span
 
 import android.os.Bundle
 import android.view.View
+import com.example.base.BaseActivity
 import com.example.home.R
-import com.xiangxiongfly.common.base.BaseActivity
 
 class SpannableStringActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

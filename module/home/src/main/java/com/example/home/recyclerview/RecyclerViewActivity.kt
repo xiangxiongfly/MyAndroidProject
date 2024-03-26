@@ -2,13 +2,13 @@ package com.example.home.recyclerview
 
 import android.os.Bundle
 import android.view.View
+import com.example.base.BaseActivity
 import com.example.home.R
 import com.example.home.recyclerview.diffutil.DiffUtilActivity
 import com.example.home.recyclerview.simple.RvGridActivity
 import com.example.home.recyclerview.simple.RvLinearActivity
 import com.example.home.recyclerview.simple.RvStaggeredActivity
 import com.example.home.recyclerview.type.RvMutilTypeActivity
-import com.xiangxiongfly.common.base.BaseActivity
 
 class RecyclerViewActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

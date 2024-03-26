@@ -5,10 +5,10 @@ import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
+import com.example.base.BaseActivity
 import com.example.home.R
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import com.xiangxiongfly.common.base.BaseActivity
 
 class BottomSheetActivity : BaseActivity() {
     private lateinit var btnBottomSheet: Button

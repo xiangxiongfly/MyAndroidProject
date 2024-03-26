@@ -6,7 +6,7 @@
     android:orientation="vertical"
     tools:context=".viewpager.wrap_vp.WrapViewPagerActivity">
 
-    <com.xiangxiongfly.common.widgets.layout.WrapContentViewPager
+    <com.example.widgets.WrapContentViewPager
         android:id="@+id/wrap_view_pager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

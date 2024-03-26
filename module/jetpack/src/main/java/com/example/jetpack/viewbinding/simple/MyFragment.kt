@@ -5,9 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import com.example.base.BaseFragment
 import com.example.jetpack.R
 import com.example.jetpack.databinding.FragmentMyBinding
-import com.xiangxiongfly.common.base.BaseFragment
 
 class MyFragment : BaseFragment() {
     private var _viewBinding: FragmentMyBinding? = null

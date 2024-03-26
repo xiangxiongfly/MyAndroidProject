@@ -34,7 +34,8 @@ ext {
             //状态栏
             "immersionbar"     : "com.geyifeng.immersionbar:immersionbar:3.2.2",
             //lottie
-            "lottie"           : "com.airbnb.android:lottie:5.1.1"
-
+            "lottie"           : "com.airbnb.android:lottie:5.1.1",
+            //EventBus
+            "eventbus"         : "org.greenrobot:eventbus:3.3.1"
     ]
 }

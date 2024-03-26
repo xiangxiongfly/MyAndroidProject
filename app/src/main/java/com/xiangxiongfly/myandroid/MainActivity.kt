@@ -15,16 +15,16 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
+import com.example.base.BaseActivity
+import com.example.base.BaseFragment
 import com.example.home.HomeFragment
 import com.example.jetpack.JetpackFragment
 import com.example.setting.SettingFragment
 import com.example.tools.ToolsFragment
 import com.google.android.material.navigation.NavigationView
 import com.gyf.immersionbar.ImmersionBar
-import com.xiangxiongfly.common.base.BaseActivity
-import com.xiangxiongfly.common.base.BaseFragment
-import com.xiangxiongfly.common.widgets.navigation.BottomNavigation
-import com.xiangxiongfly.common.widgets.navigation.TabItem
+import com.example.widgets.navigation.BottomNavigation
+import com.example.widgets.navigation.TabItem
 
 
 class MainActivity : BaseActivity() {
@@ -55,7 +55,7 @@ class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        initView()
+        initViews()
         savedInstanceState?.let {
             currentPosition = it.getInt(KEY_POSITION, 0)
         }
@@ -68,7 +68,7 @@ class MainActivity : BaseActivity() {
         initDrawerLayout()
     }
 
-    private fun initView() {
+    private fun initViews() {
         vpMain = findViewById(R.id.vp_main)
         bottomNavigation = findViewById(R.id.bottom_navigation)
         drawerLayout = findViewById(R.id.drawer_layout)
