@@ -18,7 +18,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@drawable/main_shape"
+            android:background="@drawable/shape_title_bar"
             app:title="MyAndroid"
             app:titleTextColor="@android:color/white" />
 
