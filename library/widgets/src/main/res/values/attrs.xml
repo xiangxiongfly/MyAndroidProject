@@ -144,4 +144,23 @@
         <attr name="item_lineWidth" format="dimension" />
         <attr name="item_lineMargin" format="dimension" />
     </declare-styleable>
+
+    <declare-styleable name="ClearEditText">
+        <attr name="cet_deleteIcon" format="reference" />
+        <attr name="cet_deleteIconSize" format="dimension" />
+        <attr name="cet_tipDefaultIcon" format="reference" />
+        <attr name="cet_tipSelectedIcon" format="reference" />
+        <attr name="cet_tipIconSize" format="dimension" />
+        <attr name="cet_defaultBg" format="color|reference" />
+        <attr name="cet_selectedBg" format="color|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="PasswordEditText">
+        <attr name="pet_eyeIconSize" format="dimension" />
+        <attr name="pet_tipDefaultIcon" format="reference" />
+        <attr name="pet_tipSelectedIcon" format="reference" />
+        <attr name="pet_tipIconSize" format="dimension" />
+        <attr name="pet_defaultBg" format="color|reference" />
+        <attr name="pet_selectedBg" format="color|reference" />
+    </declare-styleable>
 </resources>

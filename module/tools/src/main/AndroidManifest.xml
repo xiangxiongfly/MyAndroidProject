@@ -3,7 +3,7 @@
     package="com.example.tools">
 
     <application>
-        <activity android:name=".clear_edittext.ClearEditTextActivity" />
+        <activity android:name=".my_edittext.MyEditTextActivity" />
         <activity android:name=".titlebar.TitleBarActivity" />
         <activity android:name=".eventbus.PostActivity" />
         <activity android:name=".eventbus.EventBusActivity" />

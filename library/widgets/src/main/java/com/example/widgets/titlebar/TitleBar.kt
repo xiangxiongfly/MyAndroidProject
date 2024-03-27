@@ -338,7 +338,7 @@ class TitleBar @JvmOverloads constructor(
         // 设置下划线颜色
         mLineView.background =
             if (a.hasValue(R.styleable.TitleBar_lineColor)) {
-                a.getDrawable(R.styleable.TitleBar_lineColor)
+                a.getDrawable(R.styleable.TitleBar_lineColor) ?: ColorDrawable(DEFAULT_LINE_COLOR)
             } else {
                 ColorDrawable(DEFAULT_LINE_COLOR)
             }

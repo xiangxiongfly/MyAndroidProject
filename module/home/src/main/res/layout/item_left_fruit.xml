@@ -7,7 +7,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
-        android:background="@drawable/left_shape"
+        android:background="@drawable/shape_border_red"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:padding="10dp">

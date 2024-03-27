@@ -5,9 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.base.BaseFragment
-import com.example.tools.clear_edittext.ClearEditTextActivity
 import com.example.tools.dialog.DialogActivity
 import com.example.tools.eventbus.EventBusActivity
+import com.example.tools.my_edittext.MyEditTextActivity
 import com.example.tools.network.NetworkActivity
 import com.example.tools.permissions.PermissionActivity
 import com.example.tools.popupwindow.PopupWindowActivity
@@ -52,7 +52,7 @@ class ToolsFragment : BaseFragment() {
         flexboxLayout.addElement(mContext, "SettingItem设置条", SettingItemActivity::class.java)
         flexboxLayout.addElement(mContext, "StateLayout状态页", StateLayoutActivity::class.java)
         flexboxLayout.addElement(mContext, "TitleBar标题栏", TitleBarActivity::class.java)
-        flexboxLayout.addElement(mContext, "ClearEditText", ClearEditTextActivity::class.java)
+        flexboxLayout.addElement(mContext, "自定义EditText", MyEditTextActivity::class.java)
     }
 
 }

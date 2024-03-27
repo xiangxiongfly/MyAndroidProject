@@ -17,7 +17,7 @@ fun FlexboxLayout.addElement(
 ) {
     addView(
         TextView(context).apply {
-            background = ContextCompat.getDrawable(context, R.drawable.home_shape)
+            background = ContextCompat.getDrawable(context, R.drawable.shape_flex_item)
             setTextColor(Color.BLACK)
             text = title
             isAllCaps = false
