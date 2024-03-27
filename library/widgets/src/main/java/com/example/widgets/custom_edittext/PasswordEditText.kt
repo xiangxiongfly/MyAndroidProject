@@ -73,7 +73,7 @@ class PasswordEditText @JvmOverloads constructor(
     }
 
     private fun setup() {
-        setDeleteIconVisible(false, false)
+        setIconVisible(false, false)
         currentEyeDrawable = eyeCloseDrawable
         bgDefaultDrawable?.let {
             background = it
@@ -89,19 +89,19 @@ class PasswordEditText @JvmOverloads constructor(
         lengthAfter: Int
     ) {
         super.onTextChanged(text, start, lengthBefore, lengthAfter)
-        setDeleteIconVisible(hasFocus() && text.length > 0, hasFocus())
+        setIconVisible(hasFocus() && text.length > 0, hasFocus())
     }
 
     override fun onFocusChanged(focused: Boolean, direction: Int, previouslyFocusedRect: Rect?) {
         super.onFocusChanged(focused, direction, previouslyFocusedRect)
-        setDeleteIconVisible(focused && length() > 0, focused)
+        setIconVisible(focused && length() > 0, focused)
     }
 
-    private fun setDeleteIconVisible(pwdVisible: Boolean, focused: Boolean) {
+    private fun setIconVisible(pwdIconVisible: Boolean, focused: Boolean) {
         setCompoundDrawablesRelative(
             if (focused) tipIconSelectedDrawable else tipIconDefaultDrawable,
             null,
-            if (pwdVisible) currentEyeDrawable else null,
+            if (pwdIconVisible) currentEyeDrawable else null,
             null
         )
         if (bgDefaultDrawable != null && bgSelectedDrawable != null) {
