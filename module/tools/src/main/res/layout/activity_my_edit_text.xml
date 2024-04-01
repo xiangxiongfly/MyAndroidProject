@@ -56,4 +56,19 @@
         app:pet_tipIconSize="30dp"
         app:pet_tipSelectedIcon="@drawable/ic_lock_blue" />
 
+    <com.example.widgets.custom_edittext.SearchEditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="30dp"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textSize="20sp"
+        app:set_background="@drawable/shape_border_gray"
+        app:set_searchIcon="@drawable/ic_search"
+        app:set_searchIconSize="30dp"
+        app:set_searchText="搜索"
+        app:set_searchTextColor="@android:color/darker_gray"
+        app:set_searchTextSize="20sp" />
+
 </LinearLayout>

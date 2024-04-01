@@ -32,12 +32,14 @@
         <entry key="..\:/MyWorksapce/android/MyAndroid/library/widgets/src/main/res/drawable-anydpi/tab_friends_selected.xml" value="0.1" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/library/widgets/src/main/res/drawable-anydpi/tab_home_unselect.xml" value="0.1" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/library/widgets/src/main/res/drawable/eye_close.xml" value="0.19" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/library/widgets/src/main/res/drawable/gray_frameb1.xml" value="0.19" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/library/widgets/src/main/res/drawable/home_shape.xml" value="0.1" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/library/widgets/src/main/res/layout/state_empty.xml" value="0.3536458333333333" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/library/widgets/src/main/res/layout/tab_view.xml" value="0.3536458333333333" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/module/home/src/main/res/drawable/left_shape.xml" value="0.184" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/module/home/src/main/res/drawable/right_shape.xml" value="0.184" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/module/home/src/main/res/drawable/shape_corner.xml" value="0.184" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/module/home/src/main/res/layout/activity_dialog.xml" value="0.3482051282051282" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/module/home/src/main/res/layout/activity_view_pager.xml" value="0.1" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/module/home/src/main/res/layout/activity_view_pager_simple.xml" value="0.23036649214659685" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/module/home/src/main/res/layout/activity_wrap_view_pager.xml" value="0.3536458333333333" />
@@ -50,6 +52,7 @@
         <entry key="..\:/MyWorksapce/android/MyAndroid/module/jetpack/src/main/res/layout/title_bar.xml" value="0.3536458333333333" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/module/tools/src/main/res/layout/activity_clear_edit_text.xml" value="0.3333333333333333" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/module/tools/src/main/res/layout/activity_event_bus.xml" value="0.23049001814882034" />
+        <entry key="..\:/MyWorksapce/android/MyAndroid/module/tools/src/main/res/layout/activity_my_edit_text.xml" value="0.32685185185185184" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/module/tools/src/main/res/layout/activity_network.xml" value="0.3536458333333333" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/module/tools/src/main/res/layout/activity_permission.xml" value="0.3536458333333333" />
         <entry key="..\:/MyWorksapce/android/MyAndroid/module/tools/src/main/res/layout/activity_post.xml" value="0.3109375" />

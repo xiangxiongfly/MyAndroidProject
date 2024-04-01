@@ -163,4 +163,14 @@
         <attr name="pet_defaultBg" format="color|reference" />
         <attr name="pet_selectedBg" format="color|reference" />
     </declare-styleable>
+
+    <declare-styleable name="SearchEditText">
+        <attr name="set_background" format="reference" />
+        <attr name="set_searchIcon" format="reference" />
+        <attr name="set_searchIconSize" format="dimension" />
+        <attr name="set_searchText" format="string" />
+        <attr name="set_searchTextSize" format="dimension" />
+        <attr name="set_searchTextColor" format="color" />
+    </declare-styleable>
+
 </resources>

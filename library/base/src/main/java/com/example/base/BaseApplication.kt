@@ -5,6 +5,7 @@ import android.util.Log
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ProcessLifecycleOwner
+import com.example.base.manager.ActivityManager
 
 class BaseApplication : Application() {
 
@@ -21,6 +22,7 @@ class BaseApplication : Application() {
         super.onCreate()
         sInstance = this
         ProcessLifecycleOwner.get().lifecycle.addObserver(ApplicationLifecycleObserver())
+        ActivityManager.getInstance().init(this)
     }
 }
 
