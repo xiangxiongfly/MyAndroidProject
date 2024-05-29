@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import com.example.base.BaseFragment
 import com.example.tools.dialog.DialogActivity
 import com.example.tools.eventbus.EventBusActivity
+import com.example.tools.genBitmap.GenerateBitmapActivity
 import com.example.tools.my_edittext.MyEditTextActivity
 import com.example.tools.network.NetworkActivity
 import com.example.tools.permissions.PermissionActivity
@@ -55,6 +56,7 @@ class ToolsFragment : BaseFragment() {
         flexboxLayout.addElement(mContext, "TitleBar标题栏", TitleBarActivity::class.java)
         flexboxLayout.addElement(mContext, "自定义EditText", MyEditTextActivity::class.java)
         flexboxLayout.addElement(mContext, "保持宽高比例", RatioActivity::class.java)
+        flexboxLayout.addElement(mContext, "将View生成Bitmap", GenerateBitmapActivity::class.java)
     }
 
 }
