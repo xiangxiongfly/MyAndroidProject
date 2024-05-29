@@ -46,6 +46,10 @@ dependencies {
     // Flex
     api rootProject.ext.dependencies["flexbox"]
 
+    // 百分比布局
+    api 'androidx.percentlayout:percentlayout:1.0.0'
+
+
     // palette
     api rootProject.ext.dependencies["palette"]
 
@@ -74,4 +78,6 @@ dependencies {
 
     // EventBus
     api rootProject.ext.dependencies["eventbus"]
+
+
 }

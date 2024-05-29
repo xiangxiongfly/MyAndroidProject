@@ -11,6 +11,7 @@ import com.example.tools.my_edittext.MyEditTextActivity
 import com.example.tools.network.NetworkActivity
 import com.example.tools.permissions.PermissionActivity
 import com.example.tools.popupwindow.PopupWindowActivity
+import com.example.tools.ratio.RatioActivity
 import com.example.tools.setting_item.SettingItemActivity
 import com.example.tools.statelayout.StateLayoutActivity
 import com.example.tools.titlebar.TitleBarActivity
@@ -53,6 +54,7 @@ class ToolsFragment : BaseFragment() {
         flexboxLayout.addElement(mContext, "StateLayout状态页", StateLayoutActivity::class.java)
         flexboxLayout.addElement(mContext, "TitleBar标题栏", TitleBarActivity::class.java)
         flexboxLayout.addElement(mContext, "自定义EditText", MyEditTextActivity::class.java)
+        flexboxLayout.addElement(mContext, "保持宽高比例", RatioActivity::class.java)
     }
 
 }

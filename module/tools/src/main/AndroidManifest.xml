@@ -3,6 +3,7 @@
     package="com.example.tools">
 
     <application>
+        <activity android:name=".ratio.RatioActivity" />
         <activity android:name=".my_edittext.MyEditTextActivity" />
         <activity android:name=".titlebar.TitleBarActivity" />
         <activity android:name=".eventbus.PostActivity" />

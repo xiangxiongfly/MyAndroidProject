@@ -21,10 +21,10 @@ import com.example.home.HomeFragment
 import com.example.jetpack.JetpackFragment
 import com.example.setting.SettingFragment
 import com.example.tools.ToolsFragment
-import com.google.android.material.navigation.NavigationView
-import com.gyf.immersionbar.ImmersionBar
 import com.example.widgets.navigation.BottomNavigation
 import com.example.widgets.navigation.TabItem
+import com.google.android.material.navigation.NavigationView
+import com.gyf.immersionbar.ImmersionBar
 
 
 class MainActivity : BaseActivity() {
