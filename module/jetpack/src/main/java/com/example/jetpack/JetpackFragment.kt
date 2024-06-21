@@ -5,12 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.base.BaseFragment
-import com.example.jetpack.lifecycle.LifecycleActivity
-import com.example.jetpack.livedata.LiveDataActivity
-import com.example.jetpack.viewbinding.ViewBindingActivity
-import com.example.jetpack.viewmodel.ViewModelActivity
 import com.google.android.flexbox.FlexboxLayout
-import com.xiangxiongfly.common.exts.addElement
 
 class JetpackFragment : BaseFragment() {
     private lateinit var flexboxLayout: FlexboxLayout
@@ -39,9 +34,5 @@ class JetpackFragment : BaseFragment() {
 
     private fun addElements() {
         flexboxLayout.removeAllViews()
-        flexboxLayout.addElement(mContext, "Lifecycle", LifecycleActivity::class.java)
-        flexboxLayout.addElement(mContext, "ViewModel", ViewModelActivity::class.java)
-        flexboxLayout.addElement(mContext, "LiveData", LiveDataActivity::class.java)
-        flexboxLayout.addElement(mContext, "ViewBinding", ViewBindingActivity::class.java)
-    }
+     }
 }

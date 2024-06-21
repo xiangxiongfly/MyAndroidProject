@@ -18,13 +18,6 @@
 - [TabLayout](https://blog.csdn.net/qq_14876133/article/details/127844487)
 - [BottomSheet](https://blog.csdn.net/qq_14876133/article/details/127882057)
 
-## Jetpack
-
-- [Lifecycle](https://blog.csdn.net/qq_14876133/article/details/114782709)
-- [ViewModel](https://blog.csdn.net/qq_14876133/article/details/114832205)
-- [LiveData](https://blog.csdn.net/qq_14876133/article/details/114806356)
-- [ViewBinding](https://blog.csdn.net/qq_14876133/article/details/114888889)
-
 ## Tools
 
 - [封装EventBus](https://blog.csdn.net/qq_14876133/article/details/136844179)
@@ -36,3 +29,4 @@
 - [StateLayout状态页](https://blog.csdn.net/qq_14876133/article/details/136837408)
 - [TitleBar标题栏](https://blog.csdn.net/qq_14876133/article/details/80915194)
 - [自定义EditText](https://blog.csdn.net/qq_14876133/article/details/137080366)
+- [控件保持宽高比得几种方式](https://blog.csdn.net/qq_14876133/article/details/139298644)

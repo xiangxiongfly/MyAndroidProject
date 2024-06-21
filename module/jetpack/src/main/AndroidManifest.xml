@@ -2,29 +2,4 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.jetpack">
 
-    <application>
-        <activity android:name=".room.RoomActivity" />
-        <activity android:name=".viewbinding.base3.ThreeActivity" />
-        <activity android:name=".viewbinding.base2.TwoActivity" />
-        <activity android:name=".viewbinding.base1.OneActivity" />
-        <activity android:name=".viewbinding.include.VBIncludeActivity" />
-        <activity android:name=".viewbinding.rv.RvActivity" />
-        <activity android:name=".viewbinding.simple.VBFragmentActivity" />
-        <activity android:name=".viewbinding.simple.VBActivity" />
-        <activity android:name=".viewbinding.ViewBindingActivity" />
-        <activity android:name=".livedata.other.LiveDataOtherActivity" />
-        <activity android:name=".livedata.simple.LiveDataSimpleActivity" />
-        <activity android:name=".livedata.LiveDataActivity" />
-        <activity android:name=".viewmodel.fragments.MenuActivity" />
-        <activity android:name=".viewmodel.simple.ViewModelSimpleActivity" />
-        <activity android:name=".viewmodel.ViewModelActivity" />
-        <activity android:name=".lifecycle.dialog.LifecycleDialogActivity" />
-        <activity android:name=".lifecycle.custom.LifecycleCustomActivity" />
-        <activity android:name=".lifecycle.advertising2.AdvertisingActivity2" />
-        <activity android:name=".NextActivity" />
-        <activity android:name=".lifecycle.advertising.AdvertisingActivity" />
-        <activity android:name=".lifecycle.simple.LifecycleSimpleActivity" />
-        <activity android:name=".lifecycle.LifecycleActivity" />
-    </application>
-
 </manifest>
