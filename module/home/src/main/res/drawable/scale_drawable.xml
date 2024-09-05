@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <scale xmlns:android="http://schemas.android.com/apk/res/android"
-    android:drawable="@drawable/a"
+    android:drawable="@drawable/abcd"
     android:scaleWidth="100%"
     android:scaleHeight="100%"
     android:scaleGravity="center" />

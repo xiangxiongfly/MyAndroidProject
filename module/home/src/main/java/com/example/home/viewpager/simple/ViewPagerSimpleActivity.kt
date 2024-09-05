@@ -29,7 +29,7 @@ class ViewPagerSimpleActivity : BaseActivity() {
 
     //图片资源
     private val mImgIds =
-        intArrayOf(R.drawable.a, R.drawable.b, R.drawable.c, R.drawable.d, R.drawable.e)
+        intArrayOf(R.drawable.abcd, R.drawable.b, R.drawable.c, R.drawable.d, R.drawable.e)
 
     //亮点之间距离
     private var distance = 0

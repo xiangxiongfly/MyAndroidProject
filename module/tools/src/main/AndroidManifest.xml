@@ -16,6 +16,7 @@
         <activity android:name=".network.NetworkActivity" />
         <activity android:name=".permissions.TwoActivity" />
         <activity android:name=".permissions.PermissionActivity" />
+        <activity android:name=".imageloader.ImageLoaderActivity" />
     </application>
 
 </manifest>

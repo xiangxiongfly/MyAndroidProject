@@ -27,7 +27,7 @@ class LayerDrawableFragment : BaseFragment(R.layout.fragment_common_drawable) {
         val layerDrawable = ContextCompat.getDrawable(mContext, R.drawable.layer_drawable)
         iv1.setImageDrawable(layerDrawable)
 
-        val drawable = ContextCompat.getDrawable(mContext, R.drawable.a)
+        val drawable = ContextCompat.getDrawable(mContext, R.drawable.abcd)
         val rectDrawable = GradientDrawable().apply {
             shape = GradientDrawable.RECTANGLE
             setColor(Color.parseColor("#FF0000"))

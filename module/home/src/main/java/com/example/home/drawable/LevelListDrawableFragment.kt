@@ -28,7 +28,7 @@ class LevelListDrawableFragment : BaseFragment(R.layout.fragment_level_list_draw
         iv1.setImageDrawable(levelListDrawable)
 
         val levelListDrawable2 = LevelListDrawable().apply {
-            addLevel(0, 1, ContextCompat.getDrawable(mContext, R.drawable.a))
+            addLevel(0, 1, ContextCompat.getDrawable(mContext, R.drawable.abcd))
             addLevel(0, 2, ContextCompat.getDrawable(mContext, R.drawable.b))
             addLevel(0, 3, ContextCompat.getDrawable(mContext, R.drawable.c))
             addLevel(0, 4, ContextCompat.getDrawable(mContext, R.drawable.d))

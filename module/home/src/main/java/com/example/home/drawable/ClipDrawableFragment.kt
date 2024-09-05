@@ -28,7 +28,7 @@ class ClipDrawableFragment : BaseFragment(R.layout.fragment_clip_drawable) {
         iv1.setImageDrawable(clipDrawable)
 
         val clipDrawable2 = ClipDrawable(
-            ContextCompat.getDrawable(mContext, R.drawable.a),
+            ContextCompat.getDrawable(mContext, R.drawable.abcd),
             Gravity.CENTER,
             ClipDrawable.VERTICAL
         )

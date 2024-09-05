@@ -13,7 +13,7 @@ class AnimationDrawableFragment : BaseFragment(R.layout.fragment_common_drawable
     private var isStart2 = false
 
     private val drawables = intArrayOf(
-        R.drawable.a,
+        R.drawable.abcd,
         R.drawable.b,
         R.drawable.c,
         R.drawable.d,

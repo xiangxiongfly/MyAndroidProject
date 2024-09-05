@@ -18,7 +18,7 @@ class ViewPager2SimpleActivity : BaseActivity() {
 
     //图片资源
     private val mImgIds =
-        intArrayOf(R.drawable.a, R.drawable.b, R.drawable.c, R.drawable.d, R.drawable.e)
+        intArrayOf(R.drawable.abcd, R.drawable.b, R.drawable.c, R.drawable.d, R.drawable.e)
 
     companion object {
         fun actionStart(context: Context) {

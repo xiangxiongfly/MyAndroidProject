@@ -25,7 +25,7 @@ class InsetDrawableFragment : BaseFragment(R.layout.fragment_common_drawable) {
         iv1.setImageDrawable(insetDrawable)
 
         val insetDrawable2 = InsetDrawable(
-            ContextCompat.getDrawable(mContext, R.drawable.a),
+            ContextCompat.getDrawable(mContext, R.drawable.abcd),
             300.dp
         )
         iv2.setImageDrawable(insetDrawable2)
