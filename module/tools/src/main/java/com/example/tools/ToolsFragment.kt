@@ -51,6 +51,7 @@ class ToolsFragment : BaseFragment() {
         flexboxLayout.addElement(mContext, "封装Dialog", DialogActivity::class.java)
         flexboxLayout.addElement(mContext, "封装PopupWindow", PopupWindowActivity::class.java)
         flexboxLayout.addElement(mContext, "封装Permissions", PermissionActivity::class.java)
+        flexboxLayout.addElement(mContext, "封装Glide", ImageLoaderActivity::class.java)
         flexboxLayout.addElement(mContext, "监听网络状态变化", NetworkActivity::class.java)
         flexboxLayout.addElement(mContext, "SettingItem设置条", SettingItemActivity::class.java)
         flexboxLayout.addElement(mContext, "StateLayout状态页", StateLayoutActivity::class.java)
@@ -58,7 +59,6 @@ class ToolsFragment : BaseFragment() {
         flexboxLayout.addElement(mContext, "自定义EditText", MyEditTextActivity::class.java)
         flexboxLayout.addElement(mContext, "保持宽高比例", RatioActivity::class.java)
         flexboxLayout.addElement(mContext, "将View生成Bitmap", GenerateBitmapActivity::class.java)
-        flexboxLayout.addElement(mContext, "封装Glide", ImageLoaderActivity::class.java)
     }
 
 }
