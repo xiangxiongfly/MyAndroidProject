@@ -9,12 +9,16 @@ class ImageOptions private constructor() {
     var resource: Any? = null // 加载资源
     var width = -1 // 指定宽度
     var height = -1 // 指定高度
+    var isDiskCache = true // 磁盘缓存
+    var isMemoryCache = true // 内存缓存
 
     @DrawableRes
     var placeholder: Int = -1 // 占位图资源
 
     @DrawableRes
     var error: Int = -1 // 失败图资源
+
+    var listener: Listener? = null
 
     companion object {
         fun create(): ImageOptions {
@@ -52,8 +56,28 @@ class ImageOptions private constructor() {
         return this
     }
 
+    fun setDiskCache(isCache: Boolean): ImageOptions {
+        isDiskCache = isCache
+        return this
+    }
+
+    fun setMemoryCache(isCache: Boolean): ImageOptions {
+        isMemoryCache = isCache
+        return this
+    }
+
+    fun setListener(listener: Listener): ImageOptions {
+        this.listener = listener
+        return this
+    }
+
     fun into(imageView: ImageView) {
         this.targetView = imageView
         ImageLoader.loadOptions(this)
+    }
+
+    interface Listener {
+        fun onSuccess(model: Any?)
+        fun onFail(model: Any?)
     }
 }

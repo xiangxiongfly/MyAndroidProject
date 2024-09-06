@@ -9,6 +9,11 @@ import androidx.fragment.app.FragmentActivity
 import com.bumptech.glide.Glide
 import com.bumptech.glide.RequestBuilder
 import com.bumptech.glide.RequestManager
+import com.bumptech.glide.load.DataSource
+import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.bumptech.glide.load.engine.GlideException
+import com.bumptech.glide.request.RequestListener
+import com.bumptech.glide.request.target.Target
 import java.io.File
 import kotlin.concurrent.thread
 
@@ -32,6 +37,32 @@ class GlideLoader : ILoaderStrategy {
             }
             if (options.width != -1 || options.height != -1) {
                 it.override(options.width, options.height)
+            }
+            it.skipMemoryCache(options.isMemoryCache)
+            it.diskCacheStrategy(if (options.isDiskCache) DiskCacheStrategy.AUTOMATIC else DiskCacheStrategy.NONE)
+            options.listener?.let { listener ->
+                it.addListener(object : RequestListener<Drawable> {
+                    override fun onLoadFailed(
+                        e: GlideException?,
+                        model: Any?,
+                        target: Target<Drawable>?,
+                        isFirstResource: Boolean
+                    ): Boolean {
+                        listener.onFail(model)
+                        return false
+                    }
+
+                    override fun onResourceReady(
+                        resource: Drawable?,
+                        model: Any?,
+                        target: Target<Drawable>?,
+                        dataSource: DataSource?,
+                        isFirstResource: Boolean
+                    ): Boolean {
+                        listener.onSuccess(model)
+                        return false
+                    }
+                })
             }
             if (options.targetView == null) {
                 throw IllegalArgumentException("targetView cannot be null");
@@ -66,7 +97,7 @@ class GlideLoader : ILoaderStrategy {
 
     override fun clearDiskCache(context: Context) {
         thread {
-            Glide.get(context).clearMemory()
+            Glide.get(context).clearDiskCache()
         }
     }
 

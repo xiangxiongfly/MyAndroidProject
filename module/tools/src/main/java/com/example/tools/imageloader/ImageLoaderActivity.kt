@@ -1,12 +1,15 @@
 package com.example.tools.imageloader
 
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.example.base.BaseActivity
 import com.example.tools.R
 import com.example.tools.imageloader.imageloader.GlideLoader
 import com.example.tools.imageloader.imageloader.ImageLoader
+import com.example.tools.imageloader.imageloader.ImageOptions
 import java.io.File
 
 class ImageLoaderActivity : BaseActivity() {
@@ -36,22 +39,41 @@ class ImageLoaderActivity : BaseActivity() {
             .size(100)
             .placeholder(R.mipmap.ic_launcher)
             .error(R.mipmap.ic_launcher)
+            .setListener(object : ImageOptions.Listener {
+                override fun onSuccess(model: Any?) {
+                    Log.e("TAG", "成功")
+                }
+
+                override fun onFail(model: Any?) {
+                    Log.e("TAG", "失败")
+                }
+            })
             .into(imageView1)
 
         ImageLoader.with(this)
-            .loadResource(File(cacheDir, "aaa.png"))
+            .loadResource(File(cacheDir, "aaa.jpg"))
             .placeholder(R.mipmap.ic_launcher)
             .error(R.mipmap.ic_launcher)
-            .into(imageView2)
+            .setListener(object : ImageOptions.Listener {
+                override fun onSuccess(model: Any?) {
+                    Log.e("TAG", "成功2")
+                }
 
+                override fun onFail(model: Any?) {
+                    Log.e("TAG", "失败2")
+                }
+            })
+            .into(imageView2)
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        ImageLoader.clear(imageView1)
-        ImageLoader.clearAll(this)
+    fun onClick(view: View) {
         ImageLoader.clearMemoryCache(this)
         ImageLoader.clearDiskCache(this)
+        ImageLoader.clearAll(this)
+    }
+
+    fun onClick2(view: View) {
+        ImageLoader.clear(imageView1)
     }
 }
 

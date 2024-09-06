@@ -18,23 +18,23 @@ object ImageLoader {
     }
 
     fun loadOptions(options: ImageOptions) {
-        imageLoader!!.loadImage(options)
+        imageLoader?.loadImage(options)
     }
 
-    fun clearDiskCache(context: Context){
-        imageLoader!!.clearDiskCache(context)
+    fun clearDiskCache(context: Context) {
+        imageLoader?.clearDiskCache(context)
     }
 
-    fun clearMemoryCache(context: Context){
-        imageLoader!!.clearMemoryCache(context)
+    fun clearMemoryCache(context: Context) {
+        imageLoader?.clearMemoryCache(context)
     }
 
-    fun clearAll(context:Context){
-        imageLoader!!.clearAll(context)
+    fun clearAll(context: Context) {
+        imageLoader?.clearAll(context)
     }
 
-    fun clear(imageView: ImageView){
-        imageLoader!!.clear(imageView)
+    fun clear(imageView: ImageView) {
+        imageLoader?.clear(imageView)
     }
 
 }
