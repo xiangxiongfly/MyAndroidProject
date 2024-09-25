@@ -72,16 +72,22 @@ class GlideLoader : ILoaderStrategy {
     }
 
     private fun getRequestManager(targetObj: Any?): RequestManager {
-        return if (targetObj is FragmentActivity) {
-            Glide.with(targetObj)
-        } else if (targetObj is Context) {
-            Glide.with(targetObj)
-        } else if (targetObj is View) {
-            Glide.with(targetObj)
-        } else if (targetObj is Fragment) {
-            Glide.with(targetObj)
-        } else {
-            throw IllegalArgumentException("You cannot start a load on a null Context");
+        return when (targetObj) {
+            is FragmentActivity -> {
+                Glide.with(targetObj)
+            }
+            is Context -> {
+                Glide.with(targetObj)
+            }
+            is View -> {
+                Glide.with(targetObj)
+            }
+            is Fragment -> {
+                Glide.with(targetObj)
+            }
+            else -> {
+                throw IllegalArgumentException("You cannot start a load on a null Context");
+            }
         }
     }
 

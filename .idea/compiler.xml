@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="11" />
+    <bytecodeTargetLevel target="1.7">
+      <module name="MyAndroid.app" target="11" />
+      <module name="MyAndroid.library.base" target="11" />
+      <module name="MyAndroid.library.common" target="11" />
+      <module name="MyAndroid.library.widgets" target="11" />
+      <module name="MyAndroid.module.home" target="11" />
+      <module name="MyAndroid.module.jetpack" target="11" />
+      <module name="MyAndroid.module.setting" target="11" />
+      <module name="MyAndroid.module.tools" target="11" />
+      <module name="MyAndroid.module.view" target="11" />
+      <module name="MyAndroid.status_bar_demo" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
