@@ -14,6 +14,7 @@ import com.example.home.popupwindow.PopupWindowActivity
 import com.example.home.recyclerview.RecyclerViewActivity
 import com.example.home.span.SpannableStringActivity
 import com.example.home.tablayout.TabLayoutActivity
+import com.example.home.textview.TextViewActivity
 import com.example.home.viewpager.ViewPagerActivity
 import com.example.home.viewpager2.ViewPager2Activity
 import com.google.android.flexbox.FlexboxLayout
@@ -46,6 +47,7 @@ class HomeFragment : BaseFragment() {
 
     private fun addElements() {
         flexboxLayout.removeAllViews()
+        flexboxLayout.addElement(mContext, "TextView", TextViewActivity::class.java)
         flexboxLayout.addElement(mContext, "Dialog", DialogActivity::class.java)
         flexboxLayout.addElement(mContext, "PopupWindow", PopupWindowActivity::class.java)
         flexboxLayout.addElement(mContext, "ViewPager", ViewPagerActivity::class.java)

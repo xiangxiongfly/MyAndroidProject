@@ -43,22 +43,6 @@ dependencies {
     api rootProject.ext.dependencies["material"]
     api rootProject.ext.dependencies["constraintlayout"]
 
-    // Flex
-    api rootProject.ext.dependencies["flexbox"]
-
-    // 百分比布局
-    api 'androidx.percentlayout:percentlayout:1.0.0'
-
-
-    // palette
-    api rootProject.ext.dependencies["palette"]
-
-    // immersionbar
-    api rootProject.ext.dependencies["immersionbar"]
-
-    // Lottie
-    api rootProject.ext.dependencies["lottie"]
-
     // Lifecycle
     def lifecycle_version = "2.5.0"
     api "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
@@ -76,8 +60,24 @@ dependencies {
 //    annotationProcessor "androidx.room:room-compiler:$room_version"
 //    kapt "androidx.room:room-compiler:$room_version"
 
+    // Glide
+    api 'com.github.bumptech.glide:glide:4.15.1'
+
     // EventBus
-    api rootProject.ext.dependencies["eventbus"]
+    api "org.greenrobot:eventbus:3.3.1"
 
+    // Lottie
+    api "com.airbnb.android:lottie:5.1.1"
 
+    // immersionbar
+    api "com.geyifeng.immersionbar:immersionbar:3.2.2"
+
+    // Flex
+    api rootProject.ext.dependencies["flexbox"]
+
+    // 百分比布局
+    api 'androidx.percentlayout:percentlayout:1.0.0'
+
+    // palette
+    api rootProject.ext.dependencies["palette"]
 }

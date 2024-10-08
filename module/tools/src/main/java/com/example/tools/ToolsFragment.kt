@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.base.BaseFragment
+import com.example.tools.clickarea.ClickAreaActivity
 import com.example.tools.dialog.DialogActivity
 import com.example.tools.eventbus.EventBusActivity
 import com.example.tools.genBitmap.GenerateBitmapActivity
@@ -59,6 +60,7 @@ class ToolsFragment : BaseFragment() {
         flexboxLayout.addElement(mContext, "自定义EditText", MyEditTextActivity::class.java)
         flexboxLayout.addElement(mContext, "保持宽高比例", RatioActivity::class.java)
         flexboxLayout.addElement(mContext, "将View生成Bitmap", GenerateBitmapActivity::class.java)
+        flexboxLayout.addElement(mContext, "扩大View的点击区域", ClickAreaActivity::class.java)
     }
 
 }

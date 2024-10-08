@@ -3,6 +3,13 @@
     package="com.example.tools">
 
     <application>
+        <activity android:name=".clickarea.LocationOnScreenActivity"></activity>
+        <activity android:name=".clickarea.TouchDelegateActivity" />
+        <activity android:name=".clickarea.PaddingActivity" />
+        <activity
+            android:name=".clickarea.ItemDetailHostActivity"
+            android:label="@string/title_activity_item_detail_host" />
+        <activity android:name=".clickarea.ClickAreaActivity" />
         <activity android:name=".genBitmap.GenerateBitmapActivity" />
         <activity android:name=".ratio.RatioActivity" />
         <activity android:name=".my_edittext.MyEditTextActivity" />

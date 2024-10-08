@@ -29,4 +29,6 @@
 - [StateLayout状态页](https://blog.csdn.net/qq_14876133/article/details/136837408)
 - [TitleBar标题栏](https://blog.csdn.net/qq_14876133/article/details/80915194)
 - [自定义EditText](https://blog.csdn.net/qq_14876133/article/details/137080366)
-- [控件保持宽高比得几种方式](https://blog.csdn.net/qq_14876133/article/details/139298644)
+- [控件保持宽高比的几种方式](https://blog.csdn.net/qq_14876133/article/details/139298644)
+- [扩大View的点击区域](https://blog.csdn.net/qq_14876133/article/details/142758670)
+- [封装Glide](https://blog.csdn.net/qq_14876133/article/details/141962584)
