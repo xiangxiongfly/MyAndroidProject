@@ -7,11 +7,11 @@
         <option name="testRunner" value="PLATFORM" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleJvm" value="Embedded JDK" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/java_design_pattern" />
             <option value="$PROJECT_DIR$/java_sort" />
             <option value="$PROJECT_DIR$/library" />
             <option value="$PROJECT_DIR$/library/base" />
@@ -22,7 +22,7 @@
             <option value="$PROJECT_DIR$/module/jetpack" />
             <option value="$PROJECT_DIR$/module/setting" />
             <option value="$PROJECT_DIR$/module/tools" />
-            <option value="$PROJECT_DIR$/status_bar_demo" />
+            <option value="$PROJECT_DIR$/statusbar_demo" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

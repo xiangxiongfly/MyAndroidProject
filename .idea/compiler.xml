@@ -10,8 +10,7 @@
       <module name="MyAndroid.module.jetpack" target="11" />
       <module name="MyAndroid.module.setting" target="11" />
       <module name="MyAndroid.module.tools" target="11" />
-      <module name="MyAndroid.module.view" target="11" />
-      <module name="MyAndroid.status_bar_demo" target="11" />
+      <module name="MyAndroid.statusbar_demo" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
