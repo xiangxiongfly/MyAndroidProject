@@ -1,4 +1,4 @@
-package com.example.java_design_pattern.absfactory;
+package com.example.java_design_pattern.abstractfactory;
 
 public class Client {
     public static void main(String[] args) {
