@@ -6,6 +6,7 @@ import android.view.View
 import com.example.base.dialog.ViewHolder
 import com.example.base.popupwindow.BasePopupWindow
 import com.example.base.utils.ToastUtils
+import com.example.base.utils.dp
 import com.example.base.utils.dp2px
 import com.example.tools.R
 
@@ -13,7 +14,7 @@ class SharePop {
 
     class Build(context: Context) : BasePopupWindow.Builder(context, R.layout.pop_share) {
         init {
-            setWidth(dp2px(100))
+            setWidth(100.dp)
             setFocusable(true)
             setXOffset(-30)
             setGravity(Gravity.RIGHT)

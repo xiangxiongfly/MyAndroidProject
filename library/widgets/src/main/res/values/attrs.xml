@@ -173,4 +173,10 @@
         <attr name="set_searchTextColor" format="color" />
     </declare-styleable>
 
+    <!-- 签名板 -->
+    <declare-styleable name="SignatureView">
+        <attr name="bgColor" format="color" />
+        <attr name="brushColor" format="color" />
+        <attr name="brushWidth" format="dimension" />
+    </declare-styleable>
 </resources>

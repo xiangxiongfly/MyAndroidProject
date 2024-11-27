@@ -13,6 +13,7 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
+import com.example.base.utils.dp
 import com.example.base.utils.dp2px
 import com.example.base.utils.sp2px
 import com.example.widgets.R
@@ -26,12 +27,12 @@ class TitleBar @JvmOverloads constructor(
     companion object {
         const val NONE_RES = -1
 
-        val DEFAULT_VERTICAL_PADDING = dp2px(15)
+        val DEFAULT_VERTICAL_PADDING = 15.dp
 
         const val DEFAULT_TITLE_POSITION = 3
         const val DEFAULT_TITLE = ""
         const val DEFAULT_TITLE_COLOR = 0xFF222222.toInt()
-        val DEFAULT_TITLE_SIZE = sp2px(16)
+        val DEFAULT_TITLE_SIZE = 16.dp
         const val DEFAULT_TITLE_STYLE = 1
         const val DEFAULT_TITLE_ICON_SIZE = 0
         const val DEFAULT_TITLE_ICON_PADDING = 0
@@ -41,21 +42,21 @@ class TitleBar @JvmOverloads constructor(
 
         const val DEFAULT_LEFT_TITLE = ""
         const val DEFAULT_LEFT_TITLE_COLOR = 0xFF666666.toInt()
-        val DEFAULT_LEFT_TITLE_SIZE = sp2px(14)
+        val DEFAULT_LEFT_TITLE_SIZE = 14.dp
         const val DEFAULT_LEFT_TITLE_STYLE = 1
         const val DEFAULT_LEFT_ICON_SIZE = 0
         const val DEFAULT_LEFT_ICON_PADDING = 0
         const val DEFAULT_LEFT_ICON_POSITION = 1
-        val DEFAULT_LEFT_HORIZONTAL_PADDING = dp2px(10)
+        val DEFAULT_LEFT_HORIZONTAL_PADDING = 10.dp
 
         const val DEFAULT_RIGHT_TITLE = ""
         const val DEFAULT_RIGHT_TITLE_COLOR = 0xFF666666.toInt()
-        val DEFAULT_RIGHT_TITLE_SIZE = sp2px(14)
+        val DEFAULT_RIGHT_TITLE_SIZE = 14.dp
         const val DEFAULT_RIGHT_TITLE_STYLE = 1
         const val DEFAULT_RIGHT_ICON_SIZE = 0
         const val DEFAULT_RIGHT_ICON_PADDING = 0
         const val DEFAULT_RIGHT_ICON_POSITION = 1
-        val DEFAULT_RIGHT_HORIZONTAL_PADDING = dp2px(10)
+        val DEFAULT_RIGHT_HORIZONTAL_PADDING = 10.dp
 
         const val DEFAULT_LINE_VISIBLE = true
         const val DEFAULT_LINE_COLOR = 0xFFECECEC.toInt()

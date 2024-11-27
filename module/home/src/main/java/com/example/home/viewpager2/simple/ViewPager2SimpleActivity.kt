@@ -9,6 +9,7 @@ import androidx.core.view.forEachIndexed
 import androidx.viewpager2.widget.ViewPager2
 import com.example.base.BaseActivity
 import com.example.base.KEY_TITLE
+import com.example.base.utils.dp
 import com.example.base.utils.dp2px
 import com.example.home.R
 
@@ -42,7 +43,7 @@ class ViewPager2SimpleActivity : BaseActivity() {
     }
 
     private fun initViewPager2() {
-        val width = dp2px(10)
+        val width = 10.dp
 
         for (i in mImgIds.indices) {
             val dot = View(this)

@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.TextView
+import com.example.base.utils.dp
 import com.example.base.utils.dp2px
 
 object SettingItemFactory {
@@ -35,7 +36,7 @@ object SettingItemFactory {
             layoutParams = leftLayoutParams
             isSingleLine = true
             ellipsize = TextUtils.TruncateAt.END
-            setPaddingRelative(dp2px(15), dp2px(12), dp2px(15), dp2px(12))
+            setPaddingRelative(15.dp, 12.dp, 15.dp, 12.dp)
             gravity = Gravity.START or Gravity.CENTER_VERTICAL
         }
     }
@@ -54,7 +55,7 @@ object SettingItemFactory {
             layoutParams = rightLayoutParams
             isSingleLine = true
             ellipsize = TextUtils.TruncateAt.END
-            setPaddingRelative(dp2px(15), dp2px(12), dp2px(15), dp2px(12))
+            setPaddingRelative(15.dp, 12.dp, 15.dp, 12.dp)
             gravity = Gravity.END or Gravity.CENTER_VERTICAL
         }
     }

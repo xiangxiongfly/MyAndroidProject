@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.PopupWindow
 import android.widget.TextView
 import com.example.base.BaseActivity
+import com.example.base.utils.dp
 import com.example.base.utils.dp2px
 import com.example.home.R
 
@@ -33,7 +34,7 @@ class PopupWindowActivity : BaseActivity() {
         val tvQQ = view.findViewById<TextView>(R.id.tv_qq)
         val tvWeixin = view.findViewById<TextView>(R.id.tv_weixin)
         val tvSina = view.findViewById<TextView>(R.id.tv_sina)
-        val sharePop = PopupWindow(view, dp2px(100), ViewGroup.LayoutParams.WRAP_CONTENT, true)
+        val sharePop = PopupWindow(view, 100.dp, ViewGroup.LayoutParams.WRAP_CONTENT, true)
         sharePop.apply {
             setBackgroundDrawable(ColorDrawable())
             setOnDismissListener { setDimEnable(false) }

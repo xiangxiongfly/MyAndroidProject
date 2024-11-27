@@ -3,24 +3,14 @@ package com.example.base.utils
 import android.content.res.Resources
 
 
-fun dp2px(dpValue: Float): Int {
-    val scale = Resources.getSystem().displayMetrics.density
-    return (dpValue * scale + 0.5F).toInt()
-}
-
 fun dp2px(dpValue: Int): Int {
     val scale = Resources.getSystem().displayMetrics.density
     return (dpValue * scale + 0.5F).toInt()
 }
 
-fun dp2px(dpValue: Double): Int {
+fun dp2px(dpValue: Float): Float {
     val scale = Resources.getSystem().displayMetrics.density
-    return (dpValue * scale + 0.5F).toInt()
-}
-
-fun sp2px(spValue: Float): Int {
-    val scale = Resources.getSystem().displayMetrics.scaledDensity
-    return (spValue * scale + 0.5F).toInt()
+    return dpValue * scale + 0.5F
 }
 
 fun sp2px(spValue: Int): Int {
@@ -28,9 +18,9 @@ fun sp2px(spValue: Int): Int {
     return (spValue * scale + 0.5F).toInt()
 }
 
-fun sp2px(spValue: Double): Int {
+fun sp2px(spValue: Float): Float {
     val scale = Resources.getSystem().displayMetrics.scaledDensity
-    return (spValue * scale + 0.5F).toInt()
+    return spValue * scale + 0.5F
 }
 
 val Float.dp
@@ -39,5 +29,9 @@ val Float.dp
 val Int.dp
     get() = dp2px(this)
 
-val Double.dp
-    get() = dp2px(this)
+
+val Float.sp
+    get() = sp2px(this)
+
+val Int.sp
+    get() = sp2px(this)

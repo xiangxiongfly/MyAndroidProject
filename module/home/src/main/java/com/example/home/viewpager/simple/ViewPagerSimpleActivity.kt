@@ -11,6 +11,7 @@ import android.widget.LinearLayout
 import androidx.core.view.size
 import androidx.viewpager.widget.ViewPager
 import com.example.base.BaseActivity
+import com.example.base.utils.dp
 import com.example.base.utils.dp2px
 import com.example.home.R
 import com.example.home.viewpager.transformer.DepthPageTransformer
@@ -81,7 +82,7 @@ class ViewPagerSimpleActivity : BaseActivity() {
      */
     private fun initViewPager1() {
         val imageViewList = getImageViewList()
-        val width = dp2px(10)
+        val width = 10.dp
 
         for (i in mImgIds.indices) {
             val dot = View(this)
@@ -122,7 +123,7 @@ class ViewPagerSimpleActivity : BaseActivity() {
      */
     private fun initViewPager2() {
         val imageViewList = getImageViewList()
-        val width = dp2px(10)
+        val width = 10.dp
 
         for (i in mImgIds.indices) {
             val dot = View(this)
@@ -172,7 +173,7 @@ class ViewPagerSimpleActivity : BaseActivity() {
     private fun initViewPager3() {
         val imageViewList = getImageViewList()
         viewPager3.offscreenPageLimit = 3
-        viewPager3.pageMargin = dp2px(0)
+        viewPager3.pageMargin = 0
         viewPager3.adapter = ViewPagerAdapter(imageViewList)
         viewPager3.setPageTransformer(true, RotateTransformer())
     }

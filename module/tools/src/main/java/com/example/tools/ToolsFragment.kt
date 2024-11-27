@@ -16,6 +16,7 @@ import com.example.tools.permissions.PermissionActivity
 import com.example.tools.popupwindow.PopupWindowActivity
 import com.example.tools.ratio.RatioActivity
 import com.example.tools.setting_item.SettingItemActivity
+import com.example.tools.signature.SignatureActivity
 import com.example.tools.statelayout.StateLayoutActivity
 import com.example.tools.titlebar.TitleBarActivity
 import com.google.android.flexbox.FlexboxLayout
@@ -61,6 +62,7 @@ class ToolsFragment : BaseFragment() {
         flexboxLayout.addElement(mContext, "保持宽高比例", RatioActivity::class.java)
         flexboxLayout.addElement(mContext, "将View生成Bitmap", GenerateBitmapActivity::class.java)
         flexboxLayout.addElement(mContext, "扩大View的点击区域", ClickAreaActivity::class.java)
+        flexboxLayout.addElement(mContext, "手写签名板", SignatureActivity::class.java)
     }
 
 }

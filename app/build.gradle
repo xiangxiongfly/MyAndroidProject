@@ -73,4 +73,5 @@ dependencies {
     implementation project(path: ':module:home')
     implementation project(path: ':module:tools')
     implementation project(path: ':module:setting')
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.14'
 }

@@ -5,6 +5,7 @@ import android.view.View
 import com.example.base.dialog.BaseDialog
 import com.example.base.dialog.ViewHolder
 import com.example.base.utils.ScreenUtils
+import com.example.base.utils.dp
 import com.example.base.utils.dp2px
 import com.example.tools.R
 
@@ -17,7 +18,7 @@ class ConfirmDialog {
 
         override fun convertView(viewHolder: ViewHolder, dialog: BaseDialog) {
             setWidth(ScreenUtils.getScreenWidth(context))
-            setHorizontalGap(dp2px(50))
+            setHorizontalGap(50.dp)
             setCancelable(false)
             setCanceledOnTouchOutside(false)
 

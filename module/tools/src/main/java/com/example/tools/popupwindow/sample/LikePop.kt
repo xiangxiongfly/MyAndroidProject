@@ -5,6 +5,7 @@ import android.view.View
 import com.example.base.dialog.ViewHolder
 import com.example.base.popupwindow.BasePopupWindow
 import com.example.base.utils.ToastUtils
+import com.example.base.utils.dp
 import com.example.base.utils.dp2px
 import com.example.tools.R
 
@@ -40,7 +41,7 @@ class LikePop {
             val location = IntArray(2)
             view.getLocationOnScreen(location)
             setXOffset(location[0] - diff)
-            setYOffset(location[1] - contentView.measuredHeight - dp2px(5))
+            setYOffset(location[1] - contentView.measuredHeight - 5.dp)
             showAtLocation(view)
         }
     }

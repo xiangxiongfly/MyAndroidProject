@@ -3,7 +3,8 @@
     package="com.example.tools">
 
     <application>
-        <activity android:name=".clickarea.LocationOnScreenActivity"></activity>
+        <activity android:name=".signature.SignatureActivity"></activity>
+        <activity android:name=".clickarea.LocationOnScreenActivity" />
         <activity android:name=".clickarea.TouchDelegateActivity" />
         <activity android:name=".clickarea.PaddingActivity" />
         <activity

@@ -11,6 +11,7 @@ import android.view.View
 import android.widget.FrameLayout
 import androidx.annotation.AttrRes
 import androidx.core.content.ContextCompat
+import com.example.base.utils.dp
 import com.example.base.utils.dp2px
 import com.example.base.utils.sp2px
 import com.example.widgets.R
@@ -21,10 +22,10 @@ class SettingItem @JvmOverloads constructor(
 ) : FrameLayout(context, attrs, defStyleAttr) {
 
     companion object {
-        val DEFAULT_TEXT_SIZE = sp2px(14)
+        val DEFAULT_TEXT_SIZE = 14.dp
         val DEFAULT_TEXT_COLOR = Color.parseColor("#99000000")
         const val DEFAULT_DRAWABLE_SIZE = 0
-        val DEFAULT_DRAWABLE_PADDING = dp2px(0)
+        val DEFAULT_DRAWABLE_PADDING = 0
         const val DEFAULT_LINE_WIDTH = 1
         val DEFAULT_LINE_COLOR = Color.parseColor("#0D000000")
     }
