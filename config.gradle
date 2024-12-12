@@ -1,5 +1,6 @@
 ext {
     kotlin_version = "1.5.31"
+    lifecycle_version = "2.5.0"
 
     android = [
             applicationId    : "com.xiangxiongfly.myandroid",
@@ -13,23 +14,52 @@ ext {
     dependencies = [
 
             //Kotlin
-            "kotlin-stdlib"    : "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
-            "core-ktx"         : "androidx.core:core-ktx:1.3.1",
+            "kotlin-stdlib"                 : "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
+            "core-ktx"                      : "androidx.core:core-ktx:1.3.1",
 
             //Android
-            "appcompat"        : "androidx.appcompat:appcompat:1.2.0",
-            "material"         : "com.google.android.material:material:1.2.1",
-            "constraintlayout" : "androidx.constraintlayout:constraintlayout:2.0.1",
-            "legacy-support-v4": "androidx.legacy:legacy-support-v4:1.0.0",
+            "appcompat"                     : "androidx.appcompat:appcompat:1.2.0",
+            "material"                      : "com.google.android.material:material:1.2.1",
+            "constraintlayout"              : "androidx.constraintlayout:constraintlayout:2.1.4",
+            "legacy-support-v4"             : "androidx.legacy:legacy-support-v4:1.0.0",
 
             //KTX
-            "activity-ktx"     : "androidx.activity:activity-ktx:1.2.3",
-            "fragment-ktx"     : "androidx.fragment:fragment-ktx:1.3.6",
+            "activity-ktx"                  : "androidx.activity:activity-ktx:1.2.3",
+            "fragment-ktx"                  : "androidx.fragment:fragment-ktx:1.3.6",
+
+
+            // Lifecycle
+            "lifecycle-common-java8"        : "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version",
+            "lifecycle-service"             : "androidx.lifecycle:lifecycle-service:$lifecycle_version",
+            "lifecycle-process"             : "androidx.lifecycle:lifecycle-process:$lifecycle_version",
+            // LiveData
+            "lifecycle-livedata-ktx"        : "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version",
+            // ViewModel
+            "lifecycle-viewmodel-ktx"       : "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version",
+            "lifecycle-viewmodel-savedstate": "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version",
 
             //第三方控件：
-            //流式布局
-            "flexbox"          : "com.google.android.flexbox:flexbox:3.0.0",
-            //palette
-            "palette"          : "androidx.palette:palette:1.0.0",
+            // Flex
+            "flexbox"                       : "com.google.android.flexbox:flexbox:3.0.0",
+            //Palette
+            "palette"                       : "androidx.palette:palette:1.0.0",
+            // Glide
+            "glide"                         : "com.github.bumptech.glide:glide:4.15.1",
+            // Eventbus
+            "eventbus"                      : "org.greenrobot:eventbus:3.3.1",
+            // immersionbar
+            "immersionbar"                  : "com.geyifeng.immersionbar:immersionbar:3.2.2",
+            // lottie
+            "lottie"                        : "com.airbnb.android:lottie:5.1.1",
+            // percentlayout
+            "percentlayout"                 : "androidx.percentlayout:percentlayout:1.0.0",
+            // okhttp
+            "okhttp"                        : "com.squareup.okhttp3:okhttp:4.9.3",
+            // OkHttp日志拦截器，用于调试
+            "logging"                       : "com.squareup.okhttp3:logging-interceptor:4.9.3",
+            // Gson
+            "gson"                          : "com.google.code.gson:gson:2.10.1",
+            // GsonFactory
+            "GsonFactory"                   : "com.github.getActivity:GsonFactory:9.6"
     ]
 }

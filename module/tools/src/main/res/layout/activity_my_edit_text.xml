@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:context=".my_edittext.MyEditTextActivity">
 
-    <com.example.widgets.custom_edittext.ClearEditText
+    <com.example.widgets.customedittext.ClearEditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
@@ -25,7 +25,7 @@
         app:cet_tipIconSize="30dp"
         app:cet_tipSelectedIcon="@drawable/ic_user_blue" />
 
-    <com.example.widgets.custom_edittext.ClearEditText
+    <com.example.widgets.customedittext.ClearEditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
@@ -42,7 +42,7 @@
         app:cet_tipIconSize="30dp"
         app:cet_tipSelectedIcon="@drawable/ic_user_blue" />
 
-    <com.example.widgets.custom_edittext.PasswordEditText
+    <com.example.widgets.customedittext.PasswordEditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
@@ -56,7 +56,7 @@
         app:pet_tipIconSize="30dp"
         app:pet_tipSelectedIcon="@drawable/ic_lock_blue" />
 
-    <com.example.widgets.custom_edittext.SearchEditText
+    <com.example.widgets.customedittext.SearchEditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"

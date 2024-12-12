@@ -1,4 +1,4 @@
-package com.example.widgets.setting_item
+package com.example.widgets.settingitem
 
 import android.content.Context
 import android.text.TextUtils
@@ -8,7 +8,6 @@ import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.TextView
 import com.example.base.utils.dp
-import com.example.base.utils.dp2px
 
 object SettingItemFactory {
     /**

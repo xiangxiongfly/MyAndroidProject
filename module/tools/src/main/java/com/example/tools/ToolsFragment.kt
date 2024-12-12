@@ -9,6 +9,7 @@ import com.example.tools.clickarea.ClickAreaActivity
 import com.example.tools.dialog.DialogActivity
 import com.example.tools.eventbus.EventBusActivity
 import com.example.tools.genBitmap.GenerateBitmapActivity
+import com.example.tools.okhttp.OkHttpActivity
 import com.example.tools.imageloader.ImageLoaderActivity
 import com.example.tools.my_edittext.MyEditTextActivity
 import com.example.tools.network.NetworkActivity
@@ -54,6 +55,7 @@ class ToolsFragment : BaseFragment() {
         flexboxLayout.addElement(mContext, "封装PopupWindow", PopupWindowActivity::class.java)
         flexboxLayout.addElement(mContext, "封装Permissions", PermissionActivity::class.java)
         flexboxLayout.addElement(mContext, "封装Glide", ImageLoaderActivity::class.java)
+        flexboxLayout.addElement(mContext, "封装OkHttp", OkHttpActivity::class.java)
         flexboxLayout.addElement(mContext, "监听网络状态变化", NetworkActivity::class.java)
         flexboxLayout.addElement(mContext, "SettingItem设置条", SettingItemActivity::class.java)
         flexboxLayout.addElement(mContext, "StateLayout状态页", StateLayoutActivity::class.java)

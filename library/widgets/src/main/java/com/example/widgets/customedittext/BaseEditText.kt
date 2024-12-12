@@ -1,4 +1,4 @@
-package com.example.widgets.custom_edittext
+package com.example.widgets.customedittext
 
 import android.content.Context
 import android.graphics.drawable.ColorDrawable

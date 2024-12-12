@@ -12,10 +12,8 @@ import android.widget.FrameLayout
 import androidx.annotation.AttrRes
 import androidx.core.content.ContextCompat
 import com.example.base.utils.dp
-import com.example.base.utils.dp2px
-import com.example.base.utils.sp2px
 import com.example.widgets.R
-import com.example.widgets.setting_item.SettingItemFactory
+import com.example.widgets.settingitem.SettingItemFactory
 
 class SettingItem @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, @AttrRes defStyleAttr: Int = 0
