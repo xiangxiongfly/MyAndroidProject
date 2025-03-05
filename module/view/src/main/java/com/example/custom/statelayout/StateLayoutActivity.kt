@@ -1,11 +1,12 @@
-package com.example.tools.statelayout
+package com.example.custom.statelayout
 
 import android.os.Bundle
 import android.widget.Button
 import com.example.base.BaseActivity
 import com.example.base.utils.LogUtils
-import com.example.tools.R
+import com.example.custom.R
 import com.example.widgets.statelayout.OnStateChangeListener
+import com.example.widgets.statelayout.State
 import com.example.widgets.statelayout.StateLayout
 
 class StateLayoutActivity : BaseActivity() {
@@ -20,27 +21,26 @@ class StateLayoutActivity : BaseActivity() {
         val btnEmpty: Button = findViewById(R.id.btn_empty)
 
         // 全局配置
-//        StateConfig.emptyLayoutRes = R.layout.state_empty
-//        StateConfig.errorLayoutRes = R.layout.state_error
-//        StateConfig.loadingLayoutRes = R.layout.state_loading
+//        StateConfig.emptyLayoutId = R.layout.state_empty
+//        StateConfig.errorLayoutId = R.layout.state_error
+//        StateConfig.loadingLayoutId = R.layout.state_loading
 //        StateConfig.retryIds = intArrayOf(R.id.state_msg, R.id.state_iv)
-//
 //        StateConfig.setOnStateChangeListener(object : OnStateChangeListener {
-//            override fun showState(status: Int) {
-//                when (status) {
-//                    StateLayout.STATE_LOADING -> {
+//            override fun onStateChange(state: State) {
+//                when (state) {
+//                    State.LOADING -> {
 //                        LogUtils.e("StateLayout", "显示加载页")
 //                        postDelayed({
 //                            stateLayout.showContent()
 //                        }, 2000L)
 //                    }
-//                    StateLayout.STATE_CONTENT -> {
+//                    State.CONTENT -> {
 //                        LogUtils.e("StateLayout", "显示内容页")
 //                    }
-//                    StateLayout.STATE_ERROR -> {
+//                    State.ERROR -> {
 //                        LogUtils.e("StateLayout", "显示失败页")
 //                    }
-//                    StateLayout.STATE_EMPTY -> {
+//                    State.EMPTY -> {
 //                        LogUtils.e("StateLayout", "显示空页")
 //                    }
 //                }
@@ -50,21 +50,21 @@ class StateLayoutActivity : BaseActivity() {
         // 局部配置
         stateLayout.setRetryIds(R.id.state_msg, R.id.state_iv)
         stateLayout.setOnStateChangeListener(object : OnStateChangeListener {
-            override fun showState(status: Int) {
-                when (status) {
-                    StateLayout.STATE_LOADING -> {
+            override fun onStateChange(state: State) {
+                when (state) {
+                    State.LOADING -> {
                         LogUtils.e("StateLayout", "显示加载页")
                         postDelayed({
                             stateLayout.showContent()
                         }, 2000L)
                     }
-                    StateLayout.STATE_CONTENT -> {
+                    State.CONTENT -> {
                         LogUtils.e("StateLayout", "显示内容页")
                     }
-                    StateLayout.STATE_ERROR -> {
+                    State.ERROR -> {
                         LogUtils.e("StateLayout", "显示失败页")
                     }
-                    StateLayout.STATE_EMPTY -> {
+                    State.EMPTY -> {
                         LogUtils.e("StateLayout", "显示空页")
                     }
                 }

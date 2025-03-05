@@ -17,12 +17,12 @@ import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.example.base.BaseActivity
 import com.example.base.BaseFragment
+import com.example.custom.CustomFragment
 import com.example.home.HomeFragment
-import com.example.jetpack.JetpackFragment
 import com.example.setting.SettingFragment
 import com.example.tools.ToolsFragment
-import com.example.widgets.navigation.BottomNavigation
-import com.example.widgets.navigation.TabItem
+import com.example.widgets.navigation.NavigationBar
+import com.example.widgets.navigation.Tab
 import com.google.android.material.navigation.NavigationView
 import com.gyf.immersionbar.ImmersionBar
 
@@ -32,7 +32,7 @@ class MainActivity : BaseActivity() {
     companion object {
         const val KEY_POSITION: String = "key_position"
         const val POSITION_HOME = 0
-        const val POSITION_JETPACK = 1
+        const val POSITION_CUSTOM = 1
         const val POSITION_TOOLS = 2
 
         fun start(context: Context) {
@@ -42,14 +42,14 @@ class MainActivity : BaseActivity() {
 
     private lateinit var vpMain: ViewPager
     private lateinit var drawerLayout: DrawerLayout
-    private lateinit var bottomNavigation: BottomNavigation
+    private lateinit var navigationBar: NavigationBar
     private lateinit var navView: NavigationView
     private lateinit var contentView: LinearLayout
     private lateinit var toolbar: Toolbar
 
-    private var currentPosition = POSITION_TOOLS
+    private var currentPosition = POSITION_CUSTOM
 
-    private val mTitles = arrayOf("首页", "Jetpack", "工具", "设置")
+    private val mTitles = arrayOf("首页", "Custom", "工具", "设置")
     private val mFragments = SparseArray<BaseFragment>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -70,7 +70,7 @@ class MainActivity : BaseActivity() {
 
     private fun initViews() {
         vpMain = findViewById(R.id.vp_main)
-        bottomNavigation = findViewById(R.id.bottom_navigation)
+        navigationBar = findViewById(R.id.bottom_navigation)
         drawerLayout = findViewById(R.id.drawer_layout)
         navView = findViewById(R.id.nav_view)
         contentView = findViewById(R.id.content_view)
@@ -83,37 +83,49 @@ class MainActivity : BaseActivity() {
     }
 
     private fun initBottomNavigation() {
-        bottomNavigation.init(
-            listOf<TabItem>(
-                TabItem(
+        navigationBar.init(
+            listOf(
+                Tab(
+                    mTitles[0],
                     R.drawable.tab_home_selected,
                     R.drawable.tab_home_unselect,
-                    mTitles[0]
+                    R.color.tab_selected_color,
+                    R.color.tab_unselect_color,
+                    0,
                 ),
-                TabItem(
+                Tab(
+                    mTitles[1],
                     R.drawable.tab_friends_selected,
                     R.drawable.tab_friends_unselect,
-                    mTitles[1]
+                    R.color.tab_selected_color,
+                    R.color.tab_unselect_color,
+                    1
                 ),
-                TabItem(
+                Tab(
+                    mTitles[2],
                     R.drawable.tab_find_selected,
                     R.drawable.tab_find_unselect,
-                    mTitles[2]
+                    R.color.tab_selected_color,
+                    R.color.tab_unselect_color,
+                    2
                 ),
-                TabItem(
+                Tab(
+                    mTitles[3],
                     R.drawable.tab_setting_selected,
                     R.drawable.tab_setting_unselect,
-                    mTitles[3]
-                )
-            )
+                    R.color.tab_selected_color,
+                    R.color.tab_unselect_color,
+                    3
+                ),
+            ),
+            currentPosition
         )
-        bottomNavigation.setCurrentTab(currentPosition)
-        bottomNavigation.setOnItemSelectedListener(
-            object : BottomNavigation.OnItemSelectedListener {
-                override fun onItemSelected(tabItem: TabItem) {
-                    currentPosition = tabItem.index
+        navigationBar.setOnItemSelectedListener(
+            object : NavigationBar.OnItemSelectedListener {
+                override fun onItemSelected(index: Int) {
+                    currentPosition = index
                     vpMain.setCurrentItem(currentPosition, false)
-                    when (tabItem.index) {
+                    when (index) {
                         0 -> Log.i("TAG", "首页")
                         1 -> Log.i("TAG", "朋友圈")
                         2 -> Log.i("TAG", "发现")
@@ -122,10 +134,10 @@ class MainActivity : BaseActivity() {
                 }
             }
         )
-        bottomNavigation.setOnItemReselectedListener(
-            object : BottomNavigation.OnItemReselectedListener {
-                override fun onItemReselected(tabItem: TabItem) {
-                    when (tabItem.index) {
+        navigationBar.setOnItemReselectedListener(
+            object : NavigationBar.OnItemReselectedListener {
+                override fun onItemReselected(index: Int) {
+                    when (index) {
                         0 -> Log.i("TAG", "首页2")
                         1 -> Log.i("TAG", "朋友圈2")
                         2 -> Log.i("TAG", "发现2")
@@ -164,12 +176,12 @@ class MainActivity : BaseActivity() {
                 positionOffset: Float,
                 positionOffsetPixels: Int
             ) {
-                bottomNavigation.setPageScrolled(position, positionOffset, positionOffsetPixels)
+                navigationBar.setPageScrolled(position, positionOffset, positionOffsetPixels)
             }
 
             override fun onPageSelected(position: Int) {
                 currentPosition = position
-                bottomNavigation.setCurrentTab(currentPosition)
+                navigationBar.setTab(currentPosition)
             }
 
             override fun onPageScrollStateChanged(state: Int) {
@@ -181,7 +193,7 @@ class MainActivity : BaseActivity() {
     private fun createFragment(@IntRange(from = 0, to = 3) position: Int): BaseFragment {
         return when (position) {
             0 -> HomeFragment.newInstance(mTitles[position])
-            1 -> JetpackFragment.newInstance(mTitles[position])
+            1 -> CustomFragment.newInstance(mTitles[position])
             2 -> ToolsFragment.newInstance(mTitles[position])
             3 -> SettingFragment.newInstance(mTitles[position])
             else -> throw IllegalArgumentException("错误Fragment")

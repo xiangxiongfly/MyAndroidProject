@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context=".my_edittext.MyEditTextActivity">
+    tools:context="com.example.custom.my_edittext.MyEditTextActivity">
 
     <com.example.widgets.customedittext.ClearEditText
         android:layout_width="wrap_content"

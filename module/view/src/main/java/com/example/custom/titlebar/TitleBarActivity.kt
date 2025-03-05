@@ -1,10 +1,10 @@
-package com.example.tools.titlebar
+package com.example.custom.titlebar
 
 import android.os.Bundle
 import android.widget.TextView
 import com.example.base.BaseActivity
 import com.example.base.utils.ToastUtils
-import com.example.tools.R
+import com.example.custom.R
 import com.example.widgets.titlebar.TitleBar
 
 class TitleBarActivity : BaseActivity() {

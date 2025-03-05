@@ -1,9 +1,9 @@
-package com.example.tools.setting_item
+package com.example.custom.setting_item
 
 import android.os.Bundle
 import com.example.base.BaseActivity
 import com.example.base.utils.ToastUtils
-import com.example.tools.R
+import com.example.custom.R
 import com.example.tools.setting_item.widgets.SettingItem
 
 class SettingItemActivity : BaseActivity() {

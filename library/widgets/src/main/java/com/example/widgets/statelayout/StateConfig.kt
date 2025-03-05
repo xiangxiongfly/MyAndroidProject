@@ -10,15 +10,15 @@ object StateConfig {
 
     @LayoutRes
     @JvmStatic
-    var emptyLayoutRes = View.NO_ID
+    var emptyLayoutId = View.NO_ID
 
     @LayoutRes
     @JvmStatic
-    var errorLayoutRes = View.NO_ID
+    var errorLayoutId = View.NO_ID
 
     @LayoutRes
     @JvmStatic
-    var loadingLayoutRes = View.NO_ID
+    var loadingLayoutId = View.NO_ID
 
     @LayoutRes
     @JvmStatic

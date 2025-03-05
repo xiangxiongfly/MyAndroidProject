@@ -6,16 +6,17 @@ import android.view.Gravity
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.annotation.DrawableRes
+import androidx.core.content.ContextCompat
 import com.example.widgets.R
 
-class TabView(context: Context, attrs: AttributeSet? = null) : LinearLayout(context, attrs) {
-    private val COLOR_SELECTED: Int = resources.getColor(R.color.tab_selected_color)
-    private val COLOR_UNSELECT: Int = resources.getColor(R.color.tab_unselect_color)
+class TabView @JvmOverloads constructor(
+    context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
+) : LinearLayout(context, attrs, defStyleAttr) {
 
     private var ivSelected: ImageView
     private var ivUnselect: ImageView
     private var tvLabel: TextView
+    private lateinit var tabItem: Tab
 
     init {
         orientation = VERTICAL
@@ -25,7 +26,6 @@ class TabView(context: Context, attrs: AttributeSet? = null) : LinearLayout(cont
         ivSelected = findViewById(R.id.iv_selected)
         ivUnselect = findViewById(R.id.iv_unselect)
         tvLabel = findViewById(R.id.tv_label)
-        setProgress(0F)
     }
 
     /**
@@ -33,22 +33,26 @@ class TabView(context: Context, attrs: AttributeSet? = null) : LinearLayout(cont
      * 0表示未选中
      */
     fun setProgress(progress: Float) {
-        ivUnselect.alpha = 1 - progress
         ivSelected.alpha = progress
-        tvLabel.setTextColor(evaluate(progress, COLOR_UNSELECT, COLOR_SELECTED))
+        ivUnselect.alpha = 1 - progress
+        tvLabel.setTextColor(
+            evaluate(
+                progress,
+                ContextCompat.getColor(context, tabItem.colorUnselect),
+                ContextCompat.getColor(context, tabItem.colorSelected)
+            )
+        )
     }
 
     /**
      * 设置图片和文本
      */
-    fun setIconAndLabel(
-        @DrawableRes iconSelected: Int,
-        @DrawableRes iconUnselect: Int,
-        label: String
-    ) {
-        ivSelected.setImageResource(iconSelected)
-        ivUnselect.setImageResource(iconUnselect)
-        tvLabel.text = label
+    fun setData(tab: Tab) {
+        this.tabItem = tab
+        tvLabel.text = tab.label
+        ivSelected.setImageResource(tab.iconSelected)
+        ivUnselect.setImageResource(tab.iconUnselect)
+        tag = tab.index
     }
 
     // ArgbEvaluator#evaluate()
@@ -83,9 +87,8 @@ class TabView(context: Context, attrs: AttributeSet? = null) : LinearLayout(cont
         r = Math.pow(r.toDouble(), 1.0 / 2.2).toFloat() * 255.0f
         g = Math.pow(g.toDouble(), 1.0 / 2.2).toFloat() * 255.0f
         b = Math.pow(b.toDouble(), 1.0 / 2.2).toFloat() * 255.0f
-        return (Math.round(a) shl 24) or
-                (Math.round(r) shl 16) or
-                (Math.round(g) shl 8) or
-                Math.round(b)
+        return (Math.round(a) shl 24) or (Math.round(r) shl 16) or (Math.round(g) shl 8) or Math.round(
+            b
+        )
     }
 }

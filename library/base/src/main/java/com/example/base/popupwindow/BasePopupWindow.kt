@@ -18,24 +18,24 @@ class BasePopupWindow(private val params: PopupWindowParams, private val build: 
 
     override fun dismiss() {
         super.dismiss()
-        if (params.mDimEnable) {
+        if (params.dimEnable) {
             build.setBackgroundDim(false)
         }
     }
 
     class PopupWindowParams {
-        var mWidth: Int = ViewGroup.LayoutParams.WRAP_CONTENT // 宽度
-        var mHeight: Int = ViewGroup.LayoutParams.WRAP_CONTENT // 高度
-        var mFocusable: Boolean = false // 焦点
-        var mBackground: Drawable = ColorDrawable() // 背景
-        var mGravity: Int = Gravity.NO_GRAVITY // 位置
+        var width: Int = ViewGroup.LayoutParams.WRAP_CONTENT // 宽度
+        var height: Int = ViewGroup.LayoutParams.WRAP_CONTENT // 高度
+        var focusable: Boolean = false // 焦点
+        var background: Drawable = ColorDrawable() // 背景
+        var gravity: Int = Gravity.NO_GRAVITY // 位置
         var x: Int = 0 // x偏移
         var y: Int = 0 // y偏移
-        var mDimEnable: Boolean = false // 背景是否暗淡
+        var dimEnable: Boolean = false // 背景是否暗淡
 
         @StyleRes
-        var mAnimationStyle: Int = -1 // 隐藏监听
-        var mOnDismissListener: OnDismissListener? = null // 隐藏监听
+        var animationStyle: Int = -1 // 隐藏监听
+        var onDismissListener: OnDismissListener? = null // 隐藏监听
     }
 
     abstract class Builder(val context: Context, @LayoutRes layoutResId: Int) {
@@ -52,7 +52,7 @@ class BasePopupWindow(private val params: PopupWindowParams, private val build: 
          * 设置宽度
          */
         fun setWidth(width: Int): Builder {
-            mParams.mWidth = width
+            mParams.width = width
             return this
         }
 
@@ -60,7 +60,7 @@ class BasePopupWindow(private val params: PopupWindowParams, private val build: 
          * 设置高度
          */
         fun setHeight(height: Int): Builder {
-            mParams.mHeight = height
+            mParams.height = height
             return this
         }
 
@@ -68,7 +68,7 @@ class BasePopupWindow(private val params: PopupWindowParams, private val build: 
          * 设置焦点
          */
         fun setFocusable(focusable: Boolean): Builder {
-            mParams.mFocusable = focusable
+            mParams.focusable = focusable
             return this
         }
 
@@ -76,7 +76,7 @@ class BasePopupWindow(private val params: PopupWindowParams, private val build: 
          * 设置背景
          */
         fun setBackgroundDrawable(background: Drawable): Builder {
-            mParams.mBackground = background
+            mParams.background = background
             return this
         }
 
@@ -84,7 +84,7 @@ class BasePopupWindow(private val params: PopupWindowParams, private val build: 
          * 设置位置
          */
         fun setGravity(gravity: Int): Builder {
-            mParams.mGravity = gravity
+            mParams.gravity = gravity
             return this
         }
 
@@ -118,7 +118,7 @@ class BasePopupWindow(private val params: PopupWindowParams, private val build: 
          * 设置背景是否暗淡
          */
         fun setDimEnable(enable: Boolean): Builder {
-            mParams.mDimEnable = enable
+            mParams.dimEnable = enable
             return this
         }
 
@@ -151,7 +151,7 @@ class BasePopupWindow(private val params: PopupWindowParams, private val build: 
          * 设置隐藏监听
          */
         fun setOnDismissListener(onDismissListener: OnDismissListener): Builder {
-            mParams.mOnDismissListener = onDismissListener
+            mParams.onDismissListener = onDismissListener
             return this
         }
 
@@ -159,7 +159,7 @@ class BasePopupWindow(private val params: PopupWindowParams, private val build: 
          * 设置动画
          */
         fun setAnimationStyle(@StyleRes animationStyle: Int): Builder {
-            mParams.mAnimationStyle = animationStyle
+            mParams.animationStyle = animationStyle
             return this
         }
 
@@ -177,15 +177,15 @@ class BasePopupWindow(private val params: PopupWindowParams, private val build: 
             mPopupWindow = BasePopupWindow(mParams, this)
             mPopupWindow!!.apply {
                 contentView = mContentView
-                width = mParams.mWidth
-                height = mParams.mHeight
-                isFocusable = mParams.mFocusable
-                setBackgroundDrawable(mParams.mBackground)
-                if (mParams.mAnimationStyle != -1) {
-                    animationStyle = mParams.mAnimationStyle
+                width = mParams.width
+                height = mParams.height
+                isFocusable = mParams.focusable
+                setBackgroundDrawable(mParams.background)
+                if (mParams.animationStyle != -1) {
+                    animationStyle = mParams.animationStyle
                 }
-                if (mParams.mOnDismissListener != null) {
-                    setOnDismissListener(mParams.mOnDismissListener)
+                if (mParams.onDismissListener != null) {
+                    setOnDismissListener(mParams.onDismissListener)
                 }
             }
             convertView(mViewHolder, mPopupWindow!!)
@@ -215,7 +215,7 @@ class BasePopupWindow(private val params: PopupWindowParams, private val build: 
             if (isShowing()) {
                 return false
             }
-            if (mParams.mDimEnable) {
+            if (mParams.dimEnable) {
                 setBackgroundDim(true)
             }
             return true
@@ -226,7 +226,7 @@ class BasePopupWindow(private val params: PopupWindowParams, private val build: 
          */
         fun showAsDropDown(anchor: View) {
             if (show()) {
-                mPopupWindow!!.showAsDropDown(anchor, mParams.x, mParams.y, mParams.mGravity)
+                mPopupWindow!!.showAsDropDown(anchor, mParams.x, mParams.y, mParams.gravity)
             }
         }
 
@@ -235,7 +235,7 @@ class BasePopupWindow(private val params: PopupWindowParams, private val build: 
          */
         fun showAtLocation(parent: View) {
             if (show()) {
-                mPopupWindow!!.showAtLocation(parent, mParams.mGravity, mParams.x, mParams.y)
+                mPopupWindow!!.showAtLocation(parent, mParams.gravity, mParams.x, mParams.y)
             }
         }
     }

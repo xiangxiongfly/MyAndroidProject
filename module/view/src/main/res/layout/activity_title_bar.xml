@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#E9F4F4F4"
     android:orientation="vertical"
-    tools:context=".titlebar.TitleBarActivity">
+    tools:context="com.example.custom.titlebar.TitleBarActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

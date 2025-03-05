@@ -14,8 +14,6 @@ import android.widget.FrameLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.example.base.utils.dp
-import com.example.base.utils.dp2px
-import com.example.base.utils.sp2px
 import com.example.widgets.R
 
 class TitleBar @JvmOverloads constructor(
@@ -106,16 +104,16 @@ class TitleBar @JvmOverloads constructor(
         val titleSize = a.getDimensionPixelSize(R.styleable.TitleBar_titleSize, DEFAULT_TITLE_SIZE)
         mTitleTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, titleSize.toFloat())
         // 设置标题样式
-        val titleStyle = a.getInt(R.styleable.TitleBar_titleStyle, DEFAULT_TITLE_STYLE)
-        val titleTypeFace: Typeface = when (titleStyle) {
-            2 -> Typeface.DEFAULT_BOLD
-            3 -> Typeface.MONOSPACE
-            else -> Typeface.DEFAULT
-        }
+        val titleTypeFace: Typeface =
+            when (a.getInt(R.styleable.TitleBar_titleStyle, DEFAULT_TITLE_STYLE)) {
+                2 -> Typeface.DEFAULT_BOLD
+                3 -> Typeface.MONOSPACE
+                else -> Typeface.DEFAULT
+            }
         mTitleTextView.typeface = titleTypeFace
         // 设置标题文字位置
         val titlePosition = a.getInt(R.styleable.TitleBar_titlePosition, DEFAULT_TITLE_POSITION)
-        val lp = mTitleTextView.layoutParams as FrameLayout.LayoutParams
+        val lp = mTitleTextView.layoutParams as LayoutParams
         lp.gravity = when (titlePosition) {
             1 -> Gravity.LEFT
             2 -> Gravity.RIGHT
@@ -206,12 +204,12 @@ class TitleBar @JvmOverloads constructor(
             a.getDimensionPixelSize(R.styleable.TitleBar_leftTextSize, DEFAULT_LEFT_TITLE_SIZE)
         mLeftTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, leftTitleSize.toFloat())
         // 设置左边标题样式
-        val leftTitleStyle = a.getInt(R.styleable.TitleBar_leftTextStyle, DEFAULT_LEFT_TITLE_STYLE)
-        val leftTitleTypeFace: Typeface = when (leftTitleStyle) {
-            2 -> Typeface.DEFAULT_BOLD
-            3 -> Typeface.MONOSPACE
-            else -> Typeface.DEFAULT
-        }
+        val leftTitleTypeFace: Typeface =
+            when (a.getInt(R.styleable.TitleBar_leftTextStyle, DEFAULT_LEFT_TITLE_STYLE)) {
+                2 -> Typeface.DEFAULT_BOLD
+                3 -> Typeface.MONOSPACE
+                else -> Typeface.DEFAULT
+            }
         mLeftTextView.typeface = leftTitleTypeFace
         // 设置左边图标
         if (a.hasValue(R.styleable.TitleBar_leftIcon)) {
@@ -275,13 +273,12 @@ class TitleBar @JvmOverloads constructor(
             a.getDimensionPixelSize(R.styleable.TitleBar_rightTextSize, DEFAULT_RIGHT_TITLE_SIZE)
         mRightTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, rightTitleSize.toFloat())
         // 设置右边标题样式
-        val rightTitleStyle =
-            a.getInt(R.styleable.TitleBar_rightTextStyle, DEFAULT_RIGHT_TITLE_STYLE)
-        val rightTitleTypeFace: Typeface = when (rightTitleStyle) {
-            2 -> Typeface.DEFAULT_BOLD
-            3 -> Typeface.MONOSPACE
-            else -> Typeface.DEFAULT
-        }
+        val rightTitleTypeFace: Typeface =
+            when (a.getInt(R.styleable.TitleBar_rightTextStyle, DEFAULT_RIGHT_TITLE_STYLE)) {
+                2 -> Typeface.DEFAULT_BOLD
+                3 -> Typeface.MONOSPACE
+                else -> Typeface.DEFAULT
+            }
         mRightTextView.typeface = rightTitleTypeFace
         // 设置右边图标
         if (a.hasValue(R.styleable.TitleBar_rightIcon)) {

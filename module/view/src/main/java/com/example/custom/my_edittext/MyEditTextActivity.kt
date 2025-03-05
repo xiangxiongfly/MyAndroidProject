@@ -1,8 +1,8 @@
-package com.example.tools.my_edittext
+package com.example.custom.my_edittext
 
 import android.os.Bundle
 import com.example.base.BaseActivity
-import com.example.tools.R
+import com.example.custom.R
 
 class MyEditTextActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

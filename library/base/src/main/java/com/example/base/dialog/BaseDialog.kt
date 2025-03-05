@@ -4,13 +4,16 @@ import android.app.Activity
 import android.content.Context
 import android.content.DialogInterface
 import android.os.Bundle
-import android.view.*
+import android.view.LayoutInflater
+import android.view.View
+import android.view.WindowManager
 import android.widget.FrameLayout
 import androidx.annotation.FloatRange
 import androidx.annotation.LayoutRes
 import androidx.annotation.StyleRes
 import androidx.appcompat.app.AppCompatDialog
 import com.example.base.R
+import com.example.base.dialog.DialogParams.Companion.NONE_ANIM_STYLE
 
 /**
  * BaseDialog
@@ -20,79 +23,58 @@ class BaseDialog(context: Context, private val params: DialogParams) :
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(params.mDialogView)
-        if (params.mWidth == FrameLayout.LayoutParams.WRAP_CONTENT) {
-            params.mWidth = params.mDialogView.layoutParams.width
+        setContentView(params.view)
+        if (params.width == FrameLayout.LayoutParams.WRAP_CONTENT) {
+            params.width = params.view.layoutParams.width
         }
-        if (params.mHeight == FrameLayout.LayoutParams.WRAP_CONTENT) {
-            params.mHeight = params.mDialogView.layoutParams.height
+        if (params.height == FrameLayout.LayoutParams.WRAP_CONTENT) {
+            params.height = params.view.layoutParams.height
         }
         window?.let { w ->
             val layoutParams = w.attributes
             layoutParams.apply {
-                width = params.mWidth
+                width = params.width
                 if (width > 0) {
-                    width -= (params.mGap * 2)
+                    width -= (params.gap * 2)
                 }
-                height = params.mHeight
-                gravity = params.mGravity
-                if (params.mAnimationStyle != -1) {
-                    windowAnimations = params.mAnimationStyle
+                height = params.height
+                gravity = params.gravity
+                if (params.animationStyle != NONE_ANIM_STYLE) {
+                    windowAnimations = params.animationStyle
                 }
-                if (params.mDimEnabled) {
+                if (params.dimEnabled) {
                     w.addFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)
-                    dimAmount = params.mDimAmount
+                    dimAmount = params.dimAmount
                 } else {
                     w.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)
                 }
             }
             w.attributes = layoutParams
         }
-        setCanceledOnTouchOutside(params.mCanceledOnTouchOutside) //点击外部区域是否取消
-        setCancelable(params.mCancelable) //按返回键是否取消
-        params.mOnShowListener?.let {
+        setCanceledOnTouchOutside(params.canceledOnTouchOutside) //点击外部区域是否取消
+        setCancelable(params.cancelable) //按返回键是否取消
+        params.onShowListener?.let {
             setOnShowListener(it)
         }
-        params.mOnDismissListener?.let {
+        params.onDismissListener?.let {
             setOnDismissListener(it)
         }
     }
 
-    class DialogParams {
-        lateinit var mDialogView: View
-
-        @FloatRange(from = 0.0, to = 1.0)
-        var mDimAmount = 0.6F // 背景暗淡度
-        var mDimEnabled = true // 是否显示背景暗淡度
-        var mGravity = Gravity.CENTER //显示位置
-        var mWidth: Int = ViewGroup.LayoutParams.WRAP_CONTENT // 宽度
-        var mHeight: Int = ViewGroup.LayoutParams.WRAP_CONTENT // 高度
-        var mGap: Int = 0 // 左右间隙
-        var mCancelable: Boolean = true // 点击返回键是否隐藏
-        var mCanceledOnTouchOutside: Boolean = true // 点击外部区域是否隐藏
-
-        @StyleRes
-        var mAnimationStyle: Int = -1
-
-        var mOnShowListener: DialogInterface.OnShowListener? = null
-        var mOnDismissListener: DialogInterface.OnDismissListener? = null
-    }
-
-    abstract class Builder(val context: Context, @LayoutRes layoutResId: Int) {
-        private var mParams: DialogParams = DialogParams()
-        private var mDialog: BaseDialog? = null
-        private var mActivity: Activity? = null
-
-        val mDialogView: View by lazy {
-            LayoutInflater.from(context).inflate(layoutResId, FrameLayout(context), false)
+    abstract class Builder(val context: Context, @LayoutRes layoutId: Int) {
+        private var dialogParams: DialogParams = DialogParams()
+        private var dialog: BaseDialog? = null
+        private var activity: Activity? = null
+        private val dialogView: View by lazy {
+            LayoutInflater.from(context).inflate(layoutId, FrameLayout(context), false)
         }
-        val mViewHolder: ViewHolder by lazy {
-            ViewHolder.create(mDialogView)
+        private val viewHolder: ViewHolder by lazy {
+            ViewHolder.create(dialogView)
         }
 
         init {
-            mParams.mDialogView = mDialogView
-            mActivity = getActivity(context)
+            dialogParams.view = dialogView
+            activity = getActivity(context)
         }
 
         protected fun getActivity(context: Context): Activity? {
@@ -106,7 +88,7 @@ class BaseDialog(context: Context, private val params: DialogParams) :
          * 是否显示背景暗淡度
          */
         protected fun setDimEnable(enable: Boolean): Builder {
-            mParams.mDimEnabled = enable
+            dialogParams.dimEnabled = enable
             return this
         }
 
@@ -114,7 +96,7 @@ class BaseDialog(context: Context, private val params: DialogParams) :
          * 设置背景暗淡度
          */
         protected fun setDimAmount(@FloatRange(from = 0.0, to = 1.0) dimAmount: Float): Builder {
-            mParams.mDimAmount = dimAmount
+            dialogParams.dimAmount = dimAmount
             return this
         }
 
@@ -122,7 +104,7 @@ class BaseDialog(context: Context, private val params: DialogParams) :
          * 设置显示位置
          */
         protected fun setGravity(gravity: Int): Builder {
-            mParams.mGravity = gravity
+            dialogParams.gravity = gravity
             return this
         }
 
@@ -130,12 +112,12 @@ class BaseDialog(context: Context, private val params: DialogParams) :
          * 设置宽高
          */
         protected fun setWidth(width: Int): Builder {
-            mParams.mWidth = width
+            dialogParams.width = width
             return this
         }
 
         protected fun setHeight(height: Int): Builder {
-            mParams.mHeight = height
+            dialogParams.height = height
             return this
         }
 
@@ -143,7 +125,7 @@ class BaseDialog(context: Context, private val params: DialogParams) :
          * 设置左右空白
          */
         protected fun setHorizontalGap(gap: Int): Builder {
-            mParams.mGap = gap
+            dialogParams.gap = gap
             return this
         }
 
@@ -151,7 +133,7 @@ class BaseDialog(context: Context, private val params: DialogParams) :
          * 动画
          */
         protected fun setAnimationStyle(@StyleRes animationStyle: Int): Builder {
-            mParams.mAnimationStyle = animationStyle
+            dialogParams.animationStyle = animationStyle
             return this
         }
 
@@ -159,7 +141,7 @@ class BaseDialog(context: Context, private val params: DialogParams) :
          * 点击外部区域是否隐藏
          */
         protected fun setCanceledOnTouchOutside(cancel: Boolean): Builder {
-            mParams.mCanceledOnTouchOutside = cancel
+            dialogParams.canceledOnTouchOutside = cancel
             return this
         }
 
@@ -167,7 +149,7 @@ class BaseDialog(context: Context, private val params: DialogParams) :
          * 点击返回按钮是否隐藏
          */
         protected fun setCancelable(cancelable: Boolean): Builder {
-            mParams.mCancelable = cancelable
+            dialogParams.cancelable = cancelable
             return this
         }
 
@@ -175,7 +157,7 @@ class BaseDialog(context: Context, private val params: DialogParams) :
          * 设置显示监听
          */
         protected fun setOnShowListener(onShowListener: DialogInterface.OnShowListener): Builder {
-            mParams.mOnShowListener = onShowListener
+            dialogParams.onShowListener = onShowListener
             return this
         }
 
@@ -183,25 +165,25 @@ class BaseDialog(context: Context, private val params: DialogParams) :
          * 设置隐藏监听
          */
         protected fun setOnDismissListener(onDismissListener: DialogInterface.OnDismissListener): Builder {
-            mParams.mOnDismissListener = onDismissListener
+            dialogParams.onDismissListener = onDismissListener
             return this
         }
 
         // 创建Dialog
         fun build(): BaseDialog {
-            mDialog = BaseDialog(context, mParams)
-            convertView(mViewHolder, mDialog!!)
-            return mDialog!!
+            dialog = BaseDialog(context, dialogParams)
+            convertView(viewHolder, dialog!!)
+            return dialog!!
         }
 
         // Dialog是否被创建
         private fun isCreated(): Boolean {
-            return mDialog != null
+            return dialog != null
         }
 
         // Dialog是否显示
         private fun isShowing(): Boolean {
-            if (mDialog != null && mDialog!!.isShowing) {
+            if (dialog != null && dialog!!.isShowing) {
                 return true
             }
             return false
@@ -211,7 +193,7 @@ class BaseDialog(context: Context, private val params: DialogParams) :
 
         // 显示Dialog
         open fun show() {
-            if (mActivity == null || mActivity!!.isFinishing || mActivity!!.isDestroyed) {
+            if (activity == null || activity!!.isFinishing || activity!!.isDestroyed) {
                 return
             }
             if (!isCreated()) {
@@ -220,18 +202,18 @@ class BaseDialog(context: Context, private val params: DialogParams) :
             if (isShowing()) {
                 return
             }
-            mDialog!!.show()
+            dialog!!.show()
         }
 
         // 隐藏Dialog
         fun dismiss() {
-            if (mActivity == null || mActivity!!.isFinishing || mActivity!!.isDestroyed) {
+            if (activity == null || activity!!.isFinishing || activity!!.isDestroyed) {
                 return
             }
-            if (mDialog == null) {
+            if (dialog == null) {
                 return
             }
-            mDialog!!.dismiss()
+            dialog!!.dismiss()
         }
     }
 }

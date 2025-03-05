@@ -3,23 +3,16 @@
     package="com.example.tools">
 
     <application>
-        <activity android:name=".okhttp.OkHttpActivity"></activity>
+        <activity android:name=".okhttp.OkHttpActivity" />
         <activity android:name=".signature.SignatureActivity" />
         <activity android:name=".clickarea.LocationOnScreenActivity" />
         <activity android:name=".clickarea.TouchDelegateActivity" />
         <activity android:name=".clickarea.PaddingActivity" />
-        <activity
-            android:name=".clickarea.ItemDetailHostActivity"
-            android:label="@string/title_activity_item_detail_host" />
         <activity android:name=".clickarea.ClickAreaActivity" />
         <activity android:name=".genBitmap.GenerateBitmapActivity" />
         <activity android:name=".ratio.RatioActivity" />
-        <activity android:name=".my_edittext.MyEditTextActivity" />
-        <activity android:name=".titlebar.TitleBarActivity" />
         <activity android:name=".eventbus.PostActivity" />
         <activity android:name=".eventbus.EventBusActivity" />
-        <activity android:name=".statelayout.StateLayoutActivity" />
-        <activity android:name=".setting_item.SettingItemActivity" />
         <activity android:name=".popupwindow.PopupWindowActivity" />
         <activity android:name=".dialog.DialogActivity" />
         <activity android:name=".network.NetworkActivity" />

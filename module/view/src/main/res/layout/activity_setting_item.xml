@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#F4F4F4"
     android:orientation="vertical"
-    tools:context=".setting_item.SettingItemActivity">
+    tools:context="com.example.custom.setting_item.SettingItemActivity">
 
     <com.example.tools.setting_item.widgets.SettingItem
         android:layout_width="match_parent"
