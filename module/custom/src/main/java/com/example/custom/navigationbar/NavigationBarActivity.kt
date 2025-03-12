@@ -2,7 +2,6 @@ package com.example.custom.navigationbar
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import com.example.base.BaseActivity
 import com.example.custom.R
 import com.example.widgets.navigationbar.NavigationBar
@@ -21,9 +20,6 @@ class NavigationBarActivity : BaseActivity() {
             R.id.fragment_container
         )
     }
-
-    private var currentIndex = ONE_INDEX
-    private var currentFragment: Fragment? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

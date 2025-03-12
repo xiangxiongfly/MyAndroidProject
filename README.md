@@ -17,6 +17,7 @@
 - [Drawable](https://blog.csdn.net/qq_14876133/article/details/127268623)
 - [TabLayout](https://blog.csdn.net/qq_14876133/article/details/127844487)
 - [BottomSheet](https://blog.csdn.net/qq_14876133/article/details/127882057)
+- [Spinner](https://blog.csdn.net/qq_14876133/article/details/146201030)
 
 ## Tools
 
@@ -34,3 +35,4 @@
 - [扩大View的点击区域](https://blog.csdn.net/qq_14876133/article/details/142758670)
 - [封装Glide](https://blog.csdn.net/qq_14876133/article/details/141962584)
 - [手写签名板](https://blog.csdn.net/qq_14876133/article/details/144078111)
+- [底部导航栏](https://blog.csdn.net/qq_14876133/article/details/146201850)
