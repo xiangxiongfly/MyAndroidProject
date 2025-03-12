@@ -53,7 +53,7 @@ class RvStaggeredActivity : BaseActivity() {
     }
 
     private fun initRv() {
-        val mAdapter = FruitAdapter(mContext, mList)
+        val mAdapter = FruitAdapter(context, mList)
         recyclerView.layoutManager =
             StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
         recyclerView.adapter = mAdapter

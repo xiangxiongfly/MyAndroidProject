@@ -8,7 +8,6 @@ import android.graphics.Rect
 import android.graphics.drawable.Drawable
 import android.text.TextUtils
 import android.util.AttributeSet
-import android.util.Log
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import com.example.widgets.R
@@ -25,17 +24,16 @@ class SearchEditText(
 
     private val bgDrawable: Drawable?
     private val searchDrawable: Drawable?
-    private val searchDrawableSize: Int
+    private val searchIconSize: Int
     private val searchText: String?
     private val searchTextSize: Int
     private val searchTextColor: Int
-    private var isNeedDraw = true // 是否需要绘制
 
     init {
         val a: TypedArray = context.obtainStyledAttributes(attrs, R.styleable.SearchEditText)
         bgDrawable = a.getDrawable(R.styleable.SearchEditText_set_background)
         searchDrawable = a.getDrawable(R.styleable.SearchEditText_set_searchIcon)
-        searchDrawableSize =
+        searchIconSize =
             a.getDimensionPixelSize(R.styleable.SearchEditText_set_searchIconSize, 0)
         searchText = a.getString(R.styleable.SearchEditText_set_searchText)
         searchTextSize = a.getDimensionPixelSize(
@@ -53,8 +51,8 @@ class SearchEditText(
             background = it
         }
         searchDrawable?.let {
-            if (searchDrawableSize > 0) {
-                it.setBounds(0, 0, searchDrawableSize, searchDrawableSize)
+            if (searchIconSize > 0) {
+                it.setBounds(0, 0, searchIconSize, searchIconSize)
             } else {
                 it.setBounds(0, 0, it.intrinsicWidth, it.intrinsicHeight)
             }
@@ -62,27 +60,9 @@ class SearchEditText(
         imeOptions = EditorInfo.IME_ACTION_SEARCH
     }
 
-    override fun onTextChanged(
-        text: CharSequence,
-        start: Int,
-        lengthBefore: Int,
-        lengthAfter: Int
-    ) {
-        super.onTextChanged(text, start, lengthBefore, lengthAfter)
-        if (lengthBefore == 0 && lengthAfter > 0) {
-            isNeedDraw = true
-            invalidate()
-        } else if (lengthBefore > 0 && lengthAfter == 0) {
-            isNeedDraw = true
-            invalidate()
-        } else {
-            isNeedDraw = false
-        }
-    }
-
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        if (isNeedDraw && text.toString().isEmpty()) {
+        if (text.toString().isEmpty()) {
             drawSearch(canvas)
         }
     }
@@ -95,19 +75,19 @@ class SearchEditText(
                 textSize = searchTextSize.toFloat()
             }
             paint.getTextBounds(searchText, 0, searchText!!.length, bounds)
-            Log.e("TAG", "width: ${bounds.width()} height:${bounds.height()}")
-
             canvas.save()
-            canvas.drawText(
-                searchText,
-                (width - bounds.width()) / 2F + bounds.width() / 2,
-                (height + bounds.height()) / 2F,
-                paint
-            )
+            val fontMetrics = paint.fontMetrics
+            // 计算文字的高度
+            val textHeight = fontMetrics.bottom - fontMetrics.top
+            // 计算文字的垂直居中位置
+            val y = height / 2f + (textHeight / 2f - fontMetrics.bottom)
+            // 计算文字的水平居中位置
+            val x = width / 2f - paint.measureText(searchText) / 2f + searchIconSize / 2
+            canvas.drawText(searchText, x, y, paint)
             searchDrawable?.let {
                 canvas.translate(
-                    (width - searchDrawableSize) / 2F - bounds.width() / 2,
-                    (height - searchDrawableSize) / 2F
+                    (width - searchIconSize) / 2F - bounds.width() / 2,
+                    (height - searchIconSize) / 2F
                 )
                 it.draw(canvas)
             }
@@ -121,5 +101,4 @@ class SearchEditText(
         }
         super.setLayoutParams(params)
     }
-
 }

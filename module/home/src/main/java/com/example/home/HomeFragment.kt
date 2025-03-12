@@ -13,6 +13,7 @@ import com.example.home.listview.ListViewActivity
 import com.example.home.popupwindow.PopupWindowActivity
 import com.example.home.recyclerview.RecyclerViewActivity
 import com.example.home.span.SpannableStringActivity
+import com.example.home.spinner.SpinnerActivity
 import com.example.home.tablayout.TabLayoutActivity
 import com.example.home.textview.TextViewActivity
 import com.example.home.viewpager.ViewPagerActivity
@@ -61,6 +62,7 @@ class HomeFragment : BaseFragment() {
         flexboxLayout.addElement(mContext, "SpannableString", SpannableStringActivity::class.java)
         flexboxLayout.addElement(mContext, "Drawable", DrawableActivity::class.java)
         flexboxLayout.addElement(mContext, "TabLayout", TabLayoutActivity::class.java)
+        flexboxLayout.addElement(mContext, "Spinner", SpinnerActivity::class.java)
     }
 
 }

@@ -26,7 +26,7 @@ class EventBusActivity : BaseActivity() {
     }
 
     fun toPostActivity(view: View) {
-        PostActivity.actionStart(mContext)
+        PostActivity.actionStart(context)
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)

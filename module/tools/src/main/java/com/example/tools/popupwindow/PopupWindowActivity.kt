@@ -26,12 +26,12 @@ class PopupWindowActivity : BaseActivity() {
     }
 
     fun showShare(view: View) {
-        SharePop.Build(mContext)
+        SharePop.Build(context)
             .show(btnShare)
     }
 
     fun showQQ(view: View) {
-        QQPop.Builder(mContext)
+        QQPop.Builder(context)
             .setOnClickListener(object : QQPop.OnClickListener {
                 override fun onClickVideo() {
                     ToastUtils.show("视频")
@@ -45,7 +45,7 @@ class PopupWindowActivity : BaseActivity() {
     }
 
     fun showLike(view: View) {
-        LikePop.Builder(mContext)
+        LikePop.Builder(context)
             .show(view)
     }
 }

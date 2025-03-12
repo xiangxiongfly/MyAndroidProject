@@ -3,11 +3,11 @@ package com.example.widgets.navigation
 import android.content.Context
 import android.util.AttributeSet
 import android.view.Gravity
+import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
-import com.example.widgets.R
 
 class TabView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
@@ -22,10 +22,24 @@ class TabView @JvmOverloads constructor(
         orientation = VERTICAL
         gravity = Gravity.CENTER
         layoutParams = LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT)
-        inflate(context, R.layout.tab_view, this)
-        ivSelected = findViewById(R.id.iv_selected)
-        ivUnselect = findViewById(R.id.iv_unselect)
-        tvLabel = findViewById(R.id.tv_label)
+        val frameLayout = FrameLayout(context).apply {
+            layoutParams =
+                FrameLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT)
+        }
+        ivSelected = ImageView(context).apply {
+            layoutParams = LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT)
+        }
+        ivUnselect = ImageView(context).apply {
+            layoutParams = LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT)
+        }
+        frameLayout.addView(ivSelected)
+        frameLayout.addView(ivUnselect)
+        tvLabel = TextView(context).apply {
+            layoutParams = LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT)
+            textSize = 12F
+        }
+        addView(frameLayout)
+        addView(tvLabel)
     }
 
     /**

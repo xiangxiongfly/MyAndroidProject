@@ -12,7 +12,6 @@ import androidx.core.view.size
 import androidx.viewpager.widget.ViewPager
 import com.example.base.BaseActivity
 import com.example.base.utils.dp
-import com.example.base.utils.dp2px
 import com.example.home.R
 import com.example.home.viewpager.transformer.DepthPageTransformer
 import com.example.home.viewpager.transformer.RotateTransformer
@@ -69,7 +68,7 @@ class ViewPagerSimpleActivity : BaseActivity() {
     private fun getImageViewList(): ArrayList<ImageView> {
         return arrayListOf<ImageView>().apply {
             for (i in mImgIds.indices) {
-                val imageView = ImageView(mContext)
+                val imageView = ImageView(context)
                 imageView.scaleType = ImageView.ScaleType.FIT_XY
                 imageView.setImageResource(mImgIds[i])
                 this.add(imageView)

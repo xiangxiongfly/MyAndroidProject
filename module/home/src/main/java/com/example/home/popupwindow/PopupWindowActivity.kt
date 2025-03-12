@@ -11,7 +11,6 @@ import android.widget.PopupWindow
 import android.widget.TextView
 import com.example.base.BaseActivity
 import com.example.base.utils.dp
-import com.example.base.utils.dp2px
 import com.example.home.R
 
 class PopupWindowActivity : BaseActivity() {
@@ -30,7 +29,7 @@ class PopupWindowActivity : BaseActivity() {
     }
 
     fun showShare(view: View) {
-        val view = LayoutInflater.from(mContext).inflate(R.layout.pop_share, null)
+        val view = LayoutInflater.from(context).inflate(R.layout.pop_share, null)
         val tvQQ = view.findViewById<TextView>(R.id.tv_qq)
         val tvWeixin = view.findViewById<TextView>(R.id.tv_weixin)
         val tvSina = view.findViewById<TextView>(R.id.tv_sina)
@@ -47,7 +46,7 @@ class PopupWindowActivity : BaseActivity() {
     }
 
     fun showQQ(view: View) {
-        val view = LayoutInflater.from(mContext).inflate(R.layout.pop_qq, null)
+        val view = LayoutInflater.from(context).inflate(R.layout.pop_qq, null)
         val cancel = view.findViewById<TextView>(R.id.cancel)
         val qqPop = PopupWindow(
             view,

@@ -31,7 +31,7 @@ class LvMutilTypeActivity : BaseActivity() {
         setContentView(R.layout.activity_lv_mutil_type)
         val listView: ListView = findViewById(R.id.listView)
         initData()
-        val mAdapter = MutilTypeAdapter(mContext, mList)
+        val mAdapter = MutilTypeAdapter(context, mList)
         listView.adapter = mAdapter
     }
 

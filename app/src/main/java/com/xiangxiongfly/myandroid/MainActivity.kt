@@ -47,7 +47,7 @@ class MainActivity : BaseActivity() {
     private lateinit var contentView: LinearLayout
     private lateinit var toolbar: Toolbar
 
-    private var currentPosition = POSITION_CUSTOM
+    private var currentPosition = POSITION_HOME
 
     private val mTitles = arrayOf("首页", "Custom", "工具", "设置")
     private val mFragments = SparseArray<BaseFragment>()
@@ -125,24 +125,14 @@ class MainActivity : BaseActivity() {
                 override fun onItemSelected(index: Int) {
                     currentPosition = index
                     vpMain.setCurrentItem(currentPosition, false)
-                    when (index) {
-                        0 -> Log.i("TAG", "首页")
-                        1 -> Log.i("TAG", "朋友圈")
-                        2 -> Log.i("TAG", "发现")
-                        3 -> Log.i("TAG", "设置")
-                    }
+                    Log.i("TAG", "点击 ${mTitles[index]}")
                 }
             }
         )
         navigationBar.setOnItemReselectedListener(
             object : NavigationBar.OnItemReselectedListener {
                 override fun onItemReselected(index: Int) {
-                    when (index) {
-                        0 -> Log.i("TAG", "首页2")
-                        1 -> Log.i("TAG", "朋友圈2")
-                        2 -> Log.i("TAG", "发现2")
-                        3 -> Log.i("TAG", "设置2")
-                    }
+                    Log.i("TAG", "重复点击 ${mTitles[index]}")
                 }
             }
         )
@@ -181,7 +171,7 @@ class MainActivity : BaseActivity() {
 
             override fun onPageSelected(position: Int) {
                 currentPosition = position
-                navigationBar.setTab(currentPosition)
+                navigationBar.selectTab(currentPosition)
             }
 
             override fun onPageScrollStateChanged(state: Int) {

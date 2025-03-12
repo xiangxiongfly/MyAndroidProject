@@ -43,7 +43,7 @@ public class PermissionActivity extends BaseActivity {
         btn_fragment_activity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(mContext, TwoActivity.class));
+                startActivity(new Intent(context, TwoActivity.class));
             }
         });
     }
@@ -54,8 +54,8 @@ public class PermissionActivity extends BaseActivity {
         permissionList.add(Manifest.permission.ACCESS_FINE_LOCATION);
         permissionList.add(Manifest.permission.CALL_PHONE);
 
-        if (PermissionUtils.isGrantedPermissions(mContext, permissionList)) {
-            Toast.makeText(mContext, "权限都通过了", Toast.LENGTH_SHORT).show();
+        if (PermissionUtils.isGrantedPermissions(context, permissionList)) {
+            Toast.makeText(context, "权限都通过了", Toast.LENGTH_SHORT).show();
         } else {
             PermissionHelper.with(this)
                     .permissions(permissionList)
@@ -63,7 +63,7 @@ public class PermissionActivity extends BaseActivity {
                         @Override
                         public void onGranted(boolean allGranted, @NonNull ArrayList<String> permissions) {
                             if (allGranted) {
-                                Toast.makeText(mContext, "权限全部通过", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(context, "权限全部通过", Toast.LENGTH_SHORT).show();
                             }
                             Log.e("TAG", "onGranted: " + allGranted + " - " + permissions);
                         }
@@ -71,7 +71,7 @@ public class PermissionActivity extends BaseActivity {
                         @Override
                         public void onDenied(boolean deniedNever, @NonNull ArrayList<String> permissions) {
                             if (deniedNever) {
-                                Toast.makeText(mContext, "权限拒绝且不再询问", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(context, "权限拒绝且不再询问", Toast.LENGTH_SHORT).show();
                             }
                             Log.e("TAG", "onDenied: " + deniedNever + " - " + permissions);
                         }

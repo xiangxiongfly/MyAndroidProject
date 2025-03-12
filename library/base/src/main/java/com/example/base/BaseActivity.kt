@@ -9,11 +9,11 @@ import com.example.base.utils.LogUtils
 const val KEY_TITLE = "title"
 
 open class BaseActivity : AppCompatActivity(), HandlerAction {
-    protected lateinit var mContext: Context
+    protected lateinit var context: Context
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mContext = this
+        context = this
         LogUtils.e("TAG", this.javaClass.simpleName.toString())
     }
 

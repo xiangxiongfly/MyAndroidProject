@@ -48,11 +48,11 @@ class DiffUtilActivity : BaseActivity() {
     }
 
     private fun initRv() {
-        mAdapter = UserAdapter(mContext, mList)
-        recyclerView.layoutManager = LinearLayoutManager(mContext)
+        mAdapter = UserAdapter(context, mList)
+        recyclerView.layoutManager = LinearLayoutManager(context)
         recyclerView.addItemDecoration(
             DividerItemDecoration(
-                mContext, DividerItemDecoration.VERTICAL
+                context, DividerItemDecoration.VERTICAL
             )
         )
         recyclerView.adapter = mAdapter

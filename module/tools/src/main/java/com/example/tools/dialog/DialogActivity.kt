@@ -15,14 +15,14 @@ class DialogActivity : BaseActivity() {
     }
 
     fun showConfirm1(view: View) {
-        ConfirmDialog.Builder(mContext)
+        ConfirmDialog.Builder(context)
             .setTitle("标题")
             .setContent("这是一些内容")
             .show()
     }
 
     fun showConfirm2(view: View) {
-        val dialog = ConfirmDialog.Builder(mContext)
+        val dialog = ConfirmDialog.Builder(context)
             .setTitle("提示")
             .setContent("您已支付成功")
             .setOnClickListener(object : ConfirmDialog.OnClickListener {
@@ -39,22 +39,22 @@ class DialogActivity : BaseActivity() {
     }
 
     fun showShare(view: View) {
-        ShareDialog.Builder(mContext)
+        ShareDialog.Builder(context)
             .show()
     }
 
     fun showSetting(view: View) {
-        SettingDialog.Builder(mContext)
+        SettingDialog.Builder(context)
             .show()
     }
 
     fun showComment(view: View) {
-        CommentDialog.Builder(mContext)
+        CommentDialog.Builder(context)
             .show()
     }
 
     fun showTip(view: View) {
-        TipsDialog.Build(mContext)
+        TipsDialog.Build(context)
             .show(2000L)
     }
 }

@@ -3,7 +3,8 @@
     package="com.example.home">
 
     <application>
-        <activity android:name=".textview.TextViewActivity"/>
+        <activity android:name=".spinner.SpinnerActivity" />
+        <activity android:name=".textview.TextViewActivity" />
         <activity android:name=".viewpager.wrap_vp.WrapViewPagerActivity" />
         <activity android:name=".viewpager.no_scroll_vp.NoScrollVpActivity" />
         <activity android:name=".popupwindow.PopupWindowActivity" />

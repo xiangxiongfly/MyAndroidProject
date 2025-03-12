@@ -44,7 +44,7 @@ class CheckBoxListViewActivity : BaseActivity() {
         setContentView(R.layout.activity_check_box_list_view)
         initView()
         initData()
-        listView.adapter = CheckBoxAdapter(mContext, mList)
+        listView.adapter = CheckBoxAdapter(context, mList)
     }
 
     private fun initView() {

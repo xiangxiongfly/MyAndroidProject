@@ -163,7 +163,7 @@ class SpanSimpleActivity : BaseActivity() {
         mList.add(
             SpannableString("后面添加图片：#").apply {
                 setSpan(
-                    ImageSpan(mContext, R.mipmap.ic_launcher),
+                    ImageSpan(context, R.mipmap.ic_launcher),
                     7, 8,
                     Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
                 )
@@ -172,7 +172,7 @@ class SpanSimpleActivity : BaseActivity() {
         mList.add(
             SpannableString("我的中#间添加图片").apply {
                 setSpan(
-                    ImageSpan(mContext, R.mipmap.ic_launcher),
+                    ImageSpan(context, R.mipmap.ic_launcher),
                     3, 4,
                     Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
                 )
@@ -181,7 +181,7 @@ class SpanSimpleActivity : BaseActivity() {
         mList.add(
             SpannableString("图片点击事件#").apply {
                 setSpan(
-                    ImageSpan(mContext, R.mipmap.ic_launcher),
+                    ImageSpan(context, R.mipmap.ic_launcher),
                     6,
                     7,
                     Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
@@ -189,7 +189,7 @@ class SpanSimpleActivity : BaseActivity() {
                 setSpan(
                     object : ClickableSpan() {
                         override fun onClick(widget: View) {
-                            Toast.makeText(mContext, "点击了", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(context, "点击了", Toast.LENGTH_SHORT).show()
                         }
                     }, 6, 7, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
                 )
@@ -199,7 +199,7 @@ class SpanSimpleActivity : BaseActivity() {
             SpannableString("复杂的点击效果1").apply {
                 setSpan(object : ClickableSpan() {
                     override fun onClick(widget: View) {
-                        Toast.makeText(mContext, "点击了", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, "点击了", Toast.LENGTH_SHORT).show()
                     }
                 }, 3, 5, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
             }
@@ -209,7 +209,7 @@ class SpanSimpleActivity : BaseActivity() {
             SpannableString("复杂的点击效果2").apply {
                 setSpan(object : ClickableSpan() {
                     override fun onClick(widget: View) {
-                        Toast.makeText(mContext, "点击了", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, "点击了", Toast.LENGTH_SHORT).show()
                     }
 
                     override fun updateDrawState(ds: TextPaint) {
@@ -222,7 +222,7 @@ class SpanSimpleActivity : BaseActivity() {
 
     private fun initHtml() {
         val html: String = "HTML:<img src=\"${R.mipmap.ic_launcher}\">"
-        val imageGetter = CustomImageGetter(mContext, 0, 0)
+        val imageGetter = CustomImageGetter(context, 0, 0)
         val htmlString = Html.fromHtml(html, imageGetter, null)
         mList.add(htmlString)
     }

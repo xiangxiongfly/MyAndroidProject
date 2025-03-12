@@ -73,7 +73,7 @@ class ExpandableListViewActivity : BaseActivity() {
     }
 
     private fun initExpandableListView() {
-        val mAdapter = ExpandableAdapter(mContext, groupList, childList)
+        val mAdapter = ExpandableAdapter(context, groupList, childList)
         expandableListView.setAdapter(mAdapter)
     }
 }

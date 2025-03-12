@@ -44,13 +44,13 @@ class RvGridActivity : BaseActivity() {
     }
 
     private fun initRv() {
-        val mAdapter = FruitAdapter(mContext, mFruitList)
-        recyclerView.layoutManager = GridLayoutManager(mContext, 3)
+        val mAdapter = FruitAdapter(context, mFruitList)
+        recyclerView.layoutManager = GridLayoutManager(context, 3)
         recyclerView.setHasFixedSize(true)
         //方式一
 //        recyclerView.addItemDecoration(GridItemDecoration(Color.RED, 1.dp))
         //方式二
-        recyclerView.addItemDecoration(GridItemDecoration(mContext, R.drawable.divider_red_shape))
+        recyclerView.addItemDecoration(GridItemDecoration(context, R.drawable.divider_red_shape))
         recyclerView.adapter = mAdapter
     }
 }

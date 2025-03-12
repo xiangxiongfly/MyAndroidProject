@@ -59,10 +59,10 @@ class RvMutilTypeActivity : BaseActivity() {
     private fun initRv() {
         recyclerView.addItemDecoration(
             DividerItemDecoration(
-                mContext,
+                context,
                 DividerItemDecoration.VERTICAL
             )
         )
-        recyclerView.adapter = MutilTypeAdapter(mContext, mList)
+        recyclerView.adapter = MutilTypeAdapter(context, mList)
     }
 }

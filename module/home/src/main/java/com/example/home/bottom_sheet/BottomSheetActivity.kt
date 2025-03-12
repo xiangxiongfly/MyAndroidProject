@@ -69,7 +69,7 @@ class BottomSheetActivity : BaseActivity() {
      */
     private fun initBottomSheetDialog() {
         btnBottomSheetDialog.setOnClickListener {
-            val bottomSheetDialog = BottomSheetDialog(mContext, R.style.MyBottomSheetDialogStyle)
+            val bottomSheetDialog = BottomSheetDialog(context, R.style.MyBottomSheetDialogStyle)
             bottomSheetDialog.dismissWithAnimation
             bottomSheetDialog.setContentView(R.layout.dialog_bottom_sheet)
             val cancel: TextView = bottomSheetDialog.findViewById<TextView>(R.id.cancel)!!

@@ -1,11 +1,11 @@
 rootProject.name = "MyAndroid"
 include ':app'
 include ':module:home'
-include ':module:view'
+include ':module:custom'
 include ':module:tools'
 include ':module:setting'
-include ':statusbar_demo'
 include ':library:widgets'
 include ':library:base'
 include ':library:common'
 include ':java_sort'
+include ':demo:statusbar'

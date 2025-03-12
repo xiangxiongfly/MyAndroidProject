@@ -69,7 +69,7 @@ android {
 
 dependencies {
     implementation project(path: ':library:common')
-    implementation project(path: ':module:view')
+    implementation project(path: ':module:custom')
     implementation project(path: ':module:home')
     implementation project(path: ':module:tools')
     implementation project(path: ':module:setting')

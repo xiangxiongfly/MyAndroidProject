@@ -11,17 +11,18 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/demo" />
+            <option value="$PROJECT_DIR$/demo/statusbar" />
             <option value="$PROJECT_DIR$/java_sort" />
             <option value="$PROJECT_DIR$/library" />
             <option value="$PROJECT_DIR$/library/base" />
             <option value="$PROJECT_DIR$/library/common" />
             <option value="$PROJECT_DIR$/library/widgets" />
             <option value="$PROJECT_DIR$/module" />
+            <option value="$PROJECT_DIR$/module/custom" />
             <option value="$PROJECT_DIR$/module/home" />
             <option value="$PROJECT_DIR$/module/setting" />
             <option value="$PROJECT_DIR$/module/tools" />
-            <option value="$PROJECT_DIR$/module/view" />
-            <option value="$PROJECT_DIR$/statusbar_demo" />
           </set>
         </option>
       </GradleProjectSettings>

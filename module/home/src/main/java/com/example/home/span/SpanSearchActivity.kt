@@ -51,7 +51,7 @@ class SpanSearchActivity : BaseActivity() {
 
             override fun afterTextChanged(s: Editable?) {
                 val keyword = s.toString()
-                textView.text = matchKeyword(mContext, text, keyword, R.style.SearchStyle)
+                textView.text = matchKeyword(context, text, keyword, R.style.SearchStyle)
             }
         })
     }

@@ -42,16 +42,16 @@ class BaseAdapterActivity : BaseActivity() {
         setContentView(R.layout.activity_base_adapter)
         val listView: ListView = findViewById(R.id.listView)
 
-        val headerView = LayoutInflater.from(mContext).inflate(R.layout.layout_header, null)
-        val headerView2 = LayoutInflater.from(mContext).inflate(R.layout.layout_header2, null)
-        val footerView = LayoutInflater.from(mContext).inflate(R.layout.layout_footer, null)
+        val headerView = LayoutInflater.from(context).inflate(R.layout.layout_header, null)
+        val headerView2 = LayoutInflater.from(context).inflate(R.layout.layout_header2, null)
+        val footerView = LayoutInflater.from(context).inflate(R.layout.layout_footer, null)
 
         //添加头尾布局
         listView.addHeaderView(headerView)
         listView.addHeaderView(headerView2)
         listView.addFooterView(footerView)
 
-        val mAdapter = MyAdapter(mContext, datas)
+        val mAdapter = MyAdapter(context, datas)
         listView.adapter = mAdapter
 
         //点击事件

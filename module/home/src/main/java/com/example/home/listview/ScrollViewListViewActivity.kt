@@ -24,6 +24,6 @@ class ScrollViewListViewActivity : BaseActivity() {
             }
         }
         myListView.adapter =
-            ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, datas)
+            ArrayAdapter<String>(context, android.R.layout.simple_list_item_1, datas)
     }
 }

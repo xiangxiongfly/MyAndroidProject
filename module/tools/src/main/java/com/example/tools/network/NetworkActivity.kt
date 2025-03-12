@@ -25,10 +25,10 @@ class NetworkActivity : BaseActivity(), NetworkHelper.OnNetworkStateChangedListe
     fun onClick(view: View) {
         when (view.id) {
             R.id.btn_network_enable -> {
-                LogUtils.e("NETWORK", "网络是否可用：${NetworkUtils.isAvailable(mContext)}")
+                LogUtils.e("NETWORK", "网络是否可用：${NetworkUtils.isAvailable(context)}")
             }
             R.id.btn_network_type -> {
-                LogUtils.e("NETWORK", "网络类型：${NetworkUtils.getNetWorkTypeName(mContext)}")
+                LogUtils.e("NETWORK", "网络类型：${NetworkUtils.getNetWorkTypeName(context)}")
             }
             R.id.btn_ping -> {
                 thread {
@@ -36,13 +36,13 @@ class NetworkActivity : BaseActivity(), NetworkHelper.OnNetworkStateChangedListe
                 }
             }
             R.id.btn_check_wifi -> {
-                LogUtils.e("NETWORK", "wifi是否开启：${NetworkUtils.isWifiEnabled(mContext)}")
+                LogUtils.e("NETWORK", "wifi是否开启：${NetworkUtils.isWifiEnabled(context)}")
             }
             R.id.btn_network_state_changed -> {
-                NetworkHelper.registerListener(mContext, this)
+                NetworkHelper.registerListener(context, this)
             }
             R.id.btn_cancel_network_state_changed -> {
-                NetworkHelper.unregisterListener(mContext, this)
+                NetworkHelper.unregisterListener(context, this)
             }
         }
     }
@@ -83,6 +83,6 @@ class NetworkActivity : BaseActivity(), NetworkHelper.OnNetworkStateChangedListe
 
     override fun onDestroy() {
         super.onDestroy()
-        NetworkHelper.unregisterListener(mContext, this)
+        NetworkHelper.unregisterListener(context, this)
     }
 }

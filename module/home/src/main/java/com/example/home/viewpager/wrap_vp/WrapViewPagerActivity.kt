@@ -34,7 +34,7 @@ class WrapViewPagerActivity : BaseActivity() {
     }
 
     private fun initViewPager() {
-        wrapViewPager.adapter = MyAdapter(mContext)
+        wrapViewPager.adapter = MyAdapter(context)
     }
 
     class MyAdapter(private val context: Context) : PagerAdapter() {

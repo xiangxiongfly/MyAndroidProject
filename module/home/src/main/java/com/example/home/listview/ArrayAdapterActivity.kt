@@ -37,6 +37,6 @@ class ArrayAdapterActivity : BaseActivity() {
             "蓝",
             "黑"
         )
-        listView.adapter = ArrayAdapter(mContext, android.R.layout.simple_list_item_1, datas)
+        listView.adapter = ArrayAdapter(context, android.R.layout.simple_list_item_1, datas)
     }
 }

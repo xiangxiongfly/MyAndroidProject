@@ -81,15 +81,14 @@ dependencies {
     api rootProject.ext.dependencies["palette"]
 
     // OkHttp核心库
-    api rootProject.ext.dependencies["okhttp"]
+    api "com.squareup.okhttp3:okhttp:4.12.0"
 
     // OkHttp日志拦截器，用于调试
-    api rootProject.ext.dependencies["logging"]
+    api "com.squareup.okhttp3:logging-interceptor:4.12.0"
 
     // Gson
-    api rootProject.ext.dependencies["gson"]
+    api "com.google.code.gson:gson:2.10.1"
 
     // GsonFactory
-    api rootProject.ext.dependencies["GsonFactory"]
-
+    api "com.github.getActivity:GsonFactory:9.6"
 }

@@ -91,7 +91,7 @@ class RvLinearActivity : BaseActivity() {
     }
 
     private fun initRv() {
-        mAdapter = FruitAdapter2(mContext, mFruitList)
+        mAdapter = FruitAdapter2(context, mFruitList)
         //设置点击事件
         mAdapter.setOnItemClickListener(object : FruitAdapter2.OnItemClickListener {
             override fun onUpdate(position: Int) {
@@ -103,7 +103,7 @@ class RvLinearActivity : BaseActivity() {
             }
         })
         //设置垂直布局
-        recyclerView.layoutManager = LinearLayoutManager(mContext)
+        recyclerView.layoutManager = LinearLayoutManager(context)
         //设置水平布局布局
 //        recyclerView.layoutManager =
 //            LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false)

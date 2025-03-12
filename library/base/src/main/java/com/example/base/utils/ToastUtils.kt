@@ -20,3 +20,7 @@ object ToastUtils {
     }
 
 }
+
+fun showToast(text: String) {
+    ToastUtils.show(text)
+}

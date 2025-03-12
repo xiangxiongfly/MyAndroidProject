@@ -36,7 +36,7 @@ class SimpleAdapterActivity : BaseActivity() {
             datas.add(map)
         }
         listView.adapter = SimpleAdapter(
-            mContext,
+            context,
             datas,
             R.layout.item_fruit,
             arrayOf("name", "img"),

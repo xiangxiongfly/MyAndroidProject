@@ -139,12 +139,12 @@ class TabLayoutActivity : BaseActivity() {
 
     //图片选中状态
     fun Drawable.selected() {
-        this.setTint(ContextCompat.getColor(mContext, R.color.color_main))
+        this.setTint(ContextCompat.getColor(context, R.color.color_main))
     }
 
     //图片未选中状态
     fun Drawable.unselected() {
-        this.setTint(ContextCompat.getColor(mContext, R.color.grey))
+        this.setTint(ContextCompat.getColor(context, R.color.grey))
     }
 
     /**
@@ -164,7 +164,7 @@ class TabLayoutActivity : BaseActivity() {
             linearLayout?.apply {
                 showDividers = LinearLayout.SHOW_DIVIDER_MIDDLE
                 dividerDrawable =
-                    ContextCompat.getDrawable(mContext, R.drawable.tab_divider)
+                    ContextCompat.getDrawable(context, R.drawable.tab_divider)
                 dividerPadding = 2.dp
             }
         }
@@ -221,7 +221,7 @@ class TabLayoutActivity : BaseActivity() {
      * 自定义View，添加Lottie动画
      */
     private fun initTabLayout06() {
-        val layoutInflate = LayoutInflater.from(mContext)
+        val layoutInflate = LayoutInflater.from(context)
         val map = mapOf<String, Int>(
             "apple" to R.raw.apple,
             "heart" to R.raw.heart,
@@ -270,7 +270,7 @@ class TabLayoutActivity : BaseActivity() {
             val text = it.findViewById<TextView>(R.id.tab_text)
             if (!image.isAnimating) image.playAnimation()
             setLottieColor(image, true)
-            text.setTextColor(ContextCompat.getColor(mContext, R.color.blue))
+            text.setTextColor(ContextCompat.getColor(context, R.color.blue))
         }
     }
 
@@ -284,7 +284,7 @@ class TabLayoutActivity : BaseActivity() {
             if (image.isAnimating) image.cancelAnimation()
             image.progress = 0F
             setLottieColor(image, false)
-            text.setTextColor(ContextCompat.getColor(mContext, R.color.black))
+            text.setTextColor(ContextCompat.getColor(context, R.color.black))
         }
     }
 

@@ -23,7 +23,7 @@ class DialogActivity : BaseActivity() {
 
     // 普通AlertDialog
     fun btn01(view: View) {
-        AlertDialog.Builder(mContext)
+        AlertDialog.Builder(context)
             .setIcon(R.mipmap.ic_launcher)
             .setTitle("系统提示")
             .setMessage("这是一个普通AlertDialog")
@@ -49,7 +49,7 @@ class DialogActivity : BaseActivity() {
             "strawberry",
             "watermelon"
         )
-        AlertDialog.Builder(mContext)
+        AlertDialog.Builder(context)
             .setTitle("水果列表")
             .setItems(fruits) { dialog, which ->
                 ToastUtils.show(fruits[which])
@@ -70,7 +70,7 @@ class DialogActivity : BaseActivity() {
             "strawberry",
             "watermelon"
         )
-        AlertDialog.Builder(mContext)
+        AlertDialog.Builder(context)
             .setTitle("水果列表")
             .setSingleChoiceItems(fruits, 0) { dialog, which ->
                 ToastUtils.show(fruits[which])
@@ -94,7 +94,7 @@ class DialogActivity : BaseActivity() {
         )
         val checkItems =
             booleanArrayOf(false, false, false, false, false, false, false, false, false)
-        AlertDialog.Builder(mContext)
+        AlertDialog.Builder(context)
             .setTitle("水果列表")
             .setMultiChoiceItems(
                 fruits, checkItems
@@ -114,8 +114,8 @@ class DialogActivity : BaseActivity() {
     // 自定义AlertDialog
     fun btn05(view: View?) {
         val dialogView: View =
-            LayoutInflater.from(mContext).inflate(R.layout.dialog_custom_view, null)
-        val alertDialog = AlertDialog.Builder(mContext).create()
+            LayoutInflater.from(context).inflate(R.layout.dialog_custom_view, null)
+        val alertDialog = AlertDialog.Builder(context).create()
         alertDialog.apply {
             setView(dialogView)
             setCancelable(false) //按返回键是否取消
@@ -131,14 +131,14 @@ class DialogActivity : BaseActivity() {
 
     // 普通圆形ProgressDialog
     fun btnProgressDialog01(view: View) {
-        ProgressDialog.show(mContext, "提示", "正在加载。。。", false, true)
+        ProgressDialog.show(context, "提示", "正在加载。。。", false, true)
     }
 
     private lateinit var progressDialog: ProgressDialog
 
     // 普通条形ProgressDialog
     fun btnProgressDialog02(view: View) {
-        progressDialog = ProgressDialog(mContext)
+        progressDialog = ProgressDialog(context)
         progressDialog.apply {
             setTitle("提示")
             setMessage("正在加载。。。")
@@ -169,11 +169,11 @@ class DialogActivity : BaseActivity() {
     fun btnDateDialog(view: View) {
         val calendar = Calendar.getInstance()
         DatePickerDialog(
-            mContext,
+            context,
             { view, year, month, dayOfMonth ->
                 var ret = ""
                 ret = year.toString() + "年" + (month + 1) + "月" + dayOfMonth + "日"
-                Toast.makeText(mContext, ret, Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, ret, Toast.LENGTH_SHORT).show()
             },
             calendar[Calendar.YEAR],
             calendar[Calendar.MONTH],
@@ -186,11 +186,11 @@ class DialogActivity : BaseActivity() {
     fun btnTimeDialog(view: View) {
         val calendar = Calendar.getInstance()
         TimePickerDialog(
-            mContext, android.app.AlertDialog.THEME_HOLO_LIGHT,
+            context, android.app.AlertDialog.THEME_HOLO_LIGHT,
             { view, hourOfDay, minute ->
                 var ret = ""
                 ret = hourOfDay.toString() + "时" + minute + "分"
-                Toast.makeText(mContext, ret, Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, ret, Toast.LENGTH_SHORT).show()
             },
             calendar[Calendar.HOUR_OF_DAY],
             calendar[Calendar.MINUTE], true
@@ -199,7 +199,7 @@ class DialogActivity : BaseActivity() {
 
     // 自定义Dialog，仿QQ弹窗
     fun btnQQDialog(view: View) {
-        val qqDialog = QQDialog(mContext)
+        val qqDialog = QQDialog(context)
         qqDialog.setOnDialogClickListener(object : QQDialog.OnDialogClickListener {
             override fun onVideoClick() {
                 ToastUtils.show("点击了视频")

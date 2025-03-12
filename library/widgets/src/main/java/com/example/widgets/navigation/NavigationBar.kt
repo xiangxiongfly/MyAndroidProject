@@ -2,7 +2,6 @@ package com.example.widgets.navigation
 
 import android.content.Context
 import android.util.AttributeSet
-import android.util.Log
 import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup
@@ -46,7 +45,7 @@ class NavigationBar @JvmOverloads constructor(
         this.onItemReselectedListener = listener
     }
 
-    fun setTab(index: Int) {
+    fun selectTab(index: Int) {
         val tabView = getChildAt(index)
         clickTab(tabView as TabView)
     }
@@ -64,7 +63,6 @@ class NavigationBar @JvmOverloads constructor(
         }
         lock = true
         val index = tabView.tag as Int
-        Log.e("TAG", "index:${index}  selectedIndex:${selectedIndex}")
         if (selectedIndex != index) {
             onItemSelectedListener?.onItemSelected(index)
             tabView.setProgress(1F)
