@@ -182,7 +182,7 @@ class MainActivity : BaseActivity() {
 
     private fun createFragment(@IntRange(from = 0, to = 3) position: Int): BaseFragment {
         return when (position) {
-            0 -> HomeFragment.newInstance(mTitles[position])
+            0 -> HomeFragment.newInstance()
             1 -> CustomFragment.newInstance(mTitles[position])
             2 -> ToolsFragment.newInstance(mTitles[position])
             3 -> SettingFragment.newInstance(mTitles[position])
