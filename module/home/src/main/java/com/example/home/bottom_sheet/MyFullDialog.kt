@@ -48,7 +48,7 @@ class MyFullDialog : BottomSheetDialogFragment() {
     }
 
     override fun dismiss() {
-        KeyboardUtils.hideKeyboard(dialog?.currentFocus)
+        dialog?.currentFocus?.let { KeyboardUtils.hideSoftInput(it) }
         super.dismiss()
     }
 }
