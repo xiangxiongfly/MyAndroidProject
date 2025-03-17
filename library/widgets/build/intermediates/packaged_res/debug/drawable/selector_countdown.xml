@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 默认获取验证码按钮样式 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false">
+        <shape android:shape="rectangle">
+            <corners android:radius="3dp" />
+            <solid android:color="#BBBBBB" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="3dp" />
+            <solid android:color="#FFB716" />
+        </shape>
+    </item>
+</selector>

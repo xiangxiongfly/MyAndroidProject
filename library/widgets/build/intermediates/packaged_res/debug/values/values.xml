@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="tab_label_color">#FF000000</color>
+    <color name="tab_line">#E2E2E2</color>
+    <color name="tab_selected_color">#FF000000</color>
+    <color name="tab_unselect_color">#FFB3B3B3</color>
+    <dimen name="tab_icon_size">25dp</dimen>
+    <dimen name="tab_padding_vertical">5dp</dimen>
+    <dimen name="tab_text_size">10sp</dimen>
+    <declare-styleable name="ClearEditText">
+        <attr format="reference" name="cet_deleteIcon"/>
+        <attr format="dimension" name="cet_deleteIconSize"/>
+        <attr format="reference" name="cet_tipDefaultIcon"/>
+        <attr format="reference" name="cet_tipSelectedIcon"/>
+        <attr format="dimension" name="cet_tipIconSize"/>
+        <attr format="color|reference" name="cet_defaultBg"/>
+        <attr format="color|reference" name="cet_selectedBg"/>
+    </declare-styleable>
+    <declare-styleable name="PasswordEditText">
+        <attr format="dimension" name="pet_eyeIconSize"/>
+        <attr format="reference" name="pet_tipDefaultIcon"/>
+        <attr format="reference" name="pet_tipSelectedIcon"/>
+        <attr format="dimension" name="pet_tipIconSize"/>
+        <attr format="color|reference" name="pet_defaultBg"/>
+        <attr format="color|reference" name="pet_selectedBg"/>
+    </declare-styleable>
+    <declare-styleable name="SearchEditText">
+        <attr format="reference" name="set_background"/>
+        <attr format="reference" name="set_searchIcon"/>
+        <attr format="dimension" name="set_searchIconSize"/>
+        <attr format="string" name="set_searchText"/>
+        <attr format="dimension" name="set_searchTextSize"/>
+        <attr format="color" name="set_searchTextColor"/>
+    </declare-styleable>
+    <declare-styleable name="SettingItem">
+        <!-- 左边 -->
+        <attr format="string" name="item_leftText"/>
+        <attr format="color" name="item_leftTextColor"/>
+        <attr format="dimension" name="item_leftTextSize"/>
+        <attr format="reference" name="item_leftDrawable"/>
+        <attr format="dimension" name="item_leftDrawablePadding"/>
+        <attr format="dimension" name="item_leftDrawableSize"/>
+        <!-- 右边 -->
+        <attr format="string" name="item_rightText"/>
+        <attr format="color" name="item_rightTextColor"/>
+        <attr format="dimension" name="item_rightTextSize"/>
+        <attr format="reference" name="item_rightDrawable"/>
+        <attr format="dimension" name="item_rightDrawablePadding"/>
+        <attr format="dimension" name="item_rightDrawableSize"/>
+        <!-- 分割线 -->
+        <attr format="boolean" name="item_lineVisible"/>
+        <attr format="color|reference" name="item_lineDrawable"/>
+        <attr format="dimension" name="item_lineWidth"/>
+        <attr format="dimension" name="item_lineMargin"/>
+    </declare-styleable>
+    <declare-styleable name="SignatureView">
+        <attr format="color" name="bgColor"/>
+        <attr format="color" name="brushColor"/>
+        <attr format="dimension" name="brushWidth"/>
+    </declare-styleable>
+    <declare-styleable name="StateLayout">
+        <attr format="reference" name="empty_layout"/>
+        <attr format="reference" name="loading_layout"/>
+        <attr format="reference" name="error_layout"/>
+    </declare-styleable>
+    <declare-styleable name="TitleBar">
+        <!--整体区域：-->
+        <attr format="dimension" name="verticalPadding"/>
+
+        <!--中间区域：-->
+        <!--标题-->
+        <attr format="string" name="title"/>
+        <!--标题颜色-->
+        <attr format="color" name="titleColor"/>
+        <!--标题大小-->
+        <attr format="dimension" name="titleSize"/>
+        <!--标题位置-->
+        <attr name="titlePosition">
+            <enum name="left" value="1"/>
+            <enum name="right" value="2"/>
+            <enum name="center" value="3"/>
+        </attr>
+        <!--标题样式-->
+        <attr name="titleStyle">
+            <enum name="normal" value="1"/>
+            <enum name="bold" value="2"/>
+            <enum name="italic" value="3"/>
+        </attr>
+        <!--标题图标-->
+        <attr format="reference" name="titleIcon"/>
+        <!--标题图标大小-->
+        <attr format="dimension" name="titleIconSize"/>
+        <!--标题图标距离文字距离-->
+        <attr format="dimension" name="titleIconPadding"/>
+        <!--标题图标位置-->
+        <attr name="titleIconPosition">
+            <enum name="left" value="1"/>
+            <enum name="right" value="2"/>
+            <enum name="top" value="3"/>
+            <enum name="bottom" value="4"/>
+        </attr>
+        <!--标题水平间距-->
+        <attr format="dimension" name="titleHorizontalPadding"/>
+        <!--标题文字溢出模式-->
+        <attr name="titleOverflowMode">
+            <enum name="none" value="0"/>
+            <enum name="start" value="1"/>
+            <enum name="middle" value="2"/>
+            <enum name="end" value="3"/>
+            <enum name="marquee" value="4"/>
+        </attr>
+
+        <!--左边区域：-->
+        <!--左边标题-->
+        <attr format="string" name="leftText"/>
+        <!--左边标题颜色-->
+        <attr format="color|reference" name="leftTextColor"/>
+        <!--左边标题大小-->
+        <attr format="dimension" name="leftTextSize"/>
+        <!--左边标题样式-->
+        <attr name="leftTextStyle">
+            <enum name="normal" value="1"/>
+            <enum name="bold" value="2"/>
+            <enum name="italic" value="3"/>
+        </attr>
+        <!--左边图标-->
+        <attr format="reference" name="leftIcon"/>
+        <!--左边图标大小-->
+        <attr format="dimension" name="leftIconSize"/>
+        <!--左边图标距离文字-->
+        <attr format="dimension" name="leftIconPadding"/>
+        <!--左边图标位置-->
+        <attr name="leftIconPosition">
+            <enum name="left" value="1"/>
+            <enum name="right" value="2"/>
+            <enum name="top" value="3"/>
+            <enum name="bottom" value="4"/>
+        </attr>
+        <!--左边水平间距-->
+        <attr format="dimension" name="leftHorizontalPadding"/>
+
+        <!--右边区域：-->
+        <!--右边标题-->
+        <attr format="string" name="rightText"/>
+        <!--右边标题颜色-->
+        <attr format="color|reference" name="rightTextColor"/>
+        <!--右边标题大小-->
+        <attr format="dimension" name="rightTextSize"/>
+        <!--右边标题样式-->
+        <attr name="rightTextStyle">
+            <enum name="normal" value="1"/>
+            <enum name="bold" value="2"/>
+            <enum name="italic" value="3"/>
+        </attr>
+        <!--右边图标-->
+        <attr format="reference" name="rightIcon"/>
+        <!--右边图标大小-->
+        <attr format="dimension" name="rightIconSize"/>
+        <!--右边图标距离文字-->
+        <attr format="dimension" name="rightIconPadding"/>
+        <!--右边图标位置-->
+        <attr name="rightIconPosition">
+            <enum name="left" value="1"/>
+            <enum name="right" value="2"/>
+            <enum name="top" value="3"/>
+            <enum name="bottom" value="4"/>
+        </attr>
+        <!--右边水平间距-->
+        <attr format="dimension" name="rightHorizontalPadding"/>
+
+        <!--下划线区域：-->
+        <!--下划线是否可见-->
+        <attr format="boolean" name="lineVisible"/>
+        <!--下划线颜色-->
+        <attr format="color|reference" name="lineColor"/>
+        <!--下划线尺寸-->
+        <attr format="dimension" name="lineSize"/>
+    </declare-styleable>
+</resources>
