@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.home.R
 import com.xiangxiongfly.common.bean.LeftFruit
 import com.xiangxiongfly.common.bean.RightFruit
+import java.util.*
 
 class MutilTypeAdapter(val mContext: Context, val mList: ArrayList<Any>) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
