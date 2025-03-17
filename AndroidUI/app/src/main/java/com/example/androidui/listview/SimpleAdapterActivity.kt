@@ -38,7 +38,7 @@ class SimpleAdapterActivity : BaseActivity() {
         listView.adapter = SimpleAdapter(
             context,
             datas,
-            R.layout.item_fruit,
+            R.layout.item_fruit2,
             arrayOf("name", "img"),
             intArrayOf(R.id.fruit_name, R.id.fruit_img)
         )

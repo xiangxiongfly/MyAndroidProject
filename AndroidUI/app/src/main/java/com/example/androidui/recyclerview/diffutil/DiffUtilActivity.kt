@@ -14,7 +14,6 @@ import com.example.core.base.BaseActivity
 import com.example.core.base.KEY_TITLE
 import com.example.core.bean.User
 import com.example.core.utils.logE
-import com.example.home.recyclerview.diffutil.MyDiffUtilCallback
 
 class DiffUtilActivity : BaseActivity() {
     private lateinit var recyclerView: RecyclerView

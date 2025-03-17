@@ -29,7 +29,7 @@
         <activity android:name=".span.TextStyleActivity" />
         <activity android:name=".span.SpanSimpleActivity" />
         <activity android:name=".span.SpannableStringActivity" />
-        <activity android:name=".recyclerview.type.RvMutilTypeActivity" />
+        <activity android:name=".recyclerview.multi.MultiTypeActivity" />
         <activity android:name=".recyclerview.diffutil.DiffUtilActivity" />
         <activity android:name=".recyclerview.simple.RvStaggeredActivity" />
         <activity android:name=".recyclerview.simple.RvGridActivity" />

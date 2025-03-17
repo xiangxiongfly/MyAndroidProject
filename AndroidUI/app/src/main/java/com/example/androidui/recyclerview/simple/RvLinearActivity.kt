@@ -12,8 +12,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidui.R
 import com.example.androidui.recyclerview.divider.LinearItemDecoration
+import com.example.androidui.recyclerview.simple.adapter.FruitLinearAdapter
 import com.example.core.base.BaseActivity
-import com.example.androidui.recyclerview.simple.adapter.FruitAdapter2
 import com.example.core.bean.Fruit
 import com.example.core.data.FruitData
 import com.example.core.utils.dp
@@ -22,12 +22,12 @@ import java.util.*
 class RvLinearActivity : BaseActivity() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var toolbar: Toolbar
-    private lateinit var mAdapter: FruitAdapter2
+    private lateinit var adapter: FruitLinearAdapter
 
-    private val mFruitList = arrayListOf<Fruit>()
+    private val fruitList = arrayListOf<Fruit>()
 
     companion object {
-        fun start(context: Context) {
+        fun actionStart(context: Context) {
             context.startActivity(Intent(context, RvLinearActivity::class.java))
         }
     }
@@ -54,23 +54,18 @@ class RvLinearActivity : BaseActivity() {
             android.R.id.home -> {
                 finish()
             }
-            R.id.add -> {
-                mAdapter.add(0, Fruit(R.drawable.banana_pic, "香蕉1号"))
-                recyclerView.scrollToPosition(0)
-            }
             R.id.addAll -> {
                 val fruits = arrayListOf<Fruit>().apply {
                     add(Fruit(R.drawable.cherry_pic, "樱桃1号"))
                     add(Fruit(R.drawable.cherry_pic, "樱桃2号"))
-                    add(Fruit(R.drawable.cherry_pic, "樱桃3号"))
                 }
-                mAdapter.addRange(2, fruits)
+                adapter.addRange(0, fruits)
             }
             R.id.deleteAll -> {
-                mAdapter.deleteRange(1, 3)
+                adapter.deleteRange(1, 2)
             }
             R.id.updateAll -> {
-                mAdapter.updateRange(1, 3)
+                adapter.updateRange(1, 2)
             }
         }
         return true
@@ -83,30 +78,35 @@ class RvLinearActivity : BaseActivity() {
     }
 
     private fun initData() {
-        mFruitList.clear()
-        mFruitList.addAll(FruitData.getFruitList())
+        fruitList.clear()
+        fruitList.addAll(FruitData.getFruitList())
     }
 
     private fun initRv() {
-        mAdapter = FruitAdapter2(context, mFruitList)
-        //设置点击事件
-        mAdapter.setOnItemClickListener(object : FruitAdapter2.OnItemClickListener {
+        adapter = FruitLinearAdapter(context, fruitList)
+        // 设置点击事件
+        adapter.setOnItemClickListener(object : FruitLinearAdapter.OnItemClickListener {
             override fun onUpdate(position: Int) {
-                mAdapter.update(position)
+                adapter.update(position)
+            }
+
+            override fun onAdd(position: Int) {
+                val fruit = Fruit(FruitData.getFruitImages().random(), "新水果")
+                adapter.add(position + 1, fruit)
             }
 
             override fun onDelete(position: Int) {
-                mAdapter.delete(position)
+                adapter.delete(position)
             }
         })
-        //设置垂直布局
+        // 设置垂直布局
         recyclerView.layoutManager = LinearLayoutManager(context)
-        //设置水平布局布局
+        // 设置水平布局布局
 //        recyclerView.layoutManager =
 //            LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false)
-        //如果itemView的高度一致，可以设置为true，性能优化
+        // 如果itemView的高度一致，可以设置为true，性能优化
         recyclerView.setHasFixedSize(true)
-        //分割线使用方式一：
+        // 分割线使用方式一：
         recyclerView.addItemDecoration(
             LinearItemDecoration(
                 LinearItemDecoration.VERTICAL_LIST,
@@ -114,7 +114,7 @@ class RvLinearActivity : BaseActivity() {
                 1.dp
             )
         )
-        //分割线使用方式二：
+        // 分割线使用方式二：
 //        recyclerView.addItemDecoration(
 //            LinearItemDecoration(
 //                mContext,
@@ -123,11 +123,11 @@ class RvLinearActivity : BaseActivity() {
 //            )
 //        )
 
-        recyclerView.adapter = mAdapter
-        initBind()
+        recyclerView.adapter = adapter
+        initTouch()
     }
 
-    private fun initBind() {
+    private fun initTouch() {
         val helper = ItemTouchHelper(
             object : ItemTouchHelper.Callback() {
                 override fun getMovementFlags(
@@ -148,15 +148,15 @@ class RvLinearActivity : BaseActivity() {
                     viewHolder: RecyclerView.ViewHolder,
                     target: RecyclerView.ViewHolder
                 ): Boolean {
-                    Collections.swap(mFruitList, viewHolder.adapterPosition, target.adapterPosition)
-                    mAdapter.notifyItemMoved(viewHolder.adapterPosition, target.adapterPosition)
+                    Collections.swap(fruitList, viewHolder.adapterPosition, target.adapterPosition)
+                    adapter.notifyItemMoved(viewHolder.adapterPosition, target.adapterPosition)
                     return false
                 }
 
                 //侧滑事件
                 override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-                    mFruitList.removeAt(viewHolder.adapterPosition)
-                    mAdapter.notifyItemRemoved(viewHolder.adapterPosition)
+                    fruitList.removeAt(viewHolder.adapterPosition)
+                    adapter.notifyItemRemoved(viewHolder.adapterPosition)
                 }
 
                 //是否拖拽
@@ -168,6 +168,4 @@ class RvLinearActivity : BaseActivity() {
         //绑定
         helper.attachToRecyclerView(recyclerView)
     }
-
-
 }

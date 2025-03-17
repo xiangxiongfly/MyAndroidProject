@@ -1,4 +1,4 @@
-package com.example.androidui.recyclerview.type
+package com.example.androidui.recyclerview.multi
 
 import android.content.Context
 import android.content.Intent
@@ -6,24 +6,24 @@ import android.os.Bundle
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidui.R
+import com.example.androidui.recyclerview.multi.adapter.MultiTypeAdapter
 import com.example.common.bean.LeftFruit
 import com.example.common.bean.RightFruit
 import com.example.core.base.BaseActivity
 import com.example.core.base.KEY_TITLE
 import com.example.core.data.FruitData
-import com.example.androidui.recyclerview.type.adapter.MultiTypeAdapter
 import java.util.*
 
-class RvMutilTypeActivity : BaseActivity() {
+class MultiTypeActivity : BaseActivity() {
     private lateinit var recyclerView: RecyclerView
 
     private val mList = arrayListOf<Any>()
-    private val mFruitImgs = FruitData.getFruitImage()
-    private val mFruitNames = FruitData.getFruitName()
+    private val mFruitImgs = FruitData.getFruitImages()
+    private val mFruitNames = FruitData.getFruitNames()
 
     companion object {
-        fun start(context: Context) {
-            context.startActivity(Intent(context, RvMutilTypeActivity::class.java).apply {
+        fun actionStart(context: Context) {
+            context.startActivity(Intent(context, MultiTypeActivity::class.java).apply {
                 putExtra(KEY_TITLE, "多类型布局")
             })
         }

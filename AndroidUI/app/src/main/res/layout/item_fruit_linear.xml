@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/white"
     android:gravity="center_vertical|left"
     android:orientation="horizontal"
     android:padding="10dp">
@@ -11,21 +12,41 @@
         android:id="@+id/fruit_img"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        tools:src="@mipmap/ic_launcher_round" />
+        tools:src="@mipmap/ic_launcher" />
 
     <TextView
         android:id="@+id/fruit_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        tools:text="name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text=" - " />
+
+    <TextView
+        android:id="@+id/fruit_count"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_weight="1"
-        tools:text="name" />
+        tools:text="count" />
 
     <TextView
         android:id="@+id/update"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="修改" />
+        android:text="count++" />
+
+    <TextView
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="增加一行" />
 
     <TextView
         android:id="@+id/delete"

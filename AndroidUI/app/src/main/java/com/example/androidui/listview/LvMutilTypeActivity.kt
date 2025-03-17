@@ -15,8 +15,8 @@ import java.util.*
 
 class LvMutilTypeActivity : BaseActivity() {
     private val mList = arrayListOf<Any>()
-    private val mFruitImgs = FruitData.getFruitImage()
-    private val mFruitNames = FruitData.getFruitName()
+    private val mFruitImgs = FruitData.getFruitImages()
+    private val mFruitNames = FruitData.getFruitNames()
 
     companion object {
         fun start(context: Context) {

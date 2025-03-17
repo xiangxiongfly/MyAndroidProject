@@ -1,4 +1,4 @@
-package com.example.home.recyclerview.diffutil
+package com.example.androidui.recyclerview.diffutil
 
 import androidx.recyclerview.widget.DiffUtil
 import com.example.core.bean.User

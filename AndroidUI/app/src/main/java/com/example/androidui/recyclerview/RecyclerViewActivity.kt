@@ -7,7 +7,7 @@ import com.example.androidui.recyclerview.group.GroupActivity
 import com.example.androidui.recyclerview.simple.RvGridActivity
 import com.example.androidui.recyclerview.simple.RvLinearActivity
 import com.example.androidui.recyclerview.simple.RvStaggeredActivity
-import com.example.androidui.recyclerview.type.RvMutilTypeActivity
+import com.example.androidui.recyclerview.multi.MultiTypeActivity
 import com.example.core.base.BaseActivity
 import com.example.androidui.recyclerview.diffutil.DiffUtilActivity
 
@@ -18,7 +18,7 @@ class RecyclerViewActivity : BaseActivity() {
     }
 
     fun toLinear(v: View) {
-        RvLinearActivity.start(this)
+        RvLinearActivity.actionStart(this)
     }
 
     fun toGrid(v: View) {
@@ -30,7 +30,7 @@ class RecyclerViewActivity : BaseActivity() {
     }
 
     fun toMutilType(v: View) {
-        RvMutilTypeActivity.start(this)
+        MultiTypeActivity.actionStart(this)
     }
 
     fun toDiffUtil(v: View) {

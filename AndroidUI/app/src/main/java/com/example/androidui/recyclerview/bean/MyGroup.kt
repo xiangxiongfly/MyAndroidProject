@@ -1,4 +1,4 @@
-package com.example.home.recyclerview.group
+package com.example.androidui.recyclerview.bean
 
 import androidx.annotation.DrawableRes
 

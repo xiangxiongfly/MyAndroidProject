@@ -10,82 +10,88 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.androidui.R
 import com.example.core.bean.Fruit
 
-class FruitAdapter2(val mContext: Context, private val mList: ArrayList<Fruit>) :
-    RecyclerView.Adapter<FruitAdapter2.ViewHolder>() {
+class FruitLinearAdapter(val context: Context, private val list: ArrayList<Fruit>) :
+    RecyclerView.Adapter<FruitLinearAdapter.ViewHolder>() {
 
-    private val layoutInflater: LayoutInflater = LayoutInflater.from(mContext)
+    private val layoutInflater: LayoutInflater = LayoutInflater.from(context)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemView = layoutInflater.inflate(R.layout.item_fruit_add_delete, parent, false)
+        val itemView = layoutInflater.inflate(R.layout.item_fruit_linear, parent, false)
         val viewHolder = ViewHolder(itemView)
         viewHolder.update.setOnClickListener {
-            mOnItemClickListener?.onUpdate(viewHolder.adapterPosition)
+            onItemClickListener?.onUpdate(viewHolder.absoluteAdapterPosition)
+        }
+        viewHolder.add.setOnClickListener {
+            onItemClickListener?.onAdd(viewHolder.absoluteAdapterPosition)
         }
         viewHolder.delete.setOnClickListener {
-            mOnItemClickListener?.onDelete(viewHolder.adapterPosition)
+            onItemClickListener?.onDelete(viewHolder.absoluteAdapterPosition)
         }
         return viewHolder
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.img.setImageResource(mList[position].fruitImage)
-        holder.name.text = mList[position].fruitName
+        holder.img.setImageResource(list[position].fruitImage)
+        holder.name.text = list[position].fruitName
+        holder.count.text = list[position].count.toString()
     }
 
-    override fun getItemCount(): Int = mList.size
+    override fun getItemCount(): Int = list.size
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val img: ImageView = itemView.findViewById(R.id.fruit_img)
         val name: TextView = itemView.findViewById(R.id.fruit_name)
+        val count: TextView = itemView.findViewById(R.id.fruit_count)
         val update: TextView = itemView.findViewById(R.id.update)
+        val add: TextView = itemView.findViewById(R.id.add)
         val delete: TextView = itemView.findViewById(R.id.delete)
     }
 
-    private var mOnItemClickListener: OnItemClickListener? = null
+    private var onItemClickListener: OnItemClickListener? = null
 
     interface OnItemClickListener {
         fun onUpdate(position: Int)
+        fun onAdd(position: Int)
         fun onDelete(position: Int)
     }
 
     fun setOnItemClickListener(listener: OnItemClickListener) {
-        mOnItemClickListener = listener
+        onItemClickListener = listener
     }
 
     fun add(position: Int, fruit: Fruit) {
-        mList.add(0, fruit)
+        list.add(position, fruit)
         notifyItemInserted(position)
     }
 
     fun addRange(position: Int, fruits: ArrayList<Fruit>) {
-        mList.addAll(position, fruits)
+        list.addAll(position, fruits)
         notifyItemRangeInserted(position, fruits.size)
     }
 
     fun delete(position: Int) {
-        mList.removeAt(position)
+        list.removeAt(position)
         notifyItemRemoved(position)
     }
 
     fun deleteRange(position: Int, count: Int) {
         val tmpList = arrayListOf<Fruit>()
         for (i in position until position + count) {
-            tmpList.add(mList[i])
+            tmpList.add(list[i])
         }
-        mList.removeAll(tmpList)
+        list.removeAll(tmpList)
         notifyItemRangeRemoved(position, count)
     }
 
     fun update(position: Int) {
-        mList[position].fruitName = "修改了$position"
+        list[position].count++
         notifyItemChanged(position)
     }
 
     fun updateRange(position: Int, count: Int) {
         for (i in position until position + count) {
-            mList[i].fruitName = "修改了$i"
+            list[i].count++
         }
         notifyItemRangeChanged(position, count)
     }
-
 }

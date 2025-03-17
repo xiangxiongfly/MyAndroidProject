@@ -7,11 +7,11 @@ import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidui.R
+import com.example.androidui.recyclerview.bean.MyGroup
+import com.example.androidui.recyclerview.bean.MyItem
 import com.example.androidui.recyclerview.group.adapter.ItemAdapter
 import com.example.androidui.recyclerview.group.adapter.TitleAdapter
 import com.example.core.base.BaseActivity
-import com.example.home.recyclerview.group.MyGroup
-import com.example.home.recyclerview.group.MyItem
 
 class GroupActivity : BaseActivity() {
     private lateinit var recyclerView: RecyclerView
@@ -58,7 +58,7 @@ class GroupActivity : BaseActivity() {
     }
 
     private fun randomFruit(): Int {
-        val fruits = listOf<Int>(R.drawable.apple_pic, R.drawable.banana_pic, R.drawable.cherry_pic)
+        val fruits = listOf(R.drawable.apple_pic, R.drawable.banana_pic, R.drawable.cherry_pic)
         return fruits.random()
     }
 }

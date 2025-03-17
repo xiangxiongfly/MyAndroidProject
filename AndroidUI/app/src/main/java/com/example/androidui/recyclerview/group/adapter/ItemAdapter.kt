@@ -8,13 +8,13 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidui.R
-import com.example.home.recyclerview.group.MyItem
+import com.example.androidui.recyclerview.bean.MyItem
 
 class ItemAdapter(private val context: Context, private val itemList: MutableList<MyItem>) :
     RecyclerView.Adapter<ItemAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemView = LayoutInflater.from(context).inflate(R.layout.item_fruit, parent, false)
+        val itemView = LayoutInflater.from(context).inflate(R.layout.item_fruit2, parent, false)
         return ViewHolder(itemView)
     }
 
