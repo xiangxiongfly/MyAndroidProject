@@ -11,6 +11,7 @@
       <module name="MyAndroid.module.home" target="11" />
       <module name="MyAndroid.module.setting" target="11" />
       <module name="MyAndroid.module.tools" target="11" />
+      <module name="MyAndroid.normal" target="11" />
       <module name="MyAndroid.statusbar" target="11" />
     </bytecodeTargetLevel>
   </component>

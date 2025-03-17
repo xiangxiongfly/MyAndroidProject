@@ -3,6 +3,9 @@
     package="com.example.home">
 
     <application>
+        <activity
+            android:name=".GroupActivity"
+            android:exported="false" />
         <activity android:name=".spinner.SpinnerActivity" />
         <activity android:name=".textview.TextViewActivity" />
         <activity android:name=".viewpager.wrap_vp.WrapViewPagerActivity" />

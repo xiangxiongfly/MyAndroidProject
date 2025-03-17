@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/abcd"
+        android:maxLevel="1" />
+    <item
+        android:drawable="@drawable/b"
+        android:maxLevel="2" />
+    <item
+        android:drawable="@drawable/c"
+        android:maxLevel="3" />
+    <item
+        android:drawable="@drawable/d"
+        android:maxLevel="4" />
+    <item
+        android:drawable="@drawable/e"
+        android:maxLevel="5" />
+    <item
+        android:drawable="@drawable/apple_pic"
+        android:maxLevel="6" />
+    <item
+        android:drawable="@drawable/banana_pic"
+        android:maxLevel="7" />
+    <item
+        android:drawable="@drawable/cherry_pic"
+        android:maxLevel="8" />
+    <item
+        android:drawable="@drawable/grape_pic"
+        android:maxLevel="9" />
+    <item
+        android:drawable="@drawable/mango_pic"
+        android:maxLevel="10" />
+</level-list>

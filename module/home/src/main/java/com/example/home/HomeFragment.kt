@@ -22,7 +22,7 @@ import com.google.android.flexbox.FlexboxLayout
 import com.xiangxiongfly.common.exts.addElement
 
 class HomeFragment : BaseFragment() {
-    private lateinit var flexboxLayout: FlexboxLayout
+
 
     companion object {
         @JvmStatic

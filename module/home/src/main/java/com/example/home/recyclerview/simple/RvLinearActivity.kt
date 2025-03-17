@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.base.BaseActivity
-import com.example.base.KEY_TITLE
 import com.example.base.utils.dp
 import com.example.home.R
 import com.example.home.recyclerview.divider.LinearItemDecoration
@@ -29,9 +28,7 @@ class RvLinearActivity : BaseActivity() {
 
     companion object {
         fun start(context: Context) {
-            context.startActivity(Intent(context, RvLinearActivity::class.java).apply {
-                putExtra(KEY_TITLE, "线性布局")
-            })
+            context.startActivity(Intent(context, RvLinearActivity::class.java))
         }
     }
 
