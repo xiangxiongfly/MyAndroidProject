@@ -2,13 +2,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.custom">
 
-    <application>
-        <activity android:name=".navigationbar.NavigationBarActivity" />
-        <activity android:name=".countdown.CountdownActivity" />
-        <activity android:name=".statelayout.StateLayoutActivity" />
-        <activity android:name=".setting_item.SettingItemActivity" />
-        <activity android:name=".my_edittext.MyEditTextActivity" />
-        <activity android:name=".titlebar.TitleBarActivity" />
-    </application>
-
+    <application></application>
 </manifest>

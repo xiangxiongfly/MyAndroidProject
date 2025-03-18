@@ -24,7 +24,7 @@ class ToolsFragment : BaseFragment() {
 
     companion object {
         @JvmStatic
-        fun newInstance(title: String) = ToolsFragment()
+        fun newInstance() = ToolsFragment()
     }
 
     override fun onCreateView(

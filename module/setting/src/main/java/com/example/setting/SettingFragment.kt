@@ -15,12 +15,7 @@ class SettingFragment : BaseFragment() {
 
     companion object {
         @JvmStatic
-        fun newInstance(title: String) =
-            SettingFragment().apply {
-                arguments = Bundle().apply {
-                    putString(KEY_TITLE, title)
-                }
-            }
+        fun newInstance() = SettingFragment()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
