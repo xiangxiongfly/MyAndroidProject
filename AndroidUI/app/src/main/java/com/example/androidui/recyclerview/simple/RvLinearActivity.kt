@@ -107,21 +107,11 @@ class RvLinearActivity : BaseActivity() {
         // 如果itemView的高度一致，可以设置为true，性能优化
         recyclerView.setHasFixedSize(true)
         // 分割线使用方式一：
-        recyclerView.addItemDecoration(
-            LinearItemDecoration(
-                LinearItemDecoration.VERTICAL_LIST,
-                Color.RED,
-                1.dp
-            )
-        )
+//        recyclerView.addItemDecoration(LinearItemDecoration())
         // 分割线使用方式二：
-//        recyclerView.addItemDecoration(
-//            LinearItemDecoration(
-//                mContext,
-//                LinearItemDecoration.VERTICAL_LIST,
-//                R.drawable.divider_red_shape
-//            )
-//        )
+        recyclerView.addItemDecoration(
+            LinearItemDecoration(2F.dp, Color.RED, 10.dp, 10.dp)
+        )
 
         recyclerView.adapter = adapter
         initTouch()

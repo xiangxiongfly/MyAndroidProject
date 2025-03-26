@@ -20,6 +20,6 @@
         <activity android:name=".setting_item.SettingItemActivity" />
         <activity android:name=".my_edittext.MyEditTextActivity" />
         <activity android:name=".titlebar.TitleBarActivity" />
+        <activity android:name=".contacts.ContactsActivity" />
     </application>
-
 </manifest>

@@ -34,7 +34,7 @@
         <activity android:name=".recyclerview.simple.RvGridActivity" />
         <activity android:name=".recyclerview.simple.RvLinearActivity" />
         <activity android:name=".recyclerview.RecyclerViewActivity" />
-        <activity android:name=".expandable_listview.ExpandableListViewActivity" />
+        <activity android:name=".expandablelistview.ExpandableListViewActivity" />
         <activity android:name=".listview.ScrollViewListViewActivity" />
         <activity android:name=".listview.CheckBoxListViewActivity" />
         <activity android:name=".listview.LvMutilTypeActivity" />

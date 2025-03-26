@@ -3,20 +3,22 @@ package com.example.androidui
 import android.os.Bundle
 import com.example.androidui.bottom_sheet.BottomSheetActivity
 import com.example.androidui.dialog.DialogActivity
-import com.example.androidui.expandable_listview.ExpandableListViewActivity
+import com.example.androidui.drawable.DrawableActivity
+import com.example.androidui.expandablelistview.ExpandableListViewActivity
+import com.example.androidui.listview.ListViewActivity
+import com.example.androidui.popupwindow.PopupWindowActivity
 import com.example.androidui.recyclerview.RecyclerViewActivity
 import com.example.androidui.span.SpannableStringActivity
+import com.example.androidui.spinner.SpinnerActivity
 import com.example.androidui.tablayout.TabLayoutActivity
 import com.example.androidui.textview.TextViewActivity
 import com.example.androidui.viewpager.ViewPagerActivity
 import com.example.androidui.viewpager2.ViewPager2Activity
 import com.example.core.base.BaseActivity
 import com.example.core.exts.addElement
-import com.example.androidui.drawable.DrawableActivity
-import com.example.androidui.listview.ListViewActivity
-import com.example.androidui.popupwindow.PopupWindowActivity
-import com.example.androidui.spinner.SpinnerActivity
 import com.google.android.flexbox.FlexboxLayout
+
+data class User(val name: Any, val age: Int, val sex: Boolean)
 
 class MainActivity : BaseActivity() {
     private lateinit var flexboxLayout: FlexboxLayout

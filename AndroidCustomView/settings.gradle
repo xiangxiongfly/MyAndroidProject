@@ -12,6 +12,6 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "customview"
+rootProject.name = "androidcustomview"
 include ':app'
 include ':core'

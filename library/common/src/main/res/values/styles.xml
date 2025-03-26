@@ -66,8 +66,5 @@
         <item name="android:windowExitAnimation">@anim/anim_exit</item>
     </style>
 
-    <style name="SpinnerStyle" parent="android:Widget.ListView.DropDown">
-        <item name="android:divider">#333</item>
-        <item name="android:dividerHeight">1dp</item>
-    </style>
+
 </resources>

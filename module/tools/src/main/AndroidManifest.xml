@@ -2,23 +2,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.tools">
 
-    <application>
-        <activity android:name=".okhttp.OkHttpActivity" />
-        <activity android:name=".signature.SignatureActivity" />
-        <activity android:name=".clickarea.LocationOnScreenActivity" />
-        <activity android:name=".clickarea.TouchDelegateActivity" />
-        <activity android:name=".clickarea.PaddingActivity" />
-        <activity android:name=".clickarea.ClickAreaActivity" />
-        <activity android:name=".genBitmap.GenerateBitmapActivity" />
-        <activity android:name=".ratio.RatioActivity" />
-        <activity android:name=".eventbus.PostActivity" />
-        <activity android:name=".eventbus.EventBusActivity" />
-        <activity android:name=".popupwindow.PopupWindowActivity" />
-        <activity android:name=".dialog.DialogActivity" />
-        <activity android:name=".network.NetworkActivity" />
-        <activity android:name=".permissions.TwoActivity" />
-        <activity android:name=".permissions.PermissionActivity" />
-        <activity android:name=".imageloader.ImageLoaderActivity" />
-    </application>
-
+    <application></application>
 </manifest>

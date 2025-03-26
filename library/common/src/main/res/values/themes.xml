@@ -13,7 +13,6 @@
         <item name="textAllCaps">false</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowBackground">@android:color/white</item>
-        <item name="android:dropDownListViewStyle">@style/SpinnerStyle</item>
     </style>
 
     <!-- 闪屏页主题 -->
