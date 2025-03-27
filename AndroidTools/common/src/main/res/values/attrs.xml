@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SignatureView">
+        <attr name="bgColor" format="color" />
+        <attr name="brushColor" format="color" />
+        <attr name="brushWidth" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="MyRatioFrameLayout">
+        <attr name="whRatio" format="string" />
+    </declare-styleable>
+</resources>

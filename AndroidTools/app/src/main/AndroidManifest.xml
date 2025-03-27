@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="com.xiangxiongfly.common.base.BaseApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".okhttp.OkHttpActivity" />
+        <activity android:name=".signature.SignatureActivity" />
+        <activity android:name=".clickarea.LocationOnScreenActivity" />
+        <activity android:name=".clickarea.TouchDelegateActivity" />
+        <activity android:name=".clickarea.PaddingActivity" />
+        <activity android:name=".clickarea.ClickAreaActivity" />
+        <activity android:name=".genBitmap.GenerateBitmapActivity" />
+        <activity android:name=".ratio.RatioActivity" />
+        <activity android:name=".eventbus.PostActivity" />
+        <activity android:name=".eventbus.EventBusActivity" />
+        <activity android:name=".popupwindow.PopupWindowActivity" />
+        <activity android:name=".dialog.DialogActivity" />
+        <activity android:name=".network.NetworkActivity" />
+        <activity android:name=".permissions.TwoActivity" />
+        <activity android:name=".permissions.PermissionActivity" />
+        <activity android:name=".imageloader.ImageLoaderActivity" />
+    </application>
+
+</manifest>

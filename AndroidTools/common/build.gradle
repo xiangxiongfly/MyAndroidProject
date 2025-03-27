@@ -1,0 +1,45 @@
+plugins {
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
+}
+
+android {
+    namespace 'com.xiangxiongfly.common'
+    compileSdk 35
+
+    defaultConfig {
+        minSdk 27
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+}
+
+dependencies {
+    api libs.androidx.core.ktx
+    api libs.androidx.appcompat
+    api libs.material
+    api libs.androidx.activity
+    api libs.androidx.constraintlayout
+
+    api libs.eventbus
+    api libs.glide
+    api libs.gson
+    api libs.gsonfactory
+    api libs.okhttp
+    api libs.logging.interceptor
+    api libs.flexbox
+    api libs.androidx.percentlayout
+}
