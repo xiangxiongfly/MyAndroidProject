@@ -6,7 +6,7 @@ import com.xiangxiongfly.core.base.BaseActivity
 import com.xiangxiongfly.core.exts.addElement
 import com.xiangxiongfly.customview.contacts.ContactsActivity
 import com.xiangxiongfly.customview.countdown.CountdownActivity
-import com.xiangxiongfly.customview.my_edittext.MyEditTextActivity
+import com.xiangxiongfly.customview.customedittext.MyEditTextActivity
 import com.xiangxiongfly.customview.navigationbar.NavigationBarActivity
 import com.xiangxiongfly.customview.setting_item.SettingItemActivity
 import com.xiangxiongfly.customview.statelayout.StateLayoutActivity

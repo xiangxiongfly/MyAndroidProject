@@ -30,7 +30,6 @@ class PasswordEditText @JvmOverloads constructor(
 
     init {
         val a: TypedArray = context.obtainStyledAttributes(attrs, R.styleable.PasswordEditText)
-
         val eyeIconSize = a.getDimensionPixelSize(R.styleable.PasswordEditText_pet_eyeIconSize, 0)
         eyeOpenDrawable = ContextCompat.getDrawable(context, R.drawable.eye_open)
         eyeOpenDrawable?.let {

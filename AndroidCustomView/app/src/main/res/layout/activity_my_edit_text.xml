@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
-    android:orientation="vertical"
-    tools:context="com.example.custom.my_edittext.MyEditTextActivity">
+    android:orientation="vertical">
 
     <com.xiangxiongfly.core.widgets.customedittext.ClearEditText
         android:layout_width="wrap_content"
@@ -56,6 +55,11 @@
         app:pet_tipIconSize="30dp"
         app:pet_tipSelectedIcon="@drawable/ic_lock_blue" />
 
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="30dp" />
+
     <com.xiangxiongfly.core.widgets.customedittext.SearchEditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -64,11 +68,36 @@
         android:padding="10dp"
         android:singleLine="true"
         android:textSize="20sp"
-        app:set_background="@drawable/shape_border_gray"
+        app:set_background="@drawable/shape_search_bg"
         app:set_searchIcon="@drawable/ic_search"
         app:set_searchIconSize="30dp"
-        app:set_searchText="搜索"
-        app:set_searchTextColor="@android:color/darker_gray"
-        app:set_searchTextSize="20sp" />
+        app:set_searchLabel="搜索"
+        app:set_searchLabelColor="@android:color/darker_gray"
+        app:set_searchLabelSize="20sp" />
+
+    <com.xiangxiongfly.core.widgets.customedittext.SearchEditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="30dp"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textSize="20sp"
+        app:set_background="@drawable/shape_search_bg"
+        app:set_searchIcon="@drawable/ic_search"
+        app:set_searchIconSize="30dp" />
+
+    <com.xiangxiongfly.core.widgets.customedittext.SearchEditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="30dp"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textSize="20sp"
+        app:set_background="@drawable/shape_search_bg"
+        app:set_searchLabel="搜索"
+        app:set_searchLabelColor="@android:color/darker_gray"
+        app:set_searchLabelSize="20sp" />
 
 </LinearLayout>

@@ -168,9 +168,9 @@
         <attr name="set_background" format="reference" />
         <attr name="set_searchIcon" format="reference" />
         <attr name="set_searchIconSize" format="dimension" />
-        <attr name="set_searchText" format="string" />
-        <attr name="set_searchTextSize" format="dimension" />
-        <attr name="set_searchTextColor" format="color" />
+        <attr name="set_searchLabel" format="string" />
+        <attr name="set_searchLabelSize" format="dimension" />
+        <attr name="set_searchLabelColor" format="color" />
     </declare-styleable>
 
     <!-- 签名板 -->

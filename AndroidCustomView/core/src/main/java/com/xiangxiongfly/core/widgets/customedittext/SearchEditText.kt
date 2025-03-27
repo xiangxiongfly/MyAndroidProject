@@ -4,45 +4,50 @@ import android.content.Context
 import android.content.res.TypedArray
 import android.graphics.Canvas
 import android.graphics.Paint
-import android.graphics.Rect
 import android.graphics.drawable.Drawable
-import android.text.TextUtils
 import android.util.AttributeSet
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import com.xiangxiongfly.core.R
+import com.xiangxiongfly.core.utils.sp
 
-class SearchEditText(
+class SearchEditText @JvmOverloads constructor(
     context: Context,
-    attrs: AttributeSet? = null,
+    attrs: AttributeSet? = null
 ) : BaseEditText(context, attrs) {
 
-    companion object {
-        private const val DEFAULT_SEARCH_TEXT_SIZE = 20
-        private const val DEFAULT_SEARCH_TEXT_COLOR = 0x666666
+    private val labelPaint by lazy {
+        Paint(Paint.ANTI_ALIAS_FLAG).apply {
+            color = searchLabelColor
+            textSize = searchLabelSize.toFloat()
+        }
     }
 
+    private val centerX: Float by lazy { width / 2f }
+    private val centerY: Float by lazy { height / 2f }
+
     private val bgDrawable: Drawable?
-    private val searchDrawable: Drawable?
+    private val searchIcon: Drawable?
     private val searchIconSize: Int
-    private val searchText: String?
-    private val searchTextSize: Int
-    private val searchTextColor: Int
+    private val searchLabel: String?
+    private val searchLabelSize: Int
+    private val searchLabelColor: Int
 
     init {
         val a: TypedArray = context.obtainStyledAttributes(attrs, R.styleable.SearchEditText)
-        bgDrawable = a.getDrawable(R.styleable.SearchEditText_set_background)
-        searchDrawable = a.getDrawable(R.styleable.SearchEditText_set_searchIcon)
-        searchIconSize =
-            a.getDimensionPixelSize(R.styleable.SearchEditText_set_searchIconSize, 0)
-        searchText = a.getString(R.styleable.SearchEditText_set_searchText)
-        searchTextSize = a.getDimensionPixelSize(
-            R.styleable.SearchEditText_set_searchTextSize,
-            DEFAULT_SEARCH_TEXT_SIZE
-        )
-        searchTextColor =
-            a.getColor(R.styleable.SearchEditText_set_searchTextColor, DEFAULT_SEARCH_TEXT_COLOR)
+        a.let {
+            bgDrawable = it.getDrawable(R.styleable.SearchEditText_set_background)
+            searchIcon = it.getDrawable(R.styleable.SearchEditText_set_searchIcon)
+            searchIconSize =
+                it.getDimensionPixelSize(R.styleable.SearchEditText_set_searchIconSize, 0)
+            searchLabel = it.getString(R.styleable.SearchEditText_set_searchLabel)
+            searchLabelSize =
+                it.getDimensionPixelSize(R.styleable.SearchEditText_set_searchLabelSize, 10.sp)
+            searchLabelColor =
+                it.getColor(R.styleable.SearchEditText_set_searchLabelColor, 0x666666)
+        }
         a.recycle()
+
         setup()
     }
 
@@ -50,7 +55,7 @@ class SearchEditText(
         bgDrawable?.let {
             background = it
         }
-        searchDrawable?.let {
+        searchIcon?.let {
             if (searchIconSize > 0) {
                 it.setBounds(0, 0, searchIconSize, searchIconSize)
             } else {
@@ -62,37 +67,57 @@ class SearchEditText(
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
+        doDraw(canvas)
+    }
+
+    private fun doDraw(canvas: Canvas) {
+        text ?: return
         if (text.toString().isEmpty()) {
-            drawSearch(canvas)
+            if (searchLabel == null && searchIcon != null) {
+                drawSingleIcon(canvas)
+            } else if (searchLabel != null && searchIcon == null) {
+                drawSingleLabel(canvas)
+            } else {
+                drawSearch(canvas)
+            }
         }
     }
 
     private fun drawSearch(canvas: Canvas) {
-        if (!TextUtils.isEmpty(searchText)) {
-            val bounds = Rect()
-            val paint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-                color = searchTextColor
-                textSize = searchTextSize.toFloat()
-            }
-            paint.getTextBounds(searchText, 0, searchText!!.length, bounds)
-            canvas.save()
-            val fontMetrics = paint.fontMetrics
-            // 计算文字的高度
-            val textHeight = fontMetrics.bottom - fontMetrics.top
-            // 计算文字的垂直居中位置
-            val y = height / 2f + (textHeight / 2f - fontMetrics.bottom)
-            // 计算文字的水平居中位置
-            val x = width / 2f - paint.measureText(searchText) / 2f + searchIconSize / 2
-            canvas.drawText(searchText, x, y, paint)
-            searchDrawable?.let {
-                canvas.translate(
-                    (width - searchIconSize) / 2F - bounds.width() / 2,
-                    (height - searchIconSize) / 2F
-                )
-                it.draw(canvas)
-            }
-            canvas.restore()
-        }
+        val textWidth = labelPaint.measureText(searchLabel)
+        val fontMetrics = labelPaint.fontMetrics
+        val textHeight = fontMetrics.bottom - fontMetrics.top
+        val allWidth = textWidth + searchIconSize
+        val xOfLabel = centerX - allWidth / 2 + searchIconSize
+        val yOfLabel = centerY + (textHeight / 2f - fontMetrics.bottom)
+        canvas.drawText(searchLabel!!, xOfLabel, yOfLabel, paint)
+        canvas.save()
+        val xOfIcon = centerX - allWidth / 2
+        val yOfIcon = centerY - searchIconSize / 2
+        canvas.translate(xOfIcon, yOfIcon)
+        searchIcon!!.draw(canvas)
+        canvas.restore()
+    }
+
+    private fun drawSingleLabel(canvas: Canvas) {
+        // 获取文本宽度
+        val textWidth = labelPaint.measureText(searchLabel)
+        // 获取文本高度
+        val fontMetrics = labelPaint.fontMetrics
+        val textHeight = fontMetrics.bottom - fontMetrics.top
+        // 计算文本坐标
+        val x = centerX - textWidth / 2
+        val y = centerY + (textHeight / 2f - fontMetrics.bottom)
+        canvas.drawText(searchLabel!!, x, y, paint)
+    }
+
+    private fun drawSingleIcon(canvas: Canvas) {
+        canvas.save()
+        val x = centerX - searchIconSize / 2
+        val y = centerY - searchIconSize / 2
+        canvas.translate(x, y)
+        searchIcon!!.draw(canvas)
+        canvas.restore()
     }
 
     override fun setLayoutParams(params: ViewGroup.LayoutParams) {

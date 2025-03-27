@@ -45,3 +45,4 @@ class MainActivity : BaseActivity() {
         flexboxLayout.addElement(context, "手写签名板", SignatureActivity::class.java)
     }
 }
+

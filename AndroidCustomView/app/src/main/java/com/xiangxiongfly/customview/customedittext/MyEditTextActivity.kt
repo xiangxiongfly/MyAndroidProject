@@ -1,4 +1,4 @@
-package com.xiangxiongfly.customview.my_edittext
+package com.xiangxiongfly.customview.customedittext
 
 import android.os.Bundle
 import com.xiangxiongfly.core.base.BaseActivity
