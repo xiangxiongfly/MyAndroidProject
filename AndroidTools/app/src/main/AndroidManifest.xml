@@ -39,6 +39,9 @@
         <activity android:name=".permissions.TwoActivity" />
         <activity android:name=".permissions.PermissionActivity" />
         <activity android:name=".imageloader.ImageLoaderActivity" />
+        <activity
+            android:name=".measuretext.MeasureTextActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

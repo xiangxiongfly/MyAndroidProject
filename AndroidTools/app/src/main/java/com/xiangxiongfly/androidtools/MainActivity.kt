@@ -7,6 +7,7 @@ import com.xiangxiongfly.androidtools.dialog.DialogActivity
 import com.xiangxiongfly.androidtools.eventbus.EventBusActivity
 import com.xiangxiongfly.androidtools.genBitmap.GenerateBitmapActivity
 import com.xiangxiongfly.androidtools.imageloader.ImageLoaderActivity
+import com.xiangxiongfly.androidtools.measuretext.MeasureTextActivity
 import com.xiangxiongfly.androidtools.network.NetworkActivity
 import com.xiangxiongfly.androidtools.okhttp.OkHttpActivity
 import com.xiangxiongfly.androidtools.permissions.PermissionActivity
@@ -43,6 +44,7 @@ class MainActivity : BaseActivity() {
         flexboxLayout.addElement(context, "将View生成Bitmap", GenerateBitmapActivity::class.java)
         flexboxLayout.addElement(context, "扩大View的点击区域", ClickAreaActivity::class.java)
         flexboxLayout.addElement(context, "手写签名板", SignatureActivity::class.java)
+        flexboxLayout.addElement(context, "测量文本宽高总结", MeasureTextActivity::class.java)
     }
 }
 

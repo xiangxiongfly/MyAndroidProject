@@ -19,6 +19,19 @@
 - [BottomSheet](https://blog.csdn.net/qq_14876133/article/details/127882057)
 - [Spinner](https://blog.csdn.net/qq_14876133/article/details/146201030)
 
+
+
+## 自定义View
+
+- [底部导航栏](https://blog.csdn.net/qq_14876133/article/details/146201850)
+- [SettingItem设置条](https://blog.csdn.net/qq_14876133/article/details/88694183)
+- [StateLayout状态页](https://blog.csdn.net/qq_14876133/article/details/136837408)
+- [TitleBar标题栏](https://blog.csdn.net/qq_14876133/article/details/80915194)
+- [自定义EditText之可清空内容](https://blog.csdn.net/qq_14876133/article/details/137080366)
+- [自定义EditText之搜索框](https://blog.csdn.net/qq_14876133/article/details/80941787)
+
+
+
 ## Tools
 
 - [封装EventBus](https://blog.csdn.net/qq_14876133/article/details/136844179)
@@ -27,12 +40,10 @@
 - [封装Permission](https://blog.csdn.net/qq_14876133/article/details/135747680)
 - [封装OkHttp](https://blog.csdn.net/qq_14876133/article/details/85266012)
 - [监听网络状态变化](https://blog.csdn.net/qq_14876133/article/details/136301889)
-- [SettingItem设置条](https://blog.csdn.net/qq_14876133/article/details/88694183)
-- [StateLayout状态页](https://blog.csdn.net/qq_14876133/article/details/136837408)
-- [TitleBar标题栏](https://blog.csdn.net/qq_14876133/article/details/80915194)
-- [自定义EditText](https://blog.csdn.net/qq_14876133/article/details/137080366)
 - [控件保持宽高比的几种方式](https://blog.csdn.net/qq_14876133/article/details/139298644)
 - [扩大View的点击区域](https://blog.csdn.net/qq_14876133/article/details/142758670)
 - [封装Glide](https://blog.csdn.net/qq_14876133/article/details/141962584)
 - [手写签名板](https://blog.csdn.net/qq_14876133/article/details/144078111)
-- [底部导航栏](https://blog.csdn.net/qq_14876133/article/details/146201850)
+
+
+
