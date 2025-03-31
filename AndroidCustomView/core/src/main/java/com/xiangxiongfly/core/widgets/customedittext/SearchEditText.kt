@@ -6,7 +6,6 @@ import android.graphics.Canvas
 import android.graphics.Paint
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
-import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import com.xiangxiongfly.core.R
 import com.xiangxiongfly.core.utils.sp
@@ -63,6 +62,7 @@ class SearchEditText @JvmOverloads constructor(
             }
         }
         imeOptions = EditorInfo.IME_ACTION_SEARCH
+        setSingleLine()
     }
 
     override fun onDraw(canvas: Canvas) {
@@ -87,15 +87,15 @@ class SearchEditText @JvmOverloads constructor(
         val textWidth = labelPaint.measureText(searchLabel)
         val fontMetrics = labelPaint.fontMetrics
         val textHeight = fontMetrics.bottom - fontMetrics.top
-        val allWidth = textWidth + searchIconSize
-        val xOfLabel = centerX - allWidth / 2 + searchIconSize
+        val allWidth = textWidth + searchIcon!!.bounds.width()
+        val xOfLabel = centerX - allWidth / 2 + searchIcon.bounds.width()
         val yOfLabel = centerY + (textHeight / 2f - fontMetrics.bottom)
-        canvas.drawText(searchLabel!!, xOfLabel, yOfLabel, paint)
+        canvas.drawText(searchLabel!!, xOfLabel, yOfLabel, labelPaint)
         canvas.save()
         val xOfIcon = centerX - allWidth / 2
-        val yOfIcon = centerY - searchIconSize / 2
+        val yOfIcon = centerY - searchIcon.bounds.width() / 2
         canvas.translate(xOfIcon, yOfIcon)
-        searchIcon!!.draw(canvas)
+        searchIcon.draw(canvas)
         canvas.restore()
     }
 
@@ -108,22 +108,15 @@ class SearchEditText @JvmOverloads constructor(
         // 计算文本坐标
         val x = centerX - textWidth / 2
         val y = centerY + (textHeight / 2f - fontMetrics.bottom)
-        canvas.drawText(searchLabel!!, x, y, paint)
+        canvas.drawText(searchLabel!!, x, y, labelPaint)
     }
 
     private fun drawSingleIcon(canvas: Canvas) {
         canvas.save()
-        val x = centerX - searchIconSize / 2
-        val y = centerY - searchIconSize / 2
+        val x = centerX - searchIcon!!.bounds.width() / 2
+        val y = centerY - searchIcon.bounds.width() / 2
         canvas.translate(x, y)
-        searchIcon!!.draw(canvas)
+        searchIcon.draw(canvas)
         canvas.restore()
-    }
-
-    override fun setLayoutParams(params: ViewGroup.LayoutParams) {
-        if (params.width == ViewGroup.LayoutParams.WRAP_CONTENT) {
-            params.width = ViewGroup.LayoutParams.MATCH_PARENT
-        }
-        super.setLayoutParams(params)
     }
 }
