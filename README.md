@@ -29,6 +29,7 @@
 - [TitleBar标题栏](https://blog.csdn.net/qq_14876133/article/details/80915194)
 - [自定义EditText之可清空内容](https://blog.csdn.net/qq_14876133/article/details/137080366)
 - [自定义EditText之搜索框](https://blog.csdn.net/qq_14876133/article/details/80941787)
+- [手写签名板](https://blog.csdn.net/qq_14876133/article/details/144078111)
 
 
 
@@ -43,7 +44,5 @@
 - [控件保持宽高比的几种方式](https://blog.csdn.net/qq_14876133/article/details/139298644)
 - [扩大View的点击区域](https://blog.csdn.net/qq_14876133/article/details/142758670)
 - [封装Glide](https://blog.csdn.net/qq_14876133/article/details/141962584)
-- [手写签名板](https://blog.csdn.net/qq_14876133/article/details/144078111)
-
-
+- [文本测量总结](https://blog.csdn.net/qq_14876133/article/details/124966697)
 
