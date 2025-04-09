@@ -32,13 +32,14 @@ class GroupActivity : BaseActivity() {
     }
 
     private fun initRV() {
+        val concatAdapter = ConcatAdapter()
         recyclerView.apply {
+            recyclerView.adapter = concatAdapter
             layoutManager = LinearLayoutManager(context)
         }
-        val concatAdapter = ConcatAdapter()
-        recyclerView.adapter = concatAdapter
 
         list.forEach {
+            // 添加Adapter
             val titleAdapter = TitleAdapter(context, mutableListOf(it.groupName))
             concatAdapter.addAdapter(titleAdapter)
             val itemAdapter = ItemAdapter(context, it.list)

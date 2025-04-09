@@ -5,16 +5,12 @@ import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
 import android.util.AttributeSet
-import android.view.Gravity
 import android.view.MotionEvent
 import android.view.View
-import android.view.WindowManager
-import android.widget.TextView
-import androidx.core.view.setPadding
 import com.xiangxiongfly.core.utils.dp
 import com.xiangxiongfly.core.utils.sp
 
-class SideIndexBar @JvmOverloads constructor(
+class SideIndexBar2 @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
@@ -28,16 +24,12 @@ class SideIndexBar @JvmOverloads constructor(
         )
     }
 
-    private var onIndexChangedListener: OnIndexChangedListener? = null
     private var letters: List<String> = DEFAULT_LETTERS
     private var selectedIndex: Int = -1
     private var cellHeight: Float = 0F
     private var textColor: Int = Color.GRAY
     private var selectedTextColor: Int = Color.RED
-    private var tipView: TextView? = null
-    private val windowManager: WindowManager? by lazy {
-        context.getSystemService(Context.WINDOW_SERVICE) as? WindowManager
-    }
+    private var onIndexChangedListener: OnIndexChangedListener? = null
 
     // 绘制相关属性
     private val textPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
@@ -45,37 +37,35 @@ class SideIndexBar @JvmOverloads constructor(
         textSize = 14F.sp
     }
 
-    private val highlightPaint = Paint().apply {
-        color = Color.parseColor("#20000000")
-    }
-
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
-        super.onMeasure(widthMeasureSpec, heightMeasureSpec)
+        // 获取文字高度
+        val textHeight = textPaint.descent() - textPaint.ascent()
+        // 文字间距
+        val verticalSpacing = 4.dp
+        // 内容总高度
+        val contentHeight = letters.size * (textHeight + verticalSpacing)
+        // 所需高度
+        val desiredHeight = (contentHeight + paddingTop + paddingBottom).toInt()
+        // 最小宽度
         val minWidth = (textPaint.measureText("W") + paddingStart + paddingEnd).toInt()
+        // 计算宽度
         val resolvedWidth = resolveSize(minWidth, widthMeasureSpec)
-        setMeasuredDimension(resolvedWidth, MeasureSpec.getSize(heightMeasureSpec))
-        val totalHeight = measuredHeight - paddingTop - paddingBottom
-        cellHeight = if (letters.isNotEmpty()) totalHeight.toFloat() / letters.size else 0F
+        val resolvedHeight = resolveSize(desiredHeight, heightMeasureSpec)
+        setMeasuredDimension(resolvedWidth, resolvedHeight)
     }
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        if (letters.isEmpty()) return
-        val fm = textPaint.fontMetrics
-        val textHeight = fm.descent - fm.ascent
-        val baseYOffset = (cellHeight - textHeight) / 2 - fm.ascent
-
-        letters.forEachIndexed { index, text ->
-            val x = width / 2F
-            val y = cellHeight * index + baseYOffset + paddingTop
+        letters.forEachIndexed { index, letter ->
+            // 计算垂直居中基线
+            val textHeight = textPaint.descent() - textPaint.ascent()
+            val verticalSpacing = 4.dp
+            val lineHeight = textHeight + verticalSpacing
+            val x = width / 2f
+            val y = paddingTop + lineHeight * index + (lineHeight - verticalSpacing) / 2 +
+                    (textPaint.descent() - textPaint.ascent()) / 2 - textPaint.descent()
             textPaint.color = if (index == selectedIndex) selectedTextColor else textColor
-            canvas.drawText(text, x, y, textPaint)
-        }
-
-        // 绘制高亮背景
-        if (selectedIndex != -1) {
-            val yPos = selectedIndex * cellHeight + paddingTop
-            canvas.drawRect(0f, yPos, width.toFloat(), yPos + cellHeight, highlightPaint)
+            canvas.drawText(letter, x, y, textPaint)
         }
     }
 
@@ -83,13 +73,30 @@ class SideIndexBar @JvmOverloads constructor(
         when (event.action) {
             MotionEvent.ACTION_DOWN,
             MotionEvent.ACTION_MOVE -> {
+                // 计算实际行高
+                val textHeight = textPaint.descent() - textPaint.ascent()
+                val verticalSpacing = 4.dp
+                val lineHeight = textHeight + verticalSpacing
+
+                // 计算选中位置
+                val y = event.y - paddingTop
+                val rawPos = (y / lineHeight).toInt()
+                val pos = rawPos.coerceIn(0, letters.lastIndex)
+
+                if (pos != selectedIndex) {
+                    selectedIndex = pos
+                    invalidate()
+                    onIndexChangedListener?.onIndexChanged(selectedIndex, letters[selectedIndex])
+                }
+                return true
+
+
                 val index =
                     ((event.y - paddingTop) / cellHeight).toInt().coerceIn(0, letters.lastIndex)
                 if (index != selectedIndex) {
                     selectedIndex = index
                     invalidate()
                     onIndexChangedListener?.onIndexChanged(index, letters[index])
-                    showTip(letters[index])
                 }
                 return true
             }
@@ -98,7 +105,6 @@ class SideIndexBar @JvmOverloads constructor(
                 selectedIndex = -1
                 invalidate()
                 onIndexChangedListener?.onIndexReleased()
-                hideTip()
                 return true
             }
         }
@@ -108,35 +114,6 @@ class SideIndexBar @JvmOverloads constructor(
     fun setLetters(letters: List<String>?) {
         this.letters = letters ?: DEFAULT_LETTERS
         requestLayout()
-    }
-
-    private fun showTip(letter: String) {
-        tipView = tipView ?: TextView(context).apply {
-            setTextColor(Color.WHITE)
-            setBackgroundColor(Color.GRAY)
-            setPadding(10.dp)
-        }
-        tipView?.let { tv ->
-            tv.text = letter
-            if (tv.parent == null) {
-                WindowManager.LayoutParams().apply {
-                    gravity = Gravity.CENTER
-                    width = WindowManager.LayoutParams.WRAP_CONTENT
-                    height = WindowManager.LayoutParams.WRAP_CONTENT
-                    flags = WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or
-                            WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE
-                    windowManager?.addView(tv, this)
-                }
-            }
-            tv.visibility = View.VISIBLE
-        }
-    }
-
-    private fun hideTip() {
-        tipView?.let { tv ->
-            windowManager?.removeView(tv)
-            tipView = null
-        }
     }
 
     fun setOnIndexChangedListener(listener: OnIndexChangedListener) {

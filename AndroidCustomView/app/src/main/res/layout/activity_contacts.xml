@@ -5,15 +5,28 @@
     android:layout_height="match_parent"
     tools:context=".contacts.ContactsActivity">
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_contacts"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
     <com.xiangxiongfly.core.widgets.sideindexbar.SideIndexBar
-        android:id="@+id/side_index_bar"
-        android:layout_width="30dp"
+        android:id="@+id/index_bar"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="50dp"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="30dp" />
+
+    <com.xiangxiongfly.core.widgets.sideindexbar.SideIndexBar2
+        android:id="@+id/index_bar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="8dp" />
 
 </RelativeLayout>
