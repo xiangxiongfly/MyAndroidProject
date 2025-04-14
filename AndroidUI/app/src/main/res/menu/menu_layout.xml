@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/linearLayout01"
+        android:title="LinearLayout01" />
+    <item
+        android:id="@+id/linearLayout02"
+        android:title="LinearLayout02" />
+    <item
+        android:id="@+id/relativeLayout01"
+        android:title="RelativeLayout01" />
+    <item
+        android:id="@+id/relativeLayout02"
+        android:title="RelativeLayout02" />
+    <item
+        android:id="@+id/frameLayout01"
+        android:title="FrameLayout" />
+    <item
+        android:id="@+id/gridLayout01"
+        android:title="GridLayout" />
+    <item
+        android:id="@+id/gridLayout02"
+        android:title="GridLayout" />
+</menu>

@@ -5,7 +5,7 @@ import android.view.View
 import com.example.androidui.R
 import com.example.core.base.BaseActivity
 
-class SpannableStringActivity : BaseActivity() {
+class SpannableActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_spannable_string)

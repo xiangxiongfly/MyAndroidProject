@@ -10,7 +10,7 @@ import com.example.core.manager.ActivityManager
 class BaseApplication : Application() {
 
     companion object {
-        lateinit var sInstance: BaseApplication
+        private lateinit var sInstance: BaseApplication
 
         @JvmStatic
         fun getInstance(): BaseApplication {

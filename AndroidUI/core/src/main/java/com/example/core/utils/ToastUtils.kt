@@ -10,7 +10,7 @@ object ToastUtils {
     fun show(text: String) {
         if (sToast == null) {
             sToast = Toast.makeText(
-                BaseApplication.getInstance().applicationContext,
+                BaseApplication.getInstance(),
                 null,
                 Toast.LENGTH_SHORT
             )

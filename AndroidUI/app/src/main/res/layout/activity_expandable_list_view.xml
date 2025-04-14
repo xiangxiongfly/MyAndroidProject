@@ -7,13 +7,6 @@
     android:orientation="vertical"
     tools:context=".expandablelistview.ExpandableListViewActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@drawable/shape_title_bar"
-        app:title="ExpandableListView"
-        app:titleTextColor="@android:color/white" />
-
     <ExpandableListView
         android:id="@+id/expandableListView"
         android:layout_width="match_parent"

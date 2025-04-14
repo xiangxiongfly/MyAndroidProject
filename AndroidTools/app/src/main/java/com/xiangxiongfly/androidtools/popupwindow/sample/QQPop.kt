@@ -8,8 +8,7 @@ import com.xiangxiongfly.androidtools.R
 import com.xiangxiongfly.common.popupwindow.BasePopupWindow
 import com.xiangxiongfly.common.popupwindow.ViewHolder
 
-class
-QQPop {
+class QQPop {
 
     class Builder(context: Context) : BasePopupWindow.Builder(context, R.layout.pop_qq) {
         private var mOnClickListener: OnClickListener? = null

@@ -5,14 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".span.SpannableStringActivity">
-
-    <androidx.appcompat.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@drawable/shape_title_bar"
-        app:title="SpannableString"
-        app:titleTextColor="@android:color/white" />
+    tools:context=".span.SpannableActivity">
 
     <Button
         android:layout_width="match_parent"

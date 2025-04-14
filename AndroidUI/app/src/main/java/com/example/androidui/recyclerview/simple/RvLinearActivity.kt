@@ -6,7 +6,6 @@ import android.graphics.Color
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -21,7 +20,6 @@ import java.util.*
 
 class RvLinearActivity : BaseActivity() {
     private lateinit var recyclerView: RecyclerView
-    private lateinit var toolbar: Toolbar
     private lateinit var adapter: FruitLinearAdapter
 
     private val fruitList = arrayListOf<Fruit>()
@@ -36,7 +34,6 @@ class RvLinearActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rv_linear)
         initView()
-        setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         initData()
         initRv()
@@ -44,7 +41,7 @@ class RvLinearActivity : BaseActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         super.onCreateOptionsMenu(menu)
-        menuInflater.inflate(R.menu.rv_menu, menu)
+        menuInflater.inflate(R.menu.menu_rv, menu)
         return true
     }
 
@@ -73,8 +70,6 @@ class RvLinearActivity : BaseActivity() {
 
     private fun initView() {
         recyclerView = findViewById(R.id.recyclerView)
-        toolbar = findViewById(R.id.toolbar)
-        setSupportActionBar(toolbar)
     }
 
     private fun initData() {

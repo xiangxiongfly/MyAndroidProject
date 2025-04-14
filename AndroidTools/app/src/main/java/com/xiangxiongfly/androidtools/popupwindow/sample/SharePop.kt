@@ -13,6 +13,7 @@ class SharePop {
 
     class Build(context: Context) : BasePopupWindow.Builder(context, R.layout.pop_share) {
         init {
+//            setWidth(ViewGroup.LayoutParams.MATCH_PARENT)
             setWidth(100.dp)
             setFocusable(true)
             setXOffset(-30)

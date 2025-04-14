@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
+        android:name="com.example.core.base.BaseApplication"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
@@ -14,41 +14,71 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".recyclerview.group.GroupActivity" />
-        <activity android:name=".spinner.SpinnerActivity" />
-        <activity android:name=".textview.TextViewActivity" />
-        <activity android:name=".viewpager.wrap_vp.WrapViewPagerActivity" />
-        <activity android:name=".viewpager.no_scroll_vp.NoScrollVpActivity" />
-        <activity android:name=".popupwindow.PopupWindowActivity" />
-        <activity android:name=".dialog.DialogActivity" />
-        <activity android:name=".bottom_sheet.BottomSheetActivity" />
-        <activity android:name=".tablayout.TabLayoutActivity" />
-        <activity android:name=".drawable.DrawableActivity" />
+        <activity
+            android:name=".layout.LayoutActivity"
+            android:label="四大布局" />
+        <activity
+            android:name=".textview.TextViewActivity"
+            android:label="TextView" />
+        <activity
+            android:name=".popupwindow.PopupWindowActivity"
+            android:label="PopupWindow" />
+        <activity
+            android:name=".dialog.DialogActivity"
+            android:label="Dialog" />
+        <activity
+            android:name=".bottom_sheet.BottomSheetActivity"
+            android:label="BottomSheet" />
+        <activity
+            android:name=".tablayout.TabLayoutActivity"
+            android:label="TabLayout" />
+        <activity
+            android:name=".drawable.DrawableActivity"
+            android:label="drawable" />
+        <activity
+            android:name=".span.SpannableActivity"
+            android:label="Span" />
         <activity android:name=".span.SpanSearchActivity" />
         <activity android:name=".span.TextStyleActivity" />
         <activity android:name=".span.SpanSimpleActivity" />
-        <activity android:name=".span.SpannableStringActivity" />
+        <activity
+            android:name=".recyclerview.RecyclerViewActivity"
+            android:label="RecyclerView" />
         <activity android:name=".recyclerview.multi.MultiTypeActivity" />
         <activity android:name=".recyclerview.diffutil.DiffUtilActivity" />
         <activity android:name=".recyclerview.simple.RvStaggeredActivity" />
         <activity android:name=".recyclerview.simple.RvGridActivity" />
         <activity android:name=".recyclerview.simple.RvLinearActivity" />
-        <activity android:name=".recyclerview.RecyclerViewActivity" />
-        <activity android:name=".expandablelistview.ExpandableListViewActivity" />
+        <activity android:name=".recyclerview.group.GroupActivity" />
+        <activity
+            android:name=".expandablelistview.ExpandableListViewActivity"
+            android:label="ExpandableListView" />
         <activity android:name=".listview.ScrollViewListViewActivity" />
+        <activity
+            android:name=".listview.ListViewActivity"
+            android:label="ListView" />
         <activity android:name=".listview.CheckBoxListViewActivity" />
         <activity android:name=".listview.LvMutilTypeActivity" />
         <activity android:name=".listview.BaseAdapterActivity" />
         <activity android:name=".listview.SimpleAdapterActivity" />
         <activity android:name=".listview.ArrayAdapterActivity" />
-        <activity android:name=".listview.ListViewActivity" />
-        <activity android:name=".viewpager2.tab.ViewPager2TabActivity" />
-        <activity android:name=".viewpager2.simple.ViewPager2SimpleActivity" />
-        <activity android:name=".viewpager2.ViewPager2Activity" />
+        <activity
+            android:name=".viewpager.ViewPagerActivity"
+            android:label="ViewPager" />
         <activity android:name=".viewpager.lazy.NewLazyActivity" />
         <activity android:name=".viewpager.lazy.LazyActivity" />
         <activity android:name=".viewpager.tab.TabVpActivity" />
         <activity android:name=".viewpager.simple.ViewPagerSimpleActivity" />
-        <activity android:name=".viewpager.ViewPagerActivity" />
+        <activity android:name=".viewpager.wrap_vp.WrapViewPagerActivity" />
+        <activity android:name=".viewpager.no_scroll_vp.NoScrollVpActivity" />
+        <activity
+            android:name=".viewpager2.ViewPager2Activity"
+            android:label="ViewPager2" />
+        <activity android:name=".viewpager2.tab.ViewPager2TabActivity" />
+        <activity android:name=".viewpager2.simple.ViewPager2SimpleActivity" />
+        <activity
+            android:name=".spinner.SpinnerActivity"
+            android:label="Spinner" />
     </application>
+
 </manifest>
