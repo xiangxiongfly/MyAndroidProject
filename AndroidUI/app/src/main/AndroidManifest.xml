@@ -7,13 +7,17 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
         <activity
             android:name=".layout.LayoutActivity"
             android:label="四大布局" />
@@ -70,7 +74,7 @@
         <activity android:name=".viewpager.tab.TabVpActivity" />
         <activity android:name=".viewpager.simple.ViewPagerSimpleActivity" />
         <activity android:name=".viewpager.wrap_vp.WrapViewPagerActivity" />
-        <activity android:name=".viewpager.no_scroll_vp.NoScrollVpActivity" />
+        <activity android:name=".viewpager.noscrollvp.NoScrollVpActivity" />
         <activity
             android:name=".viewpager2.ViewPager2Activity"
             android:label="ViewPager2" />

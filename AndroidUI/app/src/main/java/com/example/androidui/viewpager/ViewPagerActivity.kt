@@ -5,7 +5,7 @@ import android.view.View
 import com.example.androidui.R
 import com.example.androidui.viewpager.lazy.LazyActivity
 import com.example.androidui.viewpager.lazy.NewLazyActivity
-import com.example.androidui.viewpager.no_scroll_vp.NoScrollVpActivity
+import com.example.androidui.viewpager.noscrollvp.NoScrollVpActivity
 import com.example.androidui.viewpager.simple.ViewPagerSimpleActivity
 import com.example.androidui.viewpager.tab.TabVpActivity
 import com.example.androidui.viewpager.wrap_vp.WrapViewPagerActivity

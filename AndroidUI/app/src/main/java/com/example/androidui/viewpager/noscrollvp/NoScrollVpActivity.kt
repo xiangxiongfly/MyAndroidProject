@@ -1,4 +1,4 @@
-package com.example.androidui.viewpager.no_scroll_vp
+package com.example.androidui.viewpager.noscrollvp
 
 import android.content.Context
 import android.content.Intent

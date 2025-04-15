@@ -18,7 +18,9 @@
 
     <!-- 闪屏页主题 -->
     <style name="SplashTheme" parent="AppTheme">
-        <item name="android:windowBackground">@drawable/dark_image</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/splash</item>
         <item name="android:windowIsTranslucent">false</item>
         <item name="android:windowDisablePreview">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
