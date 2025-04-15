@@ -4,20 +4,17 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="testRunner" value="CHOOSE_PER_TEST" />
+        <option name="testRunner" value="GRADLE" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="gradleJvm" value="11" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/demo" />
-            <option value="$PROJECT_DIR$/demo/statusbar" />
             <option value="$PROJECT_DIR$/java_sort" />
             <option value="$PROJECT_DIR$/library" />
             <option value="$PROJECT_DIR$/library/base" />
             <option value="$PROJECT_DIR$/library/common" />
-            <option value="$PROJECT_DIR$/library/widgets" />
             <option value="$PROJECT_DIR$/module" />
             <option value="$PROJECT_DIR$/module/custom" />
             <option value="$PROJECT_DIR$/module/home" />

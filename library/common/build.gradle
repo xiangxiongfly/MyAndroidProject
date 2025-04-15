@@ -6,5 +6,4 @@ apply from: '../../common.gradle'
 
 dependencies {
     api project(':library:base')
-    api project(':library:widgets')
 }
