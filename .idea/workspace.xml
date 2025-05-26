@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="81205dc9-b2ba-48f5-bf4e-51946794e0cb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/AndroidApp/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/.idea/deploymentTargetDropDown.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/app/src/androidTest/java/com/xiangxiongfly/app/ExampleInstrumentedTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/java/com/xiangxiongfly/app/MainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/java/com/xiangxiongfly/app/MyFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/java/com/xiangxiongfly/app/widgets/NavigationBar.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/java/com/xiangxiongfly/app/widgets/Tab.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/java/com/xiangxiongfly/app/widgets/TabView.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/res/drawable/tab_find_selected.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/res/drawable/tab_find_unselect.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/res/drawable/tab_friends_selected.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/res/drawable/tab_friends_unselect.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/res/drawable/tab_home_selected.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/res/drawable/tab_home_unselect.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/res/drawable/tab_setting_selected.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/res/drawable/tab_setting_unselect.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/res/mipmap-mdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/res/xml/backup_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/res/xml/data_extraction_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/app/src/test/java/com/xiangxiongfly/app/ExampleUnitTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidApp/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/AndroidProjectSystem.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/migrations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/render.experimental.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AndroidUI/app/src/main/java/com/example/androidui/SplashActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/AndroidUI/app/src/main/java/com/example/androidui/SplashActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/example/myandroid/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/xiangxiongfly/myandroid/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/xiangxiongfly/myandroid/SplashActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/drawer_header.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/drawer_menu.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/example/myandroid/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/base/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/base/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/base/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/base/src/main/java/com/example/base/BaseActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/base/src/main/java/com/example/base/BaseApplication.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/base/src/main/java/com/example/base/BaseFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/base/src/main/java/com/example/base/action/HandlerAction.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/base/src/main/java/com/example/base/action/ResourcesAction.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/base/src/main/java/com/example/base/manager/ActivityManager.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/base/src/main/java/com/example/base/utils/ClickUtils.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/base/src/main/java/com/example/base/utils/EditTextUtils.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/base/src/main/java/com/example/base/utils/KeyboardUtils.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/base/src/main/java/com/example/base/utils/LogUtils.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/base/src/main/java/com/example/base/utils/ScreenUtils.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/base/src/main/java/com/example/base/utils/StatusBarUtils.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/base/src/main/java/com/example/base/utils/ToastUtils.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/base/src/main/java/com/example/base/utils/UIUtils.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/base/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/base/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/consumer-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/java/com/xiangxiongfly/common/bean/Fruit.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/java/com/xiangxiongfly/common/bean/LeftFruit.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/java/com/xiangxiongfly/common/bean/RightFruit.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/java/com/xiangxiongfly/common/bean/User.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/java/com/xiangxiongfly/common/data/FruitData.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/java/com/xiangxiongfly/common/exts/flows.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/java/com/xiangxiongfly/common/fragment/SimpleFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/java/com/xiangxiongfly/common/fragment/TextFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/anim/anim_enter.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/anim/anim_exit.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/abcd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/apple_pic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/banana_pic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/bg_empty.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/bg_error.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/cherry_pic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/dark_image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/grape_pic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/ic_add.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/ic_backup.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/ic_close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/ic_collection.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/ic_comment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/ic_delete.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/ic_delete_x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/ic_email.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/ic_friends.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/ic_like.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/ic_location.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/ic_lock_blue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/ic_lock_gray.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/ic_moon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/ic_note.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/ic_phone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/ic_search.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/ic_sun.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/ic_user_blue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/ic_user_gray.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/icon_arrow_down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/icon_at.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/icon_qq.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/icon_smile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/icon_weibo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/icon_weixin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/light_image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/mango_pic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/orange_pic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/pear_pic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/pineapple_pic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/strawberry_pic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable-xxhdpi/watermelon_pic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable/divider_red_shape.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable/dot_normal_shape.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable/dot_selected_shape.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable/dot_selector.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable/eye_close.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable/eye_open.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable/ic_arrows_bottom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable/ic_arrows_left.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable/ic_arrows_right.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable/ic_arrows_top.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable/icon_add.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable/icon_close.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable/list_tankuang.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable/pop.9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable/shape_border_blue.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable/shape_border_gray.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable/shape_border_green.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable/shape_border_red.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable/shape_flex_item.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable/shape_rounded_bg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable/shape_title_bar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/drawable/tips_warning_ic.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/layout/fragment_simple.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/layout/fragment_text.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/layout/item_text.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/layout/pop_like.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/layout/pop_qq.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/layout/pop_share.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/values/attrs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/values/dimens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/values/ids.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/common/src/main/res/values/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/custom/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/custom/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/custom/consumer-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/custom/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/custom/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/custom/src/main/java/com/example/custom/CustomFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/custom/src/main/res/layout/fragment_custom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/custom/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/home/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/home/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/home/consumer-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/home/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/home/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/home/src/main/java/com/example/home/HomeFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/home/src/main/res/layout/fragment_home.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/setting/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/setting/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/setting/consumer-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/setting/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/setting/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/setting/src/main/java/com/example/setting/SettingFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/setting/src/main/res/layout/fragment_setting.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/setting/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/tools/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/tools/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/tools/consumer-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/tools/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/tools/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/tools/src/main/java/com/example/tools/ToolsFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/tools/src/main/res/layout/fragment_tools.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/tools/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sign/MyAndroid.jks" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2xcZY7WgHrgHZ9iWRMei9FUrAjS" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cidr.known.project.marker": "true",
+    "settings.editor.selected.configurable": "AndroidSdkUpdater"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="81205dc9-b2ba-48f5-bf4e-51946794e0cb" name="Changes" comment="" />
+      <created>1748239367140</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1748239367140</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="0fc4148e-f1c6-4f37-b880-7e311fa23fc5">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="0fc4148e-f1c6-4f37-b880-7e311fa23fc5" value="TOOL_WINDOW" />
+      </map>
+    </option>
+  </component>
+</project>
