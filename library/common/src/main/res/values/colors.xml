@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <color name="color_main">#008577</color>
-    <color name="color_secondary">#69B056</color>
-    <color name="color_selected">@color/black</color>
-    <color name="color_unselect">@color/grey</color>
-</resources>

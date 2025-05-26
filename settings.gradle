@@ -1,9 +1,0 @@
-rootProject.name = "MyAndroid"
-include ':app'
-include ':module:home'
-include ':module:custom'
-include ':module:tools'
-include ':module:setting'
-include ':library:base'
-include ':library:common'
-include ':java_sort'
