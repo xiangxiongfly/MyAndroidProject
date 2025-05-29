@@ -3,6 +3,7 @@ package com.xiangxiongfly.androidtools
 import android.os.Bundle
 import com.google.android.flexbox.FlexboxLayout
 import com.xiangxiongfly.androidtools.clickarea.ClickAreaActivity
+import com.xiangxiongfly.androidtools.countdown.CountDownActivity
 import com.xiangxiongfly.androidtools.debouncethrottle.DebounceThrottleActivity
 import com.xiangxiongfly.androidtools.dialog.DialogActivity
 import com.xiangxiongfly.androidtools.eventbus.EventBusActivity
@@ -47,5 +48,6 @@ class MainActivity : BaseActivity() {
         flexboxLayout.addElement(context, "手写签名板", SignatureActivity::class.java)
         flexboxLayout.addElement(context, "测量文本宽高总结", MeasureTextActivity::class.java)
         flexboxLayout.addElement(context, "防抖和节流", DebounceThrottleActivity::class.java)
+        flexboxLayout.addElement(context, "倒计时总结", CountDownActivity::class.java)
     }
 }
