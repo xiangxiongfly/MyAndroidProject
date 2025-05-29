@@ -4,6 +4,7 @@ import android.app.Application
 import android.util.Log
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.ProcessLifecycleOwner
 
 class BaseApplication : Application() {
 
@@ -19,6 +20,8 @@ class BaseApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         sInstance = this
+        ProcessLifecycleOwner.get().lifecycle
+            .addObserver(ApplicationLifecycleObserver())
     }
 }
 

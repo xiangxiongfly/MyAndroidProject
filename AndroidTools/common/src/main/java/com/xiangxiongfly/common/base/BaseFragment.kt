@@ -7,13 +7,14 @@ import com.xiangxiongfly.common.action.HandlerAction
 
 open class BaseFragment(@LayoutRes contentLayoutId: Int) : Fragment(contentLayoutId),
     HandlerAction {
-    protected lateinit var mContext: Context
+
+    internal lateinit var context: Context
 
     constructor() : this(0)
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        mContext = context
+        this.context = context
     }
 
     override fun onDestroy() {

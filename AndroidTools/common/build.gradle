@@ -42,4 +42,5 @@ dependencies {
     api libs.logging.interceptor
     api libs.flexbox
     api libs.androidx.percentlayout
+    api "androidx.lifecycle:lifecycle-process:2.5.0"
 }

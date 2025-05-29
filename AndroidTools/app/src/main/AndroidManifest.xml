@@ -47,6 +47,9 @@
         <activity
             android:name=".debouncethrottle.DebounceThrottleActivity"
             android:exported="false" />
+        <activity
+            android:name=".countdown.CountDownActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
