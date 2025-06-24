@@ -28,7 +28,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="toMutilType"
+        android:onClick="toMultiType"
         android:text="多类型布局" />
 
     <Button

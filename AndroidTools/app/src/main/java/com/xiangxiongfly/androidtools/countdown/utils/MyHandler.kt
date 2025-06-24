@@ -20,12 +20,10 @@ class MyHandler(
     private val runnable = object : Runnable {
         override fun run() {
             if (currentTime > 0) {
-                // 进行中
                 currentTime -= intervalTime
                 weekOnTick.get()?.invoke(currentTime)
                 handler?.postDelayed(this, intervalTime)
             } else {
-                // 结束
                 weekOnFinish.get()?.invoke()
                 runType = RunType.STOP
             }

@@ -8,6 +8,7 @@ import com.example.androidui.expandablelistview.ExpandableListViewActivity
 import com.example.androidui.layout.LayoutActivity
 import com.example.androidui.listview.ListViewActivity
 import com.example.androidui.popupwindow.PopupWindowActivity
+import com.example.androidui.ratingbar.RatingBarActivity
 import com.example.androidui.recyclerview.RecyclerViewActivity
 import com.example.androidui.span.SpannableActivity
 import com.example.androidui.spinner.SpinnerActivity
@@ -53,6 +54,7 @@ class MainActivity : BaseActivity() {
         flexboxLayout.addElement(context, "Drawable", DrawableActivity::class.java)
         flexboxLayout.addElement(context, "TabLayout", TabLayoutActivity::class.java)
         flexboxLayout.addElement(context, "Spinner", SpinnerActivity::class.java)
+        flexboxLayout.addElement(context, "RatingBar", RatingBarActivity::class.java)
     }
 
 }
