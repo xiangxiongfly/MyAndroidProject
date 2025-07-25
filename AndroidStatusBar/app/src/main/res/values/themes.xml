@@ -48,7 +48,7 @@
         <!-- 设置透明状态栏 -->
         <item name="android:statusBarColor">@android:color/transparent</item>
         <!-- 设置透明导航栏 -->
-        <item name="android:windowTranslucentNavigation">true</item>
+        <!--        <item name="android:windowTranslucentNavigation">true</item>-->
         <!--设置透明状态栏-->
         <!--        <item name="android:windowTranslucentStatus">true</item>-->
     </style>

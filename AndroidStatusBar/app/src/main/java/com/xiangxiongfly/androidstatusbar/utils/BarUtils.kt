@@ -20,17 +20,14 @@ import androidx.core.content.ContextCompat
 object BarUtils {
 
     /**
-     * 刘海屏适配
+     * 适配刘海屏
      */
     fun fitsNotchScreen(activity: Activity) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-            try {
-                val lp: WindowManager.LayoutParams = activity.window.attributes
-                lp.layoutInDisplayCutoutMode =
-                    WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES
-                activity.window.attributes = lp
-            } catch (e: Exception) {
-            }
+            val lp: WindowManager.LayoutParams = activity.window.attributes
+            lp.layoutInDisplayCutoutMode =
+                WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES
+            activity.window.attributes = lp
         }
     }
 

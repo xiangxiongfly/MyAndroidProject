@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#f00"
-    tools:context=".immersion_status_bar.Immersion4Activity">
+    tools:context=".immersion.Immersion4Activity">
 
     <Button
         android:id="@+id/btn"

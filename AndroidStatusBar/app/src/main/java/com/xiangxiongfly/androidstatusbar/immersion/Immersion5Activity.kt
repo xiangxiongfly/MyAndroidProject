@@ -1,4 +1,4 @@
-package com.xiangxiongfly.androidstatusbar.immersion_status_bar
+package com.xiangxiongfly.androidstatusbar.immersion
 
 import android.content.Context
 import android.content.Intent

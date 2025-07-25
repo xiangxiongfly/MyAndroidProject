@@ -8,6 +8,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <!-- 允许绘制到小米刘海屏机型的刘海区域 -->
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait" />
+        <!-- 允许绘制到华为刘海屏机型的刘海区域 -->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" />
+        <!-- 允许绘制到oppo、vivo刘海屏机型的刘海区域 -->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.2" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -43,19 +56,19 @@
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity
-            android:name=".immersion_status_bar.Immersion5Activity"
+            android:name=".immersion.Immersion5Activity"
             android:theme="@style/AppTheme.Transparent" />
         <activity
-            android:name=".immersion_status_bar.Immersion4Activity"
+            android:name=".immersion.Immersion4Activity"
             android:theme="@style/AppTheme.Transparent" />
         <activity
-            android:name=".immersion_status_bar.Immersion3Activity"
+            android:name=".immersion.Immersion3Activity"
             android:theme="@style/AppTheme.Transparent" />
         <activity
-            android:name=".immersion_status_bar.Immersion2Activity"
+            android:name=".immersion.Immersion2Activity"
             android:theme="@style/AppTheme.Transparent" />
         <activity
-            android:name=".immersion_status_bar.Immersion1Activity"
+            android:name=".immersion.Immersion1Activity"
             android:theme="@style/AppTheme.Transparent" />
 
     </application>

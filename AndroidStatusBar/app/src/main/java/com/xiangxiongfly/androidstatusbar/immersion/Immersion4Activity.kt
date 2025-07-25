@@ -1,4 +1,4 @@
-package com.xiangxiongfly.androidstatusbar.immersion_status_bar
+package com.xiangxiongfly.androidstatusbar.immersion
 
 import android.content.Context
 import android.content.Intent
@@ -12,8 +12,8 @@ import android.widget.ImageView
 import androidx.core.view.OnApplyWindowInsetsListener
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.xiangxiongfly.androidstatusbar.base.BaseActivity
 import com.xiangxiongfly.androidstatusbar.R
+import com.xiangxiongfly.androidstatusbar.base.BaseActivity
 
 class Immersion4Activity : BaseActivity() {
     companion object {
