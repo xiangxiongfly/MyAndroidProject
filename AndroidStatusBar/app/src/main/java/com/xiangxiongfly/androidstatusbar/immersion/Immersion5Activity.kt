@@ -1,7 +1,5 @@
 package com.xiangxiongfly.androidstatusbar.immersion
 
-import android.content.Context
-import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.Bundle
@@ -10,19 +8,13 @@ import android.widget.ImageView
 import androidx.annotation.DrawableRes
 import androidx.core.graphics.ColorUtils
 import androidx.palette.graphics.Palette
-import com.xiangxiongfly.androidstatusbar.base.BaseActivity
 import com.xiangxiongfly.androidstatusbar.R
+import com.xiangxiongfly.androidstatusbar.base.BaseActivity
 import com.xiangxiongfly.androidstatusbar.utils.BarUtils
 import com.xiangxiongfly.androidstatusbar.utils.ScreenUtils
 
 class Immersion5Activity : BaseActivity() {
     private lateinit var imageView: ImageView
-
-    companion object {
-        fun actionStart(context: Context) {
-            context.startActivity(Intent(context, Immersion5Activity::class.java))
-        }
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
