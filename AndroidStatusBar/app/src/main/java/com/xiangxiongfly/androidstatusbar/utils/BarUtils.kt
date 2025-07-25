@@ -37,37 +37,39 @@ object BarUtils {
     /**
      * 隐藏ActionBar
      */
-    fun setNoTitle(activity: AppCompatActivity) {
+    fun setNoActionBar(activity: AppCompatActivity) {
         activity.requestWindowFeature(Window.FEATURE_NO_TITLE) // 隐藏标题栏
         activity.supportActionBar?.hide() // 隐藏ActionBar
     }
 
     /**
-     * 全屏显示，状态栏不显示文字图片
+     * 全屏显示
      */
     fun fullScreen(activity: AppCompatActivity) {
-        setNoTitle(activity)
-        activity.window.setFlags(
-            WindowManager.LayoutParams.FLAG_FULLSCREEN,
-            WindowManager.LayoutParams.FLAG_FULLSCREEN
-        ) // 全屏显示
-        activity.window.statusBarColor = Color.TRANSPARENT; // 设置状态栏颜色为透明
-        activity.window.setFlags(
-            WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION,
-            WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION
-        ) // 导航栏半透明
+        // 设置透明状态栏
+        activity.window.statusBarColor = Color.TRANSPARENT
+        // 内容延伸至状态栏
+        activity.window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+        // 内容延伸至导航栏
+        activity.window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION)
+        // 隐藏状态栏
+        activity.window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
+        // 隐藏导航栏
+        activity.window.decorView.systemUiVisibility =
+            View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
     }
 
     /**
      * 全屏显示，状态栏显示文字图片
      */
     fun fullScreen2(activity: AppCompatActivity) {
-        setNoTitle(activity)
-        activity.window.statusBarColor = Color.TRANSPARENT; // 设置状态栏颜色为透明
-        activity.window.setFlags(
-            WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION,
-            WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION
-        ) // 导航栏半透明
+        // 设置透明状态栏
+        activity.window.statusBarColor = Color.TRANSPARENT
+
+        activity.window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION)
+        // 隐藏导航栏
+        activity.window.decorView.systemUiVisibility =
+            View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
     }
 
     /**

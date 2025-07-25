@@ -1,4 +1,4 @@
-package com.xiangxiongfly.androidstatusbar.operate_status_bar
+package com.xiangxiongfly.androidstatusbar.statusbar
 
 import android.content.Context
 import android.content.Intent
@@ -6,8 +6,8 @@ import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import com.xiangxiongfly.androidstatusbar.base.BaseActivity
 import com.xiangxiongfly.androidstatusbar.R
+import com.xiangxiongfly.androidstatusbar.base.BaseActivity
 import com.xiangxiongfly.androidstatusbar.utils.BarUtils
 
 class OperateStatusBar3Activity : BaseActivity() {
@@ -19,7 +19,7 @@ class OperateStatusBar3Activity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_operate_status_bar3)
+        setContentView(R.layout.activity_operate_status_bar)
     }
 
     fun onClick(view: View) {
@@ -46,8 +46,8 @@ class OperateStatusBar3Activity : BaseActivity() {
                 BarUtils.setStatusBarColorRes(this, R.color.green)
             }
             R.id.btn_other -> {
-                Log.e("TAG", "获取状态栏高度；${BarUtils.getStatusBarHeight(mContext)}")
-                Log.e("TAG", "获取导航栏高度；${BarUtils.getNavigationBarHeight(mContext)}")
+                Log.e("TAG", "获取状态栏高度；${BarUtils.getStatusBarHeight(context)}")
+                Log.e("TAG", "获取导航栏高度；${BarUtils.getNavigationBarHeight(context)}")
                 Log.e("TAG", "是否有导航栏；${BarUtils.isNavigationBar(this)}")
             }
         }

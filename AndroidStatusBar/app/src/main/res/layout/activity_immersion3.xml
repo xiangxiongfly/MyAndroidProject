@@ -23,6 +23,6 @@
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
             android:scaleType="fitXY"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@drawable/dark_image" />
     </com.google.android.material.appbar.CollapsingToolbarLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -3,40 +3,61 @@
 
     <application
         android:name=".base.BaseApplication"
-        android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MyStatusBar">
+        android:theme="@style/AppTheme">
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="状态栏">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
         <activity
+            android:name=".theme.NoActionBarThemeActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".theme.FullScreenThemeActivity"
+            android:theme="@style/AppTheme.FullScreenTheme" />
+        <activity
+            android:name=".theme.LightStatusBarThemeActivity"
+            android:theme="@style/AppTheme.LightStatusBar" />
+        <activity
+            android:name=".theme.TransparentThemeActivity"
+            android:theme="@style/AppTheme.Transparent" />
+
+        <activity
+            android:name=".statusbar.FullScreenActivity"
+            android:theme="@style/AppTheme.FullScreenTheme" />
+        <activity
+            android:name=".statusbar.FullScreen2Activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".statusbar.OperateStatusBar3Activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
             android:name=".immersion_status_bar.Immersion5Activity"
-            android:theme="@style/TransparentTheme" />
+            android:theme="@style/AppTheme.Transparent" />
         <activity
             android:name=".immersion_status_bar.Immersion4Activity"
-            android:theme="@style/TransparentTheme" />
+            android:theme="@style/AppTheme.Transparent" />
         <activity
             android:name=".immersion_status_bar.Immersion3Activity"
-            android:theme="@style/TransparentTheme" />
+            android:theme="@style/AppTheme.Transparent" />
         <activity
             android:name=".immersion_status_bar.Immersion2Activity"
-            android:theme="@style/TransparentTheme" />
+            android:theme="@style/AppTheme.Transparent" />
         <activity
             android:name=".immersion_status_bar.Immersion1Activity"
-            android:theme="@style/TransparentTheme" />
-        <activity android:name=".operate_status_bar.OperateStatusBar3Activity" />
-        <activity android:name=".operate_status_bar.OperateStatusBar2Activity" />
-        <activity android:name=".operate_status_bar.OperateStatusBar1Activity" />
+            android:theme="@style/AppTheme.Transparent" />
+
     </application>
+
 </manifest>
