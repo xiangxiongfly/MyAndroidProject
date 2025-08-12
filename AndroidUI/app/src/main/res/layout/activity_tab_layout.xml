@@ -26,7 +26,7 @@
         app:tabIconTint="@color/grey"
         app:tabIndicatorHeight="0dp"
         app:tabMode="fixed"
-        app:tabSelectedTextColor="@color/color_main"
+        app:tabSelectedTextColor="@color/color_primary"
         app:tabTextAppearance="@style/MyTabLayoutStyle"
         app:tabTextColor="@color/grey" />
 
@@ -68,7 +68,7 @@
         app:tabIndicatorFullWidth="true"
         app:tabMinWidth="80dp"
         app:tabMode="fixed"
-        app:tabSelectedTextColor="@color/color_main"
+        app:tabSelectedTextColor="@color/color_primary"
         app:tabTextAppearance="@style/MyTabLayoutStyle"
         app:tabTextColor="@color/black" />
 

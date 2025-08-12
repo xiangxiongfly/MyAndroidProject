@@ -52,7 +52,7 @@ class TabLayoutActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tab_layout)
-        initView()
+        initViews()
         initViewPager()
         initTabLayout01()
         initTabLayout02()
@@ -62,7 +62,7 @@ class TabLayoutActivity : BaseActivity() {
         initTabLayout06()
     }
 
-    private fun initView() {
+    private fun initViews() {
         viewPager2 = findViewById(R.id.viewPager2)
         tabLayout01 = findViewById(R.id.tabLayout01)
         tabLayout02 = findViewById(R.id.tabLayout02)
@@ -73,8 +73,7 @@ class TabLayoutActivity : BaseActivity() {
     }
 
     private fun initViewPager() {
-        viewPager2.adapter = object :
-            FragmentStateAdapter(this@TabLayoutActivity) {
+        viewPager2.adapter = object : FragmentStateAdapter(this@TabLayoutActivity) {
             override fun getItemCount(): Int {
                 return fragments.size
             }
@@ -139,7 +138,7 @@ class TabLayoutActivity : BaseActivity() {
 
     //图片选中状态
     fun Drawable.selected() {
-        this.setTint(ContextCompat.getColor(context, R.color.color_main))
+        this.setTint(ContextCompat.getColor(context, R.color.color_primary))
     }
 
     //图片未选中状态

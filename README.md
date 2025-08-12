@@ -18,6 +18,8 @@
 - [TabLayout](https://blog.csdn.net/qq_14876133/article/details/127844487)
 - [BottomSheet](https://blog.csdn.net/qq_14876133/article/details/127882057)
 - [Spinner](https://blog.csdn.net/qq_14876133/article/details/146201030)
+- [状态栏](https://blog.csdn.net/qq_14876133/article/details/126411006)
+- [沉浸式](https://blog.csdn.net/qq_14876133/article/details/100990933)
 
 
 
