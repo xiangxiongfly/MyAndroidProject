@@ -1,7 +1,6 @@
-package com.example.core.utils
+package com.example.core.exts
 
 import android.content.res.Resources
-
 
 fun dp2px(dpValue: Int): Int {
     val scale = Resources.getSystem().displayMetrics.density
@@ -13,9 +12,14 @@ fun dp2px(dpValue: Float): Float {
     return dpValue * scale + 0.5F
 }
 
+fun dp2px(dpValue: Double): Double {
+    val scale = Resources.getSystem().displayMetrics.density
+    return dpValue * scale + 0.5
+}
+
 fun sp2px(spValue: Int): Int {
     val scale = Resources.getSystem().displayMetrics.scaledDensity
-    return (spValue * scale + 0.5F).toInt()
+    return (spValue * scale + 0.5).toInt()
 }
 
 fun sp2px(spValue: Float): Float {
@@ -24,6 +28,9 @@ fun sp2px(spValue: Float): Float {
 }
 
 val Float.dp
+    get() = dp2px(this)
+
+val Double.dp
     get() = dp2px(this)
 
 val Int.dp

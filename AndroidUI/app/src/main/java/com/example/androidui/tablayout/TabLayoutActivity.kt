@@ -20,7 +20,7 @@ import com.airbnb.lottie.value.LottieValueCallback
 import com.example.androidui.R
 import com.example.core.base.BaseActivity
 import com.example.core.fragment.SimpleFragment
-import com.example.core.utils.dp
+import com.example.core.exts.dp
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 

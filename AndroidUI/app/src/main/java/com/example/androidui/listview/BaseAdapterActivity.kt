@@ -8,10 +8,9 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ListView
 import com.example.androidui.R
-import com.example.core.base.BaseActivity
-import com.example.core.base.KEY_TITLE
-import com.example.core.bean.Fruit
 import com.example.androidui.listview.adapter.MyAdapter
+import com.example.core.base.BaseActivity
+import com.example.core.bean.Fruit
 
 class BaseAdapterActivity : BaseActivity() {
     private val datas = arrayListOf<Fruit>().apply {
@@ -31,9 +30,7 @@ class BaseAdapterActivity : BaseActivity() {
 
     companion object {
         fun start(context: Context) {
-            context.startActivity(Intent(context, BaseAdapterActivity::class.java).apply {
-                putExtra(KEY_TITLE, "BaseAdapter")
-            })
+            context.startActivity(Intent(context, BaseAdapterActivity::class.java))
         }
     }
 

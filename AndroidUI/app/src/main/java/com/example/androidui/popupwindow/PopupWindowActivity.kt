@@ -11,7 +11,7 @@ import android.widget.PopupWindow
 import android.widget.TextView
 import com.example.androidui.R
 import com.example.core.base.BaseActivity
-import com.example.core.utils.dp
+import com.example.core.exts.dp
 
 class PopupWindowActivity : BaseActivity() {
     private lateinit var root: View

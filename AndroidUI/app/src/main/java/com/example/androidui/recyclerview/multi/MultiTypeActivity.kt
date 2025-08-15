@@ -10,9 +10,8 @@ import com.example.androidui.recyclerview.multi.adapter.MultiTypeAdapter
 import com.example.common.bean.LeftFruit
 import com.example.common.bean.RightFruit
 import com.example.core.base.BaseActivity
-import com.example.core.base.KEY_TITLE
 import com.example.core.data.FruitData
-import java.util.*
+import java.util.Random
 
 class MultiTypeActivity : BaseActivity() {
     private lateinit var recyclerView: RecyclerView
@@ -23,9 +22,7 @@ class MultiTypeActivity : BaseActivity() {
 
     companion object {
         fun actionStart(context: Context) {
-            context.startActivity(Intent(context, MultiTypeActivity::class.java).apply {
-                putExtra(KEY_TITLE, "多类型布局")
-            })
+            context.startActivity(Intent(context, MultiTypeActivity::class.java))
         }
     }
 

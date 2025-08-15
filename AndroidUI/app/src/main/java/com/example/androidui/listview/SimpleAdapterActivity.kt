@@ -7,14 +7,11 @@ import android.widget.ListView
 import android.widget.SimpleAdapter
 import com.example.androidui.R
 import com.example.core.base.BaseActivity
-import com.example.core.base.KEY_TITLE
 
 class SimpleAdapterActivity : BaseActivity() {
     companion object {
         fun start(context: Context) {
-            context.startActivity(Intent(context, SimpleAdapterActivity::class.java).apply {
-                putExtra(KEY_TITLE, "SimpleAdapter")
-            })
+            context.startActivity(Intent(context, SimpleAdapterActivity::class.java))
         }
     }
 

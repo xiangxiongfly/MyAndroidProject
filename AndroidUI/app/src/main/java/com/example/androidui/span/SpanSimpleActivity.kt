@@ -6,9 +6,26 @@ import android.graphics.Color
 import android.graphics.Typeface
 import android.graphics.drawable.Drawable
 import android.os.Bundle
-import android.text.*
+import android.text.Html
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.SpannableStringBuilder
+import android.text.Spanned
+import android.text.TextPaint
 import android.text.method.LinkMovementMethod
-import android.text.style.*
+import android.text.style.AbsoluteSizeSpan
+import android.text.style.BackgroundColorSpan
+import android.text.style.ClickableSpan
+import android.text.style.ForegroundColorSpan
+import android.text.style.ImageSpan
+import android.text.style.RelativeSizeSpan
+import android.text.style.StrikethroughSpan
+import android.text.style.StyleSpan
+import android.text.style.SubscriptSpan
+import android.text.style.SuperscriptSpan
+import android.text.style.TypefaceSpan
+import android.text.style.URLSpan
+import android.text.style.UnderlineSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,7 +36,6 @@ import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.example.androidui.R
 import com.example.core.base.BaseActivity
-import com.example.core.base.KEY_TITLE
 
 class SpanSimpleActivity : BaseActivity() {
     private lateinit var listView: ListView
@@ -28,9 +44,7 @@ class SpanSimpleActivity : BaseActivity() {
 
     companion object {
         fun start(context: Context) {
-            context.startActivity(Intent(context, SpanSimpleActivity::class.java).apply {
-                putExtra(KEY_TITLE, "SpannableString基本使用")
-            })
+            context.startActivity(Intent(context, SpanSimpleActivity::class.java))
         }
     }
 

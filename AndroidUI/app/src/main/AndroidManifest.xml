@@ -6,6 +6,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
+
         <activity
             android:name=".SplashActivity"
             android:exported="true"
@@ -32,7 +33,7 @@
             android:name=".dialog.DialogActivity"
             android:label="Dialog" />
         <activity
-            android:name=".bottom_sheet.BottomSheetActivity"
+            android:name=".bottomsheet.BottomSheetActivity"
             android:label="BottomSheet" />
         <activity
             android:name=".tablayout.TabLayoutActivity"
@@ -86,7 +87,12 @@
             android:label="Spinner" />
         <activity
             android:name=".ratingbar.RatingBarActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="RatingBar" />
+        <activity
+            android:name=".circleround.CircleRoundActivity"
+            android:exported="false"
+            android:label="圆形和圆角矩形" />
     </application>
 
 </manifest>

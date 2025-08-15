@@ -6,7 +6,6 @@ import android.os.Bundle
 import androidx.viewpager2.widget.ViewPager2
 import com.example.androidui.R
 import com.example.core.base.BaseActivity
-import com.example.core.base.KEY_TITLE
 import com.example.core.fragment.TextFragment
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
@@ -24,9 +23,7 @@ class ViewPager2TabActivity : BaseActivity() {
 
     companion object {
         fun actionStart(context: Context) {
-            val intent = Intent(context, ViewPager2TabActivity::class.java).apply {
-                putExtra(KEY_TITLE, "ViewPager2+TabLayout+Fragment")
-            }
+            val intent = Intent(context, ViewPager2TabActivity::class.java)
             context.startActivity(intent)
         }
     }

@@ -1,4 +1,4 @@
-package com.example.androidui.bottom_sheet
+package com.example.androidui.bottomsheet
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidui.R
 import com.example.core.base.BaseActivity
-import com.example.core.base.KEY_TITLE
 import com.example.core.bean.User
 import com.example.core.utils.logE
 
@@ -23,9 +22,7 @@ class DiffUtilActivity : BaseActivity() {
 
     companion object {
         fun start(context: Context) {
-            context.startActivity(Intent(context, DiffUtilActivity::class.java).apply {
-                putExtra(KEY_TITLE, "DiffUtil测试")
-            })
+            context.startActivity(Intent(context, DiffUtilActivity::class.java))
         }
     }
 

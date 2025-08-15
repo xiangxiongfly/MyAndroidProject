@@ -28,7 +28,7 @@ class TransitionDrawableFragment : BaseFragment(R.layout.fragment_common_drawabl
         iv1.setImageDrawable(transitionDrawable)
 
         val drawables = arrayOf(
-            ContextCompat.getDrawable(mContext, R.drawable.abcd),
+            ContextCompat.getDrawable(mContext, R.drawable.a),
             ContextCompat.getDrawable(mContext, R.drawable.b)
         )
         val transitionDrawable2 = TransitionDrawable(drawables)

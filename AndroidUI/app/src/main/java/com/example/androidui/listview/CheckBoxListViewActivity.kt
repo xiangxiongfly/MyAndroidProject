@@ -7,7 +7,6 @@ import android.widget.ListView
 import com.example.androidui.R
 import com.example.androidui.listview.adapter.CheckBoxAdapter
 import com.example.core.base.BaseActivity
-import com.example.core.base.KEY_TITLE
 import com.example.core.bean.Fruit
 
 class CheckBoxListViewActivity : BaseActivity() {
@@ -33,9 +32,7 @@ class CheckBoxListViewActivity : BaseActivity() {
 
     companion object {
         fun start(context: Context) {
-            context.startActivity(Intent(context, CheckBoxListViewActivity::class.java).apply {
-                putExtra(KEY_TITLE, "CheckBox+ListView")
-            })
+            context.startActivity(Intent(context, CheckBoxListViewActivity::class.java))
         }
     }
 

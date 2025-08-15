@@ -27,7 +27,7 @@ class StateListDrawableFragment : BaseFragment(R.layout.fragment_common_drawable
         val stateListDrawable2 = StateListDrawable().apply {
             addState(
                 intArrayOf(android.R.attr.state_pressed),
-                ContextCompat.getDrawable(mContext, R.drawable.abcd)
+                ContextCompat.getDrawable(mContext, R.drawable.a)
             )
             addState(StateSet.NOTHING, ContextCompat.getDrawable(mContext, R.drawable.b))
         }

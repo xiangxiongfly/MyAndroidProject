@@ -7,14 +7,11 @@ import android.widget.ArrayAdapter
 import android.widget.ListView
 import com.example.androidui.R
 import com.example.core.base.BaseActivity
-import com.example.core.base.KEY_TITLE
 
 class ArrayAdapterActivity : BaseActivity() {
     companion object {
         fun start(context: Context) {
-            context.startActivity(Intent(context, ArrayAdapterActivity::class.java).apply {
-                putExtra(KEY_TITLE, "ArrayAdapter")
-            })
+            context.startActivity(Intent(context, ArrayAdapterActivity::class.java))
         }
     }
 

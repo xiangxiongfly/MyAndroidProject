@@ -8,7 +8,7 @@ import android.widget.ImageView
 import androidx.core.content.ContextCompat
 import com.example.androidui.R
 import com.example.core.base.BaseFragment
-import com.example.core.utils.dp
+import com.example.core.exts.dp
 
 class GradientDrawableFragment : BaseFragment(R.layout.fragment_common_drawable) {
 

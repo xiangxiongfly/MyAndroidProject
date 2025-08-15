@@ -5,13 +5,12 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.ListView
 import com.example.androidui.R
+import com.example.androidui.listview.adapter.MutilTypeAdapter
 import com.example.common.bean.LeftFruit
 import com.example.common.bean.RightFruit
 import com.example.core.base.BaseActivity
-import com.example.core.base.KEY_TITLE
 import com.example.core.data.FruitData
-import com.example.androidui.listview.adapter.MutilTypeAdapter
-import java.util.*
+import java.util.Random
 
 class LvMutilTypeActivity : BaseActivity() {
     private val mList = arrayListOf<Any>()
@@ -20,9 +19,7 @@ class LvMutilTypeActivity : BaseActivity() {
 
     companion object {
         fun start(context: Context) {
-            context.startActivity(Intent(context, LvMutilTypeActivity::class.java).apply {
-                putExtra(KEY_TITLE, "多类型ListView")
-            })
+            context.startActivity(Intent(context, LvMutilTypeActivity::class.java))
         }
     }
 

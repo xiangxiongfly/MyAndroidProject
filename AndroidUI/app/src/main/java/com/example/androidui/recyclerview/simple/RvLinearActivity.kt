@@ -15,7 +15,7 @@ import com.example.androidui.recyclerview.simple.adapter.FruitLinearAdapter
 import com.example.core.base.BaseActivity
 import com.example.core.bean.Fruit
 import com.example.core.data.FruitData
-import com.example.core.utils.dp
+import com.example.core.exts.dp
 import java.util.*
 
 class RvLinearActivity : BaseActivity() {

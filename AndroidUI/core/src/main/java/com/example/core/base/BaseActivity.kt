@@ -6,8 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.core.action.HandlerAction
 import com.example.core.utils.LogUtils
 
-const val KEY_TITLE = "title"
-
 open class BaseActivity : AppCompatActivity(), HandlerAction {
     protected lateinit var context: Context
 

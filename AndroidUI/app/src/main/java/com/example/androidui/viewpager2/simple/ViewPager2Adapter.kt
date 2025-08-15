@@ -25,7 +25,7 @@ class ViewPager2Adapter(private val context: Context, private val mImgIds: IntAr
         return mImgIds.size
     }
 
-    class MyViewHolder(private val itemView: View) : RecyclerView.ViewHolder(itemView) {
-        public val imageView: ImageView = itemView as ImageView
+    class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val imageView: ImageView = itemView as ImageView
     }
 }

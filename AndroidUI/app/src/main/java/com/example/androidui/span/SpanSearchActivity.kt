@@ -13,7 +13,6 @@ import android.widget.TextView
 import androidx.annotation.StyleRes
 import com.example.androidui.R
 import com.example.core.base.BaseActivity
-import com.example.core.base.KEY_TITLE
 import java.util.regex.Pattern
 
 class SpanSearchActivity : BaseActivity() {
@@ -22,9 +21,7 @@ class SpanSearchActivity : BaseActivity() {
 
     companion object {
         fun start(context: Context) {
-            context.startActivity(Intent(context, SpanSearchActivity::class.java).apply {
-                putExtra(KEY_TITLE, "搜索关键字变色")
-            })
+            context.startActivity(Intent(context, SpanSearchActivity::class.java))
         }
     }
 

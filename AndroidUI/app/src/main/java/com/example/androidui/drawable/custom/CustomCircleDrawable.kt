@@ -6,7 +6,7 @@ import android.graphics.drawable.Animatable
 import android.graphics.drawable.Drawable
 import android.view.animation.Animation
 import android.view.animation.LinearInterpolator
-import com.example.core.utils.dp
+import com.example.core.exts.dp
 import kotlin.math.min
 
 

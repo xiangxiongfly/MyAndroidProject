@@ -9,8 +9,7 @@ import androidx.core.view.forEachIndexed
 import androidx.viewpager2.widget.ViewPager2
 import com.example.androidui.R
 import com.example.core.base.BaseActivity
-import com.example.core.base.KEY_TITLE
-import com.example.core.utils.dp
+import com.example.core.exts.dp
 
 class ViewPager2SimpleActivity : BaseActivity() {
     private lateinit var viewPager2: ViewPager2
@@ -18,13 +17,11 @@ class ViewPager2SimpleActivity : BaseActivity() {
 
     //图片资源
     private val mImgIds =
-        intArrayOf(R.drawable.abcd, R.drawable.b, R.drawable.c, R.drawable.d, R.drawable.e)
+        intArrayOf(R.drawable.a, R.drawable.b, R.drawable.c, R.drawable.d, R.drawable.e)
 
     companion object {
         fun actionStart(context: Context) {
-            val intent = Intent(context, ViewPager2SimpleActivity::class.java).apply {
-                putExtra(KEY_TITLE, "ViewPager2基本使用")
-            }
+            val intent = Intent(context, ViewPager2SimpleActivity::class.java)
             context.startActivity(intent)
         }
     }

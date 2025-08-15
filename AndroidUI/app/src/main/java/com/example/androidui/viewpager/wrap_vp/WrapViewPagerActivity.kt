@@ -51,7 +51,7 @@ class WrapViewPagerActivity : BaseActivity() {
         }
 
         override fun instantiateItem(container: ViewGroup, position: Int): Any {
-            val imgIds = intArrayOf(R.drawable.apple_pic, R.drawable.abcd, R.drawable.bg)
+            val imgIds = intArrayOf(R.drawable.apple_pic, R.drawable.a, R.drawable.bg)
             val view: FrameLayout =
                 mInflater.inflate(R.layout.item_pager, container, false) as FrameLayout
             val imageView = view.findViewById<ImageView>(R.id.imageView)

@@ -7,11 +7,10 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidui.R
 import com.example.androidui.recyclerview.divider.GridItemDecoration
+import com.example.androidui.recyclerview.simple.adapter.FruitAdapter
 import com.example.core.base.BaseActivity
-import com.example.core.base.KEY_TITLE
 import com.example.core.bean.Fruit
 import com.example.core.data.FruitData
-import com.example.androidui.recyclerview.simple.adapter.FruitAdapter
 
 class RvGridActivity : BaseActivity() {
     private lateinit var recyclerView: RecyclerView
@@ -20,9 +19,7 @@ class RvGridActivity : BaseActivity() {
 
     companion object {
         fun start(context: Context) {
-            context.startActivity(Intent(context, RvGridActivity::class.java).apply {
-                putExtra(KEY_TITLE, "网格布局")
-            })
+            context.startActivity(Intent(context, RvGridActivity::class.java))
         }
     }
 

@@ -28,7 +28,7 @@ class ScaleDrawableFragment : BaseFragment(R.layout.fragment_scale_drawable) {
         iv1.setImageDrawable(scaleDrawable)
 
         val scaleDrawable2 =
-            ScaleDrawable(ContextCompat.getDrawable(mContext, R.drawable.abcd), Gravity.CENTER, 1F, 1F)
+            ScaleDrawable(ContextCompat.getDrawable(mContext, R.drawable.a), Gravity.CENTER, 1F, 1F)
         iv2.setImageDrawable(scaleDrawable2)
 
         seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {

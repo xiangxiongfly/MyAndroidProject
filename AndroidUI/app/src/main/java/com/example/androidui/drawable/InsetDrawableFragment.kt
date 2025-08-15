@@ -7,7 +7,7 @@ import android.widget.ImageView
 import androidx.core.content.ContextCompat
 import com.example.androidui.R
 import com.example.core.base.BaseFragment
-import com.example.core.utils.dp
+import com.example.core.exts.dp
 
 class InsetDrawableFragment : BaseFragment(R.layout.fragment_common_drawable) {
 
@@ -25,7 +25,7 @@ class InsetDrawableFragment : BaseFragment(R.layout.fragment_common_drawable) {
         iv1.setImageDrawable(insetDrawable)
 
         val insetDrawable2 = InsetDrawable(
-            ContextCompat.getDrawable(mContext, R.drawable.abcd),
+            ContextCompat.getDrawable(mContext, R.drawable.a),
             300.dp
         )
         iv2.setImageDrawable(insetDrawable2)

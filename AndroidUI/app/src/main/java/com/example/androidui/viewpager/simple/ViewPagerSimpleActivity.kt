@@ -15,7 +15,7 @@ import com.example.androidui.viewpager.transformer.DepthPageTransformer
 import com.example.androidui.viewpager.transformer.RotateTransformer
 import com.example.androidui.viewpager.transformer.ScaleTransformer
 import com.example.core.base.BaseActivity
-import com.example.core.utils.dp
+import com.example.core.exts.dp
 
 class ViewPagerSimpleActivity : BaseActivity() {
     private lateinit var viewPager: ViewPager
@@ -28,7 +28,7 @@ class ViewPagerSimpleActivity : BaseActivity() {
 
     //图片资源
     private val mImgIds =
-        intArrayOf(R.drawable.abcd, R.drawable.b, R.drawable.c, R.drawable.d, R.drawable.e)
+        intArrayOf(R.drawable.a, R.drawable.b, R.drawable.c, R.drawable.d, R.drawable.e)
 
     //亮点之间距离
     private var distance = 0

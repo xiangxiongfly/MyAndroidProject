@@ -10,7 +10,7 @@ import android.widget.ImageView
 import androidx.core.content.ContextCompat
 import com.example.androidui.R
 import com.example.core.base.BaseFragment
-import com.example.core.utils.dp
+import com.example.core.exts.dp
 
 class LayerDrawableFragment : BaseFragment(R.layout.fragment_common_drawable) {
 
@@ -27,7 +27,7 @@ class LayerDrawableFragment : BaseFragment(R.layout.fragment_common_drawable) {
         val layerDrawable = ContextCompat.getDrawable(mContext, R.drawable.layer_drawable)
         iv1.setImageDrawable(layerDrawable)
 
-        val drawable = ContextCompat.getDrawable(mContext, R.drawable.abcd)
+        val drawable = ContextCompat.getDrawable(mContext, R.drawable.a)
         val rectDrawable = GradientDrawable().apply {
             shape = GradientDrawable.RECTANGLE
             setColor(Color.parseColor("#FF0000"))

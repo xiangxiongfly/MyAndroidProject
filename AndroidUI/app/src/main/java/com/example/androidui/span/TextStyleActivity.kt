@@ -12,7 +12,6 @@ import android.text.style.RelativeSizeSpan
 import android.widget.TextView
 import com.example.androidui.R
 import com.example.core.base.BaseActivity
-import com.example.core.base.KEY_TITLE
 
 class TextStyleActivity : BaseActivity() {
     private lateinit var textView: TextView
@@ -24,9 +23,7 @@ class TextStyleActivity : BaseActivity() {
         const val DELAY_TIME = 150L
 
         fun start(context: Context) {
-            context.startActivity(Intent(context, TextStyleActivity::class.java).apply {
-                putExtra(KEY_TITLE, "文字跳动效果")
-            })
+            context.startActivity(Intent(context, TextStyleActivity::class.java))
         }
     }
 

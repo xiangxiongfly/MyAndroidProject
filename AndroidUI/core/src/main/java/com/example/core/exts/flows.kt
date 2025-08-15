@@ -6,7 +6,6 @@ import android.graphics.Color
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.example.core.base.BaseActivity
-import com.example.core.base.KEY_TITLE
 import com.example.mylibrary.R
 import com.google.android.flexbox.FlexboxLayout
 
@@ -23,9 +22,7 @@ fun FlexboxLayout.addElement(
             isAllCaps = false
             textSize = 18F
             setOnClickListener {
-                context.startActivity(Intent(context, actClass).apply {
-                    putExtra(KEY_TITLE, title)
-                })
+                context.startActivity(Intent(context, actClass))
             }
         }
     )

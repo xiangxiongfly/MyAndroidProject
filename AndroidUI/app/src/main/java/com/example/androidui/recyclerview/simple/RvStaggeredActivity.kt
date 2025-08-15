@@ -6,11 +6,10 @@ import android.os.Bundle
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.androidui.R
-import com.example.core.base.BaseActivity
-import com.example.core.base.KEY_TITLE
 import com.example.androidui.recyclerview.simple.adapter.FruitAdapter
+import com.example.core.base.BaseActivity
 import com.example.core.bean.Fruit
-import java.util.*
+import java.util.Random
 
 class RvStaggeredActivity : BaseActivity() {
     private lateinit var recyclerView: RecyclerView
@@ -19,9 +18,7 @@ class RvStaggeredActivity : BaseActivity() {
 
     companion object {
         fun start(context: Context) {
-            context.startActivity(Intent(context, RvStaggeredActivity::class.java).apply {
-                putExtra(KEY_TITLE, "瀑布流布局")
-            })
+            context.startActivity(Intent(context, RvStaggeredActivity::class.java))
         }
     }
 
