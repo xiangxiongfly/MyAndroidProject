@@ -3,6 +3,8 @@ package com.example.androidui
 import android.os.Bundle
 import com.example.androidui.bottomsheet.BottomSheetActivity
 import com.example.androidui.circleround.CircleRoundActivity
+import com.example.androidui.collapsing.Collapsing1Activity
+import com.example.androidui.collapsing.Collapsing2Activity
 import com.example.androidui.dialog.DialogActivity
 import com.example.androidui.drawable.DrawableActivity
 import com.example.androidui.expandablelistview.ExpandableListViewActivity
@@ -57,6 +59,8 @@ class MainActivity : BaseActivity() {
         flexboxLayout.addElement(context, "Spinner", SpinnerActivity::class.java)
         flexboxLayout.addElement(context, "RatingBar", RatingBarActivity::class.java)
         flexboxLayout.addElement(context, "圆形和圆角矩形", CircleRoundActivity::class.java)
+        flexboxLayout.addElement(context, "折叠置顶布局1", Collapsing1Activity::class.java)
+        flexboxLayout.addElement(context, "折叠置顶布局2", Collapsing2Activity::class.java)
     }
 
 }

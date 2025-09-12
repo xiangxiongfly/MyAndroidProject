@@ -138,7 +138,7 @@ class TabLayoutActivity : BaseActivity() {
 
     //图片选中状态
     fun Drawable.selected() {
-        this.setTint(ContextCompat.getColor(context, R.color.color_primary))
+        this.setTint(ContextCompat.getColor(context, R.color.colorPrimary))
     }
 
     //图片未选中状态
