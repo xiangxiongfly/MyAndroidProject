@@ -14,8 +14,7 @@
         android:layout_width="100dp"
         android:layout_height="200dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/dark_image"
-        app:direction="left" />
+        android:src="@drawable/dark_image" />
 
     <com.xiangxiongfly.core.widgets.bubble.BubbleImageView
         android:layout_width="100dp"
