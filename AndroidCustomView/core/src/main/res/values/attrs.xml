@@ -179,4 +179,17 @@
         <attr name="brushColor" format="color" />
         <attr name="brushWidth" format="dimension" />
     </declare-styleable>
+
+    <!-- 气泡ImageView -->
+    <declare-styleable name="BubbleImageView">
+        <attr name="radius" format="dimension" />
+        <attr name="triangle_width" format="dimension" />
+        <attr name="triangle_height" format="dimension" />
+        <attr name="triangle_top" format="dimension" />
+        <attr name="direction" format="integer">
+            <enum name="left" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+    </declare-styleable>
+
 </resources>

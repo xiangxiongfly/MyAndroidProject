@@ -4,6 +4,7 @@ import android.os.Bundle
 import com.google.android.flexbox.FlexboxLayout
 import com.xiangxiongfly.core.base.BaseActivity
 import com.xiangxiongfly.core.exts.addElement
+import com.xiangxiongfly.customview.bubble.BubbleImageViewActivity
 import com.xiangxiongfly.customview.contacts.ContactsActivity
 import com.xiangxiongfly.customview.countdown.CountdownActivity
 import com.xiangxiongfly.customview.customedittext.MyEditTextActivity
@@ -35,5 +36,6 @@ class MainActivity : BaseActivity() {
         flexboxLayout.addElement(context, "倒计时", CountdownActivity::class.java)
         flexboxLayout.addElement(context, "底部导航栏", NavigationBarActivity::class.java)
         flexboxLayout.addElement(context, "通讯录(侧边索引栏)", ContactsActivity::class.java)
+        flexboxLayout.addElement(context, "气泡ImageView", BubbleImageViewActivity::class.java)
     }
 }

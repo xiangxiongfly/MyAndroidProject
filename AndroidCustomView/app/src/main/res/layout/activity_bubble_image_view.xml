@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".bubble.BubbleImageViewActivity">
+
+    <com.xiangxiongfly.core.widgets.bubble.BubbleImageView
+        android:layout_width="100dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dark_image"
+        app:direction="left" />
+
+    <com.xiangxiongfly.core.widgets.bubble.BubbleImageView
+        android:layout_width="100dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dark_image"
+        app:direction="right" />
+</LinearLayout>
