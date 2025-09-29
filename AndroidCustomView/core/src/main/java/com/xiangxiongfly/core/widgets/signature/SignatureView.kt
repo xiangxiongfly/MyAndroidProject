@@ -1,7 +1,12 @@
 package com.xiangxiongfly.core.widgets.signature
 
 import android.content.Context
-import android.graphics.*
+import android.graphics.Bitmap
+import android.graphics.Canvas
+import android.graphics.Color
+import android.graphics.Paint
+import android.graphics.Path
+import android.graphics.PorterDuff
 import android.util.AttributeSet
 import android.util.Log
 import android.view.MotionEvent
@@ -15,18 +20,15 @@ class SignatureView @JvmOverloads constructor(
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
 ) : View(context, attrs, defStyleAttr) {
-    companion object {
-        const val DEFAULT_BG_COLOR = Color.WHITE
-        const val DEFAULT_BRUSH_COLOR = Color.BLACK
-        const val DEFAULT_BRUSH_WIDTH = 12F
-    }
 
-    private var bgColor: Int =
-        DEFAULT_BG_COLOR
-    private var brushColor: Int =
-        DEFAULT_BRUSH_COLOR
-    private var brushWidth =
-        DEFAULT_BRUSH_WIDTH
+    // 背景颜色
+    private var bgColor = DEFAULT_BG_COLOR
+
+    // 画笔颜色
+    private var brushColor = DEFAULT_BRUSH_COLOR
+
+    // 画笔宽度
+    private var brushWidth = DEFAULT_BRUSH_WIDTH
 
     private val paint = Paint().apply {
         isAntiAlias = true
@@ -207,6 +209,7 @@ class SignatureView @JvmOverloads constructor(
                 path.moveTo(touchX, touchY)
                 return true
             }
+
             MotionEvent.ACTION_MOVE -> {
                 val x = event.x
                 val y = event.y
@@ -240,5 +243,11 @@ class SignatureView @JvmOverloads constructor(
                 canvas.drawPath(path, paint)
             }
         }
+    }
+
+    companion object {
+        const val DEFAULT_BG_COLOR = Color.WHITE
+        const val DEFAULT_BRUSH_COLOR = Color.BLACK
+        const val DEFAULT_BRUSH_WIDTH = 12F
     }
 }

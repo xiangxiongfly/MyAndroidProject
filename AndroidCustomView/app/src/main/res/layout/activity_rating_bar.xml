@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.xiangxiongfly.core.widgets.ratingbar.RatingBar
+        android:id="@+id/rating_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:star="2" />
+
+    <com.xiangxiongfly.core.widgets.ratingbar.RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:star="3"
+        app:starCount="6" />
+
+    <com.xiangxiongfly.core.widgets.ratingbar.RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:star="4"
+        app:starGap="20dp"
+        app:starHeight="40dp"
+        app:starWidth="40dp" />
+</LinearLayout>

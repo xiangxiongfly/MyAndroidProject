@@ -192,4 +192,15 @@
         </attr>
     </declare-styleable>
 
+    <!-- RatingBar -->
+    <declare-styleable name="RatingBar">
+        <attr name="star" format="integer" />
+        <attr name="starCount" format="integer" />
+        <attr name="starWidth" format="dimension" />
+        <attr name="starHeight" format="dimension" />
+        <attr name="starGap" format="dimension" />
+        <attr name="normalDrawable" format="reference" />
+        <attr name="selectedDrawable" format="reference" />
+    </declare-styleable>
+
 </resources>
