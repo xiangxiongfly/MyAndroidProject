@@ -5,7 +5,11 @@ import android.view.View
 import com.example.androidui.R
 import com.example.androidui.recyclerview.diffutil.DiffUtilActivity
 import com.example.androidui.recyclerview.group.GroupActivity
-import com.example.androidui.recyclerview.multi.MultiTypeActivity
+import com.example.androidui.recyclerview.operator.OperatorActivity
+import com.example.androidui.recyclerview.payload.a1.Payload1Activity
+import com.example.androidui.recyclerview.payload.a2.Payload2Activity
+import com.example.androidui.recyclerview.pool.RecycledViewPoolActivity
+import com.example.androidui.recyclerview.simple.MultiTypeActivity
 import com.example.androidui.recyclerview.simple.RvGridActivity
 import com.example.androidui.recyclerview.simple.RvLinearActivity
 import com.example.androidui.recyclerview.simple.RvStaggeredActivity
@@ -18,26 +22,42 @@ class RecyclerViewActivity : BaseActivity() {
     }
 
     fun toLinear(v: View) {
-        RvLinearActivity.actionStart(this)
+        RvLinearActivity.actionStart(context)
     }
 
     fun toGrid(v: View) {
-        RvGridActivity.start(this)
+        RvGridActivity.start(context)
     }
 
     fun toStaggered(v: View) {
-        RvStaggeredActivity.start(this)
+        RvStaggeredActivity.start(context)
     }
 
     fun toMultiType(v: View) {
-        MultiTypeActivity.actionStart(this)
+        MultiTypeActivity.actionStart(context)
+    }
+
+    fun toOperator(v: View) {
+        OperatorActivity.actionStart(context)
     }
 
     fun toDiffUtil(v: View) {
-        DiffUtilActivity.start(this)
+        DiffUtilActivity.actionStart(context)
     }
 
-    fun toGroup(v:View){
+    fun toPayload1(v: View) {
+        Payload1Activity.actionStart(context)
+    }
+
+    fun toPayload2(v: View) {
+        Payload2Activity.actionStart(context)
+    }
+
+    fun toGroup(v: View) {
         GroupActivity.actionStart(context)
+    }
+
+    fun toPool(v: View) {
+        RecycledViewPoolActivity.actionStart(context)
     }
 }

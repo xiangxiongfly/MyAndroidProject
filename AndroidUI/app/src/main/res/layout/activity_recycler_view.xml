@@ -34,12 +34,36 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="toOperator"
+        android:text="增删改操作" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:onClick="toDiffUtil"
-        android:text="DiffUtil测试" />
+        android:text="diffutil" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="toPayload1"
+        android:text="payload(Adapter)" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="toPayload2"
+        android:text="payload(DiffUtil)" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="toGroup"
         android:text="分组(ConcatAdapter)" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="toPool"
+        android:text="RecycledViewPool" />
 </LinearLayout>

@@ -16,7 +16,7 @@ class FruitAdapter(val mContext: Context, private val mList: ArrayList<Fruit>) :
     private val layoutInflater: LayoutInflater = LayoutInflater.from(mContext)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemView = layoutInflater.inflate(R.layout.item_fruit2, parent, false)
+        val itemView = layoutInflater.inflate(R.layout.item_fruit, parent, false)
         return ViewHolder(itemView)
     }
 
@@ -28,12 +28,7 @@ class FruitAdapter(val mContext: Context, private val mList: ArrayList<Fruit>) :
     override fun getItemCount(): Int = mList.size
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val img: ImageView
-        val name: TextView
-
-        init {
-            img = itemView.findViewById(R.id.fruit_img)
-            name = itemView.findViewById(R.id.fruit_name)
-        }
+        val img: ImageView = itemView.findViewById(R.id.fruit_img)
+        val name: TextView = itemView.findViewById(R.id.fruit_name)
     }
 }

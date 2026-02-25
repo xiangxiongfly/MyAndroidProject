@@ -4,23 +4,21 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidui.R
 import com.example.androidui.recyclerview.divider.LinearItemDecoration
-import com.example.androidui.recyclerview.simple.adapter.FruitLinearAdapter
+import com.example.androidui.recyclerview.simple.adapter.FruitAdapter
 import com.example.core.base.BaseActivity
 import com.example.core.bean.Fruit
 import com.example.core.data.FruitData
 import com.example.core.exts.dp
-import java.util.*
+import java.util.Collections
 
 class RvLinearActivity : BaseActivity() {
     private lateinit var recyclerView: RecyclerView
-    private lateinit var adapter: FruitLinearAdapter
+    private lateinit var adapter: FruitAdapter
 
     private val fruitList = arrayListOf<Fruit>()
 
@@ -32,40 +30,10 @@ class RvLinearActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_rv_linear)
+        setContentView(R.layout.activity_rv_operator)
         initView()
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         initData()
         initRv()
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        super.onCreateOptionsMenu(menu)
-        menuInflater.inflate(R.menu.menu_rv, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        super.onOptionsItemSelected(item)
-        when (item.itemId) {
-            android.R.id.home -> {
-                finish()
-            }
-            R.id.addAll -> {
-                val fruits = arrayListOf<Fruit>().apply {
-                    add(Fruit(R.drawable.cherry_pic, "樱桃1号"))
-                    add(Fruit(R.drawable.cherry_pic, "樱桃2号"))
-                }
-                adapter.addRange(0, fruits)
-            }
-            R.id.deleteAll -> {
-                adapter.deleteRange(1, 2)
-            }
-            R.id.updateAll -> {
-                adapter.updateRange(1, 2)
-            }
-        }
-        return true
     }
 
     private fun initView() {
@@ -78,22 +46,7 @@ class RvLinearActivity : BaseActivity() {
     }
 
     private fun initRv() {
-        adapter = FruitLinearAdapter(context, fruitList)
-        // 设置点击事件
-        adapter.setOnItemClickListener(object : FruitLinearAdapter.OnItemClickListener {
-            override fun onUpdate(position: Int) {
-                adapter.update(position)
-            }
-
-            override fun onAdd(position: Int) {
-                val fruit = Fruit(FruitData.getFruitImages().random(), "新水果")
-                adapter.add(position + 1, fruit)
-            }
-
-            override fun onDelete(position: Int) {
-                adapter.delete(position)
-            }
-        })
+        adapter = FruitAdapter(context, fruitList)
         // 设置垂直布局
         recyclerView.layoutManager = LinearLayoutManager(context)
         // 设置水平布局布局

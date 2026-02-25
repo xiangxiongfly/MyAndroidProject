@@ -4,31 +4,26 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.view.ViewTreeObserver
-import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.DividerItemDecoration
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidui.R
+import com.example.androidui.recyclerview.divider.LinearItemDecoration
 import com.example.core.base.BaseActivity
 import com.example.core.bean.User
-import com.example.core.utils.logE
 
 class DiffUtilActivity : BaseActivity() {
     private lateinit var recyclerView: RecyclerView
-
-    private lateinit var mAdapter: UserAdapter
-    private var mList = ArrayList<User>()
+    private lateinit var adapter: UserAdapter
+    private var list = ArrayList<User>()
 
     companion object {
-        fun start(context: Context) {
+        fun actionStart(context: Context) {
             context.startActivity(Intent(context, DiffUtilActivity::class.java))
         }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_diff_util)
+        setContentView(R.layout.activity_diffutil)
         initView()
         initData()
         initRv()
@@ -40,100 +35,25 @@ class DiffUtilActivity : BaseActivity() {
 
     private fun initData() {
         for (i in 0..15) {
-            mList.add(User(i, "name$i", i, "address$i"))
+            list.add(User(i, "name$i", i, "address$i"))
         }
     }
 
     private fun initRv() {
-        mAdapter = UserAdapter(context, mList)
-        recyclerView.layoutManager = LinearLayoutManager(context)
-        recyclerView.addItemDecoration(
-            DividerItemDecoration(
-                context, DividerItemDecoration.VERTICAL
-            )
-        )
-        recyclerView.adapter = mAdapter
+        adapter = UserAdapter()
+        recyclerView.addItemDecoration(LinearItemDecoration())
+        recyclerView.adapter = adapter
+        adapter.submitList(list)
     }
-
-    var start: Long = 0
 
     fun click1(v: View) {
-        recyclerView.viewTreeObserver.addOnGlobalLayoutListener(
-            object : ViewTreeObserver.OnGlobalLayoutListener {
-                override fun onGlobalLayout() {
-                    val end = System.currentTimeMillis()
-                    logE("DiffUtil耗时1：${end - start}ms")
-                    recyclerView.viewTreeObserver.removeOnGlobalLayoutListener(this)
-                }
-            })
-        start = System.currentTimeMillis()
-        val newList = ArrayList<User>()
-        for (item in mList) {
-            newList.add(item.copy())
-        }
+        val newList = list.toMutableList()
         newList.removeFirst()
         newList.removeLast()
-        newList[1].address = "修改了1"
-        newList[10].address = "修改了10"
-        val result: DiffUtil.DiffResult =
-            DiffUtil.calculateDiff(MyDiffUtilCallback(mList, newList), true)
-        result.dispatchUpdatesTo(mAdapter)
-        mAdapter.setData(newList)
-    }
+        newList[1].address = "修改了修改了修改了"
+        newList[6].address = "修改了修改了修改了修改了修改了修改了"
 
-    fun click2(v: View) {
-        recyclerView.viewTreeObserver.addOnGlobalLayoutListener(
-            object : ViewTreeObserver.OnGlobalLayoutListener {
-                override fun onGlobalLayout() {
-                    val end = System.currentTimeMillis()
-                    logE("DiffUtil耗时2：${end - start}ms")
-                    recyclerView.viewTreeObserver.removeOnGlobalLayoutListener(this)
-                }
-            },
-        )
-        start = System.currentTimeMillis()
-        val newList = ArrayList<User>()
-        for (item in mList) {
-            newList.add(item.copy())
-        }
-        newList.removeFirst()
-        newList.removeLast()
-        val result: DiffUtil.DiffResult =
-            DiffUtil.calculateDiff(MyDiffUtilCallback(mList, newList), true)
-        result.dispatchUpdatesTo(mAdapter)
-        mAdapter.setData(newList)
-    }
-
-    fun click3(v: View) {
-        recyclerView.viewTreeObserver.addOnGlobalLayoutListener(
-            object : ViewTreeObserver.OnGlobalLayoutListener {
-                override fun onGlobalLayout() {
-                    val end = System.currentTimeMillis()
-                    logE("notifyDataSetChanged耗时1：${end - start}ms")
-                    recyclerView.viewTreeObserver.removeOnGlobalLayoutListener(this)
-                }
-            })
-        start = System.currentTimeMillis()
-        mList.removeFirst()
-        mList.removeLast()
-        mList[1].address = "修改了1"
-        mList[10].address = "修改了10"
-        mAdapter.notifyDataSetChanged()
-    }
-
-    fun click4(v: View) {
-        recyclerView.viewTreeObserver.addOnGlobalLayoutListener(
-            object : ViewTreeObserver.OnGlobalLayoutListener {
-                override fun onGlobalLayout() {
-                    val end = System.currentTimeMillis()
-                    logE("notifyDataSetChanged耗时2：${end - start}ms")
-                    recyclerView.viewTreeObserver.removeOnGlobalLayoutListener(this)
-                }
-            })
-        start = System.currentTimeMillis()
-        mList.removeFirst()
-        mList.removeLast()
-        mAdapter.notifyDataSetChanged()
+        adapter.submitList(newList)
     }
 }
 

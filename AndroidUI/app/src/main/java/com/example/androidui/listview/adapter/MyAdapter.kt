@@ -22,7 +22,7 @@ class MyAdapter(val mContext: Context, val mDatas: ArrayList<Fruit>) : BaseAdapt
         val viewHolder: ViewHolder
         val itemView: View
         if (convertView == null) {
-            itemView = layoutInflater.inflate(R.layout.item_fruit2, null)
+            itemView = layoutInflater.inflate(R.layout.item_fruit, null)
             val fruitImage: ImageView = itemView.findViewById(R.id.fruit_img)
             val fruitName: TextView = itemView.findViewById(R.id.fruit_name)
             viewHolder = ViewHolder(fruitImage, fruitName)

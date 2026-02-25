@@ -14,7 +14,7 @@ class ItemAdapter(private val context: Context, private val itemList: MutableLis
     RecyclerView.Adapter<ItemAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemView = LayoutInflater.from(context).inflate(R.layout.item_fruit2, parent, false)
+        val itemView = LayoutInflater.from(context).inflate(R.layout.item_fruit, parent, false)
         return ViewHolder(itemView)
     }
 

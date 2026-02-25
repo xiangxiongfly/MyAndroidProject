@@ -1,18 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name="com.example.core.base.BaseApplication"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
-
+        <activity
+            android:name=".recyclerview.payload.a1.Payload1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".recyclerview.payload.a2.Payload2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".recyclerview.pool.RecycledViewPoolActivity"
+            android:exported="false" />
         <activity
             android:name=".SplashActivity"
             android:exported="true"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -49,8 +60,9 @@
         <activity
             android:name=".recyclerview.RecyclerViewActivity"
             android:label="RecyclerView" />
-        <activity android:name=".recyclerview.multi.MultiTypeActivity" />
+        <activity android:name=".recyclerview.simple.MultiTypeActivity" />
         <activity android:name=".recyclerview.diffutil.DiffUtilActivity" />
+        <activity android:name=".recyclerview.operator.OperatorActivity" />
         <activity android:name=".recyclerview.simple.RvStaggeredActivity" />
         <activity android:name=".recyclerview.simple.RvGridActivity" />
         <activity android:name=".recyclerview.simple.RvLinearActivity" />
@@ -92,7 +104,6 @@
             android:name=".circleround.CircleRoundActivity"
             android:exported="false"
             android:label="圆形和圆角矩形" />
-
         <activity
             android:name=".collapsing.Collapsing1Activity"
             android:exported="false"

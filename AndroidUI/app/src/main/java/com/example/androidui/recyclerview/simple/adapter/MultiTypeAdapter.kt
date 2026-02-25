@@ -1,4 +1,4 @@
-package com.example.androidui.recyclerview.multi.adapter
+package com.example.androidui.recyclerview.simple.adapter
 
 import android.content.Context
 import android.view.LayoutInflater

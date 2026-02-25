@@ -1,12 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/addAll"
-        android:title="添加多个" />
+        android:id="@+id/addFirstItem"
+        android:title="在头部添加单个数据" />
     <item
-        android:id="@+id/deleteAll"
-        android:title="删除多个" />
+        android:id="@+id/addLastItem"
+        android:title="在尾部添加单个数据" />
     <item
-        android:id="@+id/updateAll"
-        android:title="更新多个" />
+        android:id="@+id/addItems"
+        android:title="添加多个数据" />
+
+    <item
+        android:id="@+id/removeFirstItem"
+        android:title="删除头部单个数据" />
+    <item
+        android:id="@+id/removeItems"
+        android:title="删除多个数据" />
+    <item
+        android:id="@+id/removeAll"
+        android:title="删除全部" />
+
+    <item
+        android:id="@+id/updateFirstItem"
+        android:title="更新头部单个数据" />
+    <item
+        android:id="@+id/updateItems"
+        android:title="更新多个数据" />
+
+    <item
+        android:id="@+id/moveItem"
+        android:title="移动数据" />
 </menu>

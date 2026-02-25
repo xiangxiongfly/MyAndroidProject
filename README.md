@@ -34,6 +34,7 @@
 - [自定义EditText之搜索框](https://blog.csdn.net/qq_14876133/article/details/80941787)
 - [手写签名板](https://blog.csdn.net/qq_14876133/article/details/144078111)
 - [气泡ImageView](https://blog.csdn.net/qq_14876133/article/details/151998569)
+- [评分条](https://blog.csdn.net/qq_14876133/article/details/152258110)
 
 
 

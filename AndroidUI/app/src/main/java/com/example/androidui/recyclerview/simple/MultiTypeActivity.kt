@@ -1,4 +1,4 @@
-package com.example.androidui.recyclerview.multi
+package com.example.androidui.recyclerview.simple
 
 import android.content.Context
 import android.content.Intent
@@ -6,7 +6,7 @@ import android.os.Bundle
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidui.R
-import com.example.androidui.recyclerview.multi.adapter.MultiTypeAdapter
+import com.example.androidui.recyclerview.simple.adapter.MultiTypeAdapter
 import com.example.common.bean.LeftFruit
 import com.example.common.bean.RightFruit
 import com.example.core.base.BaseActivity
