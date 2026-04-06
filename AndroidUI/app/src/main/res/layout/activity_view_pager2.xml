@@ -10,12 +10,19 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="toViewPager2"
-        android:text="ViewPager2基本使用" />
+        android:onClick="toViewAdapter"
+        android:text="基于 View 的适配器" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="tpTabVp"
-        android:text="ViewPager2+TabLayout+Fragment" />
+        android:onClick="toFragmentAdapter"
+        android:text="基于 Fragment 的适配器" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="toVp2Lazy1"
+        android:text="懒加载" />
+
 </LinearLayout>

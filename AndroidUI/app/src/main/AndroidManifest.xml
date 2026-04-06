@@ -57,6 +57,8 @@
         <activity android:name=".span.SpanSearchActivity" />
         <activity android:name=".span.TextStyleActivity" />
         <activity android:name=".span.SpanSimpleActivity" />
+
+        <!-- RecyclerView -->
         <activity
             android:name=".recyclerview.RecyclerViewActivity"
             android:label="RecyclerView" />
@@ -67,10 +69,12 @@
         <activity android:name=".recyclerview.simple.RvGridActivity" />
         <activity android:name=".recyclerview.simple.RvLinearActivity" />
         <activity android:name=".recyclerview.group.GroupActivity" />
+
         <activity
             android:name=".expandablelistview.ExpandableListViewActivity"
             android:label="ExpandableListView" />
-        <activity android:name=".listview.ScrollViewListViewActivity" />
+
+        <!-- ListView -->
         <activity
             android:name=".listview.ListViewActivity"
             android:label="ListView" />
@@ -79,6 +83,9 @@
         <activity android:name=".listview.BaseAdapterActivity" />
         <activity android:name=".listview.SimpleAdapterActivity" />
         <activity android:name=".listview.ArrayAdapterActivity" />
+        <activity android:name=".listview.ScrollViewListViewActivity" />
+
+        <!-- ViewPager -->
         <activity
             android:name=".viewpager.ViewPagerActivity"
             android:label="ViewPager" />
@@ -88,11 +95,15 @@
         <activity android:name=".viewpager.simple.ViewPagerSimpleActivity" />
         <activity android:name=".viewpager.wrap_vp.WrapViewPagerActivity" />
         <activity android:name=".viewpager.noscrollvp.NoScrollVpActivity" />
+
+        <!-- ViewPager2 -->
         <activity
             android:name=".viewpager2.ViewPager2Activity"
             android:label="ViewPager2" />
-        <activity android:name=".viewpager2.tab.ViewPager2TabActivity" />
-        <activity android:name=".viewpager2.simple.ViewPager2SimpleActivity" />
+        <activity android:name=".viewpager2.viewadapter.VpWithViewActivity" />
+        <activity android:name=".viewpager2.fragmentadapter.VpWithFragmentActivity" />
+        <activity android:name=".viewpager2.lazy1.Vp2Lazy1Activity" />
+
         <activity
             android:name=".spinner.SpinnerActivity"
             android:label="Spinner" />
