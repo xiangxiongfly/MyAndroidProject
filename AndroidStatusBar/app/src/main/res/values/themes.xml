@@ -44,14 +44,23 @@
     </style>
 
     <!--透明状态栏主题-->
-    <style name="AppTheme.Transparent" parent="AppTheme.NoActionBar">
+    <style name="AppTheme.TransparentStatusBar" parent="AppTheme.NoActionBar">
         <!-- 设置透明状态栏 -->
         <item name="android:statusBarColor">@android:color/transparent</item>
         <!-- 设置透明导航栏 -->
-        <!--        <item name="android:windowTranslucentNavigation">true</item>-->
-        <!--设置透明状态栏-->
-        <!--        <item name="android:windowTranslucentStatus">true</item>-->
+        <item name="android:navigationBarColor">@android:color/transparent</item>
     </style>
 
+    <!--  沉浸式主题  -->
+    <style name="ImmersionTheme" parent="AppTheme.NoActionBar">
+        <!-- 状态栏透明 -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <!-- 状态栏延伸 -->
+        <item name="android:windowTranslucentStatus">true</item>
+        <!-- 导航栏透明 -->
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <!-- 导航栏延伸 -->
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
 
 </resources>

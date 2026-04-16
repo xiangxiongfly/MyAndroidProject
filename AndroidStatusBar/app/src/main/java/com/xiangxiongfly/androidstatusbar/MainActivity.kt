@@ -9,6 +9,7 @@ import com.xiangxiongfly.androidstatusbar.immersion.Immersion2Activity
 import com.xiangxiongfly.androidstatusbar.immersion.Immersion3Activity
 import com.xiangxiongfly.androidstatusbar.immersion.Immersion4Activity
 import com.xiangxiongfly.androidstatusbar.immersion.Immersion5Activity
+import com.xiangxiongfly.androidstatusbar.immersion.Immersion6Activity
 import com.xiangxiongfly.androidstatusbar.statusbar.FullScreen2Activity
 import com.xiangxiongfly.androidstatusbar.statusbar.FullScreenActivity
 import com.xiangxiongfly.androidstatusbar.statusbar.OperateStatusBar3Activity
@@ -39,6 +40,7 @@ class MainActivity : BaseActivity() {
             R.id.btn_immersion03 -> actionStart<Immersion3Activity>()
             R.id.btn_immersion04 -> actionStart<Immersion4Activity>()
             R.id.btn_immersion05 -> actionStart<Immersion5Activity>()
+            R.id.btn_immersion06 -> actionStart<Immersion6Activity>()
         }
     }
 }
