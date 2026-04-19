@@ -2,8 +2,6 @@ package com.xiangxiongfly.androidstatusbar.immersion
 
 import android.os.Bundle
 import android.view.View
-import android.view.View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-import android.view.View.SYSTEM_UI_FLAG_LAYOUT_STABLE
 import android.widget.Button
 import android.widget.FrameLayout
 import android.widget.ImageView
@@ -23,8 +21,8 @@ class Immersion4Activity : BaseActivity() {
         val imageView = findViewById<ImageView>(R.id.imageView)
 
         // 沉浸式效果
-        frameLayout.systemUiVisibility =
-            SYSTEM_UI_FLAG_LAYOUT_STABLE or SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+         frameLayout.systemUiVisibility =
+            window.decorView.systemUiVisibility or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LAYOUT_STABLE or    View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR
 
         // 处理状态栏遮挡问题
         ViewCompat.setOnApplyWindowInsetsListener(btn, object : OnApplyWindowInsetsListener {
